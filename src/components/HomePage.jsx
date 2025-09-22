@@ -40,7 +40,7 @@ export default function HomePage() {
                 {/* <p className="mt-6 text-lg text-gray-600">Learn more about our research <a href="#" className='px-2 underline'>here</a>.</p> */}
 
                 <div className="mt-8 flex flex-wrap gap-3">
-                  <a href="#work" className="inline-flex items-center px-5 py-3 bg-black text-white rounded-md text-sm font-semibold">Explore work</a>
+                  <a href="#research" className="inline-flex items-center px-5 py-3 bg-black text-white rounded-md text-sm font-semibold">Explore work</a>
                   <a href="#contact" className="inline-flex items-center px-5 py-3 border border-gray-300 rounded-md text-sm">Contact us</a>
                 </div>
 
@@ -66,7 +66,7 @@ export default function HomePage() {
         </section>
 
         {/* Research Section*/}
-        <section id="features" className="py-16 bg-white">
+        <section id="research" className="py-16 bg-white">
           <div className = "container">
             <h2 className="text-2xl font-bold">Research</h2>
             <p className="mt-2 text-gray-600 max-w-2xl">A concise enumeration of core subsystems and deliverables.</p>

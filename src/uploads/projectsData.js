@@ -1,75 +1,72 @@
 // This file contains an array of research items
 const projectsData = [
   {
-    title: 'Urban Region Representation Learning',
-    inshort: 'Urban Region Representation',
-    desc: 'In this work, we propose heterogeneous urban graph attention network (HUGAT), which incorporates heterogeneity of diverse urban datasets.',
-    image: '/uploads/Research/research1.jpg',
-    link: '/research/lunar-construction'
+    id: 1,
+    title: "GS E&C (UAM)",
+    image: "src/uploads/projectsImg/1.png",
+    link: "#",
+    type: 'internal',
   },
   {
-    title: 'Smart Bridge Monitoring',
-    inshort: 'Urban Region Representation',
-    desc: 'Sensor fusion and AI models for structural health assessment of urban bridges.',
-    image: '/uploads/Research/research2.jpg',
-    link: '/research/bridge-monitoring'
+    id: 2,
+    title: "KAIST-NYU C³",
+    image: "src/uploads/projectsImg/2.png",
+    link: "#",
+    type: 'external',
   },
   {
-    title: 'Urban Thermal Mitigation',
-    inshort: 'Urban Region Representation',
-    desc: 'Simulations of urban heat islands and data-driven cooling strategies.',
-    image: '/uploads/Research/research3.jpg',
-    link: '/research/thermal-mitigation'
+    id: 3,
+    title: "Deep Traffic",
+    image: "src/uploads/projectsImg/3.png",
+    link: "#",
+    type: 'external',
   },
   {
-    title: 'Hydrogen Energy Systems',
-    inshort: 'Urban Region Representation',
-    desc: 'Coupled CFD–CHEMKIN models for hydrogen-natural gas co-firing efficiency.',
-    image: '/uploads/Research/research4.jpg',
-    link: '/research/hydrogen-energy'
+    id: 4,
+    title: "Urban@KAIST",
+    image: "src/uploads/projectsImg/4.png",
+    link: "#",
+    type: 'external',
   },
   {
-    title: 'Adaptive Formwork Robotics',
-    inshort: 'Urban Region Representation',
-    desc: 'Deployable robotic scaffolding for complex geometry construction.',
-    image: '/uploads/Research/research5.jpg',
-    link: '/research/formwork-robotics'
+    id: 5,
+    title: "Human-centered Future Mobility (HcFM)",
+    image: "src/uploads/projectsImg/5.png",
+    link: "#",
+    type: 'external',
   },
   {
-    title: 'City-scale Flow Analytics',
-    inshort: 'Urban Region Representation',
-    desc: 'Computational fluid dynamics for pedestrian comfort and pollutant dispersion.',
-    image: '/uploads/Research/research6.jpg',
-    link: '/research/flow-analytics'
+    id: 6,
+    title: "POST AI & Mobility",
+    image: "src/uploads/projectsImg/6.png",
+    link: "#",
+    type: 'external',
   },
   {
-    title: 'Extraterrestrial Habitats',
-    inshort: 'Urban Region Representation',
-    desc: 'Design optimization of modular shells for off-world settlements.',
-    image: '/uploads/Research/research7.jpg',
-    link: '/research/extraterrestrial-habitats'
+    id: 7,
+    title: "Air Traffic Management Master Plan - NARAE",
+    link: "#",
+    type: 'external',
   },
   {
-    title: 'Data-driven Energy Maps',
-    inshort: 'Urban Region Representation',
-    desc: 'Integrative GIS and ML pipelines for urban energy consumption mapping.',
-    image: '/uploads/Research/research8.jpg',
-    link: '/research/energy-maps'
+    id: 8,
+    title: "Probabilistic Air Traffic Flow Management (ATFM)",
+    link: "#",
+    type: 'external',
   },
   {
-    title: 'Resilient Infrastructure',
-    inshort: 'Urban Region Representation',
-    desc: 'AI-enhanced lifecycle models for infrastructure in seismic zones.',
-    image: '/uploads/Research/research9.jpg',
-    link: '/research/resilient-infrastructure'
+    id: 9,
+    title: "Autonomous Logistics",
+
+    link: "#",
+    type: 'external',
   },
   {
-    title: 'Human-centric Simulation Tools',
-    inshort: 'Urban Region Representation',
-    desc: 'Interactive visualization interfaces for architects and engineers.',
-    image: '/uploads/Research/research10.jpg',
-    link: '/research/human-centric-tools'
-  }
+    id: 10,
+    title: "Aviation System Safety Management and Reliability Centered Maintenance Program Development",
+    link: "#",
+    type: 'external',
+  },
 ];
 
 export default projectsData;

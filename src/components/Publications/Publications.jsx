@@ -4,7 +4,7 @@ import publicationsData from "../../uploads/publicationsData";
 export default function Publications() {
   return (
     <div className="p-8 bg-gray-50 min-h-screen">
-      <h1 className="text-3xl font-bold mb-8">Publications</h1>
+      <h1 className="pagetitle">Publications</h1>
 
       <div className="space-y-6">
         {publicationsData.map((pub) => (
