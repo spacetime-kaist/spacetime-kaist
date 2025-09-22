@@ -1,8 +1,7 @@
 import React from 'react';
 // Import components
-import SeeMoreButton from '../../ui/Buttons/SeeMoreButton';
-import FigureCard from '../../ui/Cards/FigureCard';
-import events from '../../uploads/Events/EventsData';
+import events from '../uploads/eventsData';
+import SeeMoreButton from '../ui/SeeMoreButton';
 
 // image and txt
 const mainImage = 'https://lh3.googleusercontent.com/sitesv/AICyYdYrsimxBVTyMJj15M-JjVvc0yv-4a1pRWLTYGaWBQRoGXF6-PMA5HgqGDDN_w32V-ysRDWdVCuWgZmbT0lp4M1DbxWMcm6F01Un1kRrMwdbTN94hNc8C_j_50bZlMtjwiregDAS2Hru_TBlKJONXe60qivJFqNqCqVp_tNHr5T0_wFH2ECzo4bJ0Yg=w16383'
@@ -87,7 +86,7 @@ export default function HomePage() {
             </div>
             {/* <a href="#work" className="inline-flex items-center mx-2 mt-5 px-8 py-2 bg-gray-800 text-white rounded-md text-sm font-semibold">See More <span><IoChevronForwardOutline /></span></a>
              */}
-            <SeeMoreButton linkto="/research" />
+            <SeeMoreButton linkto="/" />
           </div>
         </section>
 
@@ -100,7 +99,7 @@ export default function HomePage() {
               {events[1] && <EventsCard {...events[1]} />}
               {events[2] && <EventsCard {...events[2]} />}
             </div>
-            <SeeMoreButton linkto="/research" />
+            <SeeMoreButton linkto="/" />
           </div>
         </section>
           
