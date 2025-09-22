@@ -8,7 +8,7 @@ import ReactMarkdown from "react-markdown";
 
 const MembersCard = (member) => (
   <div key={member.id} className="bg-white rounded-2xl shadow-md hover:shadow-lg transition p-6 flex flex-col items-center text-center">
-    <img src={`src/uploads/peopleImg/${member.id}.jpg`} alt={member.name} className="w-54 h-54 rounded-full object-cover mb-4 border-2 border-gray-300" />
+    <img src={`/uploads/peopleImg/${member.id}.jpg`} alt={member.name} className="w-54 h-54 rounded-full object-cover mb-4 border-2 border-gray-300" />
     {member.link ? <a href={member.link} target="_blank" className="text-blue-600 hover:underline mt-2 text-sm">
       <h3 className="text-xl font-semibold mb-1">{member.name}</h3></a>
       :
@@ -22,7 +22,7 @@ const MembersCard = (member) => (
 
 const AluminiCard = (member) => (
   <div key={member.id} className="rounded-2xl shadow-md hover:shadow-lg transition p-6 flex flex-col items-center text-center">
-    <img src={`src/uploads/peopleImg/${member.id}.jpg`} alt={member.name} className="w-32 h-32 rounded-full object-cover mb-4 border-2 border-gray-300" />
+    <img src={`/uploads/peopleImg/${member.id}.jpg`} alt={member.name} className="w-32 h-32 rounded-full object-cover mb-4 border-2 border-gray-300" />
     {member.link ? <a href={member.link} target="_blank" className="text-blue-600 hover:underline mt-2 text-sm">
       <h3 className="text-xl font-semibold mb-1">{member.name}</h3></a>
       :
