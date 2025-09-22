@@ -36,63 +36,7 @@ export default function HomePage() {
               <div>
                 <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">Spacetime Intelligence Lab</h1>
                 <h2 className="mt-4 text-2xl text-gray-700">Department of Civil and Environment Engineering, KAIST</h2>
-                <p className="mt-6 text-lg text-gray-600">Urban@KAIST Urban-X Seminar 
-
-Oct. 27, 2023, 10:00 am KST
-
-Kaist-NYU Young Researcher Day (Week 1)
-
-(10:00~10:15) Building Verisimilitude in VR With High-Fidelity Local Action Models: A Demonstration Supporting Road-Crossing Experiments
-
-Speaker: Ryan Kim (NYU)
-
-Keywords. #simulation #hardware #virtual reality 
-
-
-(10:00~10:15)  On-demand Mobility-as-a-Service Platform Assignment Games with Guaranteed Stable Outcomes.
-
-Speaker: Bingqing Liu (NYU)
-
-Keywords. #mobility
-
-
-(10:30~10:45) Fame through Surprise: How Fame-seeking Mass Shooters Diversify Their Attacks
-
-Speaker: Rayan Succar (NYU)
-
-Keywords. #health #urban violence
-
-
-(10:45~11:00)  Learning Representation of Communities’ Social Vulnerability from Human Mobility
-
-Speaker: Namwoo Kim (KAIST)
-
-Keywords. #mobility #social vulnerability
-
-
-(11:00~11:15) Socially-aware Control of Devices in Urban Spaces
-
-Speaker: Wonjung Kim and Seoungchul Lee (KAIST)
-
-Keywords. #electrification #infrastructure #policy
-
-
-(11:15~11:30) Coastal Protection Strategies to Minimize Traffic Disruption from Inundation Due to Sea Level Rise: the Case of Abu Dhabi
-
-Speaker: Ilia Papakonstantinou (NYU)
-
-Keywords. #mobility #climate change #infrastructure #policy
-
-
-* Evaluation Panels 
-
-Prof. Yoonjin Yoon, Urban@KAIST Lead, KAIST
-
-Prof. Seoung-Ook Lee, School of Digital Humanities and Computational Social Sciences, KAIST
-
-Dr. Yuyol Shin, Department of Civil and Environmental Engineering, KAIST
-
-Dr. Seonghoon Sean Kim, CTO, Motov</p>
+                <p className="mt-6 text-lg text-gray-600">The research focus at Spacetime Intelligence Lab is spacetime Artificial Intelligence, and its implication in the urban context. The research scope ranges from traffic forecasting GNN models to autonomous driver workload assessment to urban air mobility feasibility study.</p>
                 {/* <p className="mt-6 text-lg text-gray-600">Learn more about our research <a href="#" className='px-2 underline'>here</a>.</p> */}
 
                 <div className="mt-8 flex flex-wrap gap-3">
