@@ -1,6 +1,6 @@
 import React from 'react';
 // Import components
-import events from '../uploads/eventsData';
+import events from '../uploads/eventsData2';
 import SeeMoreButton from '../ui/SeeMoreButton';
 
 // image and txt
@@ -86,7 +86,7 @@ export default function HomePage() {
             </div>
             {/* <a href="#work" className="inline-flex items-center mx-2 mt-5 px-8 py-2 bg-gray-800 text-white rounded-md text-sm font-semibold">See More <span><IoChevronForwardOutline /></span></a>
              */}
-            <SeeMoreButton linkto="/" />
+            <SeeMoreButton linkto="/research" />
           </div>
         </section>
 
@@ -99,7 +99,7 @@ export default function HomePage() {
               {events[1] && <EventsCard {...events[1]} />}
               {events[2] && <EventsCard {...events[2]} />}
             </div>
-            <SeeMoreButton linkto="/" />
+            <SeeMoreButton linkto="/events" />
           </div>
         </section>
           

@@ -1,5 +1,5 @@
 // This file contains an array of research items
-const researchItems = [
+const researchData = [
   {
     id: 1,
     title: 'Urban Region Representation Learning',
@@ -65,4 +65,4 @@ const researchItems = [
   },
 ];
 
-export default researchItems;
+export default researchData;

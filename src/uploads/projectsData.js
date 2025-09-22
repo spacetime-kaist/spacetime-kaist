@@ -1,5 +1,5 @@
 // This file contains an array of research items
-const projectItems = [
+const projectsData = [
   {
     title: 'Urban Region Representation Learning',
     inshort: 'Urban Region Representation',
@@ -72,4 +72,4 @@ const projectItems = [
   }
 ];
 
-export default projectItems;
+export default projectsData;
