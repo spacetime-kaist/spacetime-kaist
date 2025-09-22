@@ -9,7 +9,7 @@ const EventCard = ( event ) => (
     <p className="text-sm text-sky-600 mb-1"><span className='font-bold'>Participants: </span>{event.participants}</p>
     <p className="text-sm text-sky-500 mb-4">Keywords: {event.keywords}</p>
 
-    <div className="prose prose-gray max-w-none mb-6">
+    <div className="prose prose-gray max-w-none mb-6 text-gray-700 text-lg p">
       <ReactMarkdown>{event.desc}</ReactMarkdown>
     </div>
 

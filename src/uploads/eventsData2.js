@@ -23,13 +23,66 @@ Highlights included:
     title: 'Robotic Construction Workshop',
     date: 'June 2025, Daejeon',
     desc: `
-This workshop focused on **hands-on demonstrations** of:
+# 🌐 KAIST–NYU Young Researcher Day (Week 1)
 
-1. Autonomous formwork robotics  
-2. 3D printing with lunar regolith simulant  
-3. Human–robot collaboration scenarios  
+---
 
-> “Robots will not replace construction workers, but augment their capabilities.”`,
+## 🗓 Date & Time  
+**Morning Session**  
+
+---
+
+### ⏰ 10:00–10:15  
+**Building Verisimilitude in VR With High-Fidelity Local Action Models: A Demonstration Supporting Road-Crossing Experiments**  
+*Speaker: Ryan Kim (NYU)*  
+**Keywords:** #simulation #hardware #virtual reality  
+
+---
+
+### ⏰ 10:00–10:15  
+**On-demand Mobility-as-a-Service Platform Assignment Games with Guaranteed Stable Outcomes**  
+*Speaker: Bingqing Liu (NYU)*  
+**Keywords:** #mobility  
+
+---
+
+### ⏰ 10:30–10:45  
+**Fame through Surprise: How Fame-seeking Mass Shooters Diversify Their Attacks**  
+*Speaker: Rayan Succar (NYU)*  
+**Keywords:** #health #urban violence  
+
+---
+
+### ⏰ 10:45–11:00  
+**Learning Representation of Communities’ Social Vulnerability from Human Mobility**  
+*Speaker: Namwoo Kim (KAIST)*  
+**Keywords:** #mobility #social vulnerability  
+
+---
+
+### ⏰ 11:00–11:15  
+**Socially-aware Control of Devices in Urban Spaces**  
+*Speakers: Wonjung Kim and Seoungchul Lee (KAIST)*  
+**Keywords:** #electrification #infrastructure #policy  
+
+---
+
+### ⏰ 11:15–11:30  
+**Coastal Protection Strategies to Minimize Traffic Disruption from Inundation Due to Sea Level Rise: the Case of Abu Dhabi**  
+*Speaker: Ilia Papakonstantinou (NYU)*  
+**Keywords:** #mobility #climate change #infrastructure #policy  
+
+---
+
+## 🏛 Evaluation Panels  
+
+- **Prof. Yoonjin Yoon** — Urban@KAIST Lead, KAIST  
+- **Prof. Seoung-Ook Lee** — School of Digital Humanities and Computational Social Sciences, KAIST  
+- **Dr. Yuyol Shin** — Department of Civil and Environmental Engineering, KAIST  
+- **Dr. Seonghoon Sean Kim** — CTO, Motov  
+
+---
+`,
     photos: [
       '/uploads/event2_1.jpg',
       '/uploads/event2_2.jpg'
