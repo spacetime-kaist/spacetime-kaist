@@ -17,7 +17,7 @@ const EventCard = ( event ) => (
       {event.photos && event.photos.map((photo, idx) => (
         <img
           key={idx}
-          src={photo}
+          src={`${import.meta.env.VITE_PUBLIC_URL}${photo}`}
           alt={`${event.title} photo ${idx + 1}`}
           className="w-full h-48 object-cover rounded-md"
         />

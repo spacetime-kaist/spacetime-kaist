@@ -8,7 +8,7 @@ import ReactMarkdown from "react-markdown";
 
 const MembersCard = (member) => (
   <div key={member.id} className="bg-white rounded-2xl shadow-md hover:shadow-lg transition p-6 flex flex-col items-center text-center">
-    <img src={`/uploads/peopleImg/${member.id}.jpg`} alt={member.name} className="w-54 h-54 rounded-full object-cover mb-4 border-2 border-gray-300" />
+    <img src={`${import.meta.env.VITE_PUBLIC_URL}/peopleImg/${member.id}.jpg`} alt={member.name} className="w-54 h-54 rounded-full object-cover mb-4 border-2 border-gray-300" />
     {member.link ? <a href={member.link} target="_blank" className="text-blue-600 hover:underline mt-2 text-sm">
       <h3 className="text-xl font-semibold mb-1">{member.name}</h3></a>
       :
@@ -22,7 +22,7 @@ const MembersCard = (member) => (
 
 const AluminiCard = (member) => (
   <div key={member.id} className="rounded-2xl shadow-md hover:shadow-lg transition p-6 flex flex-col items-center text-center">
-    <img src={`/uploads/peopleImg/${member.id}.jpg`} alt={member.name} className="w-32 h-32 rounded-full object-cover mb-4 border-2 border-gray-300" />
+    <img src={`${import.meta.env.VITE_PUBLIC_URL}/peopleImg/${member.id}.jpg`} alt={member.name} className="w-32 h-32 rounded-full object-cover mb-4 border-2 border-gray-300" />
     {member.link ? <a href={member.link} target="_blank" className="text-blue-600 hover:underline mt-2 text-sm">
       <h3 className="text-xl font-semibold mb-1">{member.name}</h3></a>
       :
@@ -40,7 +40,7 @@ export default function People() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
               <div className="">
                 <div className="w-full aspect-[3/3] bg-gradient-to-br from-white to-gray-100 rounded-2xl shadow-lg flex items-center justify-center">
-                  <div className="text-center text-gray-400"><img src={professorData.photo} alt={professorData.name} className="w-full h-full object-cover rounded-2xl" /></div>
+                  <div className="text-center text-gray-400"><img src={`${import.meta.env.VITE_PUBLIC_URL}/peopleImg/1.jpg`} alt={professorData.name} className="w-full h-full object-cover rounded-2xl" /></div>
                 </div>
               </div>
               <div className="md:col-span-2">

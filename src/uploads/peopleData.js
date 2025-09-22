@@ -14,7 +14,7 @@ export const professorData ={
 
 **Urban Intelligence**: Urban Region Representation Learning; SDG Data Science; AI and Cities; AI for Social Good`,
 
-  photo: "src/uploads/peopleImg/1.jpg", // Replace with actual image path
+  photo: "/peopleImg/1.jpg", // Replace with actual image path
   }
 
 // id should be the photo name. {id}.jpg
@@ -36,7 +36,7 @@ const labMembersData = [
         "from": "2023.09~",
         "email": "smsohn1997@kaist.ac.kr",
         "edu": ["M.S. in Civil and Environmental Engineering, Transportation Engineering, UC Berkeley", "B.S. in Civil Engineering, NYUAD"],
-        "photo": "src/uploads/peopleImg/3.jpg"
+        "photo": "/peopleImg/3.jpg"
     },
     {
         "id": 4,
@@ -46,7 +46,7 @@ const labMembersData = [
         "from": "2024.03~",
         "email": "tloveu49@kaist.ac.kr",
         "edu": ["M.S. in Information Security, Sungkyunkwan University", "B.S. in Computer Engineering and Military Science, Korea Air Force Academy"],
-        "photo": "src/uploads/peopleImg/4.jpg"
+        "photo": "/peopleImg/4.jpg"
     },
     {
         "id": 5,
@@ -56,7 +56,7 @@ const labMembersData = [
         "from": "2024.03~",
         "email": "minwoo5003@kaist.ac.kr",
         "edu": ["B.S. in Economics and Data Science, University of Seoul"],
-        "photo": "src/uploads/peopleImg/5.jpg"
+        "photo": "/peopleImg/5.jpg"
     },
     {
         "id": 6,
@@ -66,7 +66,7 @@ const labMembersData = [
         "from": "2024.03~",
         "email": "juneyoung.ro@kaist.ac.kr",
         "edu": ["B.S. in Quantitative Sciences and Biology, Emory University"],
-        "photo": "src/uploads/peopleImg/6.jpg"
+        "photo": "/peopleImg/6.jpg"
     },
     {
         "id": 7,
@@ -76,7 +76,7 @@ const labMembersData = [
         "from": "2024.09~",
         "email": "roy.seungro.lee@kaist.ac.kr",
         "edu": ["B.S. in Business Administration, University of Southern California"],
-        "photo": "src/uploads/peopleImg/7.jpg"
+        "photo": "/peopleImg/7.jpg"
     },
     {
         "id": 8,
@@ -86,7 +86,7 @@ const labMembersData = [
         "from": "2024.09~",
         "email": "keoniverse@kaist.ac.kr",
         "edu": ["B.S. in Psychology, University of Utah"],
-        "photo": "src/uploads/peopleImg/8.jpg"
+        "photo": "/peopleImg/8.jpg"
     },
     {
         "id": 9,
@@ -96,7 +96,7 @@ const labMembersData = [
         "from": "2025.03~",
         "email": "jyc021@kaist.ac.kr",
         "edu": ["B.A. in Data Science, UC Berkeley"],
-        "photo": "src/uploads/peopleImg/9.jpg"
+        "photo": "/peopleImg/9.jpg"
     },
     {
         "id": 10,
@@ -106,7 +106,7 @@ const labMembersData = [
         "from": "2025.09~",
         "email": "jh.ohk@kaist.ac.kr",
         "edu": ["B.S. in Civil Engineering, Kyoto University"],
-        "photo": "src/uploads/peopleImg/10.jpg"
+        "photo": "/peopleImg/10.jpg"
     }
 ];
 
@@ -116,70 +116,70 @@ export const aluminiData = [
     name: "Ohhoon Kwon",
     degree: "Ph.D.",
     date: "2010.03~2015.02",
-    photo: "src/uploads/peopleImg/11.jpg"
+    photo: "/peopleImg/11.jpg"
   },
   {
     id: 12,
     name: "Sammer Ud Din",
     degree: "Ph.D.",
     date: "2014.03~2018.02",
-    photo: "src/uploads/peopleImg/12.jpg"
+    photo: "/peopleImg/12.jpg"
   },
   {
     id: 13,
     name: "Yuna Noh",
     degree: "Ph.D.",
     date: "2012.09~2018.02",
-    photo: "src/uploads/peopleImg/13.jpg"
+    photo: "/peopleImg/13.jpg"
   },
   {
     id: 14,
     name: "Jungwoo Cho",
     degree: "Ph.D.",
     date: "2015.09~2020.02",
-    photo: "src/uploads/peopleImg/14.jpg"
+    photo: "/peopleImg/14.jpg"
   },
   {
     id: 15,
     name: "Jiseon Lee",
     degree: "Ph.D.",
     date: "2013.09~2022.08",
-    photo: "src/uploads/peopleImg/15.jpg"
+    photo: "/peopleImg/15.jpg"
   },
   {
     id: 16,
     name: "Yuyol Shin",
     degree: "Ph.D.",
     date: "2016.09~2022.08",
-    photo: "src/uploads/peopleImg/16.jpg"
+    photo: "/peopleImg/16.jpg"
   },
   {
     id: 17,
     name: "Soohwan Oh",
     degree: "Ph.D.",
     date: "2016.09~2023.02",
-    photo: "src/uploads/peopleImg/17.jpg"
+    photo: "/peopleImg/17.jpg"
   },
   {
     id: 18,
     name: "Namwoo Kim",
     degree: "Ph.D.",
     date: "2017.09~2023.08",
-    photo: "src/uploads/peopleImg/18.jpg"
+    photo: "/peopleImg/18.jpg"
   },
   {
     id: 19,
     name: "Seyun Kim",
     degree: "Ph.D.",
     date: "2016.03~2021.02",
-    photo: "src/uploads/peopleImg/19.jpg"
+    photo: "/peopleImg/19.jpg"
   },
    {
     id: 20,
     name: "Seyun Kim",
     degree: "Research Assistant Professor",
     date: "2021.03~2025.07",
-    photo: "src/uploads/peopleImg/20.jpg"
+    photo: "/peopleImg/20.jpg"
   },
   {
     id: 21,

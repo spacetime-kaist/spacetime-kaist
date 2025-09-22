@@ -4,7 +4,7 @@ const eventsData = [
     date: "June 16, 2025, KAIST",
     participants: "Professor Yoonjin Yoon, Professor Uichin Lee, students",
     keywords: "#CAUS #Monthly Seminar",
-    photos: ['src/uploads/eventsImg/unnamed(0).jpg', 'src/uploads/eventsImg/unnamed(1).jpg'],
+    photos: ['/eventsImg/unnamed(0).jpg', '/eventsImg/unnamed(1).jpg'],
   },
   {
     title: "INFORMS TSL Workshop",
