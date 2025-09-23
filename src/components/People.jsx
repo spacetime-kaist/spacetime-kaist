@@ -64,7 +64,7 @@ export default function People() {
         </section>
         
         <div className="container bg-white rounded-2xl shadow-md hover:shadow-lg transition p-6 flex flex-col  p-8 mb-12 lg:flex-row items-center gap-8 flex-1 text-center">
-          <img src={professorData.photo} alt={professorData.name} className="w-96 h-96 rounded-3xl object-cover border-4 border-blue-100" />
+          <img src={`${import.meta.env.VITE_PUBLIC_URL}/peopleImg/1.jpg`} alt={professorData.name} className="w-96 h-96 rounded-3xl object-cover border-4 border-blue-100" />
           <div className="flex-1 mt-4 lg:mt-0 lg:ml-6 text-left">
             <h1 className="text-4xl font-bold mb-2">{professorData.name}</h1>
             <p className="my-6 text-lg text-gray-600">{professorData.greeting}</p>
