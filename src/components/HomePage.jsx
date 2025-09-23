@@ -1,10 +1,10 @@
 import React from 'react';
 // Import components
-import events from '../uploads/eventsData';
+import events from '../uploads/eventsData2';
 import SeeMoreButton from '../ui/SeeMoreButton';
+import mainImg from '../assets/mainImg.jpg';
 
 // image and txt
-const mainImage = 'https://lh3.googleusercontent.com/sitesv/AICyYdYrsimxBVTyMJj15M-JjVvc0yv-4a1pRWLTYGaWBQRoGXF6-PMA5HgqGDDN_w32V-ysRDWdVCuWgZmbT0lp4M1DbxWMcm6F01Un1kRrMwdbTN94hNc8C_j_50bZlMtjwiregDAS2Hru_TBlKJONXe60qivJFqNqCqVp_tNHr5T0_wFH2ECzo4bJ0Yg=w16383'
 const EventsCard = (event) => (
   <figure className="rounded-xl overflow-hidden shadow hover:shadow-lg">
     <div className="h-40 bg-gradient-to-br from-gray-200 to-gray-100 flex items-center justify-center">
@@ -40,7 +40,7 @@ export default function HomePage() {
                 {/* <p className="mt-6 text-lg text-gray-600">Learn more about our research <a href="#" className='px-2 underline'>here</a>.</p> */}
 
                 <div className="mt-8 flex flex-wrap gap-3">
-                  <a href="#work" className="inline-flex items-center px-5 py-3 bg-black text-white rounded-md text-sm font-semibold">Explore work</a>
+                  <a href="#research" className="inline-flex items-center px-5 py-3 bg-black text-white rounded-md text-sm font-semibold">Explore work</a>
                   <a href="#contact" className="inline-flex items-center px-5 py-3 border border-gray-300 rounded-md text-sm">Contact us</a>
                 </div>
 
@@ -58,7 +58,7 @@ export default function HomePage() {
 
               <div>
                 <div className="w-full aspect-[4/3] bg-gradient-to-br from-white to-gray-100 rounded-2xl shadow-lg flex items-center justify-center">
-                  <div className="text-center text-gray-400"><img src={mainImage} alt="Main visual" className="w-full h-full object-cover rounded-2xl" /></div>
+                  <div className="text-center text-gray-400"><img src={mainImg} alt="Main visual" className="w-full h-full object-cover rounded-2xl" /></div>
                 </div>
               </div>
             </div>
@@ -66,7 +66,7 @@ export default function HomePage() {
         </section>
 
         {/* Research Section*/}
-        <section id="features" className="py-16 bg-white">
+        <section id="research" className="py-16 bg-white">
           <div className = "container">
             <h2 className="text-2xl font-bold">Research</h2>
             <p className="mt-2 text-gray-600 max-w-2xl">A concise enumeration of core subsystems and deliverables.</p>
@@ -86,7 +86,7 @@ export default function HomePage() {
             </div>
             {/* <a href="#work" className="inline-flex items-center mx-2 mt-5 px-8 py-2 bg-gray-800 text-white rounded-md text-sm font-semibold">See More <span><IoChevronForwardOutline /></span></a>
              */}
-            <SeeMoreButton linkto="/" />
+            <SeeMoreButton linkto="/research" />
           </div>
         </section>
 
@@ -99,7 +99,7 @@ export default function HomePage() {
               {events[1] && <EventsCard {...events[1]} />}
               {events[2] && <EventsCard {...events[2]} />}
             </div>
-            <SeeMoreButton linkto="/" />
+            <SeeMoreButton linkto="/events" />
           </div>
         </section>
           
