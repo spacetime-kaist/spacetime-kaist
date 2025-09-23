@@ -3,10 +3,8 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
-export default defineConfig(({mode})=>{
-  return {
-    plugins: [react(), tailwindcss()],
-    base: '/test/'
-  }
+export default defineConfig({
+  plugins: [react(), tailwindcss()],
+  base:`${import.meta.env.VITE_PUBLIC_URL}/`
 })
 

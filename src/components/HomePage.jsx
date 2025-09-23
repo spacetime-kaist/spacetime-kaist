@@ -2,9 +2,9 @@ import React from 'react';
 // Import components
 import events from '../uploads/eventsData2';
 import SeeMoreButton from '../ui/SeeMoreButton';
+import mainImg from '../assets/mainImg.png';
 
 // image and txt
-const mainImage = 'https://lh3.googleusercontent.com/sitesv/AICyYdYrsimxBVTyMJj15M-JjVvc0yv-4a1pRWLTYGaWBQRoGXF6-PMA5HgqGDDN_w32V-ysRDWdVCuWgZmbT0lp4M1DbxWMcm6F01Un1kRrMwdbTN94hNc8C_j_50bZlMtjwiregDAS2Hru_TBlKJONXe60qivJFqNqCqVp_tNHr5T0_wFH2ECzo4bJ0Yg=w16383'
 const EventsCard = (event) => (
   <figure className="rounded-xl overflow-hidden shadow hover:shadow-lg">
     <div className="h-40 bg-gradient-to-br from-gray-200 to-gray-100 flex items-center justify-center">
@@ -58,7 +58,7 @@ export default function HomePage() {
 
               <div>
                 <div className="w-full aspect-[4/3] bg-gradient-to-br from-white to-gray-100 rounded-2xl shadow-lg flex items-center justify-center">
-                  <div className="text-center text-gray-400"><img src={mainImage} alt="Main visual" className="w-full h-full object-cover rounded-2xl" /></div>
+                  <div className="text-center text-gray-400"><img src={mainImg} alt="Main visual" className="w-full h-full object-cover rounded-2xl" /></div>
                 </div>
               </div>
             </div>
