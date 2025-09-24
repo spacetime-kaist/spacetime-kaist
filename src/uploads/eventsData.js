@@ -11,12 +11,14 @@ const eventsData = [
     date: "May 19th-21st, 2025, GLAD Hotel (Yeouido)",
     participants: "Namwoo Kim (Postdoc Researcher), Sungmin Sohn (Ph.D. candidate), Minwoo Jeong (M.S. candidate)",
     keywords: "#INFORMS #TSL",
+    photos: ['/eventsImg/unnamed(2).jpg', '/eventsImg/unnamed(3).jpg'],
   },
   {
     title: "CAUS Monthly Meeting",
     date: "May 13, 2025, KAIST",
     participants: "Professor Yoonjin Yoon, Professor Ilchul Moon, Professor Taesik Lee, Professor Minjoon Seo, Professor Changhyun Kwon, Professor Dongman Lee, students",
     keywords: "#CAUS #Monthly Seminar",
+    photos: ['/eventsImg/unnamed(4).jpg', '/eventsImg/unnamed(5).jpg'],
   },
   {
     title: "Professor Amy Kim's Visit for CEE seminar",
@@ -33,30 +35,35 @@ Her work aims to support infrastructure and operational decision-making for clim
 - MS and PhD, University of California, Berkeley  
 - Professional experience in transportation consulting in California and BC
     `,
+  photos: ['/eventsImg/unnamed(6).jpg'],
   },
   {
     title: "Seoul AI Festa",
     date: "March 8~9, 2025, Dongdaemun Design Plaza (DDP)",
     participants: "Professor Yoonjin Yoon, Professor Carlo Ratti (Director of MIT Senseable City Lab), Professor Song Chong (Dean of KAIST Graduate School of AI), Mangi Kim (President of Seoul AI Foundation), Seyun Kim (Research Professor), Minwoo Jeong (M.S. candidate), Juneyoung Ro (M.S. candidate)",
     keywords: "#AI Festa",
+    photos: ['/eventsImg/unnamed(7).jpg', '/eventsImg/unnamed(8).jpg', '/eventsImg/unnamed(9).jpg', '/eventsImg/unnamed(10).jpg', '/eventsImg/unnamed(11).jpg'],
   },
   {
     title: "CAUS US Workshop",
     date: "January 13~14, 2025, Stanford University",
     participants: "Professors, leaders, students participating in CAUS",
     keywords: "#CAUS",
+    photos: ['/eventsImg/unnamed(12).jpg', '/eventsImg/unnamed(13).jpg', '/eventsImg/unnamed(14).jpg', '/eventsImg/unnamed(15).jpg', '/eventsImg/unnamed(16).jpg'],
   },
   {
     title: "Presentation at TRB Annual Meeting",
     date: "January 5~9, 2025, Washington D.C.",
     participants: "Seyun Kim (Research Professor), Sungmin Sohn (Ph.D. candidate), Donghyun Yoon (Ph.D. candidate), Minwoo Jeong (M.S. candidate)",
     keywords: "#TRB",
+    photos: ['/eventsImg/unnamed(17).jpg', '/eventsImg/unnamed(18).jpg', '/eventsImg/unnamed(19).jpg', '/eventsImg/unnamed(20).jpg', '/eventsImg/unnamed(21).jpg'],
   },
   {
     title: "CAUS Regular Meeting - Prof. Changhyun Kwon",
     date: "December 12, 2024, 12:00 pm KST",
     participants: "Prof. Changhyun Kwon, Prof. Yoonjin Yoon, students",
     keywords: "#CAUS",
+    photos: ['/eventsImg/unnamed(22).jpg'],
   },
   {
     title: "CAUS Regular Meeting - Prof. Minjoon Seo",
@@ -75,36 +82,42 @@ Her work aims to support infrastructure and operational decision-making for clim
     date: "November 15, 2024, 10:30 am KST",
     participants: "Prof. Yoonjin Yoon, Prof. Dongman Lee, Prof. Jinkyoo Park, Prof. Changhyun Kwon, Prof. Taesik Lee, Dr. Seonghoon Kim (CTO at Motov), students",
     keywords: "#CAUS",
+    photos: ['/eventsImg/unnamed(23).jpg', '/eventsImg/unnamed(24).jpg', '/eventsImg/unnamed(25).jpg'],
   },
   {
     title: "K-DS Hackathon: 2nd Prize!",
     date: "November 11-13, 2024, Seoul National University Samsung Convention Center",
     participants: "Donghyun Yoon (Ph.D. candidate), Sungmin Sohn (Ph.D. candidate), Juneyoung Ro (M.S. candidate), Seungro Lee (M.S. candidate)",
     keywords: "#Hackathon",
+    photos: ['/eventsImg/unnamed(26).jpg', '/eventsImg/unnamed(27).jpg', '/eventsImg/unnamed(28).jpg'],
   },
   {
     title: "한국경영과학회 추계학술대회",
     date: "November 8, 2024, 16:00 pm KST, Korea Aerospace University",
     participants: "Prof. Yoonjin Yoon, Seyun Kim (Research Professor), Namwoo Kim (PostDoc Researcher), Sungmin Sohn (Ph.D. candidate), Donghyun Yoon (Ph.D. candidate)",
     keywords: "#한국경영과학회",
+    photos: ['/eventsImg/unnamed(29).jpg', '/eventsImg/unnamed(30).jpg', '/eventsImg/unnamed(31).jpg', '/eventsImg/unnamed(32).jpg', '/eventsImg/unnamed(33).jpg'],
   },
   {
     title: "CAUS Regular Meeting - Prof. Jinkyoo Park",
     date: "November 4, 2024, 14:00 pm KST",
     participants: "Prof. Changhyun Kwon, Prof. Seyun Kim, students",
     keywords: "#CAUS",
+    photos: ['/eventsImg/unnamed(34).jpg'],
   },
   {
     title: "CAUS Regular Meeting - Prof. Yoonjin Yoon",
     date: "October 29, 2024, 18:00 pm KST",
     participants: "Prof. Yoonjin Yoon, Prof. Changhyun Kwon, students",
     keywords: "#CAUS",
+    photos: ['/eventsImg/unnamed(35).jpg'],
   },
   {
     title: "ICTC Workshop on ETRI Human Understanding AI Paper Challenge (IWETRIAI)",
     date: "October 16, 2024, 13:00 pm KST, Ramada Plaza Hotel, Jeju Island",
     participants: "Juneyoung Ro (M.S. Candidate)",
     keywords: "#ICTC",
+    photos: ['/eventsImg/unnamed(36).jpg', '/eventsImg/unnamed(37).jpg', '/eventsImg/unnamed(38).jpg', '/eventsImg/unnamed(39).jpg'],
   },
   {
     title: "CAUS Regular Meeting - Prof. Dongman Lee",
@@ -117,29 +130,34 @@ Her work aims to support infrastructure and operational decision-making for clim
     date: "September 25, 2024, 15:00 pm KST",
     participants: "Prof. Yoonjin Yoon, Prof. Changhyun Kwon, Prof. Seyun Kim, Prof. Dongman Lee, Prof. Minjoon Seo",
     keywords: "#CAUS",
+    photos: ['/eventsImg/unnamed(40).jpg'],
   },
   {
     title: "CAUS Regular Meeting - Prof. Taesik Lee",
     date: "September 11, 2024, 14:00 pm KST",
     participants: "Prof. Yoonjin Yoon, Prof. Taesik Lee, students",
     keywords: "#CAUS",
+    photos: ['/eventsImg/unnamed(41).jpg'],
   },
   {
     title: "고속도로 비전 캠퍼스 논문 공모전 장려상 시상식",
     date: "September 6, 2024, 10:00 am KST, 한국도로공사 (Korea Expressway Corporation)",
     participants: "Donghyun Yoon (Ph.D. candidate), Minwoo Jeong (M.S. candidate)",
     keywords: "#한국도로공사",
+    photos: ['/eventsImg/unnamed(42).jpg', '/eventsImg/unnamed(43).jpg'],
   },
   {
     title: "CAUS Internal Kick-Off Meeting",
     date: "September 4, 2024, 13:00 pm KST",
     participants: "Prof. Yoonjin Yoon, Prof. Changhyun Kwon, Prof. Taesik Lee, Prof. Dongman Lee, Prof. Jinkyoo Park, Prof. Minjoon Seo",
     keywords: "#CAUS",
+    photos: ['/eventsImg/unnamed(44).jpg', '/eventsImg/unnamed(45).jpg'],
   },
   {
     title: "CAUS MoU Signing Ceremony",
     date: "August 22, 2024, 14:30 pm KST",
     keywords: "#CAUS",
+    photos: ['/eventsImg/unnamed(46).jpg', '/eventsImg/unnamed(47).jpg', '/eventsImg/unnamed(48).jpg'],
   },
   {
     title: "CAUS Regular Meeting - Prof. Changhyun Kwon",
@@ -170,12 +188,14 @@ Her work aims to support infrastructure and operational decision-making for clim
     date: "June 21, 2024, 09:00 am KST",
     participants: "Prof. Yoonjin Yoon, Prof. Changhyun Kwon, GS, students",
     keywords: "#CAUS",
+    photos: ['/eventsImg/unnamed(49).jpg'],
   },
   {
     title: "Study group meeting with professors",
     date: "April 22, 2024, 19:00 pm KST",
     participants: "Prof. Jinkyoo Park, Prof. Minjoon Seo, Speaker: Yuyol Shin (Ph.D, Postdoctoral Researcher, KAIST)",
     keywords: "#traffic forecasting",
+    photos: ['/eventsImg/unnamed(50).jpg'],
   },
   {
     title: "Professor Kincho Law's Visit",
@@ -185,6 +205,7 @@ Her work aims to support infrastructure and operational decision-making for clim
     desc: `
 **Talk:** Cyber Physical System for Civil Infrastructures
     `,
+    photos: ['/eventsImg/unnamed(51).jpg', '/eventsImg/unnamed(52).jpg', '/eventsImg/unnamed(53).jpg', '/eventsImg/unnamed(54).jpg'],
   },
   {
     title: "Urban@KAIST Urban-X Seminar",
@@ -192,6 +213,7 @@ Her work aims to support infrastructure and operational decision-making for clim
     participants: "Speaker: Prof. Dongman Lee, Provost and Executive Vice President, KAIST; Professor, School of Computing, KAIST",
     keywords: "#Human flows #Urban space",
     desc: "Understanding Urban State Changes via Human Flow Analysis",
+    photos: ['/eventsImg/unnamed(55).jpg'],
   },
   {
     title: "Urban@KAIST Urban-X Seminar",
@@ -213,6 +235,7 @@ Her work aims to support infrastructure and operational decision-making for clim
     participants: "Speaker: Dr. Boyeong Hong, Associate Research Scholar, NYU Marron Institute of Urban Management; Adjunct Professor, Columbia University",
     keywords: "#mobility #climatechange #health #policy #inequality",
     desc: "Responsible and Responsive City - The Next Phase of Urban Planning",
+    photos: ['/eventsImg/unnamed(56).jpg'],
   },
   {
     title: "Urban@KAIST Urban-X Seminar",
