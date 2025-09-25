@@ -1,10 +1,15 @@
 import React from "react";
+
 import internationalData from "../../uploads/conferenceData/internationalData";
 import nationalData from "../../uploads/conferenceData/nationalData";
 
 import ScrolltoAnchor from "../../utility/ScrolltoAnchor";
 import { Link } from "react-router-dom";
 
+
+export default function Conference() {
+
+  
 const ConCard = ( item ) => (   
 <div key={item.id} className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition">
             <h2 className="text-xl font-semibold">{item.title}</h2>
@@ -22,6 +27,7 @@ const ConCard = ( item ) => (
             )}
 </div>
 )
+
 
 const SectionLink = () => (
   // For floating link container
@@ -47,6 +53,7 @@ export default function Conference() {
       </section>
       
       <section id="national" className="mt-16">
+
        <SectionLink />
       <h2 className="sectiontitle text-2xl font-bold mb-4">National Conference Presentation</h2>
       <div className="space-y-6">

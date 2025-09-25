@@ -14,12 +14,19 @@ const EventCard = ( event ) => (
     </div>
 
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {event.youtube && 
+        <iframe
+          src={event.youtube}
+          alt={`${event.title} youtube`}
+          className="w-120 h-70 rounded-md"
+        />
+      }
       {event.photos && event.photos.map((photo, idx) => (
         <img
           key={idx}
           src={`${import.meta.env.VITE_PUBLIC_URL}${photo}`}
           alt={`${event.title} photo ${idx + 1}`}
-          className="w-full h-48 object-cover rounded-md"
+          className="w-full rounded-md"
         />
       ))}
     </div>
