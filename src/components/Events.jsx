@@ -34,7 +34,7 @@ const EventCard = ( event ) => (
 );
 
 const EventGridCard = ( event ) => (
-  <article className="p-6 bg-white rounded-lg border border-gray-200 shadow-sm mb-8">
+  <article id={event.id} className="p-6 bg-white rounded-lg border border-gray-200 shadow-sm mb-8">
     <h2 className="text-2xl font-bold">{event.title}</h2>
     <p className="text-sm text-gray-500 mb-2">{event.date}</p>
     <p className="text-sm text-sky-600 mb-1"><span className='font-bold'>Participants: </span>{event.participants}</p>
@@ -112,8 +112,8 @@ export default function EventsPage() {
  
       <main className="py-1">
         <div className="container">
-          {eventsData.map((event, idx) => (
-            <EventGridCard key={idx} {...event} />
+          {eventsData.map((event) => (
+            <EventGridCard key={event.id} {...event} />
           ))}
         </div>
       </main>
