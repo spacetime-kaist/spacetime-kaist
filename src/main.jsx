@@ -6,7 +6,7 @@ import ErrorBoundary from './ErrorBoundary.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <ErrorBoundary fallback={<h1>Something went wrong.</h1>}>
+    <ErrorBoundary fallback={<h1>ErrorErrorError Something went wrong.</h1>}>
       <App />
     </ErrorBoundary>
   </StrictMode>,
