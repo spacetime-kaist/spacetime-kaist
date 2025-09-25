@@ -18,7 +18,7 @@ const EventCard = ( event ) => (
         <iframe
           src={event.youtube}
           alt={`${event.title} youtube`}
-          className="w-full h-full object-cover rounded-md"
+          className="w-120 h-70 rounded-md"
         />
       }
       {event.photos && event.photos.map((photo, idx) => (
@@ -26,7 +26,7 @@ const EventCard = ( event ) => (
           key={idx}
           src={`${import.meta.env.VITE_PUBLIC_URL}${photo}`}
           alt={`${event.title} photo ${idx + 1}`}
-          className="w-full h-full object-cover rounded-md"
+          className="w-full rounded-md"
         />
       ))}
     </div>
