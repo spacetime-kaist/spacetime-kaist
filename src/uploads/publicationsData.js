@@ -1,5 +1,4 @@
 const publicationsData = [
-export const publicationsData = [
   {
     id: 1,
     title: "Urban drone operations: A data-centric and comprehensive assessment of urban airspace with a Pareto-based approach",
