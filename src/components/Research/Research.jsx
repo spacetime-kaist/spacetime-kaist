@@ -3,13 +3,13 @@ import researchData from '../../uploads/researchData'; // Import the data array 
 import { Link } from 'react-router-dom';
 
 
-const ResearchCard = ({ title, desc, link, image }) => (
-  <Link to={link} className="no-underline">
+const ResearchCard = ({ id,title, desc, link, thumbnail }) => (
+  <Link key={id} to={link} className="no-underline">
   <article className="p-5 bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition">
-    <img src={image} alt={title} className="w-full h-48 object-cover rounded-md mb-4" />
+    <img src={`${import.meta.env.VITE_PUBLIC_URL}/${thumbnail}`} alt={title} className="w-full h-92 object-cover rounded-md mb-4" />
     <h3 className="font-semibold text-lg">{title}</h3>
     <p className="mt-2 text-sm text-gray-600">{desc}</p>
-    <a href={link} className="mt-4 inline-block text-sm font-medium text-blue-600 hover:underline">Read more →</a>
+    <div className="mt-4 inline-block text-sm font-medium text-blue-600 hover:underline">Read more →</div>
   </article>
   </Link>
 );
