@@ -78,6 +78,7 @@ function Navbar() {
                     <div className="absolute right-0 mt-2 w-50 p-2 flex flex-col bg-white border border-gray-200 rounded shadow-md z-50">
                         <Link to="/" className={menuTextStyle}>Home</Link>
                         {/* Publications - Mobile click dropdown */}
+                        <div>
                         <div className="relative md:hidden flex items-center">
                             {isPublicationsOpen ? (
                               <IoIosArrowDown className="inline-block text-md"/>
@@ -90,11 +91,12 @@ function Navbar() {
                             >
                               Publications
                             </button>
+                            </div>
                             {isPublicationsOpen && (
                                 <>
-                                <div className='border-t border-gray-200'></div>
-                                <Link to="/publications" className="block pl-7 py-2 text-gray-600 hover:bg-gray-100">Journal Publications</Link>
-                                <Link to="/conference" className="block pl-7 py-2 text-gray-600 hover:bg-gray-100">Conference Papers</Link>
+                                <div className='border-t border-slate-300'></div>
+                                <Link to="/publications" className="block pl-7 py-2 text-gray-500 hover:bg-gray-100">Journal Publications</Link>
+                                <Link to="/conference" className="block pl-7 py-2 text-gray-500 hover:bg-gray-100">Conference Papers</Link>
                               </>
                             )}
                         </div>
