@@ -1,7 +1,7 @@
 import React from 'react';
 // Import components
 import events from '../uploads/eventsData2';
-import SeeMoreButton from '../ui/SeeMoreButton';
+import SeeMoreButton from './ui/SeeMoreButton';
 import mainImg from '../assets/mainImg.jpg';
 
 // image and txt

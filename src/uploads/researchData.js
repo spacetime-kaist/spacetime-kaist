@@ -19,7 +19,7 @@ const researchData = [
   {
     id: 2,
     title: 'Urban Air Mobility',
-    shortTitle: 'UAM',
+    navTitle: 'UAM',
     desc: 'As our first step toward UAM demand forecasting, we considered the case of using existing helipads. We plan to expand our scope in future work to UAM routing, fleet rebalancing and scheduling.',
     thumbnail: '/researchImg/2.png',
     images: ['/researchImg/1-1.jpg'],

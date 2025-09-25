@@ -10,11 +10,11 @@ export default function Publications() {
         {publicationsData.map((pub) => (
           <div key={pub.id} className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition">
             <h2 className="text-xl font-semibold">{pub.title}</h2>
-            <p className="text-gray-600">{pub.authors}</p>
             <p className="text-gray-500 italic">{pub.journal}</p>
-            {pub.link && (
+            <p className="text-gray-600 text-lg ">{pub.authors} ({pub.date})</p>
+            {pub.href && (
               <a
-                href={pub.link}
+                href={pub.href}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-600 hover:underline mt-2 inline-block"
