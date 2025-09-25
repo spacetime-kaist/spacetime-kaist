@@ -15,7 +15,7 @@ function Navbar() {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [isPublicationsOpen, setPublicationsOpen] = useState(false);
   return (
-      <div className='w-full py-2 bg-white/80 backdrop-blur-sm shadow-sm'>
+      <div className='fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md shadow-sm z-80'>
         <div className='container'>
           <div className='flex items-center justify-between'>
             <Link to="/" className='no-tracking-tight basis-1/8'>
