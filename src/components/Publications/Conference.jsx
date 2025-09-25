@@ -37,7 +37,6 @@ const SectionLink = () => (
       <Link to="/conference#national" className="inline-flex items-center px-5 py-3 border border-gray-300 rounded-md text-sm">National Conference Presentation</Link>
   </div>
 )
-export default function Conference() {
 
   return (
     <div className="p-8 bg-gray-50 min-h-screen">
