@@ -1,6 +1,10 @@
 import React from "react";
-import publicationsData from "../../uploads/publicationsData";
+import internationalData ,{nationalData} from "../../uploads/conferenceData";
 
+
+export default function Conference() {
+
+  
 const ConCard = ( item ) => (   
 <div key={item.id} className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition">
             <h2 className="text-xl font-semibold">{item.title}</h2>
@@ -18,8 +22,6 @@ const ConCard = ( item ) => (
             )}
 </div>
 )
-
-export default function Conference() {
   return (
     <div className="p-8 bg-gray-50 min-h-screen">
       <h1 className="pagetitle">Conference</h1>
@@ -28,15 +30,17 @@ export default function Conference() {
         <a href="#national" className="inline-flex items-center px-5 py-3 border border-gray-300 rounded-md text-sm">National Conference Presentation</a>
     </div>
     <section id="international" className="mt-16">
+      <div className="sectiontitle">International Conference</div>
       <div className="space-y-6">
-        {publicationsData.map((item) => (
+        {internationalData.map((item) => (
           <ConCard key={item.id} {...item} />
         ))}
       </div>
       </section>
       <section id="national" className="mt-16">
+        <div className="sectiontitle">National Conference Presentation</div>
       <div className="space-y-6">
-        {publicationsData.map((item) => (
+        {nationalData.map((item) => (
             <ConCard key={item.id} {...item} />
         ))}
       </div>
