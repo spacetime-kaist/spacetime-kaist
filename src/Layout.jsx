@@ -7,7 +7,7 @@ import ScrolltoUp from './utility/ScrolltoUp';
 function Layout() {
     return (
 <div id='top' className=" flex flex-col justify-center items-center overflow-hidden">
-<div className="w-screen min-h-[100vh] min-w-[640px] bg-welcomeHome lg:bg-cover bg-contain bg-no-repeat">
+<div className="w-screen min-h-[100vh] min-w-[320px] bg-welcomeHome lg:bg-cover bg-contain bg-no-repeat">
     <Navbar />
     <ScrolltoUp />
     <div className="min-h-screen bg-gray-50 text-gray-900">
