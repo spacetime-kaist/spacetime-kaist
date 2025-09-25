@@ -1,4 +1,6 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Routes, Route, HashRouter } from 'react-router-dom'
+
+// Pages
 import Layout from './Layout'
 import HomePage from './components/HomePage'
 import Publications from './components/Publications/Publications'
@@ -8,9 +10,16 @@ import Projects from './components/Projects/Projects'
 import Events from './components/Events'
 import Conference from './components/Publications/Conference'
 
+// Utility
+import ScrolltoAnchor from './utility/ScrolltoAnchor'
+
+
+
+
 function App() {
   return (
-    <BrowserRouter basename={`${import.meta.env.VITE_PUBLIC_URL}`}>
+    <HashRouter>
+      <ScrolltoAnchor />
       <Routes>
         <Route path="/" element={<Layout />} >
         <Route index element={<HomePage />} />
@@ -22,7 +31,7 @@ function App() {
         <Route path='/events' element={<Events />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
