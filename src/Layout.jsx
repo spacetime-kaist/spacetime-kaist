@@ -1,14 +1,15 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 
-// Styled components
-import Navbar from './components/Navbar';
+import Navbar from './utility/Navbar';
+import ScrolltoUp from './utility/ScrolltoUp';
 
 function Layout() {
     return (
-<div className="flex flex-col justify-center items-center overflow-hidden">
+<div id='top' className=" flex flex-col justify-center items-center overflow-hidden">
 <div className={` w-screen min-h-[100vh] bg-welcomeHome lg:bg-cover bg-contain bg-no-repeat`}>
     <Navbar />
+    <ScrolltoUp />
     <div className="min-h-screen bg-gray-50 text-gray-900">
     <main>
     <section className="pt-20 pb-16">

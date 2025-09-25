@@ -15,7 +15,7 @@ function Navbar() {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [isPublicationsOpen, setPublicationsOpen] = useState(false);
   return (
-      <div className='w-full py-2 bg-white/80 backdrop-blur-sm shadow-sm'>
+      <div className='fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md shadow-sm z-80'>
         <div className='container'>
           <div className='flex items-center justify-between'>
             <Link to="/" className='no-tracking-tight basis-1/8'>
@@ -51,7 +51,7 @@ function Navbar() {
                     <Link to="/research" className={menuTextStyle}>Research &#x25BC;</Link>
                     <div className="absolute left-0 top-full w-60 bg-white border border-gray-200 rounded shadow-md z-50 hidden group-hover:block">
                       {researchData.map((item) => (
-                        <Link key={item.id} to={`/research#${item.navTitle}`} className="block px-4 py-2 text-gray-500 hover:bg-gray-100">
+                        <Link key={item.id} to={`/research#${item.menuTitle}`} className="block px-4 py-2 text-gray-500 hover:bg-gray-100">
                           {item.title}
                         </Link>
                       ))}
