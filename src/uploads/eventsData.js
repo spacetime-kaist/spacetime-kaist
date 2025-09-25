@@ -26,16 +26,14 @@ const eventsData = [
     participants: "Professor Yoonjin Yoon, Professor Amy Kim, CEE students",
     keywords: "#CEE Seminar",
     desc: `
-Amy M. Kim is a Professor of Civil Engineering at the University of British Columbia in Vancouver, on the traditional territories of the Musqueam people.  
-With the members of her lab, **UBC Multimodal Mobility Systems**, she investigates how long-distance transportation systems perform in connecting people across large geographies, particularly amid disruptions caused by natural hazards and other climate change-induced events.  
-
-Her work aims to support infrastructure and operational decision-making for climate change adaptation and emergency planning, and to train values-driven, community-minded practitioners and researchers.  
-
-- BASc in Civil Engineering, University of Waterloo  
-- MS and PhD, University of California, Berkeley  
-- Professional experience in transportation consulting in California and BC
-    `,
-  photos: ['/eventsImg/unnamed(6).jpg'],
+    Amy M. Kim is a Professor of Civil Engineering at the University of British Columbia in Vancouver, on the traditional territories of the Musqueam people.  
+    With the members of her lab, **UBC Multimodal Mobility Systems**, she investigates how long-distance transportation systems perform in connecting people across large geographies, particularly amid disruptions 
+    caused by natural hazards and other climate change-induced events.  
+    Her work aims to support infrastructure and operational decision-making for climate change adaptation and emergency planning, and to train values-driven, community-minded practitioners and researchers.  
+    - BASc in Civil Engineering, University of Waterloo  
+    - MS and PhD, University of California, Berkeley  
+    - Professional experience in transportation consulting in California and BC`,
+    photos: ['/eventsImg/unnamed(6).png'],
   },
   {
     title: "Seoul AI Festa",
@@ -82,7 +80,7 @@ Her work aims to support infrastructure and operational decision-making for clim
     date: "November 15, 2024, 10:30 am KST",
     participants: "Prof. Yoonjin Yoon, Prof. Dongman Lee, Prof. Jinkyoo Park, Prof. Changhyun Kwon, Prof. Taesik Lee, Dr. Seonghoon Kim (CTO at Motov), students",
     keywords: "#CAUS",
-    photos: ['/eventsImg/unnamed(23).jpg', '/eventsImg/unnamed(24).jpg', '/eventsImg/unnamed(25).jpg'],
+    photos: ['/eventsImg/unnamed(23).png', '/eventsImg/unnamed(24).png', '/eventsImg/unnamed(25).jpg'],
   },
   {
     title: "K-DS Hackathon: 2nd Prize!",
@@ -203,8 +201,7 @@ Her work aims to support infrastructure and operational decision-making for clim
     participants: "Speaker: Prof. Kincho Law, Professor of Civil and Environmental Engineering, Stanford University",
     keywords: "#civil infrastructures",
     desc: `
-**Talk:** Cyber Physical System for Civil Infrastructures
-    `,
+    **Talk:** Cyber Physical System for Civil Infrastructures`,
     photos: ['/eventsImg/unnamed(51).jpg', '/eventsImg/unnamed(52).jpg', '/eventsImg/unnamed(53).jpg', '/eventsImg/unnamed(54).jpg'],
   },
   {
@@ -213,7 +210,7 @@ Her work aims to support infrastructure and operational decision-making for clim
     participants: "Speaker: Prof. Dongman Lee, Provost and Executive Vice President, KAIST; Professor, School of Computing, KAIST",
     keywords: "#Human flows #Urban space",
     desc: "Understanding Urban State Changes via Human Flow Analysis",
-    photos: ['/eventsImg/unnamed(55).jpg'],
+    photos: ['/eventsImg/unnamed(55).png'],
   },
   {
     title: "Urban@KAIST Urban-X Seminar",
@@ -221,6 +218,7 @@ Her work aims to support infrastructure and operational decision-making for clim
     participants: "Speaker: Prof. Daniel Vignon, Assistant Professor, Civil and Urban Engineering, NYU",
     keywords: "#mobility #policy #economics",
     desc: "Safety, Liability, and Insurance Markets in the Age of Automated Driving",
+    youtube:"https://www.youtube.com/embed/D18TnNnS3J0?si=UrcX5zxZD-tLeENU"
   },
   {
     title: "Urban@KAIST Urban-X Seminar",
@@ -228,6 +226,7 @@ Her work aims to support infrastructure and operational decision-making for clim
     participants: "Speaker: Prof. Lisa Lim, Assistant Professor, Civil and Environmental Engineering, KAIST",
     keywords: "#design #health",
     desc: "Improving Health through Design of Cities and Buildings",
+    youtube:"https://www.youtube.com/embed/kHNgVpuIa7A?si=NUBGw3hZEnLuhkyY"
   },
   {
     title: "Urban@KAIST Urban-X Seminar",
@@ -235,7 +234,7 @@ Her work aims to support infrastructure and operational decision-making for clim
     participants: "Speaker: Dr. Boyeong Hong, Associate Research Scholar, NYU Marron Institute of Urban Management; Adjunct Professor, Columbia University",
     keywords: "#mobility #climatechange #health #policy #inequality",
     desc: "Responsible and Responsive City - The Next Phase of Urban Planning",
-    photos: ['/eventsImg/unnamed(56).jpg'],
+    photos: ['/eventsImg/unnamed(56).png'],
   },
   {
     title: "Urban@KAIST Urban-X Seminar",
@@ -243,6 +242,7 @@ Her work aims to support infrastructure and operational decision-making for clim
     participants: "Speaker: Prof. Jihee Kim, Associate Professor, School of Business and Technology Management, KAIST",
     keywords: "#economic development",
     desc: "A Human-machine Collaborative Approach Measures Economic Development Using Satellite Imagery",
+    youtube:"https://www.youtube.com/embed/CZH92bvJwcc?si=S_MLoFMdZHeAwd1A"
   },
   // [... continue adding remaining events in same format ...]
 ];
