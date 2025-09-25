@@ -1,20 +1,69 @@
 import React from 'react';
 // Import components
-import events from '../uploads/eventsData2';
+import eventsData from '../uploads/eventsData';
 import SeeMoreButton from './ui/SeeMoreButton';
 import mainImg from '../assets/mainImg.jpg';
 
 // image and txt
 const EventsCard = (event) => (
-  <figure className="rounded-xl overflow-hidden shadow hover:shadow-lg">
-    <div className="h-40 bg-gradient-to-br from-gray-200 to-gray-100 flex items-center justify-center">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+  <figure className=" rounded-xl shadow hover:shadow-lg">
+    <div className="h-40 m-5 overflow-hidden bg-gradient-to-br from-gray-200 to-gray-100 flex items-center justify-center">
+      <div className="grid auto-cols-max grid-flow-col gap-4">
         {event.photos.map((photo, idx) => (
           <img
             key={idx}
-            src={photo}
+            src={`${import.meta.env.VITE_PUBLIC_URL}/${photo}`}
             alt={`${event.title} photo ${idx + 1}`}
             className="w-full h-48 object-cover rounded-md"
+          />
+        ))}
+      </div>
+    </div>
+    <figcaption className="p-4 bg-white">
+      <div className="text-lg font-semibold">{event.title}</div>
+      <div className="text-sm text-gray-500 mt-1">{event.date}</div>
+      <div className="text-sm text-blue-500 mt-1">{event.keywords}</div>
+    </figcaption>
+  </figure>
+);
+
+const EventsPlayfulCard = (event) => (
+  <figure className=" rounded-xl shadow hover:shadow-lg">
+    <div className="h-40 m-5 overflow-hidden bg-gradient-to-br from-gray-200 to-gray-100 flex items-center justify-center">
+      <div className="grid auto-cols-max grid-flow-col gap-4">
+        {event.photos.map((photo, idx) => (
+          <img
+            key={idx}
+            src={`${import.meta.env.VITE_PUBLIC_URL}/${photo}`}
+            alt={`${event.title} photo ${idx + 1}`}
+            className={`absolute top-0 left-0 w-40 h-40 object-cover rounded-lg shadow-lg
+            ${idx === 0 ? "rotate-[-6deg]" : ""}
+            ${idx === 1 ? "left-12 top-8 rotate-[5deg]" : ""}
+            ${idx === 2 ? "left-24 top-16 rotate-[-3deg]" : `left-0 bottom-${0+ idx*8} rotate-[${idx}deg]`}
+          `}
+          />
+        ))}
+      </div>
+    </div>
+    <figcaption className="p-4 bg-white">
+      <div className="text-lg font-semibold">{event.title}</div>
+      <div className="text-sm text-gray-500 mt-1">{event.date}</div>
+      <div className="text-sm text-blue-500 mt-1">{event.keywords}</div>
+    </figcaption>
+  </figure>
+);
+
+const EventsGridCard = (event) => (
+  <figure className=" rounded-xl shadow hover:shadow-lg">
+    <div className="h-40 m-5 overflow-hidden bg-gradient-to-br from-gray-200 to-gray-100 flex items-center justify-center">
+      <div className="grid auto-cols-max grid-flow-col gap-4">
+        <img src={`${import.meta.env.VITE_PUBLIC_URL}/${event.photos[0]}`} className="col-span-2 row-span-2 object-cover rounded-lg" />
+        {event.photos.slice(1).map((photo, idx) => (
+          <img
+            key={idx}
+            src={`${import.meta.env.VITE_PUBLIC_URL}/${photo}`}
+            alt={`${event.title} photo ${idx + 1}`}
+            className="object-cover rounded-lg"
           />
         ))}
       </div>
@@ -95,9 +144,9 @@ export default function HomePage() {
           <div className="container">
             <h2 className="text-2xl font-bold">Events</h2>
             <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-              {events[0] && <EventsCard {...events[0]} />}
-              {events[1] && <EventsCard {...events[1]} />}
-              {events[2] && <EventsCard {...events[2]} />}
+              {eventsData.slice(0, 3).map((event, idx) => (
+                <EventsCard key={idx} {...event} />
+              ))}
             </div>
             <SeeMoreButton linkto="/events" />
           </div>

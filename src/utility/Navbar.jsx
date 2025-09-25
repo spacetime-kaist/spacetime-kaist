@@ -99,7 +99,7 @@ function Navbar() {
                             )}
                         </div>
                       <Link to="/people" className={menuTextStyle}>People</Link>
-                      
+                      <Link to="/research" className={menuTextStyle}>Research</Link>
                       {/* Research - Desktop hover dropdown */}
                         {/* <div className="relative group hidden md:block ">
                           <Link to="/research" className={menuTextStyle}>Research</Link>
