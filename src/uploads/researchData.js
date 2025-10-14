@@ -102,8 +102,24 @@ const researchData = [
     detail: '-',
     period: '-',
     thumbnail: '/researchImg/7.png',
-    images: ['-'],
-    link: '-'
+    research:[
+      {
+        title:'Inferring driver workload with individualization using physiological data',
+        date: '',
+        desc: 'The ability to measure and detect driver’s workload has been an important research topic in automotive research domain, and started to attract greater interest in recent years in relation to the emerging vehicle technology such as autonomous driving. Our study incorporates the individual difference to characterize the workload response on personal basis. Extensive pre-processing of electroencephalogram (EEG) and electrocardiogram (ECG) signals were carried out to generate features for personalization. The results showed that human workload response is far from homogeneity, nor the driving environment is a sole determinant.',
+        list:[],
+        images: ['/researchImg/7-1.jpg'],
+      },
+      {
+        title:'Characterizing driver stress using physiological and operational data',
+        date: '',
+        desc: 'From 53 km Electric vehicle driving experiment of 40 subjects, physiological data including electroencephalogram (EEG) and eye-gazing were obtained along with vehicle operational data such as state of charge, altitude, and speed. The dataset was rich in information, but individual difference and nonlinear patterns made it extremely difficult to draw meaningful insights. As a solution, an information-theoretic framework is proposed to evaluate mutual information between physiological and operational data as well as the entropy of physiological data itself.
+
+              The result shows two groups of subjects, one not showing much evidence of stress and the other exhibiting sufficient stress. Among the subjects who showed sufficient driving, 9 out of the top 10 high EEG-entropy drivers were female, one driver showed a strong pattern of range anxiety, and several showed patterns of uphill climbing anxiety.',
+        list:[],
+        images: ['/researchImg/7-2.jpg'],
+      }
+    ]
   },
   {
     id: 'traffic-safety',
@@ -114,8 +130,21 @@ const researchData = [
     detail: '-',
     period: '-',
     thumbnail: '/researchImg/8.png',
-    images: ['-'],
-    link: '-'
+    research:[
+      {
+        title:'Elderly Pedestrian Safety',
+        date: '',
+        desc: '​Changes in the physical and mental abilities of elderly road users have led to an important question of how to define elderly. With an 8-year collision data set in Seoul, this study investigated the commonality and diversity of pedestrian injuries among the elderly by introducing an additional cutoff age of 75. By employing single and interaction binary logit models, common risk factors were identified for both elderly groups, as well as those that are particularly hazardous to the older-old. With nearly every country experiencing growth in the elderly population, our study strongly suggests that the conventional definition of a single elderly group is no longer relevant and the variety among elderly pedestrians needs to be considered in traffic safety policy.',
+        list:[],
+        images: ['/researchImg/8-1.jpg'],
+      },
+      {
+        title:'Elderly driver injury severity by seat positions and seat-belt use',
+        date: '',
+        desc: 'Aging has long been regarded as one of the most critical factors affecting crash injury outcomes. In this study, the confounding effect of occupant age in a vehicle in terms of seat position and seatbelt use was investigated. A multinomial logit framework was adopted to predict two-level injury severity using collision data between 2008 and 2015. The degree of injury severity of elderly occupants was reduced the most with the use of a seatbelt, demonstrating the importance of using seat restraints. The sharp increase in the risk of injury of the older-old group suggests that the age standard of 65 years as the elderly group with regard to traffic safety may require reconsideration due to the growing number of elderly vehicle users on the road.',
+        list:[],
+      }
+    ]
   },
   {
     id: 'aviation',
@@ -126,8 +155,64 @@ const researchData = [
     detail: '-',
     period: '-',
     thumbnail: '/researchImg/9.png',
-    images: ['-'],
-    link: '-'
+    research:[
+      {
+        title:'Air Traffic Management Master Plan - NARAE (National ATM Renovation & Enhancement)',
+        date: '',
+        desc: `2012 marks the 40th anniversary for the Republic of Korea(ROK)’s first trans-pacific flight. Over the past decades, ROK has seen a tremendous growth in air navigation sector fueled by robust economic growth, along with a demonstrated operational capability to handle increasing demand.
+
+              ROK has been actively investing in modernizing of air navigation system, including CNS/ATM, aviation technology, and so on. In 2011, ROK initiated on a transition to the future ATM system and is establishing future ATM plan called NARAE, National ATM Renovation And Enhancement, which means the ‘wing’ in Korean.
+
+              ROK subsequently commissioned the working group in November 2011 as a group of researchers from academia and civil aviation organizations to prepare the draft of NARAE for the future ATM system. True lab developed the ROK’s ATM master plan as below.`,
+        images: ['/researchImg/9-1.jpg'],
+        list:[],
+      },
+      {
+        title:'Autonomous Logistics',
+        date: '',
+        desc: `Development of Autonomous Mobile Agent System in Complex Warehouse
+      
+              Unlike vehicles with men aboard, autonomous vehicles require algorithms for path planning, static obstacle avoidance, dynamic obstacle avoidance, and many more. Especially, algorithms need to be considered for co-working with human workers to easily adapt the system in existing warehouses with lower setup cost.
+
+              Therefore TRUE lab is developing an optimized algorithm for each robot to find the shortest path from origin to destination for each mission while potential conflicts and deadlocks are prevented.
+
+              The goal of this project is to develop an algorithm which enables a large quantity of mobile robots (up to 300) operate in simulation. By having a testbed in a real warehouse and mobile robots specially produced for this project, in 2015-2016 the algorithm will be tested.`,
+        images: ['/researchImg/9-2.jpg'],
+        list:[],
+        images: ['/researchImg/9-3.jpg'],
+        youtube:['https://www.youtube.com/embed/z-0NvxDENak?si=AbtzbgWHjJphgGR2'],
+        list:[],
+      },
+      {
+        title:'Probabilistic Air Traffic Flow Management (ATFM) in the next generation air transportation system',
+        date: '',
+        desc: `This research seeks to develop and evaluate both deterministic and stochastic Air Traffic Flow Management (ATFM) optimization models, with the purpose to be utilized in the current and future air transportation systems.
+
+              South Korea, one of leading states of the International Civil Aviation Organization (ICAO), is facing the challenge to modernize its air transportation system as mandated by the organization by 2020.
+
+              This research first addresses shortcomings of the current ATFM system by developing a mathematical model to achieve integrated system management. We also study Probabilistic Air Traffic Management (PATM), which has attracted great interests in the ATM community, and propose a stochastic route optimization model when certain challenges inhibits full utilization of the airspace. Software implementation of developed models to simulate and evaluate effectiveness of the proposed models.`,
+        images: ['/researchImg/9-5.jpg'],
+        list:[],
+      },
+      {
+        title:'Aviation System Safety Management and Reliability Centered Maintenance Program Development',
+        date: '',
+        desc: ``,
+        list:[],
+        images: ['/researchImg/9-6.jpg'],['/researchImg/9-7.jpg'],['/researchImg/9-8.jpg'],
+        list:[],
+        images: ['/researchImg/9-9.jpg'],
+        list:[],
+        images: ['/researchImg/9-10.jpg'],
+      },
+      {
+        title:'Impacts of volcanic eruption on aviation system',
+        date: '',
+        desc: ``,
+        list:[],
+        images: ['/researchImg/9-11.jpg'],
+      },
+    ]
   },
   {
     id: 'other',
@@ -138,8 +223,41 @@ const researchData = [
     detail: '-',
     period: '-',
     thumbnail: '/researchImg/10.png',
-    images: ['-'],
-    link: '-'
+    research:[
+      {
+        title:'Risk factor analysis',
+        date: '',
+        desc: '​',
+        list:[],
+        images: ['/researchImg/10-1.jpg'],
+        list:[],
+        images: ['/researchImg/10-2.jpg'],
+        list:[],
+      },
+      {
+        title:'Accident hot spot study',
+        date: '',
+        desc: '',
+        list:[],
+        images: ['/researchImg/10-3.jpg'],
+        list:[],
+        images: ['/researchImg/10-4.jpg'],
+      },
+      {
+        title:'EMS response time coverage using historic traffic data',
+        date: '',
+        desc: '',
+        list:[];
+        images: ['/researchImg/10-5.jpg'],
+      },
+      {
+        title:'Impacts of volcanic eruption on aviation system',
+        date: '',
+        desc: '',
+        list:[],
+        images: ['/researchImg/10-6.jpg'],
+      },
+    ]
   },
 ];
 
