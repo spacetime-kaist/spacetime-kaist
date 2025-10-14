@@ -12,6 +12,7 @@ import Conference from './components/Publications/Conference'
 
 // Utility
 import ScrolltoAnchor from './utility/ScrolltoAnchor'
+import ResearchDetail from './components/Research/ResearchDetail'
 
 
 
@@ -27,6 +28,7 @@ function App() {
         <Route path='/conference' element={<Conference />} />
         <Route path='/people' element={<People />} />
         <Route path='/research' element={<Research/>} />
+        <Route path='/research/:id' element={<ResearchDetail/>} />
         <Route path='/projects' element={<Projects />} />
         <Route path='/events' element={<Events />} />
         </Route>
