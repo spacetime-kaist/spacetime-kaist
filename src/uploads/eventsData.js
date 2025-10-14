@@ -29,15 +29,20 @@ const eventsData = [
     date: "March 18, 2025, KAIST",
     participants: "Professor Yoonjin Yoon, Professor Amy Kim, CEE students",
     keywords: "#CEE Seminar",
-    desc: `
-    *Amy M. Kim* is a Professor of Civil Engineering at the University of British Columbia in Vancouver, 
-    on the traditional territories of the Musqueam people.  
-    With the members of her lab, **UBC Multimodal Mobility Systems**, she investigates how long-distance transportation systems perform in connecting people across large geographies, particularly amid disruptions 
-    caused by natural hazards and other climate change-induced events.  
-    Her work aims to support infrastructure and operational decision-making for climate change adaptation and emergency planning, and to train values-driven, community-minded practitioners and researchers.  
-    - BASc in Civil Engineering, University of Waterloo  
-    - MS and PhD, University of California, Berkeley  
-    - Professional experience in transportation consulting in California and BC`,
+    desc: 
+`*Amy M. Kim* is a Professor of Civil Engineering at the University of British Columbia in Vancouver, 
+on the traditional territories of the Musqueam people. 
+With the members of her lab, **UBC Multimodal Mobility Systems**, she investigates how long-distance transportation systems perform in connecting people across large geographies, particularly amid disruptions 
+caused by natural hazards and other climate change-induced events.
+
+Her work aims to support infrastructure and operational decision-making for climate change adaptation and emergency planning, and to train values-driven, community-minded practitioners and researchers.  
+
+*- BASc in Civil Engineering, University of Waterloo*
+
+*- MS and PhD, University of California, Berkeley*
+
+*- Professional experience in transportation consulting in California and BC*
+`,
     photos: ['/eventsImg/unnamed(6).png'],
   },
   {

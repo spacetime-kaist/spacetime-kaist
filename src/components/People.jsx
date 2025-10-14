@@ -56,7 +56,7 @@ export default function People() {
                 <div className={partTitle}>Education</div>
               {professorData.edu.map((item, idx) => <p key={idx} className="text-gray-500">{item}</p>)}
               <div className={partTitle}>Research Interest</div>
-            <ReactMarkdown>{professorData.research}</ReactMarkdown>
+            <ReactMarkdown className="markdown">{professorData.research}</ReactMarkdown>
           </div>
               </div>
             </div>

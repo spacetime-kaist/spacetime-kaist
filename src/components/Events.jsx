@@ -10,7 +10,7 @@ const EventCard = ( event ) => (
     <p className="text-sm text-sky-500 mb-4">Keywords: {event.keywords}</p>
 
   <div className="prose prose-gray break-all overflow-auto max-w-none mb-6 text-gray-700 text-lg p">
-      <ReactMarkdown>{event.desc}</ReactMarkdown>
+      <ReactMarkdown className='markdown'>{event.desc}</ReactMarkdown>
     </div>
 
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -41,7 +41,7 @@ const EventGridCard = ( event ) => (
     <p className="text-sm text-sky-500 mb-4">Keywords: {event.keywords}</p>
 
   <div className="prose prose-gray break-all overflow-auto max-w-none mb-6 text-gray-700 text-lg p">
-      <ReactMarkdown>{event.desc}</ReactMarkdown>
+      <ReactMarkdown className='markdown'>{event.desc}</ReactMarkdown>
     </div>
 
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -74,7 +74,7 @@ const EventMasonryCard = ( event ) => (
     <p className="text-sm text-sky-500 mb-4">Keywords: {event.keywords}</p>
 
   <div className="prose prose-gray overflow-auto max-w-none mb-6 text-gray-700 text-lg p">
-      <ReactMarkdown>{event.desc}</ReactMarkdown>
+      <ReactMarkdown className='markdown'>{event.desc}</ReactMarkdown>
     </div>
 
     <div className="columns-1 sm:columns-2 lg:columns-3 gap-4">
@@ -102,12 +102,12 @@ export default function EventsPage() {
     <>
       <header className="py-5">
         <div className='container'>
-          <h1 className="text-3xl font-bold">Events</h1>
-          <p className="mt-2 text-gray-600 max-w-2xl">
-            Explore our past and upcoming events, conferences, and workshops.
+          <h1 className="pagetitle">Events</h1>
+          <p className="text-gray-600 max-w-2xl">
+            Explore our past events, conferences, and workshops.
           </p>
+        <div className='divider' />
         </div>
-      <div className='divider' />
       </header>
  
       <main className="py-1">

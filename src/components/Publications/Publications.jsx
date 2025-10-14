@@ -5,7 +5,7 @@ export default function Publications() {
   return (
     <div className="p-8 bg-gray-50 min-h-screen">
       <h1 className="pagetitle">Publications</h1>
-
+      <div className='divider' />
       <div className="space-y-6">
         {publicationsData.map((pub) => (
           <div key={pub.id} className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition">

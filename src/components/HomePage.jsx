@@ -65,8 +65,8 @@ export default function HomePage() {
                 {/* <p className="mt-6 text-lg text-gray-600">Learn more about our research <a href="#" className='px-2 underline'>here</a>.</p> */}
 
                 <div className="mt-8 flex flex-wrap gap-3">
-                  <a href="#research" className="inline-flex items-center px-5 py-3 bg-black text-white rounded-md text-sm font-semibold">Explore work</a>
-                  <a href="#contact" className="inline-flex items-center px-5 py-3 border border-gray-300 rounded-md text-sm">Contact us</a>
+                  <a href="#projects" className="inline-flex items-center px-5 py-3 bg-black text-white rounded-md text-sm font-semibold">Explore work</a>
+                  <a href="#people" className="inline-flex items-center px-5 py-3 border border-gray-300 rounded-md text-sm">Contact us</a>
                 </div>
 
                 {/* <div className="mt-8 grid grid-cols-2 gap-4 text-xs text-gray-500">
@@ -82,8 +82,8 @@ export default function HomePage() {
               </div>
 
               <div>
-                <div className="w-full aspect-[4/3] bg-gradient-to-br from-white to-gray-100 rounded-2xl shadow-lg flex items-center justify-center">
-                  <div className="text-center text-gray-400"><img src={mainImg} alt="Main visual" className="w-full h-full object-cover rounded-2xl" /></div>
+                <div className="w-full aspect-[4/3] bg-gradient-to-br from-white to-gray-100 rounded-2xl shadow-lg flex items-center justify-center"> 
+                    <img src={mainImg} alt="Main visual" className="relative object-cover h-full rounded-2xl" />
                 </div>
               </div>
             </div>
@@ -98,15 +98,17 @@ export default function HomePage() {
 
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                {title: 'Urban Region Representation Learning', desc: 'Heterogeneity of diverse urban datasets by HUGAT.'},
-                {title: 'Urban Air Mobility', desc: 'UAM demand forecasting using existing helipads.'},
-                {title: 'Maritime Transportation', desc: 'A novel deep learning-based vessel trajectory prediction framework for AIS data using AIS-ACNet.'},
-                {title: 'Traffic Forecasting', desc: 'A key technical enabler of the adaptive traffic management..'}
+                {id: 'urban-region', title: 'Urban Region Representation Learning', desc: 'Heterogeneity of diverse urban datasets by HUGAT.'},
+                {id: 'uam',title: 'Urban Air Mobility', desc: 'UAM demand forecasting using existing helipads.'},
+                {id: 'maritime', title: 'Maritime Transportation', desc: 'A novel deep learning-based vessel trajectory prediction framework for AIS data using AIS-ACNet.'},
+                {id: 'traffic-forecasting', title: 'Traffic Forecasting', desc: 'A key technical enabler of the adaptive traffic management..'}
               ].map((f) => (
+                <Link key={f.title} to={`/research/${f.id}`} className='no-underline text-inherit'>
                 <article key={f.title} className="p-5 bg-gray-50 rounded-lg border border-gray-100 hover:shadow-lg">
                   <h3 className="font-semibold">{f.title}</h3>
                   <p className="mt-2 text-sm text-gray-500">{f.desc}</p>
                 </article>
+                </Link>
               ))}
             </div>
             {/* <a href="#work" className="inline-flex items-center mx-2 mt-5 px-8 py-2 bg-gray-800 text-white rounded-md text-sm font-semibold">See More <span><IoChevronForwardOutline /></span></a>
@@ -139,7 +141,7 @@ export default function HomePage() {
         </section>
           
 
-        <section id="contact" className="py-12 bg-gradient-to-b from-gray-50 to-white">
+        {/* <section id="contact" className="py-12 bg-gradient-to-b from-gray-50 to-white">
           <div className="container">
             <div className="rounded-lg p-8 border border-gray-100 bg-white shadow-sm">
               <h3 className="text-2xl font-semibold">Get in touch</h3>
@@ -155,7 +157,7 @@ export default function HomePage() {
               </form>
             </div>
           </div>
-        </section>
+        </section> */}
     </>
   );
 }

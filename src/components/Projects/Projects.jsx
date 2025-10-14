@@ -15,10 +15,11 @@ const ProjectCard = (p) =>
 export default function Projects() {
   return (
     <>
-      <header className="py-10 bg-white shadow-sm">
+      <header className="pt-10">
         <div className="container">
           <h1 className="pagetitle">Projects</h1>
-          <p className="mt-2 text-gray-600 max-w-2xl">Explore our ongoing and completed projects that span urban systems, robotics, energy, and extraterrestrial habitats.</p>
+          <div className='divider' />
+          {/* <p className="mt-2 text-gray-600 max-w-2xl">explanation</p> */}
         </div>
       </header>
 
@@ -27,7 +28,7 @@ export default function Projects() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {projectsData.map((p) =>
                 p.type === "internal" ? (
-                  <Link key={p.id} to={p.link}>
+                  <Link key={p.id} to={`/projects${p.link}`}>
                     <ProjectCard {...p} />
                   </Link>
                 ) : (
