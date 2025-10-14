@@ -15,7 +15,7 @@ function Navbar() {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [isPublicationsOpen, setPublicationsOpen] = useState(false);
   return (
-      <div className='w-full py-2 bg-white/80 backdrop-blur-sm shadow-sm'>
+      <div className='fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md shadow-sm z-80'>
         <div className='container'>
           <div className='flex items-center justify-between'>
             <Link to="/" className='no-tracking-tight basis-1/8'>
@@ -51,8 +51,8 @@ function Navbar() {
                     <Link to="/research" className={menuTextStyle}>Research &#x25BC;</Link>
                     <div className="absolute left-0 top-full w-60 bg-white border border-gray-200 rounded shadow-md z-50 hidden group-hover:block">
                       {researchData.map((item) => (
-                        <Link key={item.id} to={`/research#${item.navTitle}`} className="block px-4 py-2 text-gray-500 hover:bg-gray-100">
-                          {item.title}
+                        <Link key={item.id} to={`/research/${item.id}`} className="block px-4 py-2 text-gray-500 hover:bg-gray-100">
+                          {(item.menuTitle !== '') ? item.menuTitle : item.title}
                         </Link>
                       ))}
                     </div>
@@ -78,6 +78,7 @@ function Navbar() {
                     <div className="absolute right-0 mt-2 w-50 p-2 flex flex-col bg-white border border-gray-200 rounded shadow-md z-50">
                         <Link to="/" className={menuTextStyle}>Home</Link>
                         {/* Publications - Mobile click dropdown */}
+                        <div>
                         <div className="relative md:hidden flex items-center">
                             {isPublicationsOpen ? (
                               <IoIosArrowDown className="inline-block text-md"/>
@@ -90,16 +91,17 @@ function Navbar() {
                             >
                               Publications
                             </button>
+                            </div>
                             {isPublicationsOpen && (
                                 <>
-                                <div className='border-t border-gray-200'></div>
-                                <Link to="/publications" className="block pl-7 py-2 text-gray-600 hover:bg-gray-100">Journal Publications</Link>
-                                <Link to="/conference" className="block pl-7 py-2 text-gray-600 hover:bg-gray-100">Conference Papers</Link>
+                                <div className='border-t border-slate-300'></div>
+                                <Link to="/publications" className="block pl-7 py-2 text-gray-500 hover:bg-gray-100">Journal Publications</Link>
+                                <Link to="/conference" className="block pl-7 py-2 text-gray-500 hover:bg-gray-100">Conference Papers</Link>
                               </>
                             )}
                         </div>
                       <Link to="/people" className={menuTextStyle}>People</Link>
-                      
+                      <Link to="/research" className={menuTextStyle}>Research</Link>
                       {/* Research - Desktop hover dropdown */}
                         {/* <div className="relative group hidden md:block ">
                           <Link to="/research" className={menuTextStyle}>Research</Link>

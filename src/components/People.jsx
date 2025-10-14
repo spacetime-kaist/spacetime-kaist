@@ -21,9 +21,9 @@ const MembersCard = (member) => (
 );
 
 const AluminiCard = (member) => (
-  <div key={member.id} className="rounded-2xl shadow-md hover:shadow-lg transition p-6 flex flex-col items-center text-center">
-    <img src={`${import.meta.env.VITE_PUBLIC_URL}/peopleImg/${member.id}.jpg`} alt={member.name} className="w-32 h-32 rounded-full object-cover mb-4 border-2 border-gray-300" />
-    {member.link ? <a href={member.link} target="_blank" className="text-blue-600 hover:underline mt-2 text-sm">
+  <div key={member.id} className="flex flex-col items-center text-center">
+    {/* <img src={`${import.meta.env.VITE_PUBLIC_URL}/peopleImg/${member.id}.jpg`} alt={member.name} className="w-32 h-32 rounded-full object-cover mb-4 border-2 border-gray-300" /> */}
+    {member.link ? <a href={member.link} target="_blank" className="text-blue-600 underline mt-2 text-sm">
       <h3 className="text-xl font-semibold mb-1">{member.name}</h3></a>
       :
       <h3 className="text-xl font-semibold mb-1">{member.name}</h3>}
@@ -63,7 +63,7 @@ export default function People() {
             
         </section>
         
-        <div className="container bg-white rounded-2xl shadow-md hover:shadow-lg transition p-6 flex flex-col  p-8 mb-12 lg:flex-row items-center gap-8 flex-1 text-center">
+        {/* <div className="container bg-white rounded-2xl shadow-md hover:shadow-lg transition p-6 flex flex-col  p-8 mb-12 lg:flex-row items-center gap-8 flex-1 text-center">
           <img src={`${import.meta.env.VITE_PUBLIC_URL}/peopleImg/1.jpg`} alt={professorData.name} className="w-96 h-96 rounded-3xl object-cover border-4 border-blue-100" />
           <div className="flex-1 mt-4 lg:mt-0 lg:ml-6 text-left">
             <h1 className="text-4xl font-bold mb-2">{professorData.name}</h1>
@@ -75,7 +75,7 @@ export default function People() {
             <div className={partTitle}>Research Interest</div>
             <ReactMarkdown>{professorData.research}</ReactMarkdown>
           </div>
-        </div>
+        </div> */}
 
         {/* Lab Members */}
         <section className="container mb-12">
