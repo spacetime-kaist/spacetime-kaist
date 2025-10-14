@@ -94,7 +94,7 @@ export default function HomePage() {
         <section id="research" className="py-16 bg-white">
           <div className = "container">
             <h2 className="sectiontitle">Research</h2>
-            <p className="mt-2 text-gray-600 max-w-2xl">A concise enumeration of core subsystems and deliverables.</p>
+            {/* <p className="mt-2 text-gray-600 max-w-2xl">Explanation of Research.</p> */}
 
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
