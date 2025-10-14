@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const ResearchCard = ({ id,title, desc, thumbnail }) => (
   <Link key={id} to={`/research/${id}`} className="no-underline">
-  <article className="p-5 bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition">
+  <article className="p-5 bg-white rounded-lg border border-gray-200 shadow shadow-sm hover:shadow-2xl transition">
     <img src={`${import.meta.env.VITE_PUBLIC_URL}/${thumbnail}`} alt={title} className="w-full h-92 object-cover rounded-md mb-4" />
     <h3 className="font-semibold text-lg">{title}</h3>
     <p className="mt-2 text-sm text-gray-600">{desc}</p>
@@ -17,10 +17,11 @@ const ResearchCard = ({ id,title, desc, thumbnail }) => (
 export default function Research() {
   return (
     <>
-      <header className="py-10 bg-white shadow-sm">
+      <header className="pt-10">
         <div className="container">
-          <h1 className="text-3xl font-bold">Research</h1>
-          <p className="mt-2 text-gray-600 max-w-2xl">Explore our ongoing and completed projects that span urban systems, robotics, energy, and extraterrestrial habitats.</p>
+          <h1 className="pagetitle">Research</h1>
+          <div className='divider' />
+          {/* <p className="mt-2 text-gray-600 max-w-2xl">explanation</p> */}
         </div>
       </header>
 

@@ -4,7 +4,7 @@ const projectsData = [
     id: 1,
     title: "GS E&C (UAM)",
     image: "/projectsImg/1.png",
-    link: "https://spacetime.kaist.ac.kr/projects/gs-ec-uam",
+    link: "/gs-ec-uam",
     type: 'internal',
   },
   {
