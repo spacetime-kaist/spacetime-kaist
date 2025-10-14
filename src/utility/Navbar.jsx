@@ -51,8 +51,8 @@ function Navbar() {
                     <Link to="/research" className={menuTextStyle}>Research &#x25BC;</Link>
                     <div className="absolute left-0 top-full w-60 bg-white border border-gray-200 rounded shadow-md z-50 hidden group-hover:block">
                       {researchData.map((item) => (
-                        <Link key={item.id} to={`/research#${item.menuTitle}`} className="block px-4 py-2 text-gray-500 hover:bg-gray-100">
-                          {item.title}
+                        <Link key={item.id} to={`/research/${item.id}`} className="block px-4 py-2 text-gray-500 hover:bg-gray-100">
+                          {(item.menuTitle !== '') ? item.menuTitle : item.title}
                         </Link>
                       ))}
                     </div>
