@@ -256,8 +256,8 @@ Her work aims to support infrastructure and operational decision-making for clim
     date: "March 21, 2024, 16:00 pm KST",
     participants: "Speaker: Prof. Kincho Law, Professor of Civil and Environmental Engineering, Stanford University",
     keywords: "#civil infrastructures",
-    desc: `
-    **Talk:** Cyber Physical System for Civil Infrastructures`,
+    desc: 
+`**Talk:** Cyber Physical System for Civil Infrastructures`,
     photos: ['/eventsImg/unnamed(51).jpg', '/eventsImg/unnamed(52).jpg', '/eventsImg/unnamed(53).jpg', '/eventsImg/unnamed(54).jpg'],
   },
   {
