@@ -28,20 +28,20 @@ const researchData = [
         desc: 'This study focuses on identifying suitable locations for highway-transfer Vertiports to integrate Urban Air Mobility (UAM) with existing highway infrastructure. UAM offers an effective solution for enhancing transportation accessibility in the Seoul Metropolitan Area, where conventional transportation often struggle to connect suburban employment zones such as industrial parks. By integrating UAM with ground transportation at highway facilities, an efficient connectivity solution can be achieved for regions with limited transportation options. Our proposed methodology for determining the suitable Vertiport locations utilizes data such as geographic information, origin-destination volume, and travel time. Vertiport candidates are evaluated and selected based on criteria including location desirability, combined transportation accessibility and transportation demand. Applying this methodology to the Seoul metropolitan area, we identify 56 suitable Vertiport locations out of 148 candidates. The proposed methodology offers a strategic approach for the selection of highway-transfer Vertiport locations, enhancing UAM integration with existing transportation systems. Our study provides valuable insights for urban planners and policymakers, with recommendations for future research to include real-time environmental data and to explore the impact of Mobility-as-a-Service on UAM operations. Detailed explanations are available on the following webpage.',
         hyperlink: 'https://scholar.google.com/citations?view_op=view_citation&hl=ko&user=W-lkXroAAAAJ&citation_for_view=W-lkXroAAAAJ:W7OEmFMy1HYC',
         youtube:['https://www.youtube.com/embed/uz03YgCI1MY?si=T9sQkTXhivEiuCxq'],
-        images: ['/researchImg/2-1.png'],
+        images: ['/researchImg/2-2.png'],
       },
       {
         title:'Data-driven future demand forecasting for UAM',
         date: '',
         desc: 'As the public interest in UAM is getting higher and the underlying technology for UAM becomes sophisticated, the need to forecast the future demand for UAM increases. As the data-driven demand forecasting method has become more accurate than the traditional modeling-based forecasting method, TRUE lab utilized Seoul taxi GPS data to forecast the potential demand for UAM. Our assumption is based on the idea that part of the long-range taxi trip will be replaced by the emerging mobility service - UAM. As our first step toward UAM demand forecasting, we considered the case of using existing helipads. We plan to expand our scope in future work to UAM routing, fleet rebalancing, and scheduling. For details, please visit our blog.',
-        images: ['/researchImg/2-2.png'],
+        images: ['/researchImg/2-3.png'],
       },
        {
         title:'UAM Concept of Operations',
         date: '',
         desc: `Urban Air Mobility (UAM) refers to an aviation transportation system that overcomes the limitations of existing terrestrial transportation methods and enables the transportation of people or cargo in three-dimensional urban airspace through vertical takeoff and landing (VTOL) vehicles, as well as the supporting infrastructure for takeoff and landing. UAM is expected to grow into a new advanced industry in future mobility, with a projected scale of over 700 trillion won over the next 20 years. Consequently, major mobility companies and governments around the world are rapidly joining the technological development efforts. In this context, in the first half of 2020, the Federal Aviation Administration (FAA) and the National Aeronautics and Space Administration (NASA) of the United States each announced specific concepts for UAM operations, known as UAM ConOps and UAM OpsCon Passenger-Carrying Operations, respectively. In line with this global trend, Korea also announced the 'Korean Urban Air Mobility (K-UAM) Roadmap,' including practical operational concepts tailored to the domestic context, as well as a technology development roadmap in the first half of 2020. Additionally, in June, we released the UAM operational concept document. Detailed explanations are available on the following webpage`,
         hyperlink: 'https://sites.google.com/view/urbanairmobility/home?authuser=1&pli=1',
-        images: ['/researchImg/2-2.png'],
+        images: ['/researchImg/2-4.png'],
       },
     ]
   },
