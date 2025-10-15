@@ -2,6 +2,7 @@ import React from "react";
 import { useParams, Link } from "react-router-dom";
 import researchData from "../../uploads/researchData";
 import ReactMarkdown from "react-markdown";
+import AutoSpanGallery from "../../utility/AutoSpanGallery";
 
 export default function ResearchDetail() {
   const { slug } = useParams();
@@ -21,7 +22,7 @@ export default function ResearchDetail() {
     );
   }
 
-  const MasonryCard = ( detail ) => (
+  const AutoGridCard = ( detail ) => (
     <article className="p-6 bg-white rounded-lg border border-gray-200 shadow-sm mb-8">
       <h2 className="text-2xl font-bold text-sky-900">{detail.title}</h2>
       <p className="text-sm text-gray-500">{detail.date}</p>
@@ -35,7 +36,7 @@ export default function ResearchDetail() {
         {detail.ref.map((ref, idx) => (<div key={`ref-${idx}`} className="text-sm text-gray-500 mb-2">{ref}</div>))}
         </div>} */}
   
-      <div className="columns-1 sm:columns-2 lg:columns-3 gap-4">
+      <div className="lg:p-10 rows-2 columns-3  gap-4">
         {detail.youtube && detail.youtube.map((video, idx) => (
           <iframe
             key={idx}
@@ -49,9 +50,44 @@ export default function ResearchDetail() {
             key={idx}
             src={`${import.meta.env.VITE_PUBLIC_URL}${img}`}
             alt={`${detail.title} photo ${idx + 1}`}
-            className="mb-2 w-full rounded-md object-cover"
+            className="mb-2 w-full "
           />
         ))}
+      </div>
+
+      {detail.footnote && 
+        <div className="prose prose-gray overflow-auto max-w-none mt-6 mb-4 text-gray-700 text-md p">
+        <ReactMarkdown className="markdown">{detail.footnote}</ReactMarkdown>
+        </div>}
+    </article>
+  );
+
+
+  const AutoGalleryCard = ( detail ) => (
+    <article className="flex flex-col  p-6 bg-white rounded-lg border border-gray-200 shadow-sm mb-8">
+      <h2 className="text-2xl font-bold text-sky-900">{detail.title}</h2>
+      <p className="text-sm text-gray-500">{detail.date}</p>
+      <div className="prose prose-gray overflow-auto max-w-none mt-6 text-gray-700 text-lg p">
+        <ReactMarkdown className="markdown">{detail.desc}</ReactMarkdown>
+      </div>
+      {detail.hyperlink && <div><a href={detail.hyperlink} target="_blank" rel="noopener noreferrer" className="text-md text-blue-600 hover:underline">[LINK]</a></div>}
+      {/* {detail.ref && 
+        <div>
+        <h4 className=""> SELECTED REFERENCE </h4>
+        {detail.ref.map((ref, idx) => (<div key={`ref-${idx}`} className="text-sm text-gray-500 mb-2">{ref}</div>))}
+        </div>} */}
+      <div className="mt-10 flex flex-col w-full justify-center items-center pb-10">
+        <div className="w-6xl">
+          {detail.youtube && detail.youtube.map((video, idx) => (
+            <iframe
+              key={idx}
+              src={`${video}&origin=http://spacetime.kaist.ac.kr/`}
+              alt={`${detail.title} youtube ${idx + 1}`}
+              className="w-full aspect-video rounded-md object-cover"
+            />
+          ))}
+          {detail.images &&  <AutoSpanGallery images = {detail.images}/>}
+        </div>
       </div>
 
       {detail.footnote && 
@@ -81,7 +117,7 @@ export default function ResearchDetail() {
           <h2 className="text-2xl font-semibold mb-4">Research</h2>
           <ul className="list-disc list-inside space-y-2 text-gray-700">
             {data.research && data.research.map((detail, i) => (
-              <MasonryCard key={i} {...detail} />
+              <AutoGalleryCard key={i} {...detail} />
             ))}
           </ul>
         </section>

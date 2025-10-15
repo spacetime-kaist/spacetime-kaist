@@ -2,6 +2,7 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import eventsData from '../uploads/eventsData';
 
+
 const EventCard = ( event ) => (
   <article className="p-6 bg-white rounded-lg border border-gray-200 shadow-sm mb-8">
     <h2 className="text-2xl font-bold">{event.title}</h2>
@@ -67,8 +68,8 @@ const EventGridCard = ( event ) => (
 );
 
 const EventMasonryCard = ( event ) => (
-  <article className="p-6 bg-white rounded-lg border border-gray-200 shadow-sm mb-8">
-    <h2 className="text-2xl font-bold">{event.title}</h2>
+  <article id={event.id} className="p-5 lg:p-16 bg-white rounded-lg border border-gray-200 shadow-sm mb-8">
+    <h2 className="text-2xl sm:text-3xl font-semibold pb-2">{event.title}</h2>
     <p className="text-sm text-gray-500 mb-2">{event.date}</p>
     <p className="text-sm text-sky-600 mb-1"><span className='font-bold'>Participants: </span>{event.participants}</p>
     <p className="text-sm text-sky-500 mb-4">Keywords: {event.keywords}</p>
@@ -76,26 +77,29 @@ const EventMasonryCard = ( event ) => (
   <div className="prose prose-gray overflow-auto max-w-none mb-6 text-gray-700 text-lg p">
       <ReactMarkdown className='markdown'>{event.desc}</ReactMarkdown>
     </div>
-
-    <div className="columns-1 sm:columns-2 lg:columns-3 gap-4">
+    <div className='flex justify-center'>
       {event.youtube && 
         <iframe
           src={`${event.youtube}&origin=http://spacetime.kaist.ac.kr/`}
           alt={`${event.title} youtube`}
-          className="w-full aspect-video rounded-md object-cover"
+          className="w-4xl aspect-video rounded-md object-cover border border-gray-300"
         />
       }
-      {event.photos && event.photos.map((photo, idx) => (
+      {event.photos && 
+      <div className={`columns-1 ${event.photos.length>1?'sm:columns-2':null} gap-4`}>
+      {event.photos.map((photo, idx) => (
         <img
           key={idx}
           src={`${import.meta.env.VITE_PUBLIC_URL}${photo}`}
           alt={`${event.title} photo ${idx + 1}`}
-          className="mb-2 w-full rounded-md object-cover"
-        />
-      ))}
+          className={`mb-2 ${event.photos.length>1?'w-full':'w-4xl'} rounded-md object-cover`}
+        />))}
+      </div>
+      }
     </div>
   </article>
 );
+
 
 export default function EventsPage() {
   return (
@@ -113,7 +117,7 @@ export default function EventsPage() {
       <main className="py-1">
         <div className="container">
           {eventsData.map((event) => (
-            <EventGridCard key={event.id} {...event} />
+            <EventMasonryCard key={event.id} {...event} />
           ))}
         </div>
       </main>

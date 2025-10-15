@@ -3,54 +3,44 @@ import React from 'react';
 import eventsData from '../uploads/eventsData';
 import SeeMoreButton from './ui/SeeMoreButton';
 import mainImg from '../assets/mainImg.jpg';
+import stilLogo from '../assets/stil_logo.png';
 import { Link } from 'react-router-dom';
+
+
+// to reduce cost, events in the same order
+// const eventsMap = Object.fromEntries(eventsData.map(event=>[event.id, event]));
+// const homeEventsData = homeEventsList.map(id => eventsMap[id])
 
 // image and txt
 const EventsCard = (event) => (
-  <figure className="max-w-[500px] rounded-xl shadow hover:shadow-xl">
-    <div className="h-40 m-5 overflow-hidden bg-gradient-to-br from-gray-200 to-gray-100 flex items-center justify-center">
-      <div className="grid auto-cols-max grid-flow-col gap-4">
-        {event.photos.map((photo, idx) => (
+  <figure className="border border-slate-200 shadow shadow-sm hover:shadow-2xl transition-transform duration-500 hover:scale-120 ">
+    <div className=" m-7 overflow-hidden bg-gradient-to-br from-gray-200 to-gray-100 flex items-center justify-center">
+      <div className="flex flex-col gap-2">
+        {event.photos ? event.photos.slice(0,1).map((photo, idx) => (
           <img
             key={idx}
             src={`${import.meta.env.VITE_PUBLIC_URL}/${photo}`}
             alt={`${event.title} photo ${idx + 1}`}
-            className="w-full h-48 object-cover rounded-md"
+            className="w-full object-fill"
           />
-        ))}
-      </div>
-    </div>
-    <figcaption className="p-4 bg-white">
-      <div className="text-lg font-semibold">{event.title}</div>
-      <div className="text-sm text-gray-500 mt-1">{event.date}</div>
-      <div className="text-sm text-blue-500 mt-1">{event.keywords}</div>
-    </figcaption>
-  </figure>
-);
-
-
-const EventsMansonryCard = (event) => (
-  <figure className=" rounded-xl shadow hover:shadow-lg">
-    <div className="h-40 m-5 overflow-hidden bg-gradient-to-br from-gray-200 to-gray-100 flex items-center justify-center">
-      <div className="columns-2 gap-4">
-        <img src={`${import.meta.env.VITE_PUBLIC_URL}/${event.photos[0]}`} className="object-cover rounded-lg" />
-        {event.photos.slice(1).map((photo, idx) => (
+          ))
+        :
           <img
-            key={idx}
-            src={`${import.meta.env.VITE_PUBLIC_URL}/${photo}`}
-            alt={`${event.title} photo ${idx + 1}`}
-            className="object-cover rounded-lg"
+            src={stilLogo}
+            alt={'default photo'}
+            className="w-full h-48 object-cover"
           />
-        ))}
+        }
       </div>
     </div>
     <figcaption className="p-4 bg-white">
-      <div className="text-lg font-semibold">{event.title}</div>
-      <div className="text-sm text-gray-500 mt-1">{event.date}</div>
-      <div className="text-sm text-blue-500 mt-1">{event.keywords}</div>
+      <div className="text-lg sm:text-2xl font-semibold">{event.title}</div>
+      <div className="text-md text-blue-400 mt-1">{event.date}</div>
+      {/* <div className="text-sm text-blue-500 mt-1">{event.keywords}</div> */}
     </figcaption>
   </figure>
 );
+
 
 export default function HomePage() {
   return (
@@ -104,8 +94,8 @@ export default function HomePage() {
                 {id: 'traffic-forecasting', title: 'Traffic Forecasting', desc: 'A key technical enabler of the adaptive traffic management..'}
               ].map((f) => (
                 <Link key={f.title} to={`/research/${f.id}`} className='no-underline text-inherit'>
-                <article key={f.title} className="p-5 bg-gray-50 rounded-lg border border-gray-100 hover:shadow-lg">
-                  <h3 className="font-semibold">{f.title}</h3>
+                <article key={f.title} className="p-5 md:text-xl bg-gray-50 rounded-lg border border-gray-100 hover:shadow-lg">
+                  <h3 className="font-semibold  md:text-xl">{f.title}</h3>
                   <p className="mt-2 text-sm text-gray-500">{f.desc}</p>
                 </article>
                 </Link>
@@ -121,11 +111,14 @@ export default function HomePage() {
         <section id="events" className="py-16">
           <div className="container ">
             <h2 className="sectiontitle">Events</h2>
-            <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {eventsData.slice(0, 3).map((event) => (
-                <Link key={event.id} to={`/events#${event.id}`} className='snap-start'>
+            {/* <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:md:grid-cols-3 gap-6"> */}
+            <div className="mt-6 columns-1 md:columns-2 lg:columns-3 gap-6">
+              {eventsData && eventsData.slice(0,20).map((event) => (
+                <div className='break-inside-avoid mb-3'>
+                <Link key={event.id} to={`/events#${event.id}`}>
                 <EventsCard {...event} className="min-w-[300px]" />
                 </Link>
+                </div>
               ))}
             </div>
             {/* Scroll */}
