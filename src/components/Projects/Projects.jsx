@@ -4,11 +4,13 @@ import { Link } from 'react-router-dom';
 
 const ProjectCard = (p) => 
 (
-  <article className="p-5 h-full bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-xl transition">
-    {p.image &&<img src={`${import.meta.env.VITE_PUBLIC_URL}${p.image}`} alt={p.title} className="w-full h-92 object-cover rounded-md mb-4" />}
-    <h3 className="font-semibold text-3xl">{p.title}</h3>
-    <p className="mt-2 text-sm text-gray-600">{p.desc}</p>
-    <p className="mt-4 inline-block text-sm font-medium text-blue-600 hover:underline">See more →</p>
+  <article className="flex flex-col justify-between p-5 h-full bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-xl transition">
+    <div>{p.image &&<img src={`${import.meta.env.VITE_PUBLIC_URL}${p.image}`} alt={p.title} className="w-5xl object-cover rounded-md mb-4" />}</div>
+    <div >
+      <h3 className="font-semibold text-3xl">{p.title}</h3>
+      <p className="mt-2 text-sm text-gray-600">{p.desc}</p>
+      <p className="mt-4 inline-block text-sm font-medium text-blue-600 hover:underline">See more →</p>
+    </div>
   </article>
 );
 
