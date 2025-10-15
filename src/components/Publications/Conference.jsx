@@ -11,11 +11,22 @@ export default function Conference() {
 
   
 const ConCard = ( item ) => (   
-<div key={item.id} className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition">
-            <h2 className="text-xl font-semibold">{item.title}</h2>
+<div key={item.id} className="bg-white px-4 py-2 rounded-sm border-l-4 border-slate-600 hover:shadow-md transition">
+            {item.href ?
+              <a
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-md sm:text-xl font-semibold hover:underline inline-block"
+              >
+                <h2 className="text-lg sm:text-xl font-semibold">{item.title}</h2>
+              </a>
+            :
+            <h2 className="text-lg sm:text-xl font-semibold">{item.title}</h2>
+            }
             <p className="text-gray-600">{item.authors}</p>
-            <p className="text-gray-500 italic">{item.conference}, {item.date}</p>
-            {item.href && (
+            <p className="text-blue-500 italic">{item.conference}, {item.date}</p>
+            {/* {item.href && (
               <a
                 href={item.href}
                 target="_blank"
@@ -24,7 +35,7 @@ const ConCard = ( item ) => (
               >
                 Read Paper
               </a>
-            )}
+            )} */}
 </div>
 )
 

@@ -11,7 +11,7 @@ const researchData = [
         title:'Effective Urban Region Representation Learning Using Heterogeneous Urban Graph Attention Network (HUGAT)',
         date: 'September 2021 ~ September 2022',
         desc: 'Revealing the hidden patterns shaping the urban environment is essential to understand its dynamics and to make cities smarter. Recent studies have demonstrated that learning the representations of urban regions can be an effective strategy to uncover the intrinsic characteristics of urban areas. However, existing studies lack in incorporating diversity in urban data sources. In this work, we propose heterogeneous urban graph attention network (HUGAT), which incorporates heterogeneity of diverse urban datasets. In HUGAT, heterogeneous urban graph (HUG) incorporates both the geo-spatial and temporal people movement variations in a single graph structure. Given a HUG, a set of meta-paths are designed to capture the rich urban semantics as composite relations between nodes. Region embedding is carried out using heterogeneous graph attention network (HAN). HUGAT is designed to consider multiple learning objectives of city’s geo-spatial and mobility variations simultaneously. In our extensive experiments on NYC data, HUGAT outperformed all the state-of-the-art models. Moreover, it demonstrated a robust generalization capability across the various prediction tasks of crime, average personal income, and bike flow as well as the spatial clustering task.',
-        images: ['/researchImg/1-1.png'],
+        images: ['/researchImg/1-1.png','/researchImg/1-2.png','/researchImg/1-3.png','/researchImg/1-4.png'],
       }
     ]
   },
@@ -267,11 +267,11 @@ ROK has been actively investing in modernizing of air navigation system, includi
 
 ROK subsequently commissioned the working group in November 2011 as a group of researchers from academia and civil aviation organizations to prepare the draft of NARAE for the future ATM system. True lab developed the ROK’s ATM master plan as below.
 
-![9-1](${PUBLIC_URL}/researchImg/9-1.png)
+![9-1](${PUBLIC_URL}/researchImg/narae.jpg)
 
 ### **Implementation Plan**
 
-![9-2](${PUBLIC_URL}/researchImg/9-2.png)`,
+![9-1](${PUBLIC_URL}/researchImg/9-1.png)`,
         footnote:
 `**Period**: 2011.12~2012.06
 
@@ -293,12 +293,13 @@ Therefore TRUE lab is developing an optimized algorithm for each robot to find t
 
 The goal of this project is to develop an algorithm which enables a large quantity of mobile robots (up to 300) operate in simulation. By having a testbed in a real warehouse and mobile robots specially produced for this project, in 2015-2016 the algorithm will be tested.
 
-![9-3](${PUBLIC_URL}/researchImg/9-3.png)
+![9-2](${PUBLIC_URL}/researchImg/9-2.png)
 
 ### **Development**
 
 Breadth First Search algorithm can be modified to be adopted in three-dimensional space with discrete time windows. Similar to Amazon's Kiva system, the algorithm generates paths for multi mobile robots, and check if any cell is overlapped by more than one robots. If there is a conflict, it finds another path which is the second shortest. This is repeated until all conflicts are resolved maintaining the shortest path as much as possible.
-![9-4](${PUBLIC_URL}/researchImg/9-4.png)
+
+![9-3](${PUBLIC_URL}/researchImg/9-3.png)
 
 ### **Simulation Example**`,
 
@@ -438,6 +439,7 @@ The studies contain :
 - In this research, Naïve Bayes classifier method and the decision tree classifier method were used to reveal the relative importance of the data fields with respect to the resulting severity level.
 
 - Some of high-ranking risk factors were found to be having strong interdependency, and it was revealed that only a few numbers of risk factors dominate the severity level.
+
 ![10-1](${PUBLIC_URL}/researchImg/10-1.png)
 
 ### **Risk factor analysis with respect to cellphone usage**
@@ -477,7 +479,7 @@ The studies contain :
 
 ![10-3](${PUBLIC_URL}/researchImg/10-3.png)
 
-### **Factor-wise accident hotspot analysis **
+### **Factor-wise accident hotspot analysis**
 
 - Current concept of accident hotspot is explained as HCCL (High Collision Concentration Location), which is determined by counting the accident frequency along absolute post-mile of the road. However, this method does not consider the severity and the cause of the accidents.
 
