@@ -39,9 +39,9 @@ export default function ResearchDetail() {
         {detail.youtube && detail.youtube.map((video, idx) => (
           <iframe
             key={idx}
-            src={video}
+            src={`${video}&origin=http://spacetime.kaist.ac.kr/`}
             alt={`${detail.title} youtube ${idx + 1}`}
-            className="w-120 h-70 rounded-md object-cover"
+            className="w-full aspect-video rounded-md object-cover"
           />
         ))}
         {detail.images && detail.images.map((img, idx) => (

@@ -16,9 +16,9 @@ const EventCard = ( event ) => (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {event.youtube && 
         <iframe
-          src={event.youtube}
+          src={`${event.youtube}&origin=http://spacetime.kaist.ac.kr/`}
           alt={`${event.title} youtube`}
-          className="w-120 h-70 rounded-md"
+          className="w-full aspect-video rounded-md"
         />
       }
       {event.photos && event.photos.map((photo, idx) => (
@@ -47,9 +47,9 @@ const EventGridCard = ( event ) => (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {event.youtube ? ( 
         <iframe
-          src={event.youtube}
+          src={`${event.youtube}&origin=http://spacetime.kaist.ac.kr/`}
           alt={`${event.title} youtube`}
-          className="w-200 h-100 rounded-md col-span-2 row-span-2 object-cover"
+          className="w-full aspect-video rounded-md col-span-2 row-span-2 object-cover"
         />
       ) : (
       event.photos && <img src={`${import.meta.env.VITE_PUBLIC_URL}/${event.photos[0]}`} className="col-span-2 row-span-2 object-cover rounded-md" />
@@ -80,9 +80,9 @@ const EventMasonryCard = ( event ) => (
     <div className="columns-1 sm:columns-2 lg:columns-3 gap-4">
       {event.youtube && 
         <iframe
-          src={event.youtube}
+          src={`${event.youtube}&origin=http://spacetime.kaist.ac.kr/`}
           alt={`${event.title} youtube`}
-          className="w-120 h-70 rounded-md object-cover"
+          className="w-full aspect-video rounded-md object-cover"
         />
       }
       {event.photos && event.photos.map((photo, idx) => (
