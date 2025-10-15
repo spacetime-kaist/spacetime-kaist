@@ -4,15 +4,15 @@ export const professorData ={
     name: "Prof. Yoonjin Yoon",
     greeting: "I'm an associate Professor in Department of Civil and Environmental Engineering at KAIST with joint appointment in Graduate School of Artificial Intelligence and Graduate School of Data Science",
     link: "http://yoonjin.kaist.ac.kr",
-    email:'ih736x@kaist.ac.kr',
+    email:'yoonjin@kaist.ac.kr',
     edu: ['Ph.D., M.S. in Civil and Environment Engineering, KAIST', 'B.S.: Mathematical Sciences, KAIST'],
     research:`Coming from Mathematics, Computer Science, Management Science, and Civil engineering background, my research focus is system-of-systems, which includes transportation system, city, logistics system, and public health system. My recent research interests include the following areas.
 
+**Urban Intelligence**: Urban Region Representation Learning; SDG Data Science; AI and Cities; AI for Social Good    
+
 **Computational Transportation Science**: Future Mobility and AI; Graph Neural Net and Traffic Forecasting; Transportation Network Science; Safety Risk Management
 
-**Sustainable Urban Mobility**: Urban Mobility Decarbonization; Mobility Accessibility and Inequality; Urban Air Mobility (UAM);
-
-**Urban Intelligence**: Urban Region Representation Learning; SDG Data Science; AI and Cities; AI for Social Good`,
+**Sustainable Urban Mobility**: Urban Mobility Decarbonization; Mobility Accessibility and Inequality; Urban Air Mobility (UAM);`,
 
   photo: "/peopleImg/1.jpg", // Replace with actual image path
   }
