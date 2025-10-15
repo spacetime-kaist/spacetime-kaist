@@ -11,7 +11,7 @@ const researchData = [
         title:'Effective Urban Region Representation Learning Using Heterogeneous Urban Graph Attention Network (HUGAT)',
         date: 'September 2021 ~ September 2022',
         desc: 'Revealing the hidden patterns shaping the urban environment is essential to understand its dynamics and to make cities smarter. Recent studies have demonstrated that learning the representations of urban regions can be an effective strategy to uncover the intrinsic characteristics of urban areas. However, existing studies lack in incorporating diversity in urban data sources. In this work, we propose heterogeneous urban graph attention network (HUGAT), which incorporates heterogeneity of diverse urban datasets. In HUGAT, heterogeneous urban graph (HUG) incorporates both the geo-spatial and temporal people movement variations in a single graph structure. Given a HUG, a set of meta-paths are designed to capture the rich urban semantics as composite relations between nodes. Region embedding is carried out using heterogeneous graph attention network (HAN). HUGAT is designed to consider multiple learning objectives of city’s geo-spatial and mobility variations simultaneously. In our extensive experiments on NYC data, HUGAT outperformed all the state-of-the-art models. Moreover, it demonstrated a robust generalization capability across the various prediction tasks of crime, average personal income, and bike flow as well as the spatial clustering task.',
-        images: ['/researchImg/1-1.jpg'],
+        images: ['/researchImg/1-1.png'],
       }
     ]
   },
@@ -28,20 +28,20 @@ const researchData = [
         desc: 'This study focuses on identifying suitable locations for highway-transfer Vertiports to integrate Urban Air Mobility (UAM) with existing highway infrastructure. UAM offers an effective solution for enhancing transportation accessibility in the Seoul Metropolitan Area, where conventional transportation often struggle to connect suburban employment zones such as industrial parks. By integrating UAM with ground transportation at highway facilities, an efficient connectivity solution can be achieved for regions with limited transportation options. Our proposed methodology for determining the suitable Vertiport locations utilizes data such as geographic information, origin-destination volume, and travel time. Vertiport candidates are evaluated and selected based on criteria including location desirability, combined transportation accessibility and transportation demand. Applying this methodology to the Seoul metropolitan area, we identify 56 suitable Vertiport locations out of 148 candidates. The proposed methodology offers a strategic approach for the selection of highway-transfer Vertiport locations, enhancing UAM integration with existing transportation systems. Our study provides valuable insights for urban planners and policymakers, with recommendations for future research to include real-time environmental data and to explore the impact of Mobility-as-a-Service on UAM operations. Detailed explanations are available on the following webpage.',
         hyperlink: 'https://scholar.google.com/citations?view_op=view_citation&hl=ko&user=W-lkXroAAAAJ&citation_for_view=W-lkXroAAAAJ:W7OEmFMy1HYC',
         youtube:['https://www.youtube.com/embed/uz03YgCI1MY?si=T9sQkTXhivEiuCxq'],
-        images: ['/researchImg/2-1.jpg'],
+        images: ['/researchImg/2-1.png'],
       },
       {
         title:'Data-driven future demand forecasting for UAM',
         date: '',
         desc: 'As the public interest in UAM is getting higher and the underlying technology for UAM becomes sophisticated, the need to forecast the future demand for UAM increases. As the data-driven demand forecasting method has become more accurate than the traditional modeling-based forecasting method, TRUE lab utilized Seoul taxi GPS data to forecast the potential demand for UAM. Our assumption is based on the idea that part of the long-range taxi trip will be replaced by the emerging mobility service - UAM. As our first step toward UAM demand forecasting, we considered the case of using existing helipads. We plan to expand our scope in future work to UAM routing, fleet rebalancing, and scheduling. For details, please visit our blog.',
-        images: ['/researchImg/2-2.jpg'],
+        images: ['/researchImg/2-2.png'],
       },
        {
         title:'UAM Concept of Operations',
         date: '',
         desc: `Urban Air Mobility (UAM) refers to an aviation transportation system that overcomes the limitations of existing terrestrial transportation methods and enables the transportation of people or cargo in three-dimensional urban airspace through vertical takeoff and landing (VTOL) vehicles, as well as the supporting infrastructure for takeoff and landing. UAM is expected to grow into a new advanced industry in future mobility, with a projected scale of over 700 trillion won over the next 20 years. Consequently, major mobility companies and governments around the world are rapidly joining the technological development efforts. In this context, in the first half of 2020, the Federal Aviation Administration (FAA) and the National Aeronautics and Space Administration (NASA) of the United States each announced specific concepts for UAM operations, known as UAM ConOps and UAM OpsCon Passenger-Carrying Operations, respectively. In line with this global trend, Korea also announced the 'Korean Urban Air Mobility (K-UAM) Roadmap,' including practical operational concepts tailored to the domestic context, as well as a technology development roadmap in the first half of 2020. Additionally, in June, we released the UAM operational concept document. Detailed explanations are available on the following webpage`,
         hyperlink: 'https://sites.google.com/view/urbanairmobility/home?authuser=1&pli=1',
-        images: ['/researchImg/2-2.jpg'],
+        images: ['/researchImg/2-2.png'],
       },
     ]
   },
@@ -56,7 +56,7 @@ const researchData = [
         title:'Regional for urban air mobility application in metropolitan areas: case studies in San Francisco and New York',
         date: '',
         desc: '​​In this study, as a first step to assess the feasibility of UAM in urban areas, we conduct 3D geodemographic analyses of two major cities in San Francisco, CA and Manhattan, NY. The 3D building footprint data is used to identify the raw available airspace as well as the added spatial restrictions with geofencing. Population data is used to represent the potential customer base by combining the daytime and nighttime population. Since the geospatial and demographic datasets differ in representation, the spatial data is vectorized while population data is available by census tract, spatial information is aggregated in census tracts. In addition, We proposed to group the areas of similar spatial and population characteristics through regionalization. Regionalization is a spatially constrained multi-variate clustering method to group small geographical units (census blocks and tracts in general) into a contiguous region of homogeneous nature. The main benefit of regionalization is to delineate regions of similar characteristics and spatial proximity. Through regionalization, one can better understand the urban space with comprehensive geographic perspective, rather than a small geographical unit of census blocks or tracts. Furthermore, regionalization can also improve geospatial intelligence in urban spaces by delineating the functional neighborhood . In this study, we adopted the SKATER, an efficient regionalization technique that uses minimum spanning tree consisting of a connected tree with no circuits. The intention is to provide a region map of the city that can readily identify regions of similar UAM operational and population characteristics with spatial continuity and feasibility. Based on the regionalization results, correspondence analysis was conducted to translate the compound effect of spatial and population characteristics into feasibility.',
-        images: ['/researchImg/5-1.jpg'],
+        images: ['/researchImg/5-1.png'],
       },
       {
         title:'Density-aware flight planning for multiple agents in urban airspace',
@@ -74,13 +74,13 @@ const researchData = [
 Namwoo Kim, Yoonjin Yoon, "Cooperative sUAV Collision Avoidance Based on Satisficing Theory", International Journal of Aeronautical and Space Sciences, 2019
         `,
         ref: ['Namwoo Kim, Yoonjin Yoon, "Cooperative sUAV Collision Avoidance Based on Satisficing Theory", International Journal of Aeronautical and Space Sciences, 2019'], 
-        images: ['/researchImg/5-2.jpg'],
+        images: ['/researchImg/5-2.png'],
       },
       {
         title:'Geodemographical Risk Analysis of 3D Urban Space',
         date: '',
         desc: `For application of UAS and UAM in urban area, people and man-mad structures that consisting urban environment should be considered. We analyzed urban space by using census tract based population data and 3d building model data. Highly urbanized areas – Manhattan Island and San Francisco were analyzed for their urban space characteristics.`,
-        images: ['/researchImg/5-3.jpg'],
+        images: ['/researchImg/5-3.png'],
       },
       {
         title:'Urban Airspace Availability Assessment',
@@ -95,7 +95,7 @@ This interactive tool enables you to explore the airspace availability in three 
 
 Jungwoo Cho, Yoonjin Yoon, "How to Assess the Capacity of Urban Airspace: A Topological Approach Using Keep-in and Keep-out Geofence", 92, 137-149, Transportation Research, Part C, 2018,  
 Method for identifying available airspace for unmanned aerial vehicle operations, Patent filed, Dec 17, 2017, KR 10-2018-0033978`,
-        images: ['/researchImg/5-4.jpg'],
+        images: ['/researchImg/5-4.png'],
       },
       {
         title:'Horizontal and Vertical Connectivity of Airspace ',
@@ -108,7 +108,7 @@ In this study, we present topography map and skeletal graph to interpret underly
 **SELECTED REFERENCES**
 
 Jungwoo Cho, Yoonjin Yoon. "Extraction and Interpretation of Geometrical and Topological Properties of Urban Airspace for UAS Operations". 13th ATM R&D Seminar, 2019`,
-        images: ['/researchImg/5-5.jpg'],
+        images: ['/researchImg/5-5.png'],
       },
       {
         title:'UTM: Urban Drone Routing',
@@ -135,7 +135,7 @@ Jungwoo Cho, Yoonjin Yoon. "Extraction and Interpretation of Geometrical and Top
 **REFERENCE**
 
 - Y. Shin, N. Kim, H. Lee, S.Y. In, M. Hansen, and Y. Yoon (2024), "Deep Learning Framework for Vessel Trajectory Prediction Using Auxiliary Tasks and Convolutional Networks". Engineering Applications of Artificial Intelligence, 132, 107936`,
-        images: ['/researchImg/3-1.jpg'],
+        images: ['/researchImg/3-1.png'],
       },
     ]
   },
@@ -154,7 +154,7 @@ Jungwoo Cho, Yoonjin Yoon. "Extraction and Interpretation of Geometrical and Top
 **SELECTED REFERENCE**
 
 - Y. Shin, Y. Yoon. (2024). [PGCN: Progressive graph convolutional networks for spatial-temporal traffic forecasting. IEEE Transactions on Intelligent Transportation Systems](https://ieeexplore.ieee.org/abstract/document/10400973)`,
-        images: ['/researchImg/3-1.jpg'],
+        images: ['/researchImg/3-1.png'],
       },
     ],
   },
@@ -180,7 +180,7 @@ Jungwoo Cho, Yoonjin Yoon. "Extraction and Interpretation of Geometrical and Top
 **SELECTED REFERENCE**
 
 Seyun Kim, Yoonjin Yoon, "On Node Criticality of the Northeast Asian Air Route Network", Journal of Air Transport Management, 80, 101693, 2019`,
-        images: ['/researchImg/6-3.jpg'],
+        images: ['/researchImg/6-3.png'],
       },
     ],
   },
@@ -202,7 +202,7 @@ Seyun Kim, Yoonjin Yoon, "On Node Criticality of the Northeast Asian Air Route N
 
 - Yuna Noh, "Modeling Individual Differences in Driver Workload Estimation using Physiological Data", Ph.D Thesis, 2018
 - Yuna Noh, Yoonjin Yoon, "Personalized stress assessment during real-world electric vehicle driving based on fuzzy c-means clustering using physiological and operational data", under review`,
-        images: ['/researchImg/7-1.jpg'],
+        images: ['/researchImg/7-1.png'],
       },
       {
         title:'Characterizing driver stress using physiological and operational data',
@@ -215,7 +215,7 @@ The result shows two groups of subjects, one not showing much evidence of stress
 **SELECTED REFERENCE**
 
 Seyun Kim, W. Rhee, D. Choi, Y.J. Jang, Yoonjin Yoon, "Characterizing Driver Stress Using Physiological and Operational Data from Real-world Electric Vehicle Driving Experiment", 19(5), 895-906, International Journal of Automotive Technology, 2018`,
-        images: ['/researchImg/7-2.jpg'],
+        images: ['/researchImg/7-2.png'],
       }
     ]
   },
@@ -235,7 +235,7 @@ Seyun Kim, W. Rhee, D. Choi, Y.J. Jang, Yoonjin Yoon, "Characterizing Driver Str
 **SELECTED REFERENCE**
   
 Yuna Noh, Minjae Kim, Yoonjin Yoon, "Elderly pedestrian safety in a rapidly aging society—Commonality and diversity between the younger-old and older-old." Traffic Injury Prevention, 19(8), 874-879, 2018`,
-        images: ['/researchImg/8-1.jpg'],
+        images: ['/researchImg/8-1.png'],
       },
       {
         title:'Elderly driver injury severity by seat positions and seat-belt use',
@@ -267,11 +267,11 @@ ROK has been actively investing in modernizing of air navigation system, includi
 
 ROK subsequently commissioned the working group in November 2011 as a group of researchers from academia and civil aviation organizations to prepare the draft of NARAE for the future ATM system. True lab developed the ROK’s ATM master plan as below.
 
-![9-1](${PUBLIC_URL}/researchImg/9-1.jpg)
+![9-1](${PUBLIC_URL}/researchImg/9-1.png)
 
 ### **Implementation Plan**
 
-![9-2](${PUBLIC_URL}/researchImg/9-2.jpg)`,
+![9-2](${PUBLIC_URL}/researchImg/9-2.png)`,
         footnote:
 `**Period**: 2011.12~2012.06
 
@@ -293,12 +293,12 @@ Therefore TRUE lab is developing an optimized algorithm for each robot to find t
 
 The goal of this project is to develop an algorithm which enables a large quantity of mobile robots (up to 300) operate in simulation. By having a testbed in a real warehouse and mobile robots specially produced for this project, in 2015-2016 the algorithm will be tested.
 
-![9-3](${PUBLIC_URL}/researchImg/9-3.jpg)
+![9-3](${PUBLIC_URL}/researchImg/9-3.png)
 
 ### **Development**
 
 Breadth First Search algorithm can be modified to be adopted in three-dimensional space with discrete time windows. Similar to Amazon's Kiva system, the algorithm generates paths for multi mobile robots, and check if any cell is overlapped by more than one robots. If there is a conflict, it finds another path which is the second shortest. This is repeated until all conflicts are resolved maintaining the shortest path as much as possible.
-![9-4](${PUBLIC_URL}/researchImg/9-4.jpg)
+![9-4](${PUBLIC_URL}/researchImg/9-4.png)
 
 ### **Simulation Example**`,
 
@@ -325,7 +325,7 @@ This research first addresses shortcomings of the current ATFM system by develop
 
 ### **Result**
 
-![9-5](${PUBLIC_URL}/researchImg/9-5.jpg)
+![9-5](${PUBLIC_URL}/researchImg/9-5.png)
 
 ### **Expected Contribution**
 
@@ -351,15 +351,15 @@ This research first addresses shortcomings of the current ATFM system by develop
 
 ### CATS, ESD Model
 
-![9-6](${PUBLIC_URL}/researchImg/9-6.jpg)
+![9-6](${PUBLIC_URL}/researchImg/9-6.png)
 
 ### ICAO- Risk Matrix Model
 
-![9-7](${PUBLIC_URL}/researchImg/9-7.jpg)
+![9-7](${PUBLIC_URL}/researchImg/9-7.png)
 
 ### FAA - Risk Matrix Model
 
-![9-8](${PUBLIC_URL}/researchImg/9-8.jpg)
+![9-8](${PUBLIC_URL}/researchImg/9-8.png)
 
 ### KAIST-Risk Model
 
@@ -377,7 +377,7 @@ This research first addresses shortcomings of the current ATFM system by develop
 - Severity value from weighted sum of the number of occurrence by severity level
 - Useful in quantitative comparison of risks among hazards
 
-![9-9](${PUBLIC_URL}/researchImg/9-9.jpg)`,
+![9-9](${PUBLIC_URL}/researchImg/9-9.png)`,
         footnote:
 `**Period**: 2011.12 ~ 2015.06
 
@@ -392,7 +392,7 @@ This research first addresses shortcomings of the current ATFM system by develop
 
 **R&D Partnership**:
 
-![9-10](${PUBLIC_URL}/researchImg/9-10.jpg)`,
+![9-10](${PUBLIC_URL}/researchImg/9-10.png)`,
       },
       {
         title:'Impacts of volcanic eruption on aviation system',
@@ -401,7 +401,7 @@ This research first addresses shortcomings of the current ATFM system by develop
 `- The ash cloud from the Eyjafjallajokull volcano in Iceland caused a significant impact on aviation industry on April 14, 2010. Airports across Europe were closed, and at least 17,000 flights a day were cancelled for over a week. Overall 100,000 flights were cancelled and 10 million passengers were unable to board their flights during this week. After Iceland case, there have been many studies trying to address aviation industry impact of Volcanic Ash. However, most of the volcanic eruption scenario studies have limitations.
 
 - In TRUE lab, we analyze the damage of the airports and number of the cancelled flights depend on the hypothetical case of Mt. Baegdu eruption model to derive a predicted flights path and diffusion distance of volcanic ash. This research analyzes the effect of volcanic ash to air traffic and airport by quantification value by assessing volcanic ash concentration and its altitude.`,
-        images: ['/researchImg/9-11.jpg'],
+        images: ['/researchImg/9-11.png'],
       },
     ]
   },
@@ -438,13 +438,13 @@ The studies contain :
 - In this research, Naïve Bayes classifier method and the decision tree classifier method were used to reveal the relative importance of the data fields with respect to the resulting severity level.
 
 - Some of high-ranking risk factors were found to be having strong interdependency, and it was revealed that only a few numbers of risk factors dominate the severity level.
-![10-1](${PUBLIC_URL}/researchImg/10-1.jpg)
+![10-1](${PUBLIC_URL}/researchImg/10-1.png)
 
 ### **Risk factor analysis with respect to cellphone usage**
 
 - Along with the development of IT industry, cellphone usage while driving is becoming one of the major concerns in traffic safety. While cellphone using popularity is growing, there are many cities banning handheld cellphone usage while driving and the efficiency of this banning policy is a controversial topic. By performing turning point analysis technique based on the frequentist and Bayesian approach, it was revealed that the law was critical to the reduction of cellphone-related collisions.
 
-![10-2](${PUBLIC_URL}/researchImg/10-2.jpg)
+![10-2](${PUBLIC_URL}/researchImg/10-2.png)
 
 ### **Risk factor analysis of highway accident with respect to cost severity**
 
@@ -475,7 +475,7 @@ The studies contain :
 
 - TRUE Lab is working on the fusion of collision history DB from SWITRS with real-time traffic information data from PeMS in order to construct integrated collision DB that provides both environmental factors and driving behavior factors. Combining different kinds of traffic DB will lead to the mutual supplementation of data reliability, offering analysis result of higher credibility.
 
-![10-3](${PUBLIC_URL}/researchImg/10-3.jpg)
+![10-3](${PUBLIC_URL}/researchImg/10-3.png)
 
 ### **Factor-wise accident hotspot analysis **
 
@@ -483,7 +483,7 @@ The studies contain :
 
 - In TRUE lab, we focused on factor-wise accident research which enables evaluation of accident in both frequency and severity, using nonparametric models and clustering algorithms.
 
-![10-4](${PUBLIC_URL}/researchImg/10-4.jpg)`,
+![10-4](${PUBLIC_URL}/researchImg/10-4.png)`,
       },
       {
         title:'EMS response time coverage using historic traffic data',
@@ -494,7 +494,7 @@ The studies contain :
 - Between the two components of response time, travel time addresses the larger portion in most cases, and is highly dependent on road traffic condition. There have been numerous researches to analyse the impact of traffic condition to emergency response time based on vehicle speed. However, travel speeds are assumed to be constant in most cases, and variations in travel speed due to conditions common to the road traffic system such as commute hour congestion are not properly addressed.  
 
 - In this research, time-varying speeds are defined for each street segment within a street network based on the historic traffic data. We propose a GIS-based method to calculate the k-minute travel time contour to represent the response time coverage, incorporating time-of-day and day-of-week effect on travel time in Seoul, South Korea. `,
-        images: ['/researchImg/10-5.jpg'],
+        images: ['/researchImg/10-5.png'],
       },
       {
         title:'Impacts of volcanic eruption on aviation system',
@@ -503,7 +503,7 @@ The studies contain :
 `- The ash cloud from the Eyjafjallajokull volcano in Iceland caused a significant impact on aviation industry on April 14, 2010. Airports across Europe were closed, and at least 17,000 flights a day were cancelled for over a week. Overall 100,000 flights were cancelled and 10 million passengers were unable to board their flights during this week. After Iceland case, there have been many studies trying to address aviation industry impact of Volcanic Ash. However, most of the volcanic eruption scenario studies have limitations.
 
 - In TRUE lab, we analyze the damage of the airports and number of the cancelled flights depend on the hypothetical case of Mt. Baegdu eruption model to derive a predicted flights path and diffusion distance of volcanic ash. This research analyzes the effect of volcanic ash to air traffic and airport by quantification value by assessing volcanic ash concentration and its altitude.`,
-        images: ['/researchImg/10-6.jpg'],
+        images: ['/researchImg/10-6.png'],
       },
     ]
   },
