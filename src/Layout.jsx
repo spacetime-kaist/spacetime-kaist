@@ -2,7 +2,7 @@ import React from 'react'
 import { Outlet } from 'react-router-dom'
 
 import Navbar from './utility/Navbar';
-import ScrolltoUp from './utility/ScrolltoUp';
+import ScrollUpBt from './utility/ScrollUpButton';
 
 function Layout() {
     return (
@@ -11,7 +11,7 @@ function Layout() {
     {/* Invisible div to fix navbar overlapping content */}
     <div className="w-full h-16"/>
     <Navbar />
-    <ScrolltoUp />
+    <ScrollUpBt />
     <div className="min-h-screen bg-gray-50 text-gray-900">
     <main>
     <section className="pt-20 pb-16">

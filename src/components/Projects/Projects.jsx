@@ -4,12 +4,24 @@ import { Link } from 'react-router-dom';
 
 const ProjectCard = (p) => 
 (
-  <article className="flex flex-col justify-between p-5 h-full bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-xl transition">
+  <article className={`flex flex-col justify-between p-5 h-full bg-white rounded-lg border border-gray-200 shadow-sm ${p.type && 'hover:shadow-xl'} transition`}>
     <div>{p.image &&<img src={`${import.meta.env.VITE_PUBLIC_URL}${p.image}`} alt={p.title} className="w-5xl object-cover rounded-md mb-4" />}</div>
     <div >
       <h3 className="font-semibold text-3xl">{p.title}</h3>
       <p className="mt-2 text-sm text-gray-600">{p.desc}</p>
-      <p className="mt-4 inline-block text-sm font-medium text-blue-600 hover:underline">See more →</p>
+      <p className="mt-4 inline-block text-sm font-medium text-blue-600 hover:underline">{p.type && 'See more →'}</p>
+    </div>
+  </article>
+);
+
+const OtherProjectCard = (p) => 
+(
+  <article className={`flex flex-col justify-between p-5 h-full w-5xl bg-white rounded-lg border border-gray-200 shadow-sm ${p.type && 'hover:shadow-xl'} transition`}>
+    <div>{p.image &&<img src={`${import.meta.env.VITE_PUBLIC_URL}${p.image}`} alt={p.title} className="w-5xl object-cover rounded-md mb-4" />}</div>
+    <div >
+      <h3 className="font-semibold text-2xl">{p.title}</h3>
+      <p className="mt-2 text-sm text-gray-600">{p.desc}</p>
+      <p className="mt-4 inline-block text-sm font-medium text-blue-600 hover:underline">{p.type && 'See more →'}</p>
     </div>
   </article>
 );
@@ -26,9 +38,9 @@ export default function Projects() {
       </header>
 
       <main className="py-16">
-        <div className="container">
+        <section className="container">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projectsData.map((p) =>
+            {projectsData.filter(p => !p.pagetitle).map((p) =>
                 p.type === "internal" ? (
                   <Link key={p.id} to={`/projects${p.link}`}>
                     <ProjectCard {...p} />
@@ -40,7 +52,17 @@ export default function Projects() {
                 )
               )}
           </div>
-        </div>
+        </section>
+        <section className="container mt-30">
+          <h2 className='sectiontitle m-5 pb-2'>Other Projects</h2>
+          <div className="mt-10 flex flex-col gap-6">
+            {projectsData.filter(p => p.pagetitle).map((p) =>
+                  <Link key={p.id} to={`/projects${p.link}`}>
+                    <OtherProjectCard {...p} />
+                  </Link>
+              )}
+          </div>
+        </section>
       </main>
     </>
   );

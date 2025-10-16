@@ -74,7 +74,7 @@ const EventMasonryCard = ( event ) => (
     <p className="text-sm text-sky-600 mb-1"><span className='font-bold'>Participants: </span>{event.participants}</p>
     <p className="text-sm text-sky-500 mb-4">Keywords: {event.keywords}</p>
 
-  <div className="prose prose-gray overflow-auto max-w-none mb-6 text-gray-700 text-lg p">
+  <div className="prose prose-gray overflow-auto max-w-6xl mb-6 text-gray-700 text-lg p">
       <ReactMarkdown className='markdown'>{event.desc}</ReactMarkdown>
     </div>
     <div className='flex justify-center'>

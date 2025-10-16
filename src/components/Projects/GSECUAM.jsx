@@ -18,8 +18,8 @@ The outcomes of this research will be utilized to formulate a long-term technolo
     funding: "GS E&C",
     team: "Seyun Kim, Gwanghwan Seong",
     partnerships: [
-      "COMET Lab (comet.kaist.ac.kr, KAIST)",
-      "CENS Lab (cens.kaist.ac.kr, KAIST)",
+      `COMET Lab (comet.kaist.ac.kr, KAIST)`,
+      `CENS Lab ([cens.kaist.ac.kr, KAIST](https://cens.kaist.ac.kr/index.php))`,
       "Spacetime Intelligence Laboratory"
     ]
   },
@@ -32,6 +32,8 @@ The outcomes of this research will be utilized to formulate a long-term technolo
 };
 
 export default function GSEcUamProjectPage() {
+
+  
   return (
 <>
       <div
@@ -56,7 +58,7 @@ export default function GSEcUamProjectPage() {
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-3">Objective</h2>
           <div className="prose prose-lg">
-            <ReactMarkdown>{gsEcUamData.objective}</ReactMarkdown>
+            <ReactMarkdown className="markdown">{gsEcUamData.objective}</ReactMarkdown>
           </div>
         </section>
 
@@ -77,7 +79,7 @@ export default function GSEcUamProjectPage() {
             <p><strong>Team:</strong> {gsEcUamData.details.team}</p>
             <p>
               <strong>R&D Partnership:</strong>{" "}
-              {gsEcUamData.details.partnerships.join(", ")}
+              <ReactMarkdown className="markdown">{gsEcUamData.details.partnerships.join(", ")}</ReactMarkdown>
             </p>
           </div>
         </section>

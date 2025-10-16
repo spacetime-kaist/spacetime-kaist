@@ -259,6 +259,7 @@ Yuna Noh, Yoonjin Yoon. "Elderly road collision injury outcomes associated with 
     research:[
       {
         title:'Air Traffic Management Master Plan - NARAE (National ATM Renovation & Enhancement)',
+        projectsSlug:'narae',
         date: '',
         desc: 
 `2012 marks the 40th anniversary for the Republic of Korea(ROK)'s first trans-pacific flight. Over the past decades, ROK has seen a tremendous growth in air navigation sector fueled by robust economic growth, along with a demonstrated operational capability to handle increasing demand.
@@ -283,6 +284,7 @@ ROK subsequently commissioned the working group in November 2011 as a group of r
       },
       {
         title:'Autonomous Logistics',
+        projectsSlug:'autonomous-logistics',
         date: '',
         desc: 
 `### **Development of Autonomous Mobile Agent System in Complex Warehouse**
@@ -316,6 +318,7 @@ Breadth First Search algorithm can be modified to be adopted in three-dimensiona
       },
       {
         title:'Probabilistic Air Traffic Flow Management (ATFM) in the next generation air transportation system',
+        projectsSlug:'atfm',
         date: '',
         desc: 
 `This research seeks to develop and evaluate both deterministic and stochastic Air Traffic Flow Management (ATFM) optimization models, with the purpose to be utilized in the current and future air transportation systems.
@@ -344,6 +347,7 @@ This research first addresses shortcomings of the current ATFM system by develop
       },
       {
         title:'Aviation System Safety Management and Reliability Centered Maintenance Program Development',
+        projectsSlug:'aviation-system-safety-management',
         date: '',
         desc: 
 `- The goal of this research is to develop SMS tools for service providers and policymakers to achieve proactive safety management in accordance with ICAO guideline. 
