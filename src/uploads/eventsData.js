@@ -1,6 +1,18 @@
 export const homeEventsList = [20250905,20250617,20250519,20250515,20250403,20250308,20250221,20250113,20250105,20241111,]
 const eventsData = [
   {
+    id: 20250930,
+    title: "COEX Exhibition: Smart Life Week 2025",
+    date: "September 30th - October 2nd, 2025, Convention and Exhibition Center (COEX)",
+    participants: "Professor Yoonjin Yoon, Namwoo Kim (Postdoc Researcher), Juneyoung Ro (M.S. candidate), Keonhee Jang (Integrated M.S.-Ph.D candidate), 박영준, 윤석우",
+    keywords: "#K-DS",
+    desc:
+`Our laboratory collaborated with the *MIT Senseable City Lab* at **Smart Life Week 2025**, presenting two exhibitions — “Urban Heat, Urban Sales” and “Feeling Nature” — centered on urban climate, citizens’ daily lives, and climate resilience.
+
+Based on credit card transaction data from 426 administrative districts in Seoul, covering 96 business sectors over 365 days, we quantitatively analyzed how climate factors such as temperature and humidity affect small business owners’ sales and sustainability. Using artificial intelligence, we modeled sales patterns by region and industry under climate stress conditions such as heatwaves and heavy rainfall, and visualized the results as an “Urban Resilience” index.`,
+    photos: ['/eventsImg/IMG_0227.jpg', '/eventsImg/IMG_0299.jpg', '/eventsImg/IMG_0306.jpg'],
+  },
+  {
     id: 20250905,
     title: "K-DS Conference",
     date: "September 5th, 2025, Daegu",

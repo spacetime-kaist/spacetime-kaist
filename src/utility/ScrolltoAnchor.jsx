@@ -1,10 +1,11 @@
 import { useEffect, useRef } from "react";
-import { useLocation } from "react-router-dom";
-
+import { useLocation, useNavigationType } from "react-router-dom";
 
 function ScrolltoAnchor() {
   const location = useLocation();
+  const navigationType = useNavigationType();
   const lastHash = useRef("");
+  
   useEffect(() => {
     if (location.hash) {
       lastHash.current = location.hash.slice(1) // For safe hashing
@@ -17,7 +18,12 @@ function ScrolltoAnchor() {
         lastHash.current = "";
       },100);
     }
-  }, [location]);
+    else{
+      if(navigationType === "PUSH"){
+        window.scrollTo({ top: 0, behavior: "instant" });
+      }
+    };
+  }, [location, navigationType]);
   return null;
 }
 export default ScrolltoAnchor;

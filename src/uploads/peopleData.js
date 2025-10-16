@@ -5,7 +5,7 @@ export const professorData ={
     greeting: "I'm an associate Professor in Department of Civil and Environmental Engineering at KAIST with joint appointment in Graduate School of Artificial Intelligence and Graduate School of Data Science",
     link: "http://yoonjin.kaist.ac.kr",
     email:'yoonjin@kaist.ac.kr',
-    edu: ['Ph.D., M.S. in Civil and Environment Engineering, KAIST', 'B.S.: Mathematical Sciences, KAIST'],
+    edu: ['B.S. Mathematics, SNU', 'M.S. Computer Science, Stanford','M.S. Management Science and Engineering, Stanford','Ph.D. Civil and Environmental Engineering, UC Berkeley',],
     research:`Coming from Mathematics, Computer Science, Management Science, and Civil engineering background, my research focus is system-of-systems, which includes transportation system, city, logistics system, and public health system. My recent research interests include the following areas.
 
 **Urban Intelligence**: Urban Region Representation Learning; SDG Data Science; AI and Cities; AI for Social Good    

@@ -9,6 +9,7 @@ import Research from './components/Research/Research'
 import ResearchDetail from './components/Research/ResearchDetail'
 import Projects from './components/Projects/Projects'
 import GSECUAM from './components/Projects/GSECUAM'
+import ProjectsDetail from './components/Projects/ProjectsDetail'
 import Events from './components/Events'
 import Conference from './components/Publications/Conference'
 
@@ -33,6 +34,7 @@ function App() {
         <Route path='/research' element={<Research/>} />
         <Route path='/research/:slug' element={<ResearchDetail/>} />
         <Route path='/projects' element={<Projects />} />
+        <Route path='/projects/:slug' element={<ProjectsDetail />} />
         <Route path='/projects/gs-ec-uam' element={<GSECUAM />} />
         <Route path='/events' element={<Events />} />
         </Route>
