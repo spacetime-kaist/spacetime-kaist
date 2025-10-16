@@ -4,7 +4,7 @@ const eventsData = [
     id: 20250930,
     title: "COEX Exhibition: Smart Life Week 2025",
     date: "September 30th - October 2nd, 2025, Convention and Exhibition Center (COEX)",
-    participants: "Professor Yoonjin Yoon, Namwoo Kim (Postdoc Researcher), YoungJoun Park, Juneyoung Ro (M.S. candidate), Keonhee Jang (Integrated M.S.-Ph.D candidate), 윤석우",
+    participants: "Professor Yoonjin Yoon, Namwoo Kim (Postdoc Researcher), YoungJoun Park, Juneyoung Ro (M.S. candidate), Keonhee Jang (Integrated M.S.-Ph.D candidate), Seokwoo Yun",
     keywords: "#K-DS",
     desc:
 `Our laboratory collaborated with the *MIT Senseable City Lab* at **Smart Life Week 2025**, presenting two exhibitions — “Urban Heat, Urban Sales” and “Feeling Nature” — centered on urban climate, citizens’ daily lives, and climate resilience.
