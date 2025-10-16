@@ -17,11 +17,8 @@ The outcomes of this research will be utilized to formulate a long-term technolo
     period: "2023.06 ~ 2023.12",
     funding: "GS E&C",
     team: "Seyun Kim, Gwanghwan Seong",
-    partnerships: [
-      `COMET Lab (comet.kaist.ac.kr, KAIST)`,
-      `CENS Lab ([cens.kaist.ac.kr, KAIST](https://cens.kaist.ac.kr/index.php))`,
-      "Spacetime Intelligence Laboratory"
-    ]
+    partnerships: 
+`COMET Lab (comet.kaist.ac.kr, KAIST), CENS Lab ([*cens.kaist.ac.kr*](https://cens.kaist.ac.kr/index.php), KAIST), Spacetime Intelligence Laboratory`,
   },
   contact: {
     address: "W16 #407, KAIST, 291 Daehak-ro, Yuseong-gu, Daejeon, Republic of Korea",
@@ -79,7 +76,7 @@ export default function GSEcUamProjectPage() {
             <p><strong>Team:</strong> {gsEcUamData.details.team}</p>
             <p>
               <strong>R&D Partnership:</strong>{" "}
-              <ReactMarkdown className="markdown">{gsEcUamData.details.partnerships.join(", ")}</ReactMarkdown>
+              <ReactMarkdown className="markdown">{gsEcUamData.details.partnerships}</ReactMarkdown>
             </p>
           </div>
         </section>
