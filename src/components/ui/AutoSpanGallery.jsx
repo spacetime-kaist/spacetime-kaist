@@ -16,7 +16,7 @@ export default function AutoSpanGallery({ images }) {
 
     const getSpan = (ratio) => {
         if (ratio > 2.0) return 3;
-        if (ratio > 1.5) return 2;
+        if (ratio > 1.2) return 2;
         return 1;
     };
        
@@ -47,22 +47,21 @@ export default function AutoSpanGallery({ images }) {
       className={`
         grid
         gap-6
-        grid-cols-1
-        sm:grid-cols-${gridCol}
+        grid-cols-${gridCol}
         justify-evenly
         w-full
-        mx-auto
       `}
     >
       {images.map((src, i) => (
         <div
           key={i}
-          className={`relative w-full col-span-${Math.min(gridCol,imageSpans[i] || 1)}`}
+          className={`relative w-full row-span-1 col-span-${Math.min(gridCol,imageSpans[i] || 1)}`}
         >
+          {/* the image sizing fixed by switching from w-full to w-5xl */}
           <img
             src={`${import.meta.env.VITE_PUBLIC_URL}${src}`}
             alt=""
-            className="w-full transition-transform duration-500 hover:scale-120"
+            className="w-5xl transition-transform duration-500 hover:scale-120"
           />
           {/* <div className="text-xl">{gridCol}  span: {imageSpans[i] || 1} col-span-{Math.min(gridCol,imageSpans[i] || 1)}</div> */}
         </div>

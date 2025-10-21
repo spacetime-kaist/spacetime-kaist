@@ -15,7 +15,7 @@
 
 /* For whole page and sections */
 .page {
-    @apply max-w-[96rem] mx-auto px-3 sm:px-6;
+    @apply max-w-[96rem] mx-auto px-3;
 }
 
 .container {
