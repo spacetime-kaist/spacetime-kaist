@@ -54,16 +54,18 @@ const ResearchGalleryCard = ( detail ) => (
     <h4 className=""> SELECTED REFERENCE </h4>
     {detail.ref.map((ref, idx) => (<div key={`ref-${idx}`} className="text-sm text-gray-500 mb-2">{ref}</div>))}
     </div>} */}
-    <div className="mt-10 flex flex-col w-full justify-center items-center pb-10">
-    <div className="w-6xl">
+    <div className="mt-10  flex flex-col w-full justify-center items-center pb-10">
+    <div className="w-5xl flex flex-col justify-center items-center">
         {detail.youtube && detail.youtube.map((video, idx) => (
         <iframe
             key={idx}
             src={`${video}&origin=http://spacetime.kaist.ac.kr/`}
             alt={`${detail.title} youtube ${idx + 1}`}
-            className="w-full aspect-video rounded-md object-cover"
+            className="w-3xl sm:w-5xl aspect-video rounded-md "
         />
         ))}
+    </div>
+    <div>
         {detail.images &&  <AutoSpanGallery images = {detail.images}/>}
     </div>
     </div>
