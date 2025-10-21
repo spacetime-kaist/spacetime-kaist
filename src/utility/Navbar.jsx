@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { React,useState } from 'react';
+import { React,useState, useRef, useEffect } from 'react';
 
 import stil_logo from '../assets/stil_logo.png'
 import { IoIosSearch, IoIosArrowForward, IoIosArrowDown } from "react-icons/io"
@@ -14,6 +14,25 @@ function Navbar() {
   const menuTextStyle = "hover:bg-blue-300 hover:text-white p-3 m-1 rounded-xl md:text-lg font-medium text-gray-700"
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [isPublicationsOpen, setPublicationsOpen] = useState(false);
+  const menuRef = useRef(null);
+
+  useEffect(() => {
+  const handleClickOutside = (event) => {
+    if (menuRef.current && !menuRef.current.contains(event.target)) {
+      setDropdownOpen(false);
+      setPublicationsOpen(false);
+    }
+  };
+
+  document.addEventListener("mousedown", handleClickOutside);
+  document.addEventListener("touchstart", handleClickOutside);
+
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutside);
+    document.removeEventListener("touchstart", handleClickOutside);
+  };
+  }, []);
+
   return (
       <div className='fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md shadow-sm z-80'>
         <div className='container'>
@@ -26,7 +45,7 @@ function Navbar() {
               <div className='hidden md:flex gap-6 items-center text-md md:text-lg font-medium text-gray-700'>
 
                 {/*Home*/}
-                <Link to="/" className={menuTextStyle}>Home</Link>
+                <Link to="/" className={`${menuTextStyle} hidden lg:block`} >Home</Link>
 
                 {/* Publications - Desktop hover dropdown */}
                   <div className="relative group hidden md:block ">
@@ -65,12 +84,12 @@ function Navbar() {
               </div>
 
               {/* -------------- Mobile Menu -------------- */}            
-              <div className="relative md:hidden">
+              <div ref={menuRef} className="relative md:hidden">
                     <button
                       onClick={() => {
                         setDropdownOpen(!isDropdownOpen)
                         setPublicationsOpen(false)}}
-                      className="focus:outline-none"
+                      className="focus:outline-none transition smooth"
                     >
                       <div className="bg-sky-600 text-xl text-white hover:bg-blue-700 inline-block px-4 py-2 rounded-md text-sm font-medium"><IoMenuSharp /></div>
                     </button>
@@ -121,9 +140,9 @@ function Navbar() {
               </div>
 
               {/* ------ Search ------ */}
-              <div className="w-10 h-10 flex justify-center items-center rounded-full bg-gray-300 hover:bg-blue-400 cursor-pointer">
-              <div className="text-xl hover:text-white inline-block px-4 py-2 rounded-md text-sm font-medium"><IoIosSearch /></div>
-            </div>
+              {/* <div className="w-10 h-10 flex justify-center items-center rounded-full bg-gray-300 hover:bg-blue-400 cursor-pointer">
+                <div className="text-xl hover:text-white inline-block px-4 py-2 rounded-md text-sm font-medium"><IoIosSearch /></div>
+              </div> */}
                </div>
               
             </div>
