@@ -1,12 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
 @import "tailwindcss";
 
-@font-face {
+
+
+/* @font-face {
     font-family: 'Tenada';
     src: url('/src/assets/fonts/TENADA_font/Tenada.ttf');
-}
-@theme {
-    --font-display: 'Tenada', sans-serif;
+} */
 
+@theme {
+    /* --font-display: 'Tenada', sans-serif; */
+    --font-display: 'Montserrat', sans-serif;
 }
 
 /* For whole page and sections */
@@ -19,11 +23,11 @@
 }
 
 .divider {
-    @apply my-10 border-t border-gray-300;
+    @apply my-10 border-2 border-t border-slate-200;
 }
 
 .pagetitle {
-    @apply text-4xl sm:text-5xl font-extrabold leading-tight mb-5;
+    @apply flex justify-center text-4xl sm:text-6xl  leading-tight mb-15 text-blue-900/90;
 }
 
 .sectiontitle {
