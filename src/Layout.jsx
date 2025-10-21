@@ -6,7 +6,7 @@ import ScrollUpBt from './utility/ScrollUpButton';
 
 function Layout() {
     return (
-<div id='top' className=" flex flex-col justify-center items-center overflow-hidden">
+<div id='top' className="font-display flex flex-col justify-center items-center overflow-hidden">
     <div className="w-screen min-h-[100vh] min-w-[320px] bg-welcomeHome lg:bg-cover bg-contain bg-no-repeat">
     {/* Invisible div to fix navbar overlapping content */}
     <div className="w-full h-16"/>
