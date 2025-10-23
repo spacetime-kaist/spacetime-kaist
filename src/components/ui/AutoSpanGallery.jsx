@@ -27,7 +27,7 @@ export default function AutoSpanGallery({ images }) {
         images.map((src) => {
           return new Promise((resolve) => {
             const img = new Image();
-            img.src = `${import.meta.env.VITE_PUBLIC_URL}${src}`;
+            img.src = `${src}`;
             img.onload = () => {
               const ratio = img.naturalWidth / img.naturalHeight;
               resolve(getSpan(ratio)); // threshold can be tuned

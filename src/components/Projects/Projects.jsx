@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const ProjectCard = (p) => 
 (
   <article className={`flex flex-col justify-between p-5 h-full bg-white rounded-lg border border-gray-200 shadow-sm ${p.type && 'hover:shadow-xl'} transition`}>
-    <div>{p.image &&<img src={`${import.meta.env.VITE_PUBLIC_URL}${p.image}`} alt={p.title} className="w-5xl object-cover rounded-md mb-4" />}</div>
+    <div>{p.image &&<img src={`${p.image}`} alt={p.title} className="w-5xl object-cover rounded-md mb-4" />}</div>
     <div >
       <h3 className="font-semibold text-3xl">{p.title}</h3>
       <p className="mt-2 text-sm text-gray-600">{p.desc}</p>
@@ -17,7 +17,7 @@ const ProjectCard = (p) =>
 const OtherProjectCard = (p) => 
 (
   <article className={`flex flex-col justify-between p-5 h-full w-5xl bg-white rounded-lg border border-gray-200 shadow-sm ${p.type && 'hover:shadow-xl'} transition`}>
-    <div>{p.image &&<img src={`${import.meta.env.VITE_PUBLIC_URL}${p.image}`} alt={p.title} className="w-5xl object-cover rounded-md mb-4" />}</div>
+    <div>{p.image &&<img src={`${p.image}`} alt={p.title} className="w-5xl object-cover rounded-md mb-4" />}</div>
     <div >
       <h3 className="font-semibold text-2xl">{p.title}</h3>
       <p className="mt-2 text-sm text-gray-600">{p.desc}</p>
