@@ -51,7 +51,7 @@ const SectionLink = () => (
 
   return (
     <div className="p-8 bg-gray-50 min-h-screen">
-      <h1 className="pagetitle">Conference</h1>
+      <h1 className="pagetitle">Conference Proceedings</h1>
     <section id="international" className="z-20 mb-16 mt-5">
       <SectionLink />
       <h2 className="sectiontitle text-2xl font-bold mb-4">International Conference</h2>
