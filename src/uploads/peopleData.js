@@ -3,7 +3,7 @@ export const professorData ={
   id: 1,
     name: "Prof. Yoonjin Yoon",
     greeting: "I'm an associate Professor in Department of Civil and Environmental Engineering at KAIST with joint appointment in Graduate School of Artificial Intelligence and Graduate School of Data Science",
-    link: "http://yoonjin.kaist.ac.kr",
+    link: "https://sites.google.com/view/yoonjintrue",
     email:'yoonjin@kaist.ac.kr',
     edu: ['B.S. Mathematics, SNU', 'M.S. Computer Science, Stanford','M.S. Management Science and Engineering, Stanford','Ph.D. Civil and Environmental Engineering, UC Berkeley',],
     research:`Coming from Mathematics, Computer Science, Management Science, and Civil engineering background, my research focus is system-of-systems, which includes transportation system, city, logistics system, and public health system. My recent research interests include the following areas.
@@ -22,7 +22,7 @@ const labMembersData = [
     {
         "id": 2,
         "name": "Namwoo Kim",
-        "link": "http://namwoo_kim.kaist.ac.kr",
+        "link": "https://sites.google.com/view/namwookim",
         "role": "Postdoctoral Researcher",
         "from": "2023.09~",
         "email": "ih736x@kaist.ac.kr",
@@ -31,7 +31,7 @@ const labMembersData = [
     {
         "id": 3,
         "name": "Sungmin Sohn",
-        "link": "http://sungmin_sohn.kaist.ac.kr",
+        "link": "https://sites.google.com/view/sungmin-sohn",
         "role": "Ph.D. Candidate",
         "from": "2023.09~",
         "email": "smsohn1997@kaist.ac.kr",
@@ -41,7 +41,7 @@ const labMembersData = [
     {
         "id": 4,
         "name": "Donghyun Yoon",
-        "link": "http://donghyun_yoon.kaist.ac.kr",
+        "link": "https://sites.google.com/view/donghyun-yoon",
         "role": "Ph.D. Candidate",
         "from": "2024.03~",
         "email": "tloveu49@kaist.ac.kr",
@@ -51,7 +51,7 @@ const labMembersData = [
     {
         "id": 5,
         "name": "Minwoo Jeong",
-        "link": "http://minwoo_jeong.kaist.ac.kr",
+        "link": "https://sites.google.com/view/minwoo-jeong",
         "role": "M.S. Candidate",
         "from": "2024.03~",
         "email": "minwoo5003@kaist.ac.kr",
@@ -61,7 +61,7 @@ const labMembersData = [
     {
         "id": 6,
         "name": "Juneyoung Ro",
-        "link": "http://juneyoung_ro.kaist.ac.kr",
+        "link": "https://sites.google.com/view/juneyoungro",
         "role": "M.S. Candidate",
         "from": "2024.03~",
         "email": "juneyoung.ro@kaist.ac.kr",
@@ -71,7 +71,6 @@ const labMembersData = [
     {
         "id": 7,
         "name": "Seungro Lee",
-        "link": "http://seungro_lee.kaist.ac.kr",
         "role": "M.S. Candidate",
         "from": "2024.09~",
         "email": "roy.seungro.lee@kaist.ac.kr",
@@ -81,7 +80,6 @@ const labMembersData = [
     {
         "id": 8,
         "name": "Keonhee Jang",
-        "link": "http://keonhee_jang.kaist.ac.kr",
         "role": "Integrated M.S.-Ph.D Candidate",
         "from": "2024.09~",
         "email": "keoniverse@kaist.ac.kr",
@@ -91,7 +89,6 @@ const labMembersData = [
     {
         "id": 9,
         "name": "Jeeyun Chang",
-        "link": "http://jeeyun_chang.kaist.ac.kr",
         "role": "M.S. Candidate",
         "from": "2025.03~",
         "email": "jyc021@kaist.ac.kr",
@@ -101,7 +98,6 @@ const labMembersData = [
     {
         "id": 10,
         "name": "Jihyeon Ohk",
-        "link": "http://jihyeon_ohk.kaist.ac.kr",
         "role": "M.S. Candidate",
         "from": "2025.09~",
         "email": "jh.ohk@kaist.ac.kr",
@@ -172,12 +168,15 @@ export const aluminiData = [
     name: "Seyun Kim",
     degree: "Ph.D.",
     date: "2016.03~2021.02",
-    photo: "/peopleImg/19.jpg"
+    photo: "/peopleImg/19.jpg",
+    desc:
+  `2021.03~2025.07\n
+  (Research Assistant Professor)`
   },
    {
     id: 20,
     name: "Seyun Kim",
-    degree: "Research Assistant Professor",
+    degree: "",
     date: "2021.03~2025.07",
     photo: "/peopleImg/20.jpg"
   },
