@@ -55,7 +55,7 @@ const researchData = [
         title:'Regional for urban air mobility application in metropolitan areas: case studies in San Francisco and New York',
         date: '',
         desc: 'In this study, as a first step to assess the feasibility of UAM in urban areas, we conduct 3D geodemographic analyses of two major cities in San Francisco, CA and Manhattan, NY. The 3D building footprint data is used to identify the raw available airspace as well as the added spatial restrictions with geofencing. Population data is used to represent the potential customer base by combining the daytime and nighttime population. Since the geospatial and demographic datasets differ in representation, the spatial data is vectorized while population data is available by census tract, spatial information is aggregated in census tracts. In addition, We proposed to group the areas of similar spatial and population characteristics through regionalization. Regionalization is a spatially constrained multi-variate clustering method to group small geographical units (census blocks and tracts in general) into a contiguous region of homogeneous nature. The main benefit of regionalization is to delineate regions of similar characteristics and spatial proximity. Through regionalization, one can better understand the urban space with comprehensive geographic perspective, rather than a small geographical unit of census blocks or tracts. Furthermore, regionalization can also improve geospatial intelligence in urban spaces by delineating the functional neighborhood . In this study, we adopted the SKATER, an efficient regionalization technique that uses minimum spanning tree consisting of a connected tree with no circuits. The intention is to provide a region map of the city that can readily identify regions of similar UAM operational and population characteristics with spatial continuity and feasibility. Based on the regionalization results, correspondence analysis was conducted to translate the compound effect of spatial and population characteristics into feasibility.',
-        images: [['/researchImg/5-2.png']],
+        images: ['/researchImg/5-1.png'],
       },
       {
         title:'Density-aware flight planning for multiple agents in urban airspace',
@@ -73,13 +73,13 @@ const researchData = [
 Namwoo Kim, Yoonjin Yoon, "Cooperative sUAV Collision Avoidance Based on Satisficing Theory", International Journal of Aeronautical and Space Sciences, 2019
         `,
         ref: ['Namwoo Kim, Yoonjin Yoon, "Cooperative sUAV Collision Avoidance Based on Satisficing Theory", International Journal of Aeronautical and Space Sciences, 2019'], 
-        images: [['/researchImg/5-3.png']],
+        images: ['/researchImg/5-2.png'],
       },
       {
         title:'Geodemographical Risk Analysis of 3D Urban Space',
         date: '',
         desc: `For application of UAS and UAM in urban area, people and man-mad structures that consisting urban environment should be considered. We analyzed urban space by using census tract based population data and 3d building model data. Highly urbanized areas – Manhattan Island and San Francisco were analyzed for their urban space characteristics.`,
-        images: [['/researchImg/5-4.png']],
+        images: ['/researchImg/5-3.png'],
       },
       {
         title:'Urban Airspace Availability Assessment',
@@ -94,7 +94,7 @@ This interactive tool enables you to explore the airspace availability in three 
 
 Jungwoo Cho, Yoonjin Yoon, "How to Assess the Capacity of Urban Airspace: A Topological Approach Using Keep-in and Keep-out Geofence", 92, 137-149, Transportation Research, Part C, 2018,  
 Method for identifying available airspace for unmanned aerial vehicle operations, Patent filed, Dec 17, 2017, KR 10-2018-0033978`,
-        images: [['/researchImg/5-5.png']],
+        images: ['/researchImg/5-4.png'],
       },
       {
         title:'Horizontal and Vertical Connectivity of Airspace ',
@@ -107,7 +107,7 @@ In this study, we present topography map and skeletal graph to interpret underly
 **SELECTED REFERENCES**
 
 Jungwoo Cho, Yoonjin Yoon. "Extraction and Interpretation of Geometrical and Topological Properties of Urban Airspace for UAS Operations". 13th ATM R&D Seminar, 2019`,
-        images: ['/researchImg/5-6.png'],
+        images: [['/researchImg/5-5.png'],['/researchImg/5-6.png']] ,
       },
       {
         title:'UTM: Urban Drone Routing',
@@ -146,14 +146,36 @@ Jungwoo Cho, Yoonjin Yoon. "Extraction and Interpretation of Geometrical and Top
     thumbnail: '/researchImg/4.png',
     research:[
       {
-        title:'Deep Learning Framework for Vessel Trajectory Prediction Using Auxiliary Tasks and Convolutional Networks',
+        title:'A Novel Graph Convolutional Networks to Progressively Adapt to Online Data',
         date: '',
-        desc: `The accurate prediction of vessel trajectories plays a pivotal role in various maritime applications, including route planning, collision avoidance, and maritime traffic management. With the exponential growth in vessel traffic and the increasing complexity of maritime operations, there is a pressing need for reliable and efficient methods to forecast vessel movements. Traditional statistical and machine-learning approaches have limitations in capturing the complex spatial-temporal patterns of vessel movements. Deep learning techniques have emerged as a promising solution due to their ability to handle large-scale datasets and capture nonlinear relationships. This paper proposes a novel deep learning-based vessel trajectory prediction framework for AIS data using Auxiliary tasks and Convolutional encoders (AIS-ACNet). The model leverages Automatic Identification System (AIS) data, including geographical positions, and vessel dynamics such as Speed Over Ground (SOG), and Course Over Ground (COG), for trajectory prediction. The AIS-ACNet employs parallel convolutional encoder networks with feature fusion layers. The model is trained with a learning objective that includes auxiliary tasks such as SOG and COG predictions. This framework enhances the model's representative power of vessel trajectory data leading to a better understanding of vessel dynamics and higher trajectory prediction performance. The proposed framework is evaluated on real-world data from the Port of Houston, Texas, USA, and compared to existing models through extensive experiments and ablation studies. The results demonstrate the effectiveness and superiority of AIS-ACNet in accurately predicting vessel trajectories.
+        desc: `In recent years, graph convolutional networks that possess the ability to adapt to the input data have shown promising results in several studies. In most cases, however, the adaptation has been made during the training phases of the models, which inevitably make the models vulnerable to unexpected traffic conditions such as road closure and traffic accident during the testing phases. In this study, we propose a novel traffic forecasting model, Progressive Graph Convolutional Network (PGCN) to make the model adapt to online traffic data. PGCN constructs a set of graphs by calculating learnable similarity measures among the node signals. The architecture of the model is based on Graph WaveNet. When applied to seven real-world datasets, PGCN consistently achieves state-of-the-art performance. This result shows that PGCN has the ability to generalize in different study areas by progressively adapting to online data.
 
 **SELECTED REFERENCE**
 
-- Y. Shin, Y. Yoon. (2024). [PGCN: Progressive graph convolutional networks for spatial-temporal traffic forecasting. IEEE Transactions on Intelligent Transportation Systems](https://ieeexplore.ieee.org/abstract/document/10400973)`,
-        images: ['/researchImg/3-1.png'],
+- Y. Shin, Y. Yoon. (2024). [PGCN: Progressive graph convolutional networks for spatial-temporal traffic forecasting](https://ieeexplore.ieee.org/abstract/document/10400973) IEEE Transactions on Intelligent Transportation Systems`,
+        images: ['/researchImg/4-1.png'],
+      },
+      {
+        title:'Performance Evaluation of Basic Elements of Deep Neural Network Models for Traffic Forecasting',
+        date: '',
+        desc: `Since 2014, various studies have proposed deep learning-based models to solve traffic forecasting problems. While earlier approaches have shown more wide range of implementations, the basic elements of the recent models can be categorized into a few groups - that are RNN, convolution, and self-attention for temporal feature extraction, and Graph Convolutional Networks (GCN) and Graph Attention Networks (GAT) for spatial feature extraction. However, there has been little effort to assess the characteristics of each element and make an in-depth evaluation. In this study, we thoroughly evaluated the performance and characteristics of basic elements of traffic forecasting models through extensive and multi-faceted experiments on four real-world datasets. The result reveals that there is no single element that is superior to the others in all aspects. Interesting outcomes include that the convolution-based models show more accurate overall performance than the attention-based models, while the attention-based models show more robustness against abnormal conditions.
+
+**SELECTED REFERENCE**
+
+- Y. Shin, Y. Yoon*, "A Comparative Study on Basic Elements of Deep Learning Models for Spatial-Temporal Traffic Forecasting", AAAI-22 workshop: AI for Transportation, 2022.`,
+        images: ['/researchImg/4-2.png'],
+      },
+      {
+        title:'Short-Term Traffic Forecasting Using Graph Convolutional Networks',
+        date: '',
+        desc: `[TRUE Blog Site](https://sites.google.com/view/trueblog/home)
+Traffic forecasting problem is a research area in transportation engineering that has flourished over the last couple of decades, and started to garner broader research interest as a key technical enabler of the adaptive traffic management. The recent surge of Graph Convolutional Networks has led to acute improvement on the performance of traffic forecasting tasks. However, many studies overlook the features that can represent the transportation networks such as speed limit, distance, and flow direction. In our research, we propose Multi-Weight Traffic Graph Convolutional Networks (MW-TGC) to incorporate aforementioned features in a single model and to reflect more spatial dynamicity in traffic forecasting problem. Experiment on two real-world datasets show that the proposed model outperforms the state-of-the-art models.
+
+**SELECTED REFERENCE**
+
+- Y. Shin and Y. Yoon, "Incorporating Dynamicity of Transportation Network With Multi-Weight Traffic Graph Convolutional Network for Traffic Forecasting," in IEEE Transactions on Intelligent Transportation Systems, doi: 10.1109/TITS.2020.3031331.
+`,
+        images: ['/researchImg/4-3.png'],
       },
     ],
   },
