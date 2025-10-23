@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import eventsData from '../uploads/eventsData';
-const PUBLIC_URL = '';
+const PUBLIC_URL = NaN;
 
 const EventCard = ( event ) => (
   <article className="p-6 bg-white rounded-lg border border-gray-200 shadow-sm mb-8">
