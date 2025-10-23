@@ -17,7 +17,7 @@ const EventCard = ( event ) => (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {event.youtube && 
         <iframe
-          src={`${event.youtube}&origin=http://spacetime.kaist.ac.kr/`}
+          src={`${event.youtube}&origin=https://spacetime.kaist.ac.kr/`}
           alt={`${event.title} youtube`}
           className="w-full aspect-video rounded-md"
         />
@@ -48,7 +48,7 @@ const EventGridCard = ( event ) => (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {event.youtube ? ( 
         <iframe
-          src={`${event.youtube}&origin=http://spacetime.kaist.ac.kr/`}
+          src={`${event.youtube}&origin=https://spacetime.kaist.ac.kr/`}
           alt={`${event.title} youtube`}
           className="w-full aspect-video rounded-md col-span-2 row-span-2 object-cover"
         />
@@ -80,7 +80,7 @@ const EventMasonryCard = ( event ) => (
     <div className='flex justify-center'>
       {event.youtube && 
         <iframe
-          src={`${event.youtube}&origin=http://spacetime.kaist.ac.kr/`}
+          src={`${event.youtube}&origin=https://spacetime.kaist.ac.kr/`}
           alt={`${event.title} youtube`}
           className="w-4xl aspect-video rounded-md object-cover border border-gray-300"
         />
