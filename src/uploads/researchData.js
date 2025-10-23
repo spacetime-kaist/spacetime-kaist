@@ -34,14 +34,13 @@ const researchData = [
         title:'Data-driven future demand forecasting for UAM',
         date: '',
         desc: 'As the public interest in UAM is getting higher and the underlying technology for UAM becomes sophisticated, the need to forecast the future demand for UAM increases. As the data-driven demand forecasting method has become more accurate than the traditional modeling-based forecasting method, TRUE lab utilized Seoul taxi GPS data to forecast the potential demand for UAM. Our assumption is based on the idea that part of the long-range taxi trip will be replaced by the emerging mobility service - UAM. As our first step toward UAM demand forecasting, we considered the case of using existing helipads. We plan to expand our scope in future work to UAM routing, fleet rebalancing, and scheduling. For details, please visit our blog.',
-        images: ['/researchImg/2-3.png'],
+        images: ['/researchImg/2-3.png','/researchImg/2-4.png'],
       },
        {
         title:'UAM Concept of Operations',
         date: '',
         desc: `Urban Air Mobility (UAM) refers to an aviation transportation system that overcomes the limitations of existing terrestrial transportation methods and enables the transportation of people or cargo in three-dimensional urban airspace through vertical takeoff and landing (VTOL) vehicles, as well as the supporting infrastructure for takeoff and landing. UAM is expected to grow into a new advanced industry in future mobility, with a projected scale of over 700 trillion won over the next 20 years. Consequently, major mobility companies and governments around the world are rapidly joining the technological development efforts. In this context, in the first half of 2020, the Federal Aviation Administration (FAA) and the National Aeronautics and Space Administration (NASA) of the United States each announced specific concepts for UAM operations, known as UAM ConOps and UAM OpsCon Passenger-Carrying Operations, respectively. In line with this global trend, Korea also announced the 'Korean Urban Air Mobility (K-UAM) Roadmap,' including practical operational concepts tailored to the domestic context, as well as a technology development roadmap in the first half of 2020. Additionally, in June, we released the UAM operational concept document. Detailed explanations are available on the following webpage`,
         hyperlink: 'https://sites.google.com/view/urbanairmobility/home?authuser=1&pli=1',
-        images: ['/researchImg/2-4.png'],
       },
     ]
   },

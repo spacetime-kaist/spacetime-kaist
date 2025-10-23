@@ -85,13 +85,13 @@ const EventMasonryCard = ( event ) => (
         />
       }
       {event.photos && 
-      <div className={`columns-1 ${event.photos.length>1?'sm:columns-2':null} gap-4`}>
+      <div className={`columns-1 ${event.photos.length>1?'md:columns-2':null} gap-4`}>
       {event.photos.map((photo, idx) => (
         <img
           key={idx}
           src={`${photo}`}
           alt={`${event.title} photo ${idx + 1}`}
-          className={`mb-2 ${event.photos.length>1?'w-full':'w-4xl'} rounded-md object-cover`}
+          className={`mb-2 ${event.photos.length>1?'w-full':'w-4xl'} rounded-md`}
         />))}
       </div>
       }
