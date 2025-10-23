@@ -27,7 +27,7 @@ export const ResearchGridCard = ( detail ) => (
     {detail.images && detail.images.map((img, idx) => (
         <img
         key={idx}
-        src={`${import.meta.env.VITE_PUBLIC_URL}${img}`}
+        src={`${img}`}
         alt={`${detail.title} photo ${idx + 1}`}
         className="mb-2 w-full "
         />
