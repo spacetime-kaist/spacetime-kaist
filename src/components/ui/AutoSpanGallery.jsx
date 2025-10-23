@@ -59,7 +59,7 @@ export default function AutoSpanGallery({ images }) {
         >
           {/* the image sizing fixed by switching from w-full to w-5xl */}
           <img
-            src={`${import.meta.env.VITE_PUBLIC_URL}${src}`}
+            src={`${src}`}
             alt=""
             className="w-5xl transition-transform duration-500 hover:scale-120"
           />

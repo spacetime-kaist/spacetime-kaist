@@ -19,7 +19,7 @@ const EventsCard = (event) => (
         {event.photos ? event.photos.slice(0,1).map((photo, idx) => (
           <img
             key={idx}
-            src={`${import.meta.env.VITE_PUBLIC_URL}/${photo}`}
+            src={`${photo}`}
             alt={`${event.title} photo ${idx + 1}`}
             className="w-full object-fill"
           />
