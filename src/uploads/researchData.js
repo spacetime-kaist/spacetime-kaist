@@ -11,7 +11,7 @@ const researchData = [
         title:'Effective Urban Region Representation Learning Using Heterogeneous Urban Graph Attention Network (HUGAT)',
         date: 'September 2021 ~ September 2022',
         desc: 'Revealing the hidden patterns shaping the urban environment is essential to understand its dynamics and to make cities smarter. Recent studies have demonstrated that learning the representations of urban regions can be an effective strategy to uncover the intrinsic characteristics of urban areas. However, existing studies lack in incorporating diversity in urban data sources. In this work, we propose heterogeneous urban graph attention network (HUGAT), which incorporates heterogeneity of diverse urban datasets. In HUGAT, heterogeneous urban graph (HUG) incorporates both the geo-spatial and temporal people movement variations in a single graph structure. Given a HUG, a set of meta-paths are designed to capture the rich urban semantics as composite relations between nodes. Region embedding is carried out using heterogeneous graph attention network (HAN). HUGAT is designed to consider multiple learning objectives of city’s geo-spatial and mobility variations simultaneously. In our extensive experiments on NYC data, HUGAT outperformed all the state-of-the-art models. Moreover, it demonstrated a robust generalization capability across the various prediction tasks of crime, average personal income, and bike flow as well as the spatial clustering task.',
-        images: ['/researchImg/1-1.png','/researchImg/1-2.png','/researchImg/1-3.png','/researchImg/1-4.png'],
+        images: [['/researchImg/1-1.png'],['/researchImg/1-2.png','/researchImg/1-3.png','/researchImg/1-4.png']],
       }
     ]
   },
@@ -48,19 +48,19 @@ const researchData = [
     id: 'utm',
     title: 'UTM and Spatial Analysis',
     menuTitle: 'UTM',
-    desc: 'This research field includes Regionalization for urban air mobility application in metropolitan areas, Density-aware flight planning for multiple agents in urban airspace, ​Cooperative sUAV Collision Avoidance, and so on.',
+    desc: 'This research field includes Regionalization for urban air mobility application in metropolitan areas, Density-aware flight planning for multiple agents in urban airspace, Cooperative sUAV Collision Avoidance, and so on.',
     thumbnail: '/researchImg/5.png',
     research:[
       {
         title:'Regional for urban air mobility application in metropolitan areas: case studies in San Francisco and New York',
         date: '',
-        desc: '​​In this study, as a first step to assess the feasibility of UAM in urban areas, we conduct 3D geodemographic analyses of two major cities in San Francisco, CA and Manhattan, NY. The 3D building footprint data is used to identify the raw available airspace as well as the added spatial restrictions with geofencing. Population data is used to represent the potential customer base by combining the daytime and nighttime population. Since the geospatial and demographic datasets differ in representation, the spatial data is vectorized while population data is available by census tract, spatial information is aggregated in census tracts. In addition, We proposed to group the areas of similar spatial and population characteristics through regionalization. Regionalization is a spatially constrained multi-variate clustering method to group small geographical units (census blocks and tracts in general) into a contiguous region of homogeneous nature. The main benefit of regionalization is to delineate regions of similar characteristics and spatial proximity. Through regionalization, one can better understand the urban space with comprehensive geographic perspective, rather than a small geographical unit of census blocks or tracts. Furthermore, regionalization can also improve geospatial intelligence in urban spaces by delineating the functional neighborhood . In this study, we adopted the SKATER, an efficient regionalization technique that uses minimum spanning tree consisting of a connected tree with no circuits. The intention is to provide a region map of the city that can readily identify regions of similar UAM operational and population characteristics with spatial continuity and feasibility. Based on the regionalization results, correspondence analysis was conducted to translate the compound effect of spatial and population characteristics into feasibility.',
-        images: ['/researchImg/5-2.png'],
+        desc: 'In this study, as a first step to assess the feasibility of UAM in urban areas, we conduct 3D geodemographic analyses of two major cities in San Francisco, CA and Manhattan, NY. The 3D building footprint data is used to identify the raw available airspace as well as the added spatial restrictions with geofencing. Population data is used to represent the potential customer base by combining the daytime and nighttime population. Since the geospatial and demographic datasets differ in representation, the spatial data is vectorized while population data is available by census tract, spatial information is aggregated in census tracts. In addition, We proposed to group the areas of similar spatial and population characteristics through regionalization. Regionalization is a spatially constrained multi-variate clustering method to group small geographical units (census blocks and tracts in general) into a contiguous region of homogeneous nature. The main benefit of regionalization is to delineate regions of similar characteristics and spatial proximity. Through regionalization, one can better understand the urban space with comprehensive geographic perspective, rather than a small geographical unit of census blocks or tracts. Furthermore, regionalization can also improve geospatial intelligence in urban spaces by delineating the functional neighborhood . In this study, we adopted the SKATER, an efficient regionalization technique that uses minimum spanning tree consisting of a connected tree with no circuits. The intention is to provide a region map of the city that can readily identify regions of similar UAM operational and population characteristics with spatial continuity and feasibility. Based on the regionalization results, correspondence analysis was conducted to translate the compound effect of spatial and population characteristics into feasibility.',
+        images: [['/researchImg/5-2.png']],
       },
       {
         title:'Density-aware flight planning for multiple agents in urban airspace',
         date: '',
-        desc: '​​​The aim of this on-going study is to present a flight planning framework that can be applied in a large-scale map environment, such as city-wide airspace. Two key components of this framework are hierarchical spatial data representation and multi-agent pathfinding algorithm. Choosing an appropriate spatial data structure is crucial for monitoring and planning high-density urban operations in a large-scale map, and we propose octree- and medial axis- based approaches to represent urban airspace. Based on proposed spatial data structures, we adopt and apply a variant of conflict-based search (CBS), proposed by Sharon et al (2015), to assign each agent to a sequence of airspace volumes while taking into account projected traffic density within each volume. Detailed methods and analysis results will be made available in our working paper.',
+        desc: 'The aim of this on-going study is to present a flight planning framework that can be applied in a large-scale map environment, such as city-wide airspace. Two key components of this framework are hierarchical spatial data representation and multi-agent pathfinding algorithm. Choosing an appropriate spatial data structure is crucial for monitoring and planning high-density urban operations in a large-scale map, and we propose octree- and medial axis- based approaches to represent urban airspace. Based on proposed spatial data structures, we adopt and apply a variant of conflict-based search (CBS), proposed by Sharon et al (2015), to assign each agent to a sequence of airspace volumes while taking into account projected traffic density within each volume. Detailed methods and analysis results will be made available in our working paper.',
         youtube:['https://www.youtube.com/embed/p-6a9HdsH8Q?si=SqXkoRQs7igYTcgE', 'https://www.youtube.com/embed/Fm9Q13cD230?si=A0c8pcNLc1aEtDnr'],
       },
       {
@@ -73,13 +73,13 @@ const researchData = [
 Namwoo Kim, Yoonjin Yoon, "Cooperative sUAV Collision Avoidance Based on Satisficing Theory", International Journal of Aeronautical and Space Sciences, 2019
         `,
         ref: ['Namwoo Kim, Yoonjin Yoon, "Cooperative sUAV Collision Avoidance Based on Satisficing Theory", International Journal of Aeronautical and Space Sciences, 2019'], 
-        images: ['/researchImg/5-3.png'],
+        images: [['/researchImg/5-3.png']],
       },
       {
         title:'Geodemographical Risk Analysis of 3D Urban Space',
         date: '',
         desc: `For application of UAS and UAM in urban area, people and man-mad structures that consisting urban environment should be considered. We analyzed urban space by using census tract based population data and 3d building model data. Highly urbanized areas – Manhattan Island and San Francisco were analyzed for their urban space characteristics.`,
-        images: ['/researchImg/5-4.png'],
+        images: [['/researchImg/5-4.png']],
       },
       {
         title:'Urban Airspace Availability Assessment',
@@ -94,7 +94,7 @@ This interactive tool enables you to explore the airspace availability in three 
 
 Jungwoo Cho, Yoonjin Yoon, "How to Assess the Capacity of Urban Airspace: A Topological Approach Using Keep-in and Keep-out Geofence", 92, 137-149, Transportation Research, Part C, 2018,  
 Method for identifying available airspace for unmanned aerial vehicle operations, Patent filed, Dec 17, 2017, KR 10-2018-0033978`,
-        images: ['/researchImg/5-5.png'],
+        images: [['/researchImg/5-5.png']],
       },
       {
         title:'Horizontal and Vertical Connectivity of Airspace ',
@@ -161,7 +161,7 @@ Jungwoo Cho, Yoonjin Yoon. "Extraction and Interpretation of Geometrical and Top
     id: 'transportation-network',
     title: 'Transportation Network and Data Representation',
     menuTitle: 'Transportation Network',
-    desc: 'In this research field, we conduct about Traffic Data Representation: ​Resolutions and Structures and Air Route Network as Complex Network.',
+    desc: 'In this research field, we conduct about Traffic Data Representation: Resolutions and Structures and Air Route Network as Complex Network.',
     thumbnail: '/researchImg/6.gif',
     research:[
       {
@@ -333,9 +333,7 @@ This research first addresses shortcomings of the current ATFM system by develop
 ### **Expected Contribution**
 
 - Conduct a leading research in the PATM area, which is one of the main focus of ATM research communities worldwide, and set out the opportunity to become a leading country in the future ATM
-
 - Provide systematic solution to address airspace congestion
-
 - Redefine the aviation as one of the green transportation mode through the optimal ATFM, which will result in the reduction of carbon footprint of the aviation and increase of the fuel efficiency`,
         footnote:
 `**Period**: 2011.05~2014.04
@@ -350,7 +348,6 @@ This research first addresses shortcomings of the current ATFM system by develop
         date: '',
         desc: 
 `- The goal of this research is to develop SMS tools for service providers and policymakers to achieve proactive safety management in accordance with ICAO guideline. 
-
 - TRUE is participating on a project of development of risk model and related techniques to assess risks in the aviation organizations both in quantitative and qualitative way: direction of collecting safety data for risk analysis and risk assessment, methodology of risk assessment using safety database, and developing state safety indicators.
 
 ### CATS, ESD Model
@@ -391,7 +388,6 @@ This research first addresses shortcomings of the current ATFM system by develop
 
 **Patents**:
 -  Aviation safety risk assessment method based on hazard matrix and apparatus for the same.  Korea Domestic Patent Application.    App. No. 10-2014-0105376  (2014.08.13)
-
 - Software: Aviation Risk Identification and Assessment (ARIA)
 
 **R&D Partnership**:
@@ -403,7 +399,6 @@ This research first addresses shortcomings of the current ATFM system by develop
         date: '',
         desc: 
 `- The ash cloud from the Eyjafjallajokull volcano in Iceland caused a significant impact on aviation industry on April 14, 2010. Airports across Europe were closed, and at least 17,000 flights a day were cancelled for over a week. Overall 100,000 flights were cancelled and 10 million passengers were unable to board their flights during this week. After Iceland case, there have been many studies trying to address aviation industry impact of Volcanic Ash. However, most of the volcanic eruption scenario studies have limitations.
-
 - In TRUE lab, we analyze the damage of the airports and number of the cancelled flights depend on the hypothetical case of Mt. Baegdu eruption model to derive a predicted flights path and diffusion distance of volcanic ash. This research analyzes the effect of volcanic ash to air traffic and airport by quantification value by assessing volcanic ash concentration and its altitude.`,
         images: ['/researchImg/9-11.png'],
       },
@@ -426,21 +421,15 @@ This research first addresses shortcomings of the current ATFM system by develop
 The studies contain :
 
 - Risk factor analysis with respect to injury severity
-
 - Risk factor analysis with respect to cellphone usage
-
 - Risk factor analysis of highway accident with respect to cost severity
-
 - Risk factor analysis for fatal crash
-
 - Aged pedestrian safety study
 
 ### **Risk factor analysis with respect to injury severity**
 
 - Many recent road traffic safety studies are focusing on the analysis of risk factors that impact fatality and injury level of traffic accidents. While there are well known factors that affect accident severity such as drug usage and drinking, still there are numerous risk factors that needs to be discovered to affect the severity. 
-
 - In this research, Naïve Bayes classifier method and the decision tree classifier method were used to reveal the relative importance of the data fields with respect to the resulting severity level.
-
 - Some of high-ranking risk factors were found to be having strong interdependency, and it was revealed that only a few numbers of risk factors dominate the severity level.
 
 ![10-1](/researchImg/10-1.png)
@@ -454,11 +443,9 @@ The studies contain :
 ### **Risk factor analysis of highway accident with respect to cost severity**
 
 - Current of damage cost calculation of traffic accidents is based only on insurance compensation. This means that the damage cost of road equipment is being ignored, and there is no efficient resolution being prepared to reduce the traffic accidents.
-
 - Our research team used a decision tree analysis that considers dependencies between the data fields in order to analyze the relationship between the accident features and the occurrence of damage cost about traffic facilities and road equipment. By using CART algorithm based decision tree classifier, we figured out that cause of accident, accident type, accident location, lane, linearity of road, and road condition are main variables that affects the damage cost. Also, situations that are highly likely to cause high equipment damage cost were extracted from the data.
 
 ### **Other researches related to the risk factor analysis**
-
 - In addition to the research mentioned above, there are several other risk factor analysis studies such as fatal accident-focused risk analysis, and risk factor analysis about aged pedestrians
 `,
       },
@@ -469,15 +456,12 @@ The studies contain :
 `There were numbers of studies related to accident hotspot study
 
 - DB Fusion
-
 - Hotspot clustering study
-
 - Factor-wise accident hotspot analysis
 
 ### **DB fusion**
 
 - Various kinds of traffic-related data are being collected and managed from many agencies. Some of these large-scale traffic DB including traffic volume, flow speed, or public transportation DB are available to public. Accident hotspots (High Collision Concentration Locations, HCCL) researches that only considered accident history DB have limitations in reliability and accuracy due to its insufficient information. 
-
 - TRUE Lab is working on the fusion of collision history DB from SWITRS with real-time traffic information data from PeMS in order to construct integrated collision DB that provides both environmental factors and driving behavior factors. Combining different kinds of traffic DB will lead to the mutual supplementation of data reliability, offering analysis result of higher credibility.
 
 ![10-3](/researchImg/10-3.png)
@@ -485,7 +469,6 @@ The studies contain :
 ### **Factor-wise accident hotspot analysis**
 
 - Current concept of accident hotspot is explained as HCCL (High Collision Concentration Location), which is determined by counting the accident frequency along absolute post-mile of the road. However, this method does not consider the severity and the cause of the accidents.
-
 - In TRUE lab, we focused on factor-wise accident research which enables evaluation of accident in both frequency and severity, using nonparametric models and clustering algorithms.
 
 ![10-4](/researchImg/10-4.png)`,
@@ -495,20 +478,17 @@ The studies contain :
         date: '',
         desc:
 `- In the Emergency Medical Service (EMS), it is widely recognized that the response time - the time from receipt of an emergency call to arrival at the patient location, highly affects the patient survival rate. Response time consists of two components: pre-travel delay and travel time. The pre-travel delay is the amount of time between an emergency call and the vehicle mobilization, while the travel time is the time between the vehicle mobilization and arrival at the patient location.
-
 - Between the two components of response time, travel time addresses the larger portion in most cases, and is highly dependent on road traffic condition. There have been numerous researches to analyse the impact of traffic condition to emergency response time based on vehicle speed. However, travel speeds are assumed to be constant in most cases, and variations in travel speed due to conditions common to the road traffic system such as commute hour congestion are not properly addressed.  
-
 - In this research, time-varying speeds are defined for each street segment within a street network based on the historic traffic data. We propose a GIS-based method to calculate the k-minute travel time contour to represent the response time coverage, incorporating time-of-day and day-of-week effect on travel time in Seoul, South Korea. `,
-        images: ['/researchImg/10-5.png'],
+        images: [['/researchImg/10-5.png']],
       },
       {
         title:'Impacts of volcanic eruption on aviation system',
         date: '',
         desc:
 `- The ash cloud from the Eyjafjallajokull volcano in Iceland caused a significant impact on aviation industry on April 14, 2010. Airports across Europe were closed, and at least 17,000 flights a day were cancelled for over a week. Overall 100,000 flights were cancelled and 10 million passengers were unable to board their flights during this week. After Iceland case, there have been many studies trying to address aviation industry impact of Volcanic Ash. However, most of the volcanic eruption scenario studies have limitations.
-
 - In TRUE lab, we analyze the damage of the airports and number of the cancelled flights depend on the hypothetical case of Mt. Baegdu eruption model to derive a predicted flights path and diffusion distance of volcanic ash. This research analyzes the effect of volcanic ash to air traffic and airport by quantification value by assessing volcanic ash concentration and its altitude.`,
-        images: ['/researchImg/10-6.png'],
+        images: [['/researchImg/10-6.png']],
       },
     ]
   },

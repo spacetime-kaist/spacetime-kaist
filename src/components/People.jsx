@@ -42,13 +42,6 @@ const AluminiCard = (member) => (
 export default function People() {
   return (
     <>
-       <header className="pt-10">
-        <div className="container">
-          <h1 className="pagetitle">People</h1>
-          <div className='divider' />
-          {/* <p className="mt-2 text-gray-600 max-w-2xl">explanation</p> */}
-        </div>
-      </header>
         {/* Professor Section */}
         <section className="pt-20 pb-16">
           <div className = "container">
