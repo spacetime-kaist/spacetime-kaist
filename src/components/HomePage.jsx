@@ -49,7 +49,7 @@ export default function HomePage() {
           <div className = "container">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
               <div>
-                <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">TEST Spacetime Intelligence Lab</h1>
+                <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">TEST??? Spacetime Intelligence Lab</h1>
                 <h2 className="mt-4 text-2xl text-gray-700">Department of Civil and Environment Engineering, KAIST</h2>
                 <p className="mt-6 text-lg text-gray-600">The research focus at Spacetime Intelligence Lab is spacetime Artificial Intelligence, and its implication in the urban context. The research scope ranges from traffic forecasting GNN models to autonomous driver workload assessment to urban air mobility feasibility study.</p>
                 {/* <p className="mt-6 text-lg text-gray-600">Learn more about our research <a href="#" className='px-2 underline'>here</a>.</p> */}
