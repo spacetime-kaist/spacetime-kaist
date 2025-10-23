@@ -27,7 +27,7 @@
 }
 
 .pagetitle {
-    @apply flex justify-center text-4xl sm:text-6xl  leading-tight mb-15 text-blue-900/90;
+    @apply flex justify-center items-center text-center text-4xl sm:text-7xl  leading-tight mt-5 mb-15 text-blue-900/90;
 }
 
 .sectiontitle {

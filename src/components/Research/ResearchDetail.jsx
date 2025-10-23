@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import researchData from "../../uploads/researchData";
-import ResearchGalleryCard from "../ui/ResearchDetailCard";
+import ResearchGalleryCard  from "../ui/ResearchDetailCard";
 
 export default function ResearchDetail() {
   const { slug } = useParams();
@@ -30,11 +30,11 @@ export default function ResearchDetail() {
           ← Back to Research Overview
         </Link>
         <header className="mb-10">
-          <h1 className="text-4xl font-bold mb-4">{data.title}</h1>
+          <h1 className="text-5xl font-bold mb-4">{data.title}</h1>
           {(data.detail)?
-          <p className="text-gray-600">{data.detail}</p>
+          <p className="text-gray-600 text-md">{data.detail}</p>
           :
-          <p className="text-gray-600">{data.desc}</p>}
+          <p className="text-gray-600 text-md">{data.desc}</p>}
         </header>
         <section>
           <h2 className="text-2xl font-semibold mb-4">Research</h2>
