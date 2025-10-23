@@ -1,4 +1,4 @@
-import { Routes, Route, BrowserRouter } from 'react-router-dom'
+import { Routes, Route, HashRouter } from 'react-router-dom'
 
 // Pages
 import Layout from './Layout'
@@ -23,7 +23,7 @@ import ScrolltoAnchor from './utility/ScrolltoAnchor'
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ScrolltoAnchor />
       <Routes>
         <Route path="/" element={<Layout />} >
@@ -39,7 +39,7 @@ function App() {
         <Route path='/events' element={<Events />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
