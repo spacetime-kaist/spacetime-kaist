@@ -1,3 +1,4 @@
+
 const researchData = [
   {
     id: 'urban-region',
@@ -267,11 +268,11 @@ ROK has been actively investing in modernizing of air navigation system, includi
 
 ROK subsequently commissioned the working group in November 2011 as a group of researchers from academia and civil aviation organizations to prepare the draft of NARAE for the future ATM system. True lab developed the ROK’s ATM master plan as below.
 
-![9-1](${}/researchImg/narae.jpg)
+![9-1](/researchImg/narae.jpg)
 
 ### **Implementation Plan**
 
-![9-1](${}/researchImg/9-1.png)`,
+![9-1](/researchImg/9-1.png)`,
         footnote:
 `**Period**: 2011.12~2012.06
 
@@ -294,13 +295,13 @@ Therefore TRUE lab is developing an optimized algorithm for each robot to find t
 
 The goal of this project is to develop an algorithm which enables a large quantity of mobile robots (up to 300) operate in simulation. By having a testbed in a real warehouse and mobile robots specially produced for this project, in 2015-2016 the algorithm will be tested.
 
-![9-2](${}/researchImg/9-2.png)
+![9-2](/researchImg/9-2.png)
 
 ### **Development**
 
 Breadth First Search algorithm can be modified to be adopted in three-dimensional space with discrete time windows. Similar to Amazon's Kiva system, the algorithm generates paths for multi mobile robots, and check if any cell is overlapped by more than one robots. If there is a conflict, it finds another path which is the second shortest. This is repeated until all conflicts are resolved maintaining the shortest path as much as possible.
 
-![9-3](${}/researchImg/9-3.png)
+![9-3](/researchImg/9-3.png)
 
 ### **Simulation Example**`,
 
@@ -328,7 +329,7 @@ This research first addresses shortcomings of the current ATFM system by develop
 
 ### **Result**
 
-![9-5](${}/researchImg/9-5.png)
+![9-5](/researchImg/9-5.png)
 
 ### **Expected Contribution**
 
@@ -355,15 +356,15 @@ This research first addresses shortcomings of the current ATFM system by develop
 
 ### CATS, ESD Model
 
-![9-6](${}/researchImg/9-6.png)
+![9-6](/researchImg/9-6.png)
 
 ### ICAO- Risk Matrix Model
 
-![9-7](${}/researchImg/9-7.png)
+![9-7](/researchImg/9-7.png)
 
 ### FAA - Risk Matrix Model
 
-![9-8](${}/researchImg/9-8.png)
+![9-8](/researchImg/9-8.png)
 
 ### KAIST-Risk Model
 
@@ -381,7 +382,7 @@ This research first addresses shortcomings of the current ATFM system by develop
 - Severity value from weighted sum of the number of occurrence by severity level
 - Useful in quantitative comparison of risks among hazards
 
-![9-9](${}/researchImg/9-9.png)`,
+![9-9](/researchImg/9-9.png)`,
         footnote:
 `**Period**: 2011.12 ~ 2015.06
 
@@ -396,7 +397,7 @@ This research first addresses shortcomings of the current ATFM system by develop
 
 **R&D Partnership**:
 
-![9-10](${}/researchImg/9-10.png)`,
+![9-10](/researchImg/9-10.png)`,
       },
       {
         title:'Impacts of volcanic eruption on aviation system',
@@ -443,13 +444,13 @@ The studies contain :
 
 - Some of high-ranking risk factors were found to be having strong interdependency, and it was revealed that only a few numbers of risk factors dominate the severity level.
 
-![10-1](${}/researchImg/10-1.png)
+![10-1](/researchImg/10-1.png)
 
 ### **Risk factor analysis with respect to cellphone usage**
 
 - Along with the development of IT industry, cellphone usage while driving is becoming one of the major concerns in traffic safety. While cellphone using popularity is growing, there are many cities banning handheld cellphone usage while driving and the efficiency of this banning policy is a controversial topic. By performing turning point analysis technique based on the frequentist and Bayesian approach, it was revealed that the law was critical to the reduction of cellphone-related collisions.
 
-![10-2](${}/researchImg/10-2.png)
+![10-2](/researchImg/10-2.png)
 
 ### **Risk factor analysis of highway accident with respect to cost severity**
 
@@ -480,7 +481,7 @@ The studies contain :
 
 - TRUE Lab is working on the fusion of collision history DB from SWITRS with real-time traffic information data from PeMS in order to construct integrated collision DB that provides both environmental factors and driving behavior factors. Combining different kinds of traffic DB will lead to the mutual supplementation of data reliability, offering analysis result of higher credibility.
 
-![10-3](${}/researchImg/10-3.png)
+![10-3](/researchImg/10-3.png)
 
 ### **Factor-wise accident hotspot analysis**
 
@@ -488,7 +489,7 @@ The studies contain :
 
 - In TRUE lab, we focused on factor-wise accident research which enables evaluation of accident in both frequency and severity, using nonparametric models and clustering algorithms.
 
-![10-4](${}/researchImg/10-4.png)`,
+![10-4](/researchImg/10-4.png)`,
       },
       {
         title:'EMS response time coverage using historic traffic data',
