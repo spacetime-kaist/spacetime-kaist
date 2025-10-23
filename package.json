@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://spacetime.kaist.ac.kr",
+  "homepage": "http://spacetime.kaist.ac.kr",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
