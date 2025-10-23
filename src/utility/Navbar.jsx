@@ -57,7 +57,7 @@ function Navbar() {
                         Journal Publications
                       </Link>
                       <Link to="/conference" className="block px-4 py-2 text-gray-500 hover:bg-gray-100">
-                        Conference Papers
+                        Conference Proceedings
                       </Link>
                     </div>
                   </div>
@@ -115,7 +115,7 @@ function Navbar() {
                                 <>
                                 <div className='border-t border-slate-300'></div>
                                 <Link to="/publications" className="block pl-7 py-2 text-gray-500 hover:bg-gray-100">Journal Publications</Link>
-                                <Link to="/conference" className="block pl-7 py-2 text-gray-500 hover:bg-gray-100">Conference Papers</Link>
+                                <Link to="/conference" className="block pl-7 py-2 text-gray-500 hover:bg-gray-100">Conference Proceedings</Link>
                               </>
                             )}
                         </div>
