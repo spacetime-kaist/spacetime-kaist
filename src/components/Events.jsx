@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import eventsData from '../uploads/eventsData';
-const PUBLIC_URL = NaN;
 
 const EventCard = ( event ) => (
   <article className="p-6 bg-white rounded-lg border border-gray-200 shadow-sm mb-8">
@@ -25,7 +24,7 @@ const EventCard = ( event ) => (
       {event.photos && event.photos.map((photo, idx) => (
         <img
           key={idx}
-          src={`${PUBLIC_URL}${photo}`}
+          src={`${photo}`}
           alt={`${event.title} photo ${idx + 1}`}
           className="w-full rounded-md"
         />
@@ -58,7 +57,7 @@ const EventGridCard = ( event ) => (
       {event.photos && event.photos.slice(1).map((photo, idx) => (
         <img
           key={idx}
-          src={`${PUBLIC_URL}${photo}`}
+          src={`${photo}`}
           alt={`${event.title} photo ${idx + 1}`}
           className="object-cover rounded-lg"
         />
@@ -90,7 +89,7 @@ const EventMasonryCard = ( event ) => (
       {event.photos.map((photo, idx) => (
         <img
           key={idx}
-          src={`${PUBLIC_URL}${photo}`}
+          src={`${photo}`}
           alt={`${event.title} photo ${idx + 1}`}
           className={`mb-2 ${event.photos.length>1?'w-full':'w-4xl'} rounded-md object-cover`}
         />))}
