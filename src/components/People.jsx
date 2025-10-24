@@ -16,10 +16,12 @@ const copyEmail = async (email) => {
 const MembersCard = (member) => (
   <div key={member.id} className="bg-white rounded-2xl shadow-md hover:shadow-lg transition p-6 flex flex-col items-center text-center">
     <img src={`/peopleImg/${member.id}.jpg`} alt={member.name} className="w-54 h-54 rounded-full object-cover mb-4 border-2 border-gray-300" />
-    {member.link ? <a href={member.link} target="_blank" className="text-blue-600 hover:underline mt-2 text-sm">
+    {/* {member.link ? 
+    <a href={member.link} target="_blank" className="text-blue-600 hover:underline mt-2 text-sm">
       <h3 className="text-xl font-semibold mb-1">{member.name}</h3></a>
       :
-      <h3 className="text-xl font-semibold mb-1 text-blue-600">{member.name}</h3>}
+      <h3 className="text-xl font-semibold mb-1 text-blue-600">{member.name}</h3>} */}
+    <h3 className="text-xl font-semibold mb-1 text-blue-600">{member.name}</h3>
     <p className="text-gray-500 mb-1">{member.role}</p>
     <p className="text-gray-400 text-sm mb-2">{member.from}</p>
     <p className="text-gray-500 text-sm mb-2 "><div onClick={() => copyEmail(member.email)} className="ml-2 text-blue-600 hover:underline cursor-pointer">{member.email}</div></p>

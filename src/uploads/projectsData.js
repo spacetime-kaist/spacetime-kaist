@@ -14,12 +14,13 @@ const projectsData = [
     link: "https://c3.kaist.ac.kr/home",
     type: 'external',
   },
-  {
-    id: 3,
-    title: "Deep Traffic",
-    image: "/projectsImg/3.png",
-    link: "https://deeptraffic.ai.kaist.ac.kr/",
-  },
+  // {
+  //   id: 3,
+  //   title: "Deep Traffic",
+  //   image: "/projectsImg/3.png",
+  //   link: "https://deeptraffic.ai.kaist.ac.kr/",
+  //   type: 'internal',
+  // },
   {
     id: 4,
     title: "Urban@KAIST",
