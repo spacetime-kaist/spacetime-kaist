@@ -25,7 +25,7 @@ const ConCard = ( item ) => (
             <h2 className="text-lg sm:text-xl font-semibold">{item.title}</h2>
             }
             <p className="text-gray-600">{item.authors}</p>
-            <p className="text-blue-500 italic">{item.conference}, {item.date}</p>
+            <p className="text-blue-500 italic">{item.conference}</p>
             {/* {item.href && (
               <a
                 href={item.href}
