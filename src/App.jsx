@@ -26,8 +26,8 @@ function App() {
     <HashRouter>
       <ScrolltoAnchor />
       <Routes>
-        <Route path="/" element={<Layout />} >
-        <Route index element={<HomePage />} />
+        <Route path="/" element={<HomePage />} />
+        <Route element={<Layout />} >
         <Route path='/publications' element={<Publications />} />
         <Route path='/conference' element={<Conference />} />
         <Route path='/people' element={<People />} />

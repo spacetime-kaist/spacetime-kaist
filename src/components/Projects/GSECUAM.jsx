@@ -1,5 +1,6 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
+import airport from '../../assets/airport_terminal.jpg';
 
 const gsEcUamData = {
   slug: "gs-ec-uam",
@@ -36,12 +37,14 @@ export default function GSEcUamProjectPage() {
       <div
       className="relative h-[25vh] w-full bg-cover bg-center flex items-center justify-center text-center"
       style={{
-        backgroundColor: "rgba(55,71,79,1)",
+        backgroundColor: "rgba(93, 130, 148, 1)",
         backgroundImage:
-          "url('https://lh3.googleusercontent.com/sitesv/AICyYdYrn5O2V6umQtVhB66PdIumezoEYuH-gcUoAhZuAoqRY8sjvl_2vPjuXNJCwXwcVPI3pVm411fWwnGdfvHOiXx4QNqmFfi5FIvjmVW_DU6H9sVhmB2p211-3KPWpobAoofirL5gmtfdO4yRKUly6VU4rZmzKCpvQhq_2ufByZwhMK0SzKGloavM=w16383')",
+          `url('${airport}')`,
         transform: "translate3d(0,0,0)",
         backgroundSize: "cover",
-        backgroundPosition: "center top",
+        backgroundPosition: "center",
+        backgroundBlendMode: "multiply",
+        // filter: "blur(5px)"
       }}
     >
       <h1 className="text-6xl font-bold text-white drop-shadow-xl px-4">
