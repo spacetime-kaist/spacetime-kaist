@@ -1,5 +1,21 @@
 const publicationsData = [
   {
+    id: '10.1109/ACCESS.2025.3577202',
+    title: "Effective Urban Region Representation Learning Using Heterogeneous Urban Graph Attention Network (HUGAT)",
+    authors: "N. Kim, Y. Yoon",
+    date: "2025",
+    journal: "IEEE Access, vol. 13, pp. 102602-102612.",
+    href: "https://ieeexplore.ieee.org/abstract/document/11027114/",
+  },
+  {
+    id: '10.1109/TITS.2024.3382680',
+    title: "Design, Field Evaluation, and Traffic Analysis of a Competitive Autonomous Driving Model in a Congested Environment",
+    authors: "D Lee, H Seong, G Kang, S Han, DH Shim, Y Yoon",
+    date: "2024",
+    journal: "IEEE Transactions on Intelligent Transportation Systems 25 (8), 9482-9497.",
+    href: "https://ieeexplore.ieee.org/abstract/document/10496360",
+  },
+  {
     id: 1,
     title: "Urban drone operations: A data-centric and comprehensive assessment of urban airspace with a Pareto-based approach",
     authors: "S. Oh, Y. Yoon",
