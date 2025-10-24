@@ -15,11 +15,11 @@
 
 /* For whole page and sections */
 .page {
-    @apply max-w-[96rem] mx-auto px-3;
+    @apply max-w-[86rem] mx-auto px-3;
 }
 
 .container {
-    @apply max-w-[96rem] mx-auto px-3 sm:px-6;
+    @apply max-w-[86rem] mx-auto px-3 sm:px-6;
 }
 
 .divider {
@@ -31,7 +31,7 @@
 }
 
 .sectiontitle {
-    @apply text-3xl sm:text-4xl font-bold leading-tight mb-10;
+    @apply text-3xl sm:text-5xl font-bold leading-tight mb-10;
 }
 
 .markdown > * {
