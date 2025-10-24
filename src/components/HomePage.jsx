@@ -153,23 +153,25 @@ export default function HomePage() {
                 <p className="mt-6 text-lg text-gray-400">{currentSlide.desc}</p>
                 {/* <p className="mt-6 text-lg text-gray-600">Learn more about our research <a href="#" className='px-2 underline'>here</a>.</p> */}
 
+                <div className="mt-8 w-90 text-xs text-gray-500">
+                  <div className='mb-5'>
+                    <div className="font-semibold text-gray-300 mb-1">{currentSlide.research[0].title}</div>
+                    <div>{currentSlide.research[0].desc.split(" ").slice(0, 10).join(" ") + "…"}</div>
+                  </div>
+                  {currentSlide.research[1] &&
+                  <div>
+                    <div className="font-semibold text-gray-300 mb-1">{currentSlide.research[1].title}</div>
+                    <div>{currentSlide.research[1].desc.split(" ").slice(0, 10).join(" ") + "…"}</div>
+                  </div>
+                  }
+                </div>
+
                 <div className="mt-8 flex flex-wrap gap-3">
                   <Link to={`/research/${currentSlide.id}`} className="inline-flex items-center px-5 py-3 bg-black text-white rounded-md text-sm font-semibold">Explore work</Link>
                   <a href="#people" className="inline-flex items-center px-5 py-3 border border-gray-300 rounded-md text-sm">Contact us</a>
                 </div>
 
-                {/* <div className="mt-8 grid grid-cols-2 gap-4 text-xs text-gray-500">
-                  <div>
-                    <div className="font-semibold text-gray-900">Latency</div>
-                    <div>Sub-second interactive updates</div>
-                  </div>
-                  <div>
-                    <div className="font-semibold text-gray-900">Scalability</div>
-                    <div>Cloud-native simulations</div>
-                  </div>
-                </div> */}
               </div>
-
               <div>
                 <div className="w-full aspect-[4/3] bg-gradient-to-br from-white to-gray-100 rounded-2xl shadow-lg flex items-center justify-center py-5"> 
                     <img src={currentSlide.thumbnail} alt="Main visual" className="relative object-cover h-full rounded-2xl brightness-90" />
