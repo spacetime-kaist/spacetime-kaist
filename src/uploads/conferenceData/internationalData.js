@@ -1,27 +1,27 @@
 const internationalData = [
   {
-    id: 75,
+    id: 'i75',
     title: "Integrating Urban Air Mobility with Highway Infrastructure: A Strategic Approach for Vertiport Location Selection in the Seoul Metropolitan Area",
     authors: "D. Yoon, M. Jeong, J. Lee, S. Kim, Y. Yoon. ",
     conference: "TRB, 2025",
     href: "https://arxiv.org/abs/2502.00399",
   },
   {
-    id: 74,
+    id: 'i74',
     title: "How Well Do Vision-Language Models Understand Cities? A Comparative Study on Spatial Reasoning from Street-View Images",
     authors: "J. Ro, N. Kim, Y. Yoon",
     conference: "IEEE/CVF International Conference on Computer Vision (ICCV) Workshops, 2025",
     href: "https://openaccess.thecvf.com/content/ICCV2025W/MARS2/html/Ro_How_Well_Do_Vision-Language_Models_Understand_Cities__A_Comparative_ICCVW_2025_paper.html",
   },
   {
-    id: 73,
+    id: 'i73',
     title: "Unveiling Latent Factors of the Urban Dynamics for Vertiport Placement",
     authors: "S. Sohn, N. Kim, M. Hansen, Y. Yoon. ",
     conference: "104th TRB Annual Meeting, 2025",
     href: "https://koasas.kaist.ac.kr/handle/10203/327191",
   },
   {
-    id: 72,
+    id: 'i72',
     title: "Fill in the Gap: Two-Stage Prediction Modeling Framework for Understanding Human Biosensor Data",
     authors: "J Ro, Y Yoon. ",
     conference: "15th International Conference on Information and Communication Technology Convergence (ICTC), 2025",

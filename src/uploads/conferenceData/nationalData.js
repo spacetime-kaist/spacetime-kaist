@@ -1,8 +1,15 @@
 const nationalData = [
   {
+    id: 'NODE12087850',
+    title: "동적 시간 왜곡 기반 코로나 19 에 따른 서울 지하철 이용 패턴의 시계열 군집 분석",
+    authors: "김정희，이혜영，김세윤，윤윤진",
+    conference: "대한교통학회지 제43권 제1호, 2025",
+    href: "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE12087850",
+  },
+  {
     id: 'NODE11760070',
-    title: "지역별 장애인 콜택시의 접근 형평성 분석",
-    authors: "오수환 (한서대학교), 윤윤진 (한국과학기술원)",
+    title: "무인항공시스템 운영을 위한 데이터 기반 통합적 도심 공역 평가 프레임워크 연구",
+    authors: "오수환, 윤윤진",
     conference: "대한교통학회 제90회 학술발표회, 2024",
     href: "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE11760070",
   },
