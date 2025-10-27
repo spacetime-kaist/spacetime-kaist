@@ -15,10 +15,9 @@ const researchData = [
 `
 ### AI-Driven Modeling of Urban Economic Resilience to Climate Change
 
-This research initiative introduces an AI-driven framework to predict the impact of climate change on urban small business ecosystems. The study utilizes a large-scale dataset of over 300 million data points, encompassing 96 business sectors across Seoul's 426 administrative districts.
-The core methodology involves a high-precision analysis correlating climate factors with sector-specific sales revenue. By quantifying sales volatility during climate stress events (e.g., heatwaves), the team generated 40,896 'Urban Heat Resilience' indicators. A key finding is the significant spatial disparity in climate resilience, with sectors like convenience stores showing vastly different outcomes depending on their location.
+This research introduces an AI-driven framework to predict the impact of climate change on urban small business ecosystems. The study utilizes a large-scale dataset of over 300 million data points, encompassing 96 business sectors across Seoul's 426 administrative districts.
 
-The predictive model, developed by KAIST, is demonstrated through an interactive visualization tool that forecasts sales changes under future temperature rise scenarios. This technology is now being considered for joint research and application in other major cities, including Boston and London.
+The core methodology involves a high-precision analysis correlating climate factors with sector-specific sales revenue. By quantifying sales volatility during climate stress events (e.g., heatwaves), the team generated 40,896 'Urban Heat Resilience' indicators. A key finding is the significant spatial disparity in climate resilience, with sectors like convenience stores showing vastly different outcomes depending on their location.
 
 ### Innovation in Data Interpretation: Data Sonification
 
