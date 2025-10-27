@@ -55,7 +55,7 @@ A novel component of this research is the pioneering use of Data Sonification—
         date: '',
         desc: 'This study focuses on identifying suitable locations for highway-transfer Vertiports to integrate Urban Air Mobility (UAM) with existing highway infrastructure. UAM offers an effective solution for enhancing transportation accessibility in the Seoul Metropolitan Area, where conventional transportation often struggle to connect suburban employment zones such as industrial parks. By integrating UAM with ground transportation at highway facilities, an efficient connectivity solution can be achieved for regions with limited transportation options. Our proposed methodology for determining the suitable Vertiport locations utilizes data such as geographic information, origin-destination volume, and travel time. Vertiport candidates are evaluated and selected based on criteria including location desirability, combined transportation accessibility and transportation demand. Applying this methodology to the Seoul metropolitan area, we identify 56 suitable Vertiport locations out of 148 candidates. The proposed methodology offers a strategic approach for the selection of highway-transfer Vertiport locations, enhancing UAM integration with existing transportation systems. Our study provides valuable insights for urban planners and policymakers, with recommendations for future research to include real-time environmental data and to explore the impact of Mobility-as-a-Service on UAM operations. Detailed explanations are available on the following webpage.',
         hyperlink: 'https://scholar.google.com/citations?view_op=view_citation&hl=ko&user=W-lkXroAAAAJ&citation_for_view=W-lkXroAAAAJ:W7OEmFMy1HYC',
-        youtube:['https://www.youtube.com/embed/uz03YgCI1MY?si=T9sQkTXhivEiuCxq'],
+        youtube:['https://www.youtube-nocookie.com/embed/uz03YgCI1MY?si=T9sQkTXhivEiuCxq'],
         images: ['/researchImg/2-2.png'],
       },
       {
@@ -89,7 +89,7 @@ A novel component of this research is the pioneering use of Data Sonification—
         title:'Density-aware flight planning for multiple agents in urban airspace',
         date: '',
         desc: 'The aim of this on-going study is to present a flight planning framework that can be applied in a large-scale map environment, such as city-wide airspace. Two key components of this framework are hierarchical spatial data representation and multi-agent pathfinding algorithm. Choosing an appropriate spatial data structure is crucial for monitoring and planning high-density urban operations in a large-scale map, and we propose octree- and medial axis- based approaches to represent urban airspace. Based on proposed spatial data structures, we adopt and apply a variant of conflict-based search (CBS), proposed by Sharon et al (2015), to assign each agent to a sequence of airspace volumes while taking into account projected traffic density within each volume. Detailed methods and analysis results will be made available in our working paper.',
-        youtube:['https://www.youtube.com/embed/p-6a9HdsH8Q?si=SqXkoRQs7igYTcgE', 'https://www.youtube.com/embed/Fm9Q13cD230?si=A0c8pcNLc1aEtDnr'],
+        youtube:['https://www.youtube-nocookie.com/embed/p-6a9HdsH8Q?si=SqXkoRQs7igYTcgE', 'https://www.youtube-nocookie.com/embed/Fm9Q13cD230?si=A0c8pcNLc1aEtDnr'],
       },
       {
         title:'Cooperative sUAV Collision Avoidance',
@@ -143,7 +143,7 @@ Jungwoo Cho, Yoonjin Yoon. "Extraction and Interpretation of Geometrical and Top
         desc:
 `- UAV path extraction & visualization in the case study area of Manhattan, NY
 - keep-out geofence of 30 meter is applied to mid-town area`,
-        youtube:['https://www.youtube.com/embed/dTboepJ5feI?si=BcnqN1BDDJgrcedg',],
+        youtube:['https://www.youtube-nocookie.com/embed/dTboepJ5feI?si=BcnqN1BDDJgrcedg',],
       },
     ]
   },
@@ -354,7 +354,7 @@ Breadth First Search algorithm can be modified to be adopted in three-dimensiona
 
 ### **Simulation Example**`,
 
-        youtube:['https://www.youtube.com/embed/z-0NvxDENak?si=AbtzbgWHjJphgGR2'],
+        youtube:['https://www.youtube-nocookie.com/embed/z-0NvxDENak?si=AbtzbgWHjJphgGR2'],
                 footnote:
 `**Period**: 2014.06~2017.05
 

@@ -288,7 +288,7 @@ Her work aims to support infrastructure and operational decision-making for clim
     participants: "Speaker: Prof. Daniel Vignon, Assistant Professor, Civil and Urban Engineering, NYU",
     keywords: "#mobility #policy #economics",
     desc: "Safety, Liability, and Insurance Markets in the Age of Automated Driving",
-    youtube:"https://www.youtube.com/embed/D18TnNnS3J0?si=UrcX5zxZD-tLeENU"
+    youtube:"https://www.youtube-nocookie.com/embed/D18TnNnS3J0?si=UrcX5zxZD-tLeENU"
   },
   {
     id: 20231124,
@@ -297,7 +297,7 @@ Her work aims to support infrastructure and operational decision-making for clim
     participants: "Speaker: Prof. Lisa Lim, Assistant Professor, Civil and Environmental Engineering, KAIST",
     keywords: "#design #health",
     desc: "Improving Health through Design of Cities and Buildings",
-    youtube:"https://www.youtube.com/embed/kHNgVpuIa7A?si=NUBGw3hZEnLuhkyY"
+    youtube:"https://www.youtube-nocookie.com/embed/kHNgVpuIa7A?si=NUBGw3hZEnLuhkyY"
   },
   {
     id: 20231117,
@@ -315,7 +315,7 @@ Her work aims to support infrastructure and operational decision-making for clim
     participants: "Speaker: Prof. Jihee Kim, Associate Professor, School of Business and Technology Management, KAIST",
     keywords: "#economic development",
     desc: "A Human-machine Collaborative Approach Measures Economic Development Using Satellite Imagery",
-    youtube:"https://www.youtube.com/embed/CZH92bvJwcc?si=S_MLoFMdZHeAwd1A"
+    youtube:"https://www.youtube-nocookie.com/embed/CZH92bvJwcc?si=S_MLoFMdZHeAwd1A"
   },
   // [... continue adding remaining events in same format ...]
 ];
