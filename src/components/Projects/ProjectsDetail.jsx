@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
-import ResearchGalleryCard from "../ui/ResearchDetailCard";
+import ResearchDetailCard from "../ui/ResearchDetailCard";
 
 // Data
 import researchData from "../../uploads/researchData";
@@ -44,7 +44,7 @@ export default function ProjectsDetail() {
         </header>
         <section>
           <ul className="list-disc list-inside space-y-2 text-gray-700">
-            <ResearchGalleryCard {...detail}/>
+            <ResearchDetailCard {...detail}/>
           </ul>
         </section>
       </div>
