@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import researchData from "../../uploads/researchData";
-import ResearchGalleryCard  from "../ui/ResearchDetailCard";
+import ResearchDetailCard  from "../ui/ResearchDetailCard";
 
 export default function ResearchDetail() {
   const { slug } = useParams();
@@ -40,7 +40,7 @@ export default function ResearchDetail() {
           <h2 className="text-2xl font-semibold mb-4">Research</h2>
           <ul className="list-disc list-inside space-y-2 text-gray-700">
             {data.research && data.research.map((detail, i) => (
-              <ResearchGalleryCard key={i} {...detail} />
+              <ResearchDetailCard key={i} {...detail} />
             ))}
           </ul>
         </section>

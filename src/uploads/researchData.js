@@ -1,6 +1,35 @@
 
 const researchData = [
   {
+    id: 'urban-heat-urban-sales',
+    title: 'Urban Heat, Urban Sales',
+    menuTitle: 'Urban Heat, Urban Sales',
+    thumbnail: '/researchImg/uhus.png',
+    desc: 'This research develops a predictive AI framework using over 300 million urban data points to quantify the economic impact of climate stress on small businesses, introducing a novel "Data Sonification" model to translate complex resilience indicators into accessible auditory patterns.',
+    research:[
+      {
+        title:'Urban Heat, Urban Sales: Artificial Intelligence Predicting the Future of Urban Small-Business Ecosystems under Climate Change',
+        date: '~ October 2025',
+        hyperlink:'https://05970c0c.slw-6vy.pages.dev/',
+        desc: 
+`
+### AI-Driven Modeling of Urban Economic Resilience to Climate Change
+
+This research initiative introduces an AI-driven framework to predict the impact of climate change on urban small business ecosystems. The study utilizes a large-scale dataset of over 300 million data points, encompassing 96 business sectors across Seoul's 426 administrative districts.
+The core methodology involves a high-precision analysis correlating climate factors with sector-specific sales revenue. By quantifying sales volatility during climate stress events (e.g., heatwaves), the team generated 40,896 'Urban Heat Resilience' indicators. A key finding is the significant spatial disparity in climate resilience, with sectors like convenience stores showing vastly different outcomes depending on their location.
+
+The predictive model, developed by KAIST, is demonstrated through an interactive visualization tool that forecasts sales changes under future temperature rise scenarios. This technology is now being considered for joint research and application in other major cities, including Boston and London.
+
+### Innovation in Data Interpretation: Data Sonification
+
+A novel component of this research is the pioneering use of Data Sonification—the conversion of data into sound. In a world-first application for this scale of urban data, researchers employed generative AI to transform the massive dataset of temperature, humidity, and sales into complex auditory patterns. This "Barrier-Free AI" technique translates complex statistics into intuitive sound attributes like pitch, rhythm, and intensity. This approach not only offers a new mode of data interpretation but is also designed for inclusivity, making the information accessible to citizens with visual impairments and children, thereby demonstrating a new potential for human-AI sensory interfaces.
+
+### [Try Out the AI Tool :](https://05970c0c.slw-6vy.pages.dev/)`,
+        videos: [['/researchImg/uhus_predict.mp4', 'Sales prediction results'],['/researchImg/uhus_sound.mp4', 'Sonified representation of urban data']]
+      }
+    ]
+  },
+  {
     id: 'urban-region',
     title: 'Urban Region Representation Learning',
     menuTitle: 'Urban Region Representation',

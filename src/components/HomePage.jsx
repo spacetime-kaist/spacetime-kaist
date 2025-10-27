@@ -5,9 +5,9 @@ import researchData from '../uploads/researchData';
 import SeeMoreButton from './ui/SeeMoreButton';
 import mainImg from '../assets/mainImg.jpg';
 import stilLogo from '../assets/stil_logo.png';
-import { Link, useLocation } from 'react-router-dom';
 import Navbar from '../utility/Navbar';
 import ScrollUpBt from '../utility/ScrollUpButton';
+import { Link } from 'react-router-dom';
 
 
 // to reduce cost, events in the same order
@@ -46,8 +46,6 @@ const EventsCard = (event) => (
 
 
 export default function HomePage() {
-  const location = useLocation();
-  const isHomePage = location.pathname === '/';
 
   // Slide Show
   const [slideIdx, setSlideIndex] = useState(0);
@@ -70,7 +68,6 @@ export default function HomePage() {
     <Navbar />
     <ScrollUpBt />
     <div className="min-h-screen bg-gray-50 text-gray-900">
-      { isHomePage &&
       <div
         className="relative h-[100vh] sm:h-[70vh] w-full bg-cover bg-center flex flex-col items-center justify-center text-center"
         style={{
@@ -87,14 +84,13 @@ export default function HomePage() {
         <h1 className="text-5xl sm:text-7xl text-white font-bold drop-shadow-xl px-4">
           Spacetime Intelligence Lab
         </h1>
-        <p className="mt-6 text-sm sm:text-lg text-white px-5  sm:w-4xl">The research focus at Spacetime Intelligence Lab is spacetime Artificial Intelligence, and its implication in the urban context. The research scope ranges from traffic forecasting GNN models to autonomous driver workload assessment to urban air mobility feasibility study.</p>
+        <p className="mt-6 text-sm sm:text-lg text-white px-5 sm:w-4xl">The research focus at Spacetime Intelligence Lab is spacetime Artificial Intelligence, and its implication in the urban context. The research scope ranges from traffic forecasting GNN models to autonomous driver workload assessment to urban air mobility feasibility study.</p>
               {/* <p className="mt-6 text-lg text-gray-600">Learn more about our research <a href="#" className='px-2 underline'>here</a>.</p> */}
         <div className="mt-8 flex flex-wrap gap-3 block sm:hidden">
           <a href="#projects" className="inline-flex items-center px-5 py-3 bg-black/70 text-white rounded-md text-sm font-semibold">Explore work</a>
           <a href="#people" className="inline-flex items-center px-5 py-3 bg-white/80 border border-gray-300 rounded-md text-sm">Contact us</a>
         </div>
       </div>
-      }
     <main>
         {/* DashBoard Section*/}
         <section id="research" className="p-3 mt-5 bg-white">
@@ -115,6 +111,14 @@ export default function HomePage() {
                 </article>
                 </Link>
               ))}
+              {/* {researchData.slice(0,4).map((f) => (
+                <Link key={f.title} to={`/research/${f.id}`} className='no-underline text-inherit'>
+                <article key={f.title} className="p-5 md:text-xl bg-gray-50 rounded-lg border border-gray-100 hover:shadow-xl">
+                  <h3 className="font-semibold  md:text-xl">{f.title}</h3>
+                  <p className="mt-2 text-sm text-gray-500">{f.desc}</p>
+                </article>
+                </Link>
+              ))} */}
             </div>
             <SeeMoreButton linkto="/research" />
           </div>
