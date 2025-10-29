@@ -1,5 +1,6 @@
 // src/pages/Home.jsx
 import React from 'react';
+import pressData from '../uploads/pressData';
 
 const articles = [
   {
@@ -16,6 +17,52 @@ const articles = [
   },
   // ... more articles
 ];
+
+const PressCard = (article) => (
+  <section id="press" className="pt-20 pb-40">
+          <div className="container">
+            <h2 className="sectiontitle text-center font-serif">STIL in the Press</h2>
+            <div className="mt-6 grid grid-cols-1 md:grid-cols-5 gap-6">
+              <div className='col-span-3'>
+                <a href='https://news.kaist.ac.kr/news/html/news/?mode=V&mng_no=53650'>
+                  <div className={`relative w-full pb-[56.25%]
+                                   rounded-md shadow-lg overflow-hidden
+                                   flex flex-col text-bottom `}
+                        style={{
+                          backgroundImage:
+                          `url('${article.image}')`,
+                          backgroundColor: "rgba(153, 181, 197, 1)",
+                          transform: "translate3d(0,0,0)",
+                          backgroundSize: "cover",
+                          backgroundPosition: "center",
+                          backgroundBlendMode: "multiply",
+                        }}>
+                    <h3 className="absolute bottom-15 text-2xl sm:text-4xl text-white font-bold drop-shadow-xl px-4 text-bottom">
+                      {article.title}
+                    </h3>
+                    <div className="w-full absolute bottom-4 left-4 text-sm sm:text-lg font-bold flex flex-row justify-start items-start text-start">
+                      <p className="mt-6 px-5">{article.writer}</p>
+                      <p className="mt-6 text-slate-300 px-5">{article.date}</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div className='col-span-2'>
+              <ReactMarkdown className="m-6 text-md lg:text-xl text-black border-l-4 border-black p-6">{article.desc}</ReactMarkdown>
+              <div className="m-6 flex flex-wrap gap-3">
+                  {article.link_kr &&<a href={article.link_kr} className="inline-flex items-center px-5 py-3 bg-black text-white rounded-md text-sm font-semibold">KR</a>}
+                  {article.link_en &&<a href={article.link_en} className="inline-flex items-center px-5 py-3 border border-gray-300 rounded-md text-sm">EN</a>}
+              </div>
+              </div>
+            </div>
+            <div className=" my-8 text-blue-900/80"> 
+                <strong>({article.date}) {article.title}</strong> -
+                {article.link_others && article.link_others.map((link) => (
+                      <a key={link.id} href={link.href} className="text-sm text-start hover:underline"> {link.source},</a> ))}
+            </div>       
+          </div>
+        </section>
+)
 
 export default function Press() {
   return (

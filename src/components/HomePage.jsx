@@ -204,12 +204,11 @@ export default function HomePage() {
               </div>
               </div>
             </div>
-            <div className=" my-8 gap-4 flex flex-wrap">
-                {pressData[0].link_others && pressData[0].link_others.map((link, idx) => (
-                    <div key={idx} className='text-sm text-gray-500 text-start'>
-                      <a href={link.href} className="text-blue-800/80 hover:underline">{link.source}</a>
-              </div> ))}
-              </div>       
+            <div className=" my-8 text-blue-900/80"> 
+                <strong>({pressData[0].date}) {pressData[0].title}</strong> -
+                {pressData[0].link_others && pressData[0].link_others.map((link) => (
+                      <a key={link.id} href={link.href} className="text-sm text-start hover:underline"> {link.source},</a> ))}
+            </div>       
           </div>
         </section>
 
