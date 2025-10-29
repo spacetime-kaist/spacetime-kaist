@@ -1,13 +1,18 @@
 import React, { useEffect, useState } from 'react';
-// Import components
+import { Link } from 'react-router-dom';
+// Import Data
 import eventsData from '../uploads/eventsData';
+import pressData from '../uploads/pressData';
 import researchData from '../uploads/researchData';
+// Import UI
 import SeeMoreButton from './ui/SeeMoreButton';
+import ScrollUpBt from '../utility/ScrollUpButton';
+// Import assets
 import mainImg from '../assets/mainImg.jpg';
 import stilLogo from '../assets/stil_logo.png';
+import pressImg from '../assets/images_20251029.jpg';
 import Navbar from '../utility/Navbar';
-import ScrollUpBt from '../utility/ScrollUpButton';
-import { Link } from 'react-router-dom';
+import ReactMarkdown from 'react-markdown';
 
 
 // to reduce cost, events in the same order
@@ -16,7 +21,7 @@ import { Link } from 'react-router-dom';
 
 // image and txt
 const EventsCard = (event) => (
-  <figure className="border border-slate-200 shadow shadow-sm hover:shadow-2xl transition-transform duration-500 hover:scale-120 ">
+  <figure className="bg-white hover:bg-white/90 border border-slate-200 shadow shadow-sm hover:shadow-2xl transition-transform duration-500 hover:scale-120 ">
     <div className=" m-7 overflow-hidden bg-gradient-to-br from-gray-200 to-gray-100 flex items-center justify-center">
       <div className="flex flex-col gap-2">
         {event.photos ? event.photos.slice(0,1).map((photo, idx) => (
@@ -36,8 +41,8 @@ const EventsCard = (event) => (
         }
       </div>
     </div>
-    <figcaption className="p-4 bg-white">
-      <div className="text-lg sm:text-2xl text-slate-800">{event.title}</div>
+    <figcaption className="p-4 bg-white ">
+      <div className="text-lg sm:text-2xl text-slate-900">{event.title}</div>
       <div className="text-md text-blue-400 mt-1">{event.date}</div>
       {/* <div className="text-sm text-blue-500 mt-1">{event.keywords}</div> */}
     </figcaption>
@@ -123,31 +128,8 @@ export default function HomePage() {
             <SeeMoreButton linkto="/research" />
           </div>
         </section>
-
-        {/* Research Section*/}
-        {/* <section id="research" className="py-16 bg-white">
-          <div className = "container">
-            <h2 className="sectiontitle">Research</h2>
-            <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {[
-                {id: 'urban-region', title: 'Urban Region Representation Learning', desc: 'Heterogeneity of diverse urban datasets by HUGAT.'},
-                {id: 'uam',title: 'Urban Air Mobility', desc: 'UAM demand forecasting using existing helipads.'},
-                {id: 'maritime', title: 'Maritime Transportation', desc: 'A novel deep learning-based vessel trajectory prediction framework for AIS data using AIS-ACNet.'},
-                {id: 'traffic-forecasting', title: 'Traffic Forecasting', desc: 'A key technical enabler of the adaptive traffic management..'}
-              ].map((f) => (
-                <Link key={f.title} to={`/research/${f.id}`} className='no-underline text-inherit'>
-                <article key={f.title} className="p-5 md:text-xl bg-gray-50 rounded-lg border border-gray-100 hover:shadow-lg">
-                  <h3 className="font-semibold  md:text-xl">{f.title}</h3>
-                  <p className="mt-2 text-sm text-gray-500">{f.desc}</p>
-                </article>
-                </Link>
-              ))}
-            </div>
-            <SeeMoreButton linkto="/research" />
-          </div>
-        </section> */}
         
-        {/* Slide Section*/}
+        {/* Research (Slide) Section*/}
           <section className="pt-25 pb-30 mt-40 mb-50 bg-gray-900/95 text-white">
           <div className = "container">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
@@ -185,15 +167,62 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Press Section */}
+        <section id="press" className="pt-20 pb-40">
+          <div className="container">
+            <h2 className="sectiontitle text-center font-serif">STIL in the Press</h2>
+            <div className="mt-6 grid grid-cols-1 md:grid-cols-5 gap-6">
+              <div className='col-span-3'>
+                <a href='https://news.kaist.ac.kr/news/html/news/?mode=V&mng_no=53650'>
+                  <div className={`relative w-full pb-[56.25%]
+                                   rounded-md shadow-lg overflow-hidden
+                                   flex flex-col text-bottom `}
+                        style={{
+                          backgroundImage:
+                          `url('${pressImg}')`,
+                          backgroundColor: "rgba(153, 181, 197, 1)",
+                          transform: "translate3d(0,0,0)",
+                          backgroundSize: "cover",
+                          backgroundPosition: "center",
+                          backgroundBlendMode: "multiply",
+                        }}>
+                    <h3 className="absolute bottom-15 text-2xl sm:text-4xl text-white font-bold drop-shadow-xl px-4 text-bottom">
+                      {pressData[0].title}
+                    </h3>
+                    <div className="w-full absolute bottom-4 left-4 text-sm sm:text-lg font-bold flex flex-row justify-start items-start text-start">
+                      <p className="mt-6 px-5">{pressData[0].writer}</p>
+                      <p className="mt-6 text-slate-300 px-5">{pressData[0].date}</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div className='col-span-2'>
+              <ReactMarkdown className="m-6 text-md lg:text-xl text-black border-l-4 border-black p-6">{pressData[0].desc}</ReactMarkdown>
+              <div className="m-6 flex flex-wrap gap-3">
+                  {pressData[0].link_kr &&<a href={pressData[0].link_kr} className="inline-flex items-center px-5 py-3 bg-black text-white rounded-md text-sm font-semibold">KR</a>}
+                  {pressData[0].link_en &&<a href={pressData[0].link_en} className="inline-flex items-center px-5 py-3 border border-gray-300 rounded-md text-sm">EN</a>}
+              </div>
+              </div>
+            </div>
+            <div className=" my-8 gap-4 flex flex-wrap">
+                {pressData[0].link_others && pressData[0].link_others.map((link, idx) => (
+                    <div key={idx} className='text-sm text-gray-500 text-start'>
+                      <a href={link.href} className="text-blue-800/80 hover:underline">{link.source}</a>
+              </div> ))}
+              </div>       
+          </div>
+        </section>
+
         {/* Events Section */}
-        <section id="events" className="py-16">
-          <div className="container ">
-            <h2 className="sectiontitle">Events</h2>
+        <section id="events" className="py-20 bg-slate-400 ">
+          <div className="container">
+            <h2 className="text-white text-center font-serif text-5xl md:text-7xl ">Events</h2>
             {/* <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:md:grid-cols-3 gap-6"> */}
+            <p className="pb-20 pt-5 flex justify-center text-gray-300 "> Explore our past events, conferences, and workshops.</p>
             <div className="mt-6 columns-1 md:columns-2 lg:columns-3 gap-6">
               {eventsData && eventsData.slice(0,20).map((event) => (
-                <div className='break-inside-avoid mb-3'>
-                <Link key={event.id} to={`/events#${event.id}`}>
+                <div key={event.id} className='break-inside-avoid mb-3'>
+                <Link to={`/events#${event.id}`}>
                 <EventsCard {...event} className="min-w-[300px]" />
                 </Link>
                 </div>
