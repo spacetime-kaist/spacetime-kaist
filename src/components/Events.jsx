@@ -5,7 +5,7 @@ import eventsData from '../uploads/eventsData';
 const EventCard = ( event ) => (
   <article className="p-6 bg-white rounded-lg border border-gray-200 shadow-sm mb-8">
     <h2 className="text-2xl font-bold">{event.title}</h2>
-    <p className="text-sm text-gray-500 mb-2">{event.date}</p>
+    <p className="text-sm text-gray-500 mb-2">{event.place}</p>
     <p className="text-sm text-sky-600 mb-1"><span className='font-bold'>Participants: </span>{event.participants}</p>
     <p className="text-sm text-sky-500 mb-4">Keywords: {event.keywords}</p>
 
@@ -36,7 +36,7 @@ const EventCard = ( event ) => (
 const EventGridCard = ( event ) => (
   <article id={event.id} className="p-6 bg-white rounded-lg border border-gray-200 shadow-sm mb-8">
     <h2 className="text-2xl font-bold">{event.title}</h2>
-    <p className="text-sm text-gray-500 mb-2">{event.date}</p>
+    <p className="text-sm text-gray-500 mb-2">{event.place}</p>
     <p className="text-sm text-sky-600 mb-1"><span className='font-bold'>Participants: </span>{event.participants}</p>
     <p className="text-sm text-sky-500 mb-4">Keywords: {event.keywords}</p>
 
@@ -69,7 +69,7 @@ const EventGridCard = ( event ) => (
 const EventMasonryCard = ( event ) => (
   <article id={event.id} className="p-5 lg:p-16 bg-white rounded-lg border border-gray-200 shadow-sm mb-8">
     <h2 className="text-2xl sm:text-3xl font-semibold pb-2">{event.title}</h2>
-    <p className="text-sm text-gray-500 mb-2">{event.date}</p>
+    <p className="text-sm text-gray-500 mb-2">{event.place}</p>
     <p className="text-sm text-sky-600 mb-1"><span className='font-bold'>Participants: </span>{event.participants}</p>
     <p className="text-sm text-sky-500 mb-4">Keywords: {event.keywords}</p>
 

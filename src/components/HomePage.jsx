@@ -43,7 +43,7 @@ const EventsCard = (event) => (
     </div>
     <figcaption className="p-4 bg-white ">
       <div className="text-lg sm:text-2xl text-slate-900">{event.title}</div>
-      <div className="text-md text-blue-400 mt-1">{event.date}</div>
+      <div className="text-md text-blue-400 mt-1">{event.place}</div>
       {/* <div className="text-sm text-blue-500 mt-1">{event.keywords}</div> */}
     </figcaption>
   </figure>
@@ -58,7 +58,7 @@ export default function HomePage() {
   useEffect(() => {
     const interval = setInterval(() => {
       setSlideIndex((prev) => (prev + 1) % researchData.length);
-    }, 5000); // change every 5s
+    }, 6000); // change every 7s
     return () => clearInterval(interval);
   }, []);
 
@@ -142,12 +142,12 @@ export default function HomePage() {
                 <div className="mt-8 w-90 text-xs text-gray-500">
                   <div className='mb-5'>
                     <div className="font-semibold text-gray-300 mb-1">{currentSlide.research[0].title}</div>
-                    <div>{currentSlide.research[0].desc.split(" ").slice(0, 10).join(" ") + "…"}</div>
+                    <ReactMarkdown>{currentSlide.research[0].desc.split(" ").slice(0, 12).join(" ") + "…"}</ReactMarkdown>
                   </div>
                   {currentSlide.research[1] &&
                   <div>
                     <div className="font-semibold text-gray-300 mb-1">{currentSlide.research[1].title}</div>
-                    <div>{currentSlide.research[1].desc.split(" ").slice(0, 10).join(" ") + "…"}</div>
+                    <ReactMarkdown>{currentSlide.research[1].desc.split(" ").slice(0, 12).join(" ") + "…"}</ReactMarkdown>
                   </div>
                   }
                 </div>
