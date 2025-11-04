@@ -4,6 +4,7 @@ import { Routes, Route, HashRouter } from 'react-router-dom'
 import Layout from './Layout'
 import HomePage from './components/HomePage'
 import Publications from './components/Publications/Publications'
+import Conference from './components/Publications/Conference'
 import People from './components/People'
 import Research from './components/Research/Research'
 import ResearchDetail from './components/Research/ResearchDetail'
@@ -11,14 +12,10 @@ import Projects from './components/Projects/Projects'
 import GSECUAM from './components/Projects/GSECUAM'
 import ProjectsDetail from './components/Projects/ProjectsDetail'
 import Events from './components/Events'
-import Conference from './components/Publications/Conference'
+import Press from './components/Press'
 
 // Utility
 import ScrolltoAnchor from './utility/ScrolltoAnchor'
-
-
-
-
 
 
 function App() {
@@ -27,6 +24,7 @@ function App() {
       <ScrolltoAnchor />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        {/* Under Layout */}
         <Route element={<Layout />} >
         <Route path='/publications' element={<Publications />} />
         <Route path='/conference' element={<Conference />} />
@@ -37,6 +35,7 @@ function App() {
         <Route path='/projects/:slug' element={<ProjectsDetail />} />
         <Route path='/projects/gs-ec-uam' element={<GSECUAM />} />
         <Route path='/events' element={<Events />} />
+        <Route path='/press' element={<Press />} />
         </Route>
       </Routes>
     </HashRouter>

@@ -81,6 +81,8 @@ function Navbar() {
                 <Link to="/projects" className={menuTextStyle}>Projects</Link>
                 {/*Events*/}
                 <Link to="/events" className={menuTextStyle}>Events</Link>
+                {/*Press*/}
+                <Link to="/press" className={menuTextStyle}>Press</Link>
               </div>
 
               {/* -------------- Mobile Menu -------------- */}            
@@ -135,6 +137,7 @@ function Navbar() {
                         </div> */}
                       <Link to="/projects" className={menuTextStyle}>Projects</Link>
                       <Link to="/events" className={menuTextStyle}>Events</Link>
+                      <Link to="/press" className={menuTextStyle}>Press</Link>
                       </div>
                     )}
               </div>
