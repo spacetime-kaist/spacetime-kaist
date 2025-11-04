@@ -1,5 +1,13 @@
 const internationalData = [
   {
+    id: '10.1145/3764921.3770151',
+    title: "Speak to Simulate: An LLM-Guided Agentic Framework for Traffic Simulation in SUMO",
+    authors: "M. Jeong, J. Chang, Y. Yoon",
+    conference: "GeoSIM '25: 8th ACM SIGSPATIAL International Workshop on Geospatial Simulation",
+    date: "2025",
+    href: "https://dl.acm.org/doi/abs/10.1145/3764921.3770151",
+  },
+  {
     id: 'i75',
     title: "Integrating Urban Air Mobility with Highway Infrastructure: A Strategic Approach for Vertiport Location Selection in the Seoul Metropolitan Area",
     authors: "D. Yoon, M. Jeong, J. Lee, S. Kim, Y. Yoon",
