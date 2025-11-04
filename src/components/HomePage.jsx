@@ -199,15 +199,15 @@ export default function HomePage() {
               <div className='col-span-2'>
               <ReactMarkdown className="m-6 text-md lg:text-xl text-black border-l-4 border-black p-6">{pressData[0].desc}</ReactMarkdown>
               <div className="m-6 flex flex-wrap gap-3">
-                  {pressData[0].link_kr &&<a href={pressData[0].link_kr} className="inline-flex items-center px-5 py-3 bg-black text-white rounded-md text-sm font-semibold">KR</a>}
-                  {pressData[0].link_en &&<a href={pressData[0].link_en} className="inline-flex items-center px-5 py-3 border border-gray-300 rounded-md text-sm">EN</a>}
+                  {pressData[0].link_kr &&<a href={pressData[0].link_kr} className="nline-flex hover:bg-slate-400 items-center px-5 py-3 border border-gray-300 rounded-md text-sm">KR</a>}
+                  {pressData[0].link_en &&<a href={pressData[0].link_en} className="inline-flex hover:bg-slate-400 items-center px-5 py-3 border border-gray-300 rounded-md text-sm">EN</a>}
               </div>
               </div>
             </div>
             <div className=" my-8 text-blue-900/80"> 
                 <strong>({pressData[0].date}) {pressData[0].title}</strong> -
-                {pressData[0].link_others && pressData[0].link_others.map((link) => (
-                      <a key={link.id} href={link.href} className="text-sm text-start hover:underline"> {link.source},</a> ))}
+                {pressData[0].link_others && pressData[0].link_others.map((link, index) => (
+                      <><span className='pl-1'></span><a key={link.id} href={link.href} className="text-sm text-start hover:underline">{link.source}</a>{index < pressData[0].link_others.length - 1 && <span>,</span>}</> ))}
             </div>       
           </div>
         </section>
