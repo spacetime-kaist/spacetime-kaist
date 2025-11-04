@@ -2,6 +2,7 @@ const pressData = [
   {
     id: 'press20251029',
     title: 'AI Finds Urban Commercial Districts Resilient to Climate Risk​',
+    keyword: ['Urban AI', 'Climate Resilience', 'KAIST-MIT Collaboration'],
     date: '2025-10-29',
     writer: 'KAIST News',
     link_kr: 'https://news.kaist.ac.kr/news/html/news/?mode=V&mng_no=53650',

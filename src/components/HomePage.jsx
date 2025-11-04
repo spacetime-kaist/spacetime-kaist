@@ -179,7 +179,7 @@ export default function HomePage() {
                                    flex flex-col text-bottom `}
                         style={{
                           backgroundImage:
-                          `url('${pressImg}')`,
+                          `url('${pressData[0].image}')`,
                           backgroundColor: "rgba(153, 181, 197, 1)",
                           transform: "translate3d(0,0,0)",
                           backgroundSize: "cover",
@@ -190,7 +190,7 @@ export default function HomePage() {
                       {pressData[0].title}
                     </h3>
                     <div className="w-full absolute bottom-4 left-4 text-sm sm:text-lg font-bold flex flex-row justify-start items-start text-start">
-                      <p className="mt-6 px-5">{pressData[0].writer}</p>
+                      <p className="mt-6 px-5 ">{pressData[0].writer}</p>
                       <p className="mt-6 text-slate-300 px-5">{pressData[0].date}</p>
                     </div>
                   </div>

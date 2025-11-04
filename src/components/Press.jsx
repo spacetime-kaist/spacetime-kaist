@@ -66,12 +66,12 @@ export default function Press() {
   return (
     <div className="min-h-screen bg-white text-gray-900">
       <header className="border-t-3 border-b-3 border-black px-6">
-        <h1 className="pagetitle text-3xl font-serif text-center translate-y-4">STIL in PRESS</h1>
+        <h1 className="pagetitle text-3xl font-serif text-center translate-y-4">STIL in the PRESS</h1>
       </header>
 
       <main className="mx-auto px-6 py-8">
-        {/* Main Front */}
-        <section id='headline' className="mb-16 grid flex flex-row">
+        {/* Headline */}
+        <section id='headline' className="mb-40 grid flex flex-row">
         {/* Featured article */}
           {pressData.map(article => (PressCard(article)))}
         {/* Grid of other articles for Later*/}
@@ -88,6 +88,18 @@ export default function Press() {
             </article>
           ))}
           </div> */}
+        </section>
+        {/* Others */}
+        <section id='other_press' className="my-16 border-t-3 border-black px-6">
+          <h2 className="text-2xl font-bold text-start mt-1 mb-15">IN LIST</h2>
+          {pressData.map(article => (
+            <div className=" my-8 "> 
+                <strong>({article.date}) {article.title}</strong> -
+                <a href={article.link_en} className="text-sm text-start hover:underline"> KAIST NEWS( EN </a>
+                <a href={article.link_kr} className="text-sm text-start hover:underline"> / KR ),</a>
+                {article.link_others && article.link_others.map((link) => (
+                      <a key={link.id} href={link.href} className="text-sm text-start hover:underline"> {link.source},</a> ))}
+            </div>))}
         </section>
       </main>
 
