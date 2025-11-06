@@ -13,9 +13,13 @@ import GSECUAM from './components/Projects/GSECUAM'
 import ProjectsDetail from './components/Projects/ProjectsDetail'
 import Events from './components/Events'
 import Press from './components/Press'
+import Apply from './components/Apply/Apply'
+import ApplyDetail from './components/Apply/ApplyDetail'
 
 // Utility
 import ScrolltoAnchor from './utility/ScrolltoAnchor'
+
+
 
 
 function App() {
@@ -36,6 +40,8 @@ function App() {
         <Route path='/projects/gs-ec-uam' element={<GSECUAM />} />
         <Route path='/events' element={<Events />} />
         <Route path='/press' element={<Press />} />
+        <Route path='/apply' element={<Apply />} />
+        <Route path='/apply/:slug' element={<ApplyDetail />} />
         </Route>
       </Routes>
     </HashRouter>

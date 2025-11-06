@@ -3,21 +3,6 @@ import React from 'react';
 import pressData from '../uploads/pressData';
 import ReactMarkdown from 'react-markdown';
 
-const articles = [
-  {
-    id: 1,
-    title: "Major World Event Unfolds",
-    excerpt: "Quick summary of world event happening right now.",
-    image: "/assets/images_20251029.jpg",
-  },
-  {
-    id: 2,
-    title: "Science Breakthrough in AI",
-    excerpt: "AI research achieves a new milestone.",
-    image: "/images/ai-breakthrough.jpg",
-  },
-  // ... more articles
-];
 
 const PressCard = (article) => (
           <div className="container">
