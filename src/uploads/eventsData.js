@@ -1,5 +1,15 @@
 export const homeEventsList = [20250905,20250617,20250519,20250515,20250403,20250308,20250221,20250113,20250105,20241111,]
 const eventsData = [
+    {
+    id: 20251103,
+    title: "Presentation at ACM SIGSPATIAL",
+    place: "November 3rd - November 6th, 2025, Minneapolis, Minnesota",
+    participants: "Minwoo Jeong (M.S. candidate)",
+    keywords: "#SIGSPATIAL #LLM #Agent #SUMO",
+    desc:
+`M.S. candidate Minwoo presented the work “Speak to Simulate: An LLM-Guided Agentic Framework for Traffic Simulation in SUMO,” conducted with M.S. candidate Jeeyun, at the ACM SIGSPATIAL International Workshop on GeoSpatial Simulation (GeoSIM'25)`,
+    photos: ['/eventsImg/IMG_6734.jpg', '/eventsImg/IMG_6793.jpg'],
+  },
   {
     id: 20250930,
     title: "COEX Exhibition: Smart Life Week 2025",
