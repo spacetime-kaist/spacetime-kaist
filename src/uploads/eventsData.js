@@ -7,7 +7,9 @@ const eventsData = [
     participants: "Minwoo Jeong (M.S. candidate)",
     keywords: "#SIGSPATIAL #LLM #Agent #SUMO",
     desc:
-`M.S. candidate Minwoo presented the work “Speak to Simulate: An LLM-Guided Agentic Framework for Traffic Simulation in SUMO,” conducted with M.S. candidate Jeeyun, at the ACM SIGSPATIAL International Workshop on GeoSpatial Simulation (GeoSIM'25)`,
+`M.S. candidate Minwoo presented the work “Speak to Simulate: An LLM-Guided Agentic Framework for Traffic Simulation in SUMO,” conducted with M.S. candidate Jeeyun, at the ACM SIGSPATIAL International Workshop on GeoSpatial Simulation (GeoSIM'25). The work has also been selected for the Association for Computing Machinery (ACM) Showcase on Kudos.
+
+[LINK](https://www.growkudos.com/publications/10.1145%25252F3764921.3770151/reader)`,
     photos: ['/eventsImg/IMG_6734.jpg', '/eventsImg/IMG_6793.jpg'],
   },
   {
