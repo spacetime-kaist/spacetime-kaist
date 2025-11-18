@@ -3,7 +3,7 @@ const eventsData = [
     {
     id: 20251103,
     title: "Presentation at ACM SIGSPATIAL",
-    place: "November 3rd - November 6th, 2025, Minneapolis, Minnesota",
+    place: "November 3rd-6th, 2025, Minneapolis, Minnesota",
     participants: "Minwoo Jeong (M.S. candidate)",
     keywords: "#SIGSPATIAL #LLM #Agent #SUMO",
     desc:
@@ -11,6 +11,18 @@ const eventsData = [
 
 [LINK](https://www.growkudos.com/publications/10.1145%25252F3764921.3770151/reader)`,
     photos: ['/eventsImg/IMG_6734.jpg', '/eventsImg/IMG_6793.jpg'],
+  },
+    {
+    id:  20251019,
+    title: "Presentation at ICCV 2025",
+    place: "October 10th-23rd, 2025, Honolulu, Hawaii",
+    participants: "Juneyoung Ro (M.S. candidate)",
+    keywords: "#ICCV #Vision",
+    desc:
+`M.S. student Juneyoung attended ICCV 2025 and presented the work “How Weel do Vision-Language Models Understand Cities? A Comparative Study on Spatial Reasoning from Street-View Images” (conducted with Postdoc researcher Namwoo) at the ICCV Workshop on Multimodal Reasoning and Slow Thinking in Large Model Era: Towards System 2 and Beyond (MARS2). The work investigated how spatially complex urban scenes can be understood through general-purpose VLMs and whether domain-specific fine-tuning can close the gap.
+
+[Link](https://openaccess.thecvf.com/content/ICCV2025W/MARS2/papers/Ro_How_Well_Do_Vision-Lang[…]dels_Understand_Cities__A_Comparative_ICCVW_2025_paper.pdf)`,
+    photos: ['/eventsImg/IMG_0749.jpeg', '/eventsImg/IMG_3152.JPG','/eventsImg/IMG_3168.JPG'],
   },
   {
     id: 20250930,
