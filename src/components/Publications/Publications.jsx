@@ -1,5 +1,5 @@
 import React from "react";
-import publicationsData from "../../uploads/publicationsData";
+import { useDataLoader } from "../../hooks/useDataLoader";
 
 const PubCard = ( item ) => (   
 <div key={item.id} className="bg-white px-4 py-2 rounded-sm border-l-4 border-slate-600 hover:shadow-md transition">
@@ -28,6 +28,24 @@ const PubCard = ( item ) => (
 
 
 export default function Publications() {
+  const { data: publicationsData, loading } = useDataLoader('publicationsData');
+
+  if (loading) {
+    return (
+      <div className="container pt-32 text-center">
+        <p className="text-gray-600">Loading publications data...</p>
+      </div>
+    );
+  }
+
+  if (!publicationsData || publicationsData.length === 0) {
+    return (
+      <div className="container pt-32 text-center">
+        <p className="text-gray-600">No publications data available.</p>
+      </div>
+    );
+  }
+
   return (
     <div className="p-8 bg-gray-50 min-h-screen">
       <h1 className="pagetitle">Journal Publications</h1>

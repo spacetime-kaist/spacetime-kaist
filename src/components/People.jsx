@@ -1,6 +1,5 @@
 import React from "react";
-//Data
-import labMembersData, { professorData, aluminiData } from '../uploads/peopleData';
+import { useDataLoader } from '../hooks/useDataLoader';
 // CSS
 const sectionTitle = "text-2xl font-bold mt-8 ";
 const partTitle = "text-2xl font-bold mt-8 mb-4 border-b-2 border-blue-200 pb-2";
@@ -42,6 +41,26 @@ const AluminiCard = (member) => (
 );
 
 export default function People() {
+  const { data: peopleData, loading } = useDataLoader('peopleData');
+  
+  if (loading) {
+    return (
+      <div className="container pt-32 text-center">
+        <p className="text-gray-600">Loading people data...</p>
+      </div>
+    );
+  }
+
+  if (!peopleData) {
+    return (
+      <div className="container pt-32 text-center">
+        <p className="text-gray-600">No people data available.</p>
+      </div>
+    );
+  }
+
+  const { professorData, labMembersData = [], aluminiData = [] } = peopleData;
+
   return (
     <>
         {/* Professor Section */}
@@ -50,21 +69,21 @@ export default function People() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
               <div className="">
                 <div className="w-full aspect-[3/3] bg-gradient-to-br from-white to-gray-100 rounded-2xl shadow-lg flex items-center justify-center">
-                  <div className="text-center text-gray-400"><img src={`/peopleImg/1.jpg`} alt={professorData.name} className="w-full h-full object-cover rounded-2xl" /></div>
+                  <div className="text-center text-gray-400"><img src={`/peopleImg/1.jpg`} alt={professorData?.name} className="w-full h-full object-cover rounded-2xl" /></div>
                 </div>
               </div>
               <div className="md:col-span-2">
-                <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">{professorData.name}</h1>         
-                <p className="mt-6 text-lg text-gray-600">{professorData.greeting}</p>
+                <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">{professorData?.name}</h1>         
+                <p className="mt-6 text-lg text-gray-600">{professorData?.greeting}</p>
                 {/* <p className="mt-6 text-lg text-gray-600">Learn more about our research <a href="#" className='px-2 underline'>here</a>.</p> */}
                 <div className="mt-8 md:flex flex-wrap gap-8">
-                  <p className="text-gray-500 mb-2 flex flex-row"><strong>Email:</strong><div onClick={() => copyEmail(professorData.email)} className="ml-2 text-blue-600 hover:underline cursor-pointer">{professorData.email}</div></p>
-                  <p className="text-gray-500 mb-2"><strong>Website:</strong><a href={professorData.link} target="_blank" className="ml-2 text-blue-600 hover:underline">{professorData.link}</a></p>
+                  <p className="text-gray-500 mb-2 flex flex-row"><strong>Email:</strong><div onClick={() => copyEmail(professorData?.email)} className="ml-2 text-blue-600 hover:underline cursor-pointer">{professorData?.email}</div></p>
+                  <p className="text-gray-500 mb-2"><strong>Website:</strong><a href={professorData?.link} target="_blank" className="ml-2 text-blue-600 hover:underline">{professorData?.link}</a></p>
                 </div>
                 <div className={partTitle}>Education</div>
-              {professorData.edu.map((item, idx) => <p key={idx} className="text-gray-500">{item}</p>)}
+              {professorData?.edu?.map((item, idx) => <p key={idx} className="text-gray-500">{item}</p>)}
               <div className={partTitle}>Research Interest</div>
-                <ReactMarkdown className="markdown">{professorData.research}</ReactMarkdown>
+                <ReactMarkdown className="markdown">{professorData?.research}</ReactMarkdown>
               </div>
           </div>
             </div>

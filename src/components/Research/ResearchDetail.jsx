@@ -1,11 +1,22 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
-import researchData from "../../uploads/researchData";
+import { useDataLoader } from "../../hooks/useDataLoader";
 import ResearchDetailCard  from "../ui/ResearchDetailCard";
 
 export default function ResearchDetail() {
   const { slug } = useParams();
-  const data = researchData.find(item => item.id === slug);
+  const { data: researchData, loading } = useDataLoader('researchData');
+  const data = researchData?.find(item => item.id === slug);
+
+  if (loading) {
+    return (
+      <div className="container">
+        <div className="pt-32 text-center">
+          <p className="text-gray-600">Loading research data...</p>
+        </div>
+      </div>
+    );
+  }
 
   if (!data) {
     return (

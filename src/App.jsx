@@ -18,6 +18,8 @@ import ApplyDetail from './components/Apply/ApplyDetail'
 
 // Utility
 import ScrolltoAnchor from './utility/ScrolltoAnchor'
+import Test from './components/Test'
+import PubCon from './components/Publications/PubCon'
 
 
 
@@ -28,9 +30,10 @@ function App() {
       <ScrolltoAnchor />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path='/test' element={<Test />} />
         {/* Under Layout */}
         <Route element={<Layout />} >
-        <Route path='/publications' element={<Publications />} />
+        <Route path='/publications' element={<PubCon />} />
         <Route path='/conference' element={<Conference />} />
         <Route path='/people' element={<People />} />
         <Route path='/research' element={<Research/>} />

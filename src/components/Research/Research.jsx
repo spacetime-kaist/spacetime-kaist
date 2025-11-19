@@ -1,7 +1,6 @@
 import React from 'react';
-import researchData from '../../uploads/researchData'; // Import the data array from another file
 import { Link } from 'react-router-dom';
-
+import { useDataLoader } from '../../hooks/useDataLoader';
 
 const ResearchCard = ({ id,title, desc, thumbnail }) => (
   <Link key={id} to={`/research/${id}`} className="no-underline">
@@ -17,6 +16,24 @@ const ResearchCard = ({ id,title, desc, thumbnail }) => (
 );
 
 export default function Research() {
+  const { data: researchData, loading } = useDataLoader('researchData');
+
+  if (loading) {
+    return (
+      <div className="container pt-32 text-center">
+        <p className="text-gray-600">Loading research data...</p>
+      </div>
+    );
+  }
+
+  if (!researchData || researchData.length === 0) {
+    return (
+      <div className="container pt-32 text-center">
+        <p className="text-gray-600">No research data available.</p>
+      </div>
+    );
+  }
+
   return (
     <>
       <header className="pt-10">
