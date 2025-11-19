@@ -27,12 +27,12 @@ function Layout() {
         <h2 className='text-2xl font-bold text-sky-700 py-3'>Spacetime Intelligence Laboratory</h2>
         <h3 className='text-xl font-semibold text-slate-500 pb-2'>Contact</h3>
         <p>
-          Address: W16 #407, KAIST, 291 Daehak-ro, Yuseong-gu, Daejeon, Republic
+          Address: W16 #410, KAIST, 291 Daehak-ro, Yuseong-gu, Daejeon, Republic
           of Korea
           <br />
-          TEL: +82-42-350-5655
+          TEL: +82-42-350-3615
           <br />
-          E-mail: spacetime@kaist.ac.kr
+          E-mail: yoonjin@kaist.ac.kr
         </p>
       </div>
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
