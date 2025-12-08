@@ -42,7 +42,7 @@ const PressCard = (article) => (
             <div className=" my-8 text-blue-900/80"> 
                 <strong>({article.date}) {article.title}</strong> -
                 {article.link_others && article.link_others.map((link, index) => (
-                      <><span className='pl-1'></span><a key={link.id} href={link.href} className="text-sm text-start hover:underline">{link.source}</a>{index < pressData[0].link_others.length - 1 && <span>,</span>}</> ))}
+                      <><span className='pl-1'></span><a key={link.id} href={link.href} className="text-sm text-start hover:underline">{link.source}</a>{index < article.link_others.length - 1 && <span>,</span>}</> ))}
             </div>       
           </div>
 )
@@ -101,7 +101,7 @@ export default function Press() {
                 <a href={article.link_en} className="text-sm text-start hover:underline"> KAIST NEWS( EN </a>
                 <a href={article.link_kr} className="text-sm text-start hover:underline"> / KR ),</a>
                 {article.link_others && article.link_others.map((link, index) => (
-                      <><span className='pl-1'></span><a key={link.id} href={link.href} className="text-sm text-start hover:underline">{link.source}</a>{index < pressData[0].link_others.length - 1 && <span>,</span>}</> ))}
+                      <><span className='pl-1'></span><a key={link.id} href={link.href} className="text-sm text-start hover:underline">{link.source}</a>{index < article.link_others.length - 1 && <span>,</span>}</> ))}
             </div>))}
         </section>
       </main>
