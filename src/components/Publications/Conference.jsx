@@ -1,13 +1,30 @@
 import React from "react";
-
-import internationalData from "../../uploads/conferenceData/internationalData";
-import nationalData from "../../uploads/conferenceData/nationalData";
-
+import { useDataLoader } from "../../hooks/useDataLoader";
 import ScrolltoAnchor from "../../utility/ScrolltoAnchor";
 import { Link } from "react-router-dom";
 
 
 export default function Conference() {
+  const { data: internationalData, loading: intLoading } = useDataLoader('internationalData');
+  const { data: nationalData, loading: natLoading } = useDataLoader('nationalData');
+  
+  const loading = intLoading || natLoading;
+
+  if (loading) {
+    return (
+      <div className="container pt-32 text-center">
+        <p className="text-gray-600">Loading conference data...</p>
+      </div>
+    );
+  }
+
+  if ((!internationalData || internationalData.length === 0) && (!nationalData || nationalData.length === 0)) {
+    return (
+      <div className="container pt-32 text-center">
+        <p className="text-gray-600">No conference data available.</p>
+      </div>
+    );
+  }
 
   
 const ConCard = ( item ) => (   
@@ -50,7 +67,7 @@ const ConCard = ( item ) => (
     </div>
       <h2 className="sectiontitle text-2xl font-bold mb-4">International Conference</h2>
       <div className="space-y-6">
-        {internationalData.map((item) => (
+        {(internationalData || []).map((item) => (
           <ConCard key={item.id} {...item} />
         ))}
       </div>
@@ -64,7 +81,7 @@ const ConCard = ( item ) => (
       </div>
       <h2 className="sectiontitle text-2xl font-bold mb-4">National Conference Presentation</h2>
       <div className="space-y-6">
-        {nationalData.map((item) => (
+        {(nationalData || []).map((item) => (
             <ConCard key={item.id} {...item} />
         ))}
       </div>

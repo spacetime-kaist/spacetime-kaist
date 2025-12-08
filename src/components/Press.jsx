@@ -1,23 +1,8 @@
 // src/pages/Home.jsx
 import React from 'react';
-import pressData from '../uploads/pressData';
+import { useDataLoader } from '../hooks/useDataLoader';
 import ReactMarkdown from 'react-markdown';
 
-const articles = [
-  {
-    id: 1,
-    title: "Major World Event Unfolds",
-    excerpt: "Quick summary of world event happening right now.",
-    image: "/assets/images_20251029.jpg",
-  },
-  {
-    id: 2,
-    title: "Science Breakthrough in AI",
-    excerpt: "AI research achieves a new milestone.",
-    image: "/images/ai-breakthrough.jpg",
-  },
-  // ... more articles
-];
 
 const PressCard = (article) => (
           <div className="container">
@@ -63,6 +48,24 @@ const PressCard = (article) => (
 )
 
 export default function Press() {
+  const { data: pressData, loading } = useDataLoader('pressData');
+
+  if (loading) {
+    return (
+      <div className="container pt-32 text-center">
+        <p className="text-gray-600">Loading press data...</p>
+      </div>
+    );
+  }
+
+  if (!pressData || pressData.length === 0) {
+    return (
+      <div className="container pt-32 text-center">
+        <p className="text-gray-600">No press data available.</p>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-white text-gray-900">
       <header className="border-t-3 border-b-3 border-black px-6">

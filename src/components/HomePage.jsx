@@ -1,9 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState, version } from 'react';
 import { Link } from 'react-router-dom';
-// Import Data
-import eventsData from '../uploads/eventsData';
-import pressData from '../uploads/pressData';
-import researchData from '../uploads/researchData';
+import { useDataLoader } from '../hooks/useDataLoader';
 // Import UI
 import SeeMoreButton from './ui/SeeMoreButton';
 import ScrollUpBt from '../utility/ScrollUpButton';
@@ -11,8 +8,8 @@ import ScrollUpBt from '../utility/ScrollUpButton';
 import mainImg from '../assets/mainImg.jpg';
 import stilLogo from '../assets/stil_logo.png';
 import pressImg from '../assets/images_20251029.jpg';
-import Navbar from '../utility/Navbar';
 import ReactMarkdown from 'react-markdown';
+import NavbarCategorized from '../utility/NavbarCategorized';
 
 
 // to reduce cost, events in the same order
@@ -51,18 +48,38 @@ const EventsCard = (event) => (
 
 
 export default function HomePage() {
+  const { data: eventsDataObj, loading: eventsLoading } = useDataLoader('eventsData');
+  const { data: pressData, loading: pressLoading } = useDataLoader('pressData');
+  const { data: researchData, loading: researchLoading } = useDataLoader('researchData');
+  
+  const eventsData = eventsDataObj?.eventsData || [];
+  const homeEventsList = eventsDataObj?.homeEventsList || [];
+  const loading = eventsLoading || pressLoading || researchLoading;
 
   // Slide Show
   const [slideIdx, setSlideIndex] = useState(0);
 
   useEffect(() => {
+    if (!researchData || researchData.length === 0) return;
     const interval = setInterval(() => {
       setSlideIndex((prev) => (prev + 1) % researchData.length);
     }, 6000); // change every 7s
     return () => clearInterval(interval);
-  }, []);
+  }, [researchData]);
 
-  const currentSlide = researchData[slideIdx];
+  const currentSlide = researchData?.[slideIdx];
+
+  const scrollRef = useRef(null);
+  const handleWheel = (e) => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollLeft += e.deltaY*5;
+    }
+  };
+  const scroll = (direction) => {
+  if (!scrollRef.current) return;
+  scrollRef.current.scrollBy({ left: direction === "left" ? -900 : 900, behavior: "smooth" });
+};
+
 
 
   return (
@@ -70,7 +87,7 @@ export default function HomePage() {
     <div className="w-screen min-h-[100vh] min-w-[320px] bg-welcomeHome lg:bg-cover bg-contain bg-no-repeat">
     {/* Invisible div to fix navbar overlapping content */}
     <div className="w-full h-16"/>
-    <Navbar />
+    <NavbarCategorized />
     <ScrollUpBt />
     <div className="min-h-screen bg-gray-50 text-gray-900">
       <div
@@ -130,37 +147,39 @@ export default function HomePage() {
         </section>
         
         {/* Research (Slide) Section*/}
-          <section className="pt-25 pb-30 mt-40 mb-50 bg-gray-900/95 text-white">
+          <section id='slide' className="pt-25 pb-30 mt-40 mb-50 bg-gray-900/95 text-white will-change-contents">
           <div className = "container">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
               <div>
-                <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">{currentSlide.title}</h1>
+                <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">{currentSlide?.title}</h1>
                 {/* <h2 className="mt-4 text-2xl text-gray-700">Department of Civil and Environment Engineering, KAIST</h2> */}
-                <p className="mt-6 text-lg text-gray-400">{currentSlide.desc}</p>
+                <p className="mt-6 text-lg text-gray-400">{currentSlide?.desc}</p>
                 {/* <p className="mt-6 text-lg text-gray-600">Learn more about our research <a href="#" className='px-2 underline'>here</a>.</p> */}
 
                 <div className="mt-8 w-90 text-xs text-gray-500">
+                  {currentSlide?.research?.[0] && (
                   <div className='mb-5'>
                     <div className="font-semibold text-gray-300 mb-1">{currentSlide.research[0].title}</div>
-                    <ReactMarkdown>{currentSlide.research[0].desc.split(" ").slice(0, 12).join(" ") + "…"}</ReactMarkdown>
+                    <ReactMarkdown>{currentSlide.research[0].desc?.split(" ").slice(0, 12).join(` `) + "…"}</ReactMarkdown>
                   </div>
-                  {currentSlide.research[1] &&
+                  )}
+                  {currentSlide?.research?.[1] && (
                   <div>
                     <div className="font-semibold text-gray-300 mb-1">{currentSlide.research[1].title}</div>
-                    <ReactMarkdown>{currentSlide.research[1].desc.split(" ").slice(0, 12).join(" ") + "…"}</ReactMarkdown>
+                    <ReactMarkdown>{currentSlide.research[1].desc?.split(" ").slice(0, 12).join(` `) + "…"}</ReactMarkdown>
                   </div>
-                  }
+                  )}
                 </div>
 
                 <div className="mt-8 flex flex-wrap gap-3">
-                  <Link to={`/research/${currentSlide.id}`} className="inline-flex items-center px-5 py-3 bg-black text-white rounded-md text-sm font-semibold">Explore work</Link>
+                  <Link to={`/research/${currentSlide?.id}`} className="inline-flex items-center px-5 py-3 bg-black text-white rounded-md text-sm font-semibold">Explore work</Link>
                   <a href="#people" className="inline-flex items-center px-5 py-3 border border-gray-300 rounded-md text-sm">Contact us</a>
                 </div>
 
               </div>
               <div>
                 <div className="w-full aspect-[4/3] bg-gradient-to-br from-white to-gray-100 rounded-2xl shadow-lg flex items-center justify-center py-5"> 
-                    <img src={currentSlide.thumbnail} alt="Main visual" className="relative object-cover h-full rounded-2xl brightness-90" />
+                    <img src={currentSlide?.thumbnail} alt="Main visual" className="relative object-cover h-full rounded-2xl brightness-90" />
                 </div>
               </div>
             </div>
@@ -179,7 +198,7 @@ export default function HomePage() {
                                    flex flex-col text-bottom `}
                         style={{
                           backgroundImage:
-                          `url('${pressData[0].image}')`,
+                          `url('${pressData?.[0]?.image}')`,
                           backgroundColor: "rgba(153, 181, 197, 1)",
                           transform: "translate3d(0,0,0)",
                           backgroundSize: "cover",
@@ -187,30 +206,32 @@ export default function HomePage() {
                           backgroundBlendMode: "multiply",
                         }}>
                     <h3 className="absolute bottom-15 text-2xl sm:text-4xl text-white font-bold drop-shadow-xl px-4 text-bottom">
-                      {pressData[0].title}
+                      {pressData?.[0]?.title}
                     </h3>
                     <div className="w-full absolute bottom-4 left-4 text-sm sm:text-lg font-bold flex flex-row justify-start items-start text-start">
-                      <p className="mt-6 px-5 ">{pressData[0].writer}</p>
-                      <p className="mt-6 text-slate-300 px-5">{pressData[0].date}</p>
+                      <p className="mt-6 px-5 ">{pressData?.[0]?.writer}</p>
+                      <p className="mt-6 text-slate-300 px-5">{pressData?.[0]?.date}</p>
                     </div>
                   </div>
                 </a>
               </div>
               <div className='col-span-2'>
-              <ReactMarkdown className="m-6 text-md lg:text-xl text-black border-l-4 border-black p-6">{pressData[0].desc}</ReactMarkdown>
+              <ReactMarkdown className="m-6 text-md lg:text-xl text-black border-l-4 border-black p-6">{pressData?.[0]?.desc}</ReactMarkdown>
               <div className="m-6 flex flex-wrap gap-3">
-                  {pressData[0].link_kr &&<a href={pressData[0].link_kr} className="nline-flex hover:bg-slate-400 items-center px-5 py-3 border border-gray-300 rounded-md text-sm">KR</a>}
-                  {pressData[0].link_en &&<a href={pressData[0].link_en} className="inline-flex hover:bg-slate-400 items-center px-5 py-3 border border-gray-300 rounded-md text-sm">EN</a>}
+                  {pressData?.[0]?.link_kr &&<a href={pressData[0].link_kr} className="nline-flex hover:bg-slate-400 items-center px-5 py-3 border border-gray-300 rounded-md text-sm">KR</a>}
+                  {pressData?.[0]?.link_en &&<a href={pressData[0].link_en} className="inline-flex hover:bg-slate-400 items-center px-5 py-3 border border-gray-300 rounded-md text-sm">EN</a>}
               </div>
               </div>
             </div>
             <div className=" my-8 text-blue-900/80"> 
-                <strong>({pressData[0].date}) {pressData[0].title}</strong> -
-                {pressData[0].link_others && pressData[0].link_others.map((link, index) => (
+                <strong>({pressData?.[0]?.date}) {pressData?.[0]?.title}</strong> -
+                {pressData?.[0]?.link_others && pressData[0].link_others.map((link, index) => (
                       <><span className='pl-1'></span><a key={link.id} href={link.href} className="text-sm text-start hover:underline">{link.source}</a>{index < pressData[0].link_others.length - 1 && <span>,</span>}</> ))}
             </div>       
           </div>
         </section>
+
+        
 
         {/* Events Section */}
         <section id="events" className="py-20 bg-slate-400 ">
@@ -219,7 +240,7 @@ export default function HomePage() {
             {/* <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:md:grid-cols-3 gap-6"> */}
             <p className="pb-20 pt-5 flex justify-center text-gray-300 "> Explore our past events, conferences, and workshops.</p>
             <div className="mt-6 columns-1 md:columns-2 lg:columns-3 gap-6">
-              {eventsData && eventsData.slice(0,20).map((event) => (
+              {eventsData && eventsData.length > 0 && eventsData.slice(0,20).map((event) => (
                 <div key={event.id} className='break-inside-avoid mb-3'>
                 <Link to={`/events#${event.id}`}>
                 <EventsCard {...event} className="min-w-[300px]" />
@@ -227,18 +248,65 @@ export default function HomePage() {
                 </div>
               ))}
             </div>
-            {/* Scroll */}
-            {/* <div className="mt-6 overflow-x-auto scroll-smooth snap-x flex gap-6">
-              {eventsData.slice(0, 7).map((event) => (
-                <Link key={event.id} to={`/events#${event.id}`} className='snap-start'>
-                <EventsCard {...event} className="min-w-[300px]" />
-                </Link>
-              ))}
-            </div> */}
             <SeeMoreButton linkto="/events" />
           </div>
         </section>
-          
+        
+        {/* Events Section2 */}
+        <section id="events" className="py-20 bg-slate-400 ">
+          <div className="container">
+            <h2 className="text-white text-center font-serif text-5xl md:text-7xl ">Events</h2>
+            {/* <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:md:grid-cols-3 gap-6"> */}
+            <p className="pb-15 pt-5 flex justify-center text-gray-300 "> Explore our past events, conferences, and workshops.</p>
+            <div className="flex justify-between items-center mb-6">
+          <div className="flex gap-2">
+            <div variant="ghost" size="icon" onClick={() => scroll("left")}>
+              {'<'}
+            </div>
+            <div variant="ghost" size="icon" onClick={() => scroll("right")}>
+              {'>'}
+            </div>
+          </div>
+        </div>
+
+        <div
+          ref={scrollRef}
+          onWheel = {handleWheel}
+          className="flex overflow-x-scroll overflow-y-hidden gap-6 scroll-smooth scrollbar-hide snap-x snap-mandatory [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)"
+        >
+          {eventsData && eventsData.length > 0 && eventsData.slice(0,20).map((ev, i) => (
+            <div
+              key={i}
+              className="min-w-[400px] max-w-[400px] flex-shrink-0 rounded-2xl shadow-md hover:shadow-lg transition-all bg-white"
+            >
+              <div className="p-6">
+                <p className="text-sm text-gray-500 mb-2">{ev.date}</p>
+                <h3 className="text-xl font-semibold mb-2">{ev.title}</h3>
+                <p className="text-gray-700 text-sm">{ev.desc}</p>
+              </div>
+              <div className="max-w-[300px] flex flex-col gap-2">
+                {ev.photos ? ev.photos.slice(0,1).map((photo, idx) => (
+                  <img
+                    key={idx}
+                    src={`${photo}`}
+                    alt={`${ev.title} photo ${idx + 1}`}
+                    className="w-full object-fill"
+                  />
+                  ))
+                :
+                  <img
+                    src={stilLogo}
+                    alt={'default photo'}
+                    className="w-full h-48 object-cover"
+                  />
+                }
+            </div>
+            </div>
+          ))}
+        </div>
+            <SeeMoreButton linkto="/events" />
+          </div>
+        </section>
 
         {/* <section id="contact" className="py-12 bg-gradient-to-b from-gray-50 to-white">
           <div className="container">

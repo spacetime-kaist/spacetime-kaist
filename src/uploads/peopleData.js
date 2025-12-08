@@ -27,6 +27,7 @@ const labMembersData = [
         "from": "2023.09~",
         "email": "ih736x@kaist.ac.kr",
         "edu": ["Ph.D., M.S. in Civil and Environment Engineering, KAIST", "B.S.: Mathematical Sciences, KAIST"],
+        "photo": "/peopleImg/2.jpg"
     },
     {
         "id": 3,

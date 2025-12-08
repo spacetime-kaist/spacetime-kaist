@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
-import eventsData from '../uploads/eventsData';
+import { useDataLoader } from '../hooks/useDataLoader';
 
 const EventCard = ( event ) => (
   <article className="p-6 bg-white rounded-lg border border-gray-200 shadow-sm mb-8">
@@ -101,6 +101,25 @@ const EventMasonryCard = ( event ) => (
 
 
 export default function EventsPage() {
+  const { data: eventsDataObj, loading } = useDataLoader('eventsData');
+  const eventsData = eventsDataObj?.eventsData || [];
+
+  if (loading) {
+    return (
+      <div className="container pt-32 text-center">
+        <p className="text-gray-600">Loading events data...</p>
+      </div>
+    );
+  }
+
+  if (!eventsData || eventsData.length === 0) {
+    return (
+      <div className="container pt-32 text-center">
+        <p className="text-gray-600">No events data available.</p>
+      </div>
+    );
+  }
+
   return (
     <>
       <header className="py-5">

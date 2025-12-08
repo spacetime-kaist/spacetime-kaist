@@ -5,16 +5,17 @@ import stil_logo from '../assets/stil_logo.png'
 import { IoIosSearch, IoIosArrowForward, IoIosArrowDown } from "react-icons/io"
 import { IoMenuSharp } from "react-icons/io5"
 
-import researchData from '../uploads/researchData';
+import { useDataLoader } from '../hooks/useDataLoader';
 
 
 
 
 function Navbar() {
-  const menuTextStyle = "hover:bg-blue-300 hover:text-white p-3 m-1 rounded-xl md:text-lg font-medium text-gray-700"
+  const menuTextStyle = "hover:bg-blue-300 hover:text-white p-3 m-1 rounded-xl text-md font-medium text-gray-700"
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [isPublicationsOpen, setPublicationsOpen] = useState(false);
   const menuRef = useRef(null);
+  const { data: researchData } = useDataLoader('researchData');
 
   useEffect(() => {
   const handleClickOutside = (event) => {
@@ -48,41 +49,41 @@ function Navbar() {
                 <Link to="/" className={`${menuTextStyle} hidden lg:block`} >Home</Link>
 
                 {/* Publications - Desktop hover dropdown */}
-                  <div className="relative group hidden md:block ">
-                    <button className="focus:outline-none menuTextStyle">
-                      Publications &#x25BC;
-                    </button>
-                    <div className="absolute left-0 top-full w-50 bg-white border border-gray-200 rounded shadow-md z-50 hidden group-hover:block">
-                      <Link to="/publications" className="block px-4 py-2 text-gray-500 hover:bg-gray-100">
-                        Journal Publications
-                      </Link>
-                      <Link to="/conference" className="block px-4 py-2 text-gray-500 hover:bg-gray-100">
-                        Conference Proceedings
-                      </Link>
-                    </div>
-                  </div>
+                  <Link to="/publications" className={menuTextStyle}>Publications</Link>
 
-                {/*People*/}
-                <Link to="/people" className={menuTextStyle}>People</Link>
+                {/*Projects*/}
+                <Link to="/projects" className={menuTextStyle}>Projects</Link>
                 
                 {/* Research - Desktop hover dropdown */}
                   <div className="relative group hidden md:block ">
-                    <Link to="/research" className={menuTextStyle}>Research &#x25BC;</Link>
+                    <Link to="/research" className={`menuTextStyle flex justify-center items-center`}>Research <IoIosArrowDown size={24}/></Link>
                     <div className="absolute left-0 top-full w-60 bg-white border border-gray-200 rounded shadow-md z-50 hidden group-hover:block">
-                      {researchData.map((item) => (
-                        <Link key={item.id} to={`/research/${item.id}`} className="block px-4 py-2 text-gray-500 hover:bg-gray-100">
+                      {(researchData || []).map((item) => (
+                        <Link key={item.id} to={`/research/${item.id}`} className="block px-4 py-2 text-gray-500 hover:bg-gray-200">
                           {(item.menuTitle !== '') ? item.menuTitle : item.title}
                         </Link>
                       ))}
                     </div>
                   </div>
 
-                {/*Projects*/}
-                <Link to="/projects" className={menuTextStyle}>Projects</Link>
-                {/*Events*/}
-                <Link to="/events" className={menuTextStyle}>Events</Link>
-                {/*Press*/}
-                <Link to="/press" className={menuTextStyle}>Press</Link>
+                {/* News&Events - Desktop hover dropdown */}
+                  <div className="relative group hidden md:block ">
+                    <button className="flex justify-center items-center focus:outline-none menuTextStyle">
+                      News&Events <IoIosArrowDown size={24}/>
+                    </button>
+                    <div className="absolute left-0 top-full w-50 bg-white border border-gray-200 rounded shadow-md z-50 hidden group-hover:block">
+                      <Link to="/press" className="block px-4 py-2 text-gray-500 hover:bg-gray-200">
+                        News
+                      </Link>
+                      <Link to="/events" className="block px-4 py-2 text-gray-500 hover:bg-gray-200">
+                        Events
+                      </Link>
+                    </div>
+                  </div>
+                {/*People*/}
+                <Link to="/people" className={menuTextStyle}>People</Link>
+                {/*Apply*/}
+                {/* <Link to="/apply" className='hover:bg-blue-300 hover:text-white p-3 m-1 rounded-xl text-md font-medium text-blue-500'>Apply</Link> */}
               </div>
 
               {/* -------------- Mobile Menu -------------- */}            
@@ -121,14 +122,13 @@ function Navbar() {
                               </>
                             )}
                         </div>
-                      <Link to="/people" className={menuTextStyle}>People</Link>
                       <Link to="/research" className={menuTextStyle}>Research</Link>
                       {/* Research - Desktop hover dropdown */}
                         {/* <div className="relative group hidden md:block ">
                           <Link to="/research" className={menuTextStyle}>Research</Link>
                           <span className="ml-1">&#x25BC;</span>
                           <div className="absolute left-0 top-full w-60 bg-white border border-gray-200 rounded shadow-md z-50 hidden group-hover:block">
-                            {researchData.map((item) => (
+                            {(researchData || []).map((item) => (
                               <Link key={item.id} to={`/research#${item.navTitle}`} className="block px-4 py-2 text-gray-500 hover:bg-gray-100">
                                 {item.title}
                               </Link>
@@ -138,6 +138,8 @@ function Navbar() {
                       <Link to="/projects" className={menuTextStyle}>Projects</Link>
                       <Link to="/events" className={menuTextStyle}>Events</Link>
                       <Link to="/press" className={menuTextStyle}>Press</Link>
+                      <Link to="/people" className={menuTextStyle}>People</Link>
+                      <Link to="/apply" className='hover:bg-blue-300 hover:text-white p-3 m-1 rounded-xl text-md font-medium text-blue-500'>Apply</Link>
                       </div>
                     )}
               </div>

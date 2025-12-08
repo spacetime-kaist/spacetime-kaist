@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom'
 
 import Navbar from './utility/Navbar';
 import ScrollUpBt from './utility/ScrollUpButton';
+import NavbarCategorized from './utility/NavbarCategorized';
 
 function Layout() {
     return (
@@ -10,7 +11,9 @@ function Layout() {
     <div className="w-screen min-h-[100vh] min-w-[320px] bg-welcomeHome lg:bg-cover bg-contain bg-no-repeat">
     {/* Invisible div to fix navbar overlapping content */}
     <div className="w-full h-16"/>
-    <Navbar />
+    {/* Switch between Navbar and NavbarNew to compare */}
+    {/* <Navbar /> */}
+    <NavbarCategorized />
     <ScrollUpBt />
     <div className="min-h-screen bg-gray-50 text-gray-900">
     <main>

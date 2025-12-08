@@ -1,6 +1,6 @@
 import React from 'react';
-import projectsData from '../../uploads/projectsData';
 import { Link } from 'react-router-dom';
+import { useDataLoader } from '../../hooks/useDataLoader';
 
 const ProjectCard = (p) => 
 (
@@ -26,6 +26,24 @@ const OtherProjectCard = (p) =>
 );
 
 export default function Projects() {
+  const { data: projectsData, loading } = useDataLoader('projectsData');
+
+  if (loading) {
+    return (
+      <div className="container pt-32 text-center">
+        <p className="text-gray-600">Loading projects data...</p>
+      </div>
+    );
+  }
+
+  if (!projectsData || projectsData.length === 0) {
+    return (
+      <div className="container pt-32 text-center">
+        <p className="text-gray-600">No projects data available.</p>
+      </div>
+    );
+  }
+
   return (
     <>
       <header className="pt-10">
