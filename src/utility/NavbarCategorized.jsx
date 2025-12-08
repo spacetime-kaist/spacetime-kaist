@@ -87,13 +87,20 @@ function NavbarCategorized() {
       ]
     },
     people: {
-        title: "Lab Members",
-        items: [
-          { title: "Professor", link: "/people#professor", desc: "Latest press releases" },
-          { title: "Lab Members", link: "/people#labmembers", desc: "Upcoming events and conferences" },
-          { title: "Alumni", link: "/people#alumni", desc: "Meet our team" }
-        ]
-      }
+      title: "Members",
+      link: "/people",
+      categories: [
+          {
+          categoryTitle: "Members",
+          link: "/people",
+          items: [
+            { title: "Professor", link: "/people#professor"},
+            { title: "Lab Members", link: "/people#labmembers"},
+            { title: "Alumni", link: "/people#alumni"}
+          ]
+          }
+      ]
+  },
   };
 
   const renderMegaMenu = (menuKey) => {
@@ -256,7 +263,6 @@ function NavbarCategorized() {
               >
                 <Link to="/publications" className={`${menuTextStyle} flex items-center gap-1`}>
                   Publications
-                  <IoIosArrowDown size={20} className={`transition-transform duration-200 ${hoveredMenu === 'publications' ? 'rotate-180' : ''}`} />
                 </Link>
               </div>
 
@@ -267,7 +273,7 @@ function NavbarCategorized() {
               >
                 <Link to="/research" className={`${menuTextStyle} flex items-center gap-1`}>
                   Research
-                  <IoIosArrowDown size={20} className={`transition-transform duration-200 ${hoveredMenu === 'research' ? 'rotate-180' : ''}`} />
+                  <IoIosArrowForward size={20} className={`transition-transform duration-200 ${hoveredMenu === 'research' ? 'rotate-90' : ''}`} />
                 </Link>
               </div>
 
@@ -278,14 +284,14 @@ function NavbarCategorized() {
               >
                 <button onClick={() => setHoveredMenu('newsEvents')} className={`${menuTextStyle} flex items-center gap-1 focus:outline-none`}>
                   News
-                  <IoIosArrowDown size={20} className={`transition-transform duration-200 ${hoveredMenu === 'newsEvents' ? 'rotate-180' : ''}`} />
+                  <IoIosArrowForward size={20} className={`transition-transform duration-200 ${hoveredMenu === 'newsEvents' ? 'rotate-90' : ''}`} />
                 </button>
               </div>
 
               {/* People - Mega Menu */}
               <div 
                 className="relative"
-                onMouseEnter={() => setHoveredMenu(null)}
+                onMouseEnter={() => setHoveredMenu('people')}
               >
                 <Link to="/people" className={`${menuTextStyle} flex items-center gap-1`}>
                   Lab Members

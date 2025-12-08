@@ -2,9 +2,7 @@ import React from 'react'
 import { Outlet } from 'react-router-dom'
 
 import Navbar from './utility/Navbar';
-import NavbarNew from './utility/NavbarNew';
 import ScrollUpBt from './utility/ScrollUpButton';
-import NavbarMegaMenu from './utility/NavbarMegaMenu';
 import NavbarCategorized from './utility/NavbarCategorized';
 
 function Layout() {

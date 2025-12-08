@@ -7,7 +7,11 @@ import { IoMenuSharp } from "react-icons/io5"
 
 import { useDataLoader } from '../hooks/useDataLoader';
 
-function NavbarNew() {
+/**
+ * Navbar with Screen-Wide Mega Menus
+ * This version shows full-width dropdown menus when hovering over menu items
+ */
+function NavbarCardMenu() {
   const menuTextStyle = "hover:bg-blue-300 hover:text-white p-3 m-1 rounded-xl text-md font-medium text-gray-700 transition-colors duration-200"
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [isPublicationsOpen, setPublicationsOpen] = useState(false);
@@ -88,6 +92,9 @@ function NavbarNew() {
         onMouseLeave={() => setHoveredMenu(null)}
       >
         <div className="container mx-auto py-8">
+          <h2 className="text-2xl font-bold text-gray-800 mb-6 pb-4 border-b border-gray-200 animate-[fadeIn_0.3s_ease-out]">
+            {config.title}
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {config.items.map((item, idx) => (
               item.external ? (
@@ -264,5 +271,5 @@ function NavbarNew() {
   )
 }
 
-export default NavbarNew;
+export default NavbarMegaMenu;
 

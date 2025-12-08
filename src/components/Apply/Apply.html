@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply / Recruitment</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for arrow icons */
+        .arrow-icon {
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-4">
+                Apply / Recruitment
+            </h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">
+                Our laboratory welcomes passionate individuals who seek to advance
+                research in intelligent urban systems and AI-driven civil engineering.
+                We recruit graduate students, interns, and postdoctoral researchers
+                regularly.
+            </p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Graduate Students -->
+                <div class="rounded-2xl shadow-sm bg-white">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">
+                            M.S. / Ph.D. Students
+                        </h3>
+                        <p class="text-gray-600 mb-4 text-sm">
+                            Applicants with B.S. or M.S. degrees in related fields.
+                        </p>
+                        <ul class="text-sm text-gray-500 mb-4 space-y-1">
+                            <li>
+                                <strong>Application:</strong> Spring 2026 / Fall 2026
+                            </li>
+                            <li>
+                                <strong>Departments:</strong> Civil & Environmental
+                                Engineering, Urban Engineering, AI & Smart Cities
+                            </li>
+                        </ul>
+                        <a href="/apply/graduates" class="inline-flex my-6 px-3 py-2 bg-slate-700 text-white rounded-md text-sm font-semibold hover:bg-gray-500 hover:text-grey-300">
+                            <div class="flex flex-row justify-center items-center">
+                                <div class="mx-1">See in Detail</div>
+                                <div>
+                                    <svg class="arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Internship -->
+                <div class="rounded-2xl shadow-sm bg-white">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">
+                            Winter / Summer Internships
+                        </h3>
+                        <p class="text-gray-600 mb-4 text-sm">
+                            For undergraduate students interested in AI, simulation, or
+                            urban systems.
+                        </p>
+                        <ul class="text-sm text-gray-500 mb-4 space-y-1">
+                            <li>
+                                <strong>Period:</strong> Every Winter & Summer Vacation
+                            </li>
+                            <li>
+                                <strong>Fields:</strong> All relevant disciplines
+                            </li>
+                        </ul>
+                        <a href="/apply/undergraduates" class="inline-flex my-6 px-3 py-2 bg-slate-700 text-white rounded-md text-sm font-semibold hover:bg-gray-500 hover:text-grey-300">
+                            <div class="flex flex-row justify-center items-center">
+                                <div class="mx-1">See in Detail</div>
+                                <div>
+                                    <svg class="arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Research / Postdoc -->
+                <div class="rounded-2xl shadow-sm bg-white">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">
+                            Research Professors / Postdoctoral Fellows
+                        </h3>
+                        <p class="text-gray-600 mb-4 text-sm">
+                            For Ph.D. holders with strong publication or project experience.
+                        </p>
+                        <ul class="text-sm text-gray-500 mb-4 space-y-1">
+                            <li>
+                                <strong>Application:</strong> Rolling basis
+                            </li>
+                            <li>
+                                <strong>Focus:</strong> Urban AI & Urban Representation
+                            </li>
+                        </ul>
+                        <a href="/apply/post" class="inline-flex my-6 px-3 py-2 bg-slate-700 text-white rounded-md text-sm font-semibold hover:bg-gray-500 hover:text-grey-300">
+                            <div class="flex flex-row justify-center items-center">
+                                <div class="mx-1">See in Detail</div>
+                                <div>
+                                    <svg class="arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Application Instructions -->
+            <div class="mt-16 bg-white rounded-2xl shadow-sm p-8 max-w-4xl mx-auto">
+                <h4 class="text-2xl font-semibold mb-4">
+                    Application Process
+                </h4>
+                <ol class="list-decimal list-inside text-gray-600 space-y-2 mb-6">
+                    <li>Prepare CV, transcript, and a 1-page statement of purpose.</li>
+                    <li>
+                        Email your documents to
+                        <span onclick="copyEmail('smsohn1997@kaist.ac.kr')" class="font-medium text-blue-600 hover:underline cursor-pointer">smsohn1997@kaist.ac.kr</span>
+                        with the title:
+                        <span class="italic">
+                            [Application] Position_Name - Your_Name
+                        </span>
+                    </li>
+                    <li>Shortlisted candidates will be contacted for an interview.</li>
+                </ol>
+
+                <div class="flex items-center justify-between text-gray-500 text-sm">
+                    <span class="flex items-center gap-2">
+                        <div></div> Early inquiries are encouraged.
+                    </span>
+                    <span class="flex items-center gap-2">
+                        <div></div> Contact at least one month before internship
+                        start.
+                    </span>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <a href="/apply">
+                <div class="mt-5 bg-white rounded-2xl shadow-sm p-8 max-w-4xl mx-auto flex justify-start items-center text-center hover:bg-gray-100 cursor-pointer">
+                    <h4 class="text-2xl font-semibold mb-4">FAQ</h4>
+                    <svg class="arrow-icon ml-2" style="width: 24px; height: 24px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <script>
+        async function copyEmail(email) {
+            try {
+                await navigator.clipboard.writeText(email);
+                alert("이메일 복사에 성공했습니다");
+            } catch (err) {
+                // Fallback for older browsers
+                const textArea = document.createElement("textarea");
+                textArea.value = email;
+                textArea.style.position = "fixed";
+                textArea.style.left = "-999999px";
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                try {
+                    document.execCommand('copy');
+                    alert("이메일 복사에 성공했습니다");
+                } catch (err) {
+                    alert("이메일 복사에 실패했습니다");
+                }
+                document.body.removeChild(textArea);
+            }
+        }
+    </script>
+</body>
+</html>
+
+

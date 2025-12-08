@@ -64,7 +64,7 @@ export default function People() {
   return (
     <>
         {/* Professor Section */}
-        <section className="pt-20 pb-16">
+        <section id="professor" className="pt-20 pb-16">
           <div className = "container">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
               <div className="">
@@ -105,7 +105,7 @@ export default function People() {
         </div> */}
 
         {/* Lab Members */}
-        <section className="container mb-12">
+        <section id="labmembers" className="container mb-12">
         <div className={sectionTitle}>Lab Members</div>
         <div className="divider" />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -116,7 +116,7 @@ export default function People() {
         </section>
 
         {/* Alumni Section */}
-        <section className="container mb-12">
+        <section id="alumni" className="container mb-12">
         <div className={sectionTitle}>Alumni - Ph.D.</div>
         <div className="divider" />
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
