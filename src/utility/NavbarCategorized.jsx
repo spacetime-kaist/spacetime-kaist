@@ -294,7 +294,7 @@ function NavbarCategorized() {
                 onMouseEnter={() => setHoveredMenu('people')}
               >
                 <Link to="/people" className={`${menuTextStyle} flex items-center gap-1`}>
-                  Lab Members
+                  Members
                 </Link>
               </div>
             </div>
@@ -343,7 +343,7 @@ function NavbarCategorized() {
                   <Link to="/research" className={menuTextStyle} onClick={() => setDropdownOpen(false)}>Research</Link>
                   <Link to="/events" className={menuTextStyle} onClick={() => setDropdownOpen(false)}>Events</Link>
                   <Link to="/press" className={menuTextStyle} onClick={() => setDropdownOpen(false)}>Press</Link>
-                  <Link to="/people" className={menuTextStyle} onClick={() => setDropdownOpen(false)}>People</Link>
+                  <Link to="/people" className={menuTextStyle} onClick={() => setDropdownOpen(false)}>Members</Link>
                   {/* <Link to="/apply" className='hover:bg-blue-300 hover:text-white p-3 m-1 rounded-xl text-md font-medium text-blue-500' onClick={() => setDropdownOpen(false)}>Apply</Link> */}
                 </div>
               )}
