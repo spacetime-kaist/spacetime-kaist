@@ -20,6 +20,7 @@ import ApplyDetail from './components/Apply/ApplyDetail'
 import ScrolltoAnchor from './utility/ScrolltoAnchor'
 import Test from './components/Test'
 import PubCon from './components/Publications/PubCon'
+import People2 from './components/People2'
 
 
 
@@ -36,6 +37,7 @@ function App() {
         <Route path='/publications' element={<PubCon />} />
         <Route path='/conference' element={<Conference />} />
         <Route path='/people' element={<People />} />
+        <Route path='/people2' element={<People2 />} />
         <Route path='/research' element={<Research/>} />
         <Route path='/research/:slug' element={<ResearchDetail/>} />
         <Route path='/projects' element={<Projects />} />

@@ -12,7 +12,7 @@
       "Ph.D. Civil and Environmental Engineering, UC Berkeley"
     ],
     "research": "Coming from Mathematics, Computer Science, Management Science, and Civil engineering background, my research focus is system-of-systems, which includes transportation system, city, logistics system, and public health system. My recent research interests include the following areas.\n\n**Urban Intelligence**: Urban Region Representation Learning; SDG Data Science; AI and Cities; AI for Social Good    \n\n**Computational Transportation Science**: Future Mobility and AI; Graph Neural Net and Traffic Forecasting; Transportation Network Science; Safety Risk Management\n\n**Sustainable Urban Mobility**: Urban Mobility Decarbonization; Mobility Accessibility and Inequality; Urban Air Mobility (UAM);",
-    "photo": "/peopleImg/1.jpg"
+    "photo": "/img/img/peopleImg/1.jpg"
   },
   "labMembersData": [
     {
@@ -26,7 +26,7 @@
         "Ph.D., M.S. in Civil and Environment Engineering, KAIST",
         "B.S.: Mathematical Sciences, KAIST"
       ],
-      "photo": "/peopleImg/2.jpg"
+      "photo": "/img/img/peopleImg/2.jpg"
     },
     {
       "id": 3,
@@ -39,7 +39,7 @@
         "M.S. in Civil and Environmental Engineering, Transportation Engineering, UC Berkeley",
         "B.S. in Civil Engineering, NYUAD"
       ],
-      "photo": "/peopleImg/3.jpg"
+      "photo": "/img/img/peopleImg/3.jpg"
     },
     {
       "id": 4,
@@ -52,7 +52,7 @@
         "M.S. in Information Security, Sungkyunkwan University",
         "B.S. in Computer Engineering and Military Science, Korea Air Force Academy"
       ],
-      "photo": "/peopleImg/4.jpg"
+      "photo": "/img/img/peopleImg/4.jpg"
     },
     {
       "id": 5,
@@ -64,7 +64,7 @@
       "edu": [
         "B.S. in Economics and Data Science, University of Seoul"
       ],
-      "photo": "/peopleImg/5.jpg"
+      "photo": "/img/img/peopleImg/5.jpg"
     },
     {
       "id": 6,
@@ -76,7 +76,7 @@
       "edu": [
         "B.S. in Quantitative Sciences and Biology, Emory University"
       ],
-      "photo": "/peopleImg/6.jpg"
+      "photo": "/img/img/peopleImg/6.jpg"
     },
     {
       "id": 7,
@@ -87,7 +87,7 @@
       "edu": [
         "B.S. in Business Administration, University of Southern California"
       ],
-      "photo": "/peopleImg/7.jpg"
+      "photo": "/img/img/peopleImg/7.jpg"
     },
     {
       "id": 8,
@@ -98,7 +98,7 @@
       "edu": [
         "B.S. in Psychology, University of Utah"
       ],
-      "photo": "/peopleImg/8.jpg"
+      "photo": "/img/img/peopleImg/8.jpg"
     },
     {
       "id": 9,
@@ -109,7 +109,7 @@
       "edu": [
         "B.A. in Data Science, UC Berkeley"
       ],
-      "photo": "/peopleImg/9.jpg"
+      "photo": "/img/img/peopleImg/9.jpg"
     },
     {
       "id": 10,
@@ -120,7 +120,7 @@
       "edu": [
         "B.S. in Civil Engineering, Kyoto University"
       ],
-      "photo": "/peopleImg/10.jpg"
+      "photo": "/img/img/peopleImg/10.jpg"
     }
   ],
   "aluminiData": [
@@ -129,63 +129,63 @@
       "name": "Ohhoon Kwon",
       "degree": "Ph.D.",
       "date": "2010.03~2015.02",
-      "photo": "/peopleImg/11.jpg"
+      "photo": "/img/img/peopleImg/11.jpg"
     },
     {
       "id": 12,
       "name": "Sammer Ud Din",
       "degree": "Ph.D.",
       "date": "2014.03~2018.02",
-      "photo": "/peopleImg/12.jpg"
+      "photo": "/img/img/peopleImg/12.jpg"
     },
     {
       "id": 13,
       "name": "Yuna Noh",
       "degree": "Ph.D.",
       "date": "2012.09~2018.02",
-      "photo": "/peopleImg/13.jpg"
+      "photo": "/img/img/peopleImg/13.jpg"
     },
     {
       "id": 14,
       "name": "Jungwoo Cho",
       "degree": "Ph.D.",
       "date": "2015.09~2020.02",
-      "photo": "/peopleImg/14.jpg"
+      "photo": "/img/img/peopleImg/14.jpg"
     },
     {
       "id": 15,
       "name": "Jiseon Lee",
       "degree": "Ph.D.",
       "date": "2013.09~2022.08",
-      "photo": "/peopleImg/15.jpg"
+      "photo": "/img/img/peopleImg/15.jpg"
     },
     {
       "id": 16,
       "name": "Yuyol Shin",
       "degree": "Ph.D.",
       "date": "2016.09~2022.08",
-      "photo": "/peopleImg/16.jpg"
+      "photo": "/img/img/peopleImg/16.jpg"
     },
     {
       "id": 17,
       "name": "Soohwan Oh",
       "degree": "Ph.D.",
       "date": "2016.09~2023.02",
-      "photo": "/peopleImg/17.jpg"
+      "photo": "/img/img/peopleImg/17.jpg"
     },
     {
       "id": 18,
       "name": "Namwoo Kim",
       "degree": "Ph.D.",
       "date": "2017.09~2023.08",
-      "photo": "/peopleImg/18.jpg"
+      "photo": "/img/img/peopleImg/18.jpg"
     },
     {
       "id": 19,
       "name": "Seyun Kim",
       "degree": "Ph.D.",
       "date": "2016.03~2021.02",
-      "photo": "/peopleImg/19.jpg",
+      "photo": "/img/img/peopleImg/19.jpg",
       "desc": "2021.03~2025.07\n\n  (Research Assistant Professor)"
     },
     {
@@ -193,7 +193,7 @@
       "name": "Seyun Kim",
       "degree": "",
       "date": "2021.03~2025.07",
-      "photo": "/peopleImg/20.jpg"
+      "photo": "/img/img/peopleImg/20.jpg"
     },
     {
       "id": 21,

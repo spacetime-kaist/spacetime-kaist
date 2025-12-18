@@ -52,7 +52,7 @@ const EventGridCard = ( event ) => (
           className="w-full aspect-video rounded-md col-span-2 row-span-2 object-cover"
         />
       ) : (
-      event.photos && <img src={`/${event.photos[0]}`} className="col-span-2 row-span-2 object-cover rounded-md" />
+      event.photos && <img src={`${event.photos[0]}`} className="col-span-2 row-span-2 object-cover rounded-md" />
       )}
       {event.photos && event.photos.slice(1).map((photo, idx) => (
         <img

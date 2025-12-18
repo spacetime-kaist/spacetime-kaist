@@ -2,35 +2,35 @@
   {
     "id": 1,
     "title": "GS E&C (UAM)",
-    "image": "/projectsImg/1.png",
+    "image": "/img/projectsImg/1.png",
     "link": "/gs-ec-uam",
     "type": "internal"
   },
   {
     "id": 2,
     "title": "KAIST-NYU C³",
-    "image": "/projectsImg/2.png",
+    "image": "/img/projectsImg/2.png",
     "link": "https://c3.kaist.ac.kr/home",
     "type": "external"
   },
   {
     "id": 4,
     "title": "Urban@KAIST",
-    "image": "/projectsImg/4.png",
+    "image": "/img/projectsImg/4.png",
     "link": "https://urban.kaist.ac.kr/",
     "type": "external"
   },
   {
     "id": 5,
     "title": "Human-centered Future Mobility (HcFM)",
-    "image": "/projectsImg/5.png",
+    "image": "/img/projectsImg/5.png",
     "link": "https://hcfm.kaist.ac.kr/",
     "type": "external"
   },
   {
     "id": 6,
     "title": "POST AI & Mobility",
-    "image": "/projectsImg/6.png",
+    "image": "/img/projectsImg/6.png",
     "link": "https://sites.google.com/view/post-ai/home",
     "type": "external"
   },
