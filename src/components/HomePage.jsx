@@ -24,7 +24,6 @@ export default function HomePage() {
   const { data: eventsData, loading: eventsDataLoading } = useDataLoader('eventsData');
   
   const homeEventsList =  homeData?.homeEventsList || [];
-  console.log(homeEventsList); 
   const loading = pressLoading || researchLoading || homeLoading || eventsDataLoading;
   const homeEventsData = loading?[]:eventsData.filter(event => homeEventsList.includes(event.id));
 
@@ -42,13 +41,39 @@ export default function HomePage() {
   const currentSlide = researchData?.[slideIdx];
 
   const [eventsIndex, setEventsIndex] = useState(0);
+  const [eventsPerPage, setEventsPerPage] = useState(3);
+
+  useEffect(() => {
+    const mq1 = window.matchMedia('(max-width: 639px)');
+    const mq2 = window.matchMedia('(min-width: 640px) and (max-width: 1023px)');
+    const update = () => {
+      if (mq1.matches) setEventsPerPage(1);
+      else if (mq2.matches) setEventsPerPage(2);
+      else setEventsPerPage(3);
+    };
+    update();
+    mq1.addEventListener('change', update);
+    mq2.addEventListener('change', update);
+    return () => {
+      mq1.removeEventListener('change', update);
+      mq2.removeEventListener('change', update);
+    };
+  }, []);
+
   const eventsCount = homeEventsData?.length || 0;
-  const totalPages = Math.max(1, Math.ceil(eventsCount/3));
+  const totalPages = Math.max(1, Math.ceil(eventsCount / eventsPerPage));
+  const lastStart = Math.max(0, eventsCount - eventsPerPage);
+
+  useEffect(() => {
+    setEventsIndex((i) => Math.min(i, lastStart));
+  }, [eventsPerPage, lastStart]);
+
+  const currentPage = totalPages > 1 ? Math.min(Math.floor(eventsIndex / eventsPerPage), totalPages - 1) : 0;
   const canGoLeft = totalPages > 1;
   const canGoRight = totalPages > 1;
-  const goLeft = () => setEventsIndex((i) => (i <= 0 ? totalPages*3 - 3 : i - 3));
-  const goRight = () => setEventsIndex((i) => (i >= totalPages *3 - 3 ? 0 : i + 3));
-  const goToPage = (page) => setEventsIndex(Math.min(page*3, totalPages *3 - 3));
+  const goLeft = () => setEventsIndex((i) => (i <= 0 ? lastStart : i - eventsPerPage));
+  const goRight = () => setEventsIndex((i) => (i >= lastStart ? 0 : i + eventsPerPage));
+  const goToPage = (page) => setEventsIndex(Math.min(page * eventsPerPage, lastStart));
 
   const getEventDayMonth = (ev) => {
     if (!ev?.start) return { day: '', month: '', year: '' };
@@ -294,13 +319,13 @@ export default function HomePage() {
               <div className="flex justify-center gap-2 mt-8">
                 {Array.from({ length: totalPages }, (_, p) => (
                   <button
-                    key={p*3}
+                    key={p}
                     type="button"
-                    onClick={() => goToPage(p*3)}
+                    onClick={() => goToPage(p)}
                     className={`rounded-full transition-all ${
-                      p*3 === eventsIndex ? 'h-2.5 w-2.5 bg-white' : 'h-2 w-2 bg-white/50 hover:bg-white/70'
+                      p === currentPage ? 'h-2.5 w-2.5 bg-white' : 'h-2 w-2 bg-white/50 hover:bg-white/70'
                     }`}
-                    aria-label={`Go to slide ${p*3 + 1}`}
+                    aria-label={`Go to slide ${p + 1}`}
                   />
                 ))}
               </div>
