@@ -43,21 +43,20 @@ export default function HomePage() {
   const [eventsIndex, setEventsIndex] = useState(0);
   const [eventsPerPage, setEventsPerPage] = useState(3);
 
+  const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
     const mq1 = window.matchMedia('(max-width: 639px)');
     const mq2 = window.matchMedia('(min-width: 640px) and (max-width: 1023px)');
     const update = () => {
+      setIsMobile(mq1.matches);
       if (mq1.matches) setEventsPerPage(1);
       else if (mq2.matches) setEventsPerPage(2);
       else setEventsPerPage(3);
-      console.log('eventsPerPage', eventsPerPage);
     };
     update();
     mq1.addEventListener('change', update);
     mq2.addEventListener('change', update);
-    
     return () => {
-      
       mq1.removeEventListener('change', update);
       mq2.removeEventListener('change', update);
     };
@@ -119,7 +118,7 @@ export default function HomePage() {
   const CARD_STEP = CARD_WIDTH + CARD_GAP;
   const maxTranslate = carouselWidth / 2 - CARD_WIDTH / 2;
   const minTranslate = eventsCount > 0 ? carouselWidth / 2 - CARD_WIDTH / 2 - (eventsCount - 1) * CARD_STEP : 0;
-  const translateX = carouselWidth > 0
+  const translateX = isMobile && carouselWidth > 0
     ? Math.min(maxTranslate, Math.max(minTranslate, carouselWidth / 2 - CARD_WIDTH / 2 - eventsIndex * CARD_STEP))
     : -eventsIndex * CARD_STEP;
 
