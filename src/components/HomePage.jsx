@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, version } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useDataLoader } from '../hooks/useDataLoader';
 // Import UI
@@ -50,11 +50,14 @@ export default function HomePage() {
       if (mq1.matches) setEventsPerPage(1);
       else if (mq2.matches) setEventsPerPage(2);
       else setEventsPerPage(3);
+      console.log('eventsPerPage', eventsPerPage);
     };
     update();
     mq1.addEventListener('change', update);
     mq2.addEventListener('change', update);
+    
     return () => {
+      
       mq1.removeEventListener('change', update);
       mq2.removeEventListener('change', update);
     };
@@ -84,6 +87,41 @@ export default function HomePage() {
       year: d.getFullYear(),
     };
   };
+
+  const touchStartX = useRef(0);
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+  const goRightOneCard = () => setEventsIndex((i) => (i >= eventsCount - 1 ? 0 : i + 1));
+  const goLeftOneCard = () => setEventsIndex((i) => (i <= 0 ? Math.max(0, eventsCount - 1) : i - 1));
+  const handleTouchEnd = (e) => {
+    const endX = e.changedTouches[0].clientX;
+    const delta = touchStartX.current - endX;
+    const threshold = 50;
+    if (delta > threshold) goRightOneCard();
+    else if (delta < -threshold) goLeftOneCard();
+  };
+
+  const carouselRef = useRef(null);
+  const [carouselWidth, setCarouselWidth] = useState(0);
+  useEffect(() => {
+    const el = carouselRef.current;
+    if (!el) return;
+    const update = () => setCarouselWidth(el.offsetWidth);
+    update();
+    const ro = new ResizeObserver(update);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
+
+  const CARD_WIDTH = 320;
+  const CARD_GAP = 24;
+  const CARD_STEP = CARD_WIDTH + CARD_GAP;
+  const maxTranslate = carouselWidth / 2 - CARD_WIDTH / 2;
+  const minTranslate = eventsCount > 0 ? carouselWidth / 2 - CARD_WIDTH / 2 - (eventsCount - 1) * CARD_STEP : 0;
+  const translateX = carouselWidth > 0
+    ? Math.min(maxTranslate, Math.max(minTranslate, carouselWidth / 2 - CARD_WIDTH / 2 - eventsIndex * CARD_STEP))
+    : -eventsIndex * CARD_STEP;
 
 
 
@@ -253,16 +291,21 @@ export default function HomePage() {
                 type="button"
                 onClick={goLeft}
                 disabled={!canGoLeft}
-                className="shrink-0 w-12 h-12 rounded-full bg-white/20 text-white text-2xl font-light disabled:opacity-30 disabled:cursor-not-allowed hover:bg-white/30 transition-all border border-white/30 flex items-center justify-center"
+                className="hidden sm:flex shrink-0 w-12 h-12 rounded-full bg-white/20 text-white text-2xl font-light disabled:opacity-30 disabled:cursor-not-allowed hover:bg-white/30 transition-all border border-white/30 items-center justify-center"
                 aria-label="Previous events"
               >
                 ‹
               </button>
 
-              <div className="overflow-hidden w-full ">
+              <div
+                ref={carouselRef}
+                className="overflow-hidden w-full touch-pan-y"
+                onTouchStart={handleTouchStart}
+                onTouchEnd={handleTouchEnd}
+              >
                 <div
                   className="flex gap-6 transition-transform duration-300 ease-out"
-                  style={{ transform: `translateX(-${eventsIndex * (320 + 24)}px)` }}
+                  style={{ transform: `translateX(${translateX}px)` }}
                 >
                   {homeEventsData && homeEventsData.length > 0 && homeEventsData.map((ev, i) => {
                     const { day, month, year } = getEventDayMonth(ev);
@@ -308,7 +351,7 @@ export default function HomePage() {
                 type="button"
                 onClick={goRight}
                 disabled={!canGoRight}
-                className="shrink-0 w-12 h-12 rounded-full bg-white/20 text-white text-2xl font-light disabled:opacity-30 disabled:cursor-not-allowed hover:bg-white/30 transition-all border border-white/30 flex items-center justify-center"
+                className="hidden sm:flex shrink-0 w-12 h-12 rounded-full bg-white/20 text-white text-2xl font-light disabled:opacity-30 disabled:cursor-not-allowed hover:bg-white/30 transition-all border border-white/30 items-center justify-center"
                 aria-label="Next events"
               >
                 ›
