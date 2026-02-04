@@ -51,11 +51,12 @@ export default function HomePage() {
   const goToPage = (page) => setEventsIndex(Math.min(page*3, totalPages *3 - 3));
 
   const getEventDayMonth = (ev) => {
-    if (!ev?.start) return { day: '', month: '' };
+    if (!ev?.start) return { day: '', month: '', year: '' };
     const d = new Date(ev.start);
     return {
       day: d.getDate(),
       month: d.toLocaleDateString('en-US', { month: 'short' }),
+      year: d.getFullYear(),
     };
   };
 
@@ -239,7 +240,7 @@ export default function HomePage() {
                   style={{ transform: `translateX(-${eventsIndex * (320 + 24)}px)` }}
                 >
                   {homeEventsData && homeEventsData.length > 0 && homeEventsData.map((ev, i) => {
-                    const { day, month } = getEventDayMonth(ev);
+                    const { day, month, year } = getEventDayMonth(ev);
                     const isActive = i === eventsIndex;
                     return (
                       <Link
@@ -250,7 +251,7 @@ export default function HomePage() {
                         <div className="p-5 pb-4">
                           <div className="mb-3">
                             <span className="block text-3xl font-bold leading-none text-slate-900">{day}</span>
-                            <span className="block text-sm font-normal text-slate-700 mt-0.5">{month}</span>
+                            <span className="block text-sm font-normal text-slate-700 mt-0.5">{month} {year}</span>
                             <div className="mt-2 h-px w-8 bg-slate-900" />
                           </div>
                           {/* {ev.category && (
