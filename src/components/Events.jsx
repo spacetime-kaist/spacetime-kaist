@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
+import { useLocation, useSearchParams } from 'react-router-dom';
 import { useDataLoader } from '../hooks/useDataLoader';
+
 
 const formatDate = (start, end) => {
   if (!start) return null;
@@ -241,6 +243,22 @@ const EventMasonryCard = (event) => (
 
 export default function EventsPage() {
   const { data: eventsData, loading } = useDataLoader('eventsData');
+  const [searchParams] = useSearchParams();
+  const location = useLocation();
+
+  // Scroll to event by id (from hash or ?scroll=id) after data is loaded and rendered
+  useEffect(() => {
+    if (!eventsData?.length) return;
+    const id = searchParams.get('scroll') || (location.hash ? location.hash.slice(1) : null);
+    if (!id) return;
+    const el = document.getElementById(id);
+    if (el) {
+      const t = setTimeout(() => {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+      return () => clearTimeout(t);
+    }
+  }, [eventsData, searchParams, location.hash]);
 
   if (loading) {
     return (

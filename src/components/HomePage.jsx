@@ -28,52 +28,6 @@ export default function HomePage() {
   const loading = pressLoading || researchLoading || homeLoading || eventsDataLoading;
   const homeEventsData = loading?[]:eventsData.filter(event => homeEventsList.includes(event.id));
 
-  const formatDate = (start, end) => {
-    const daySuffix = (day) => {
-        if (day > 3 && day < 21) {
-            return 'th';
-        }
-        switch (day % 10) {
-            case 1:
-            return 'st';
-            case 2:
-            return 'nd';
-            case 3: 
-            return 'rd';
-            default:
-            return 'th';
-        }
-    }
-    const startDate = new Date(start);
-    const startDay = startDate.getDate();
-    const startDaySuffix = daySuffix(startDay);
-    const startMonth = startDate.toLocaleDateString('en-US', { month: 'long' });
-    const startYear = startDate.getFullYear();
-
-    if (!end) {
-        return `${startMonth} ${startDay}${startDaySuffix}, ${startYear}`;
-    }
-    
-    const endDate = new Date(end);
-    const endDay = endDate.getDate();
-    const endDaySuffix = daySuffix(endDay);
-    const endMonth = endDate.toLocaleDateString('en-US', { month: 'long' });
-    const endYear = endDate.getFullYear();
-
-    if (startDate === endDate) {
-        return `${startMonth} ${startDay}${startDaySuffix}, ${startYear}`;
-    }
-    if (startYear !== endYear){
-        return `${startMonth} ${startDay}${startDaySuffix}, ${startYear}-${endMonth} ${endDay}${endDaySuffix}, ${endYear}`;
-    }else if (startMonth !== endMonth){
-        return `${startMonth} ${startDay}${startDaySuffix}-${endMonth} ${endDay}${endDaySuffix}, ${startYear}`;
-    }else if (startDay !== endDay){
-        return `${startMonth} ${startDay}${startDaySuffix}-${endDay}${endDaySuffix}, ${startYear}`;
-    }else{
-        return `${startMonth} ${startDay}${startDaySuffix}, ${startYear}`;
-    }
-}
-
   // Slide Show
   const [slideIdx, setSlideIndex] = useState(0);
 
@@ -88,15 +42,22 @@ export default function HomePage() {
   const currentSlide = researchData?.[slideIdx];
 
   const [eventsIndex, setEventsIndex] = useState(0);
-  const eventsToShow = 3;
-  const totalPages = Math.max(1, Math.ceil((homeEventsData?.length || 0) / eventsToShow));
-  const currentPage = totalPages ? Math.min(Math.floor(eventsIndex / eventsToShow), totalPages - 1) : 0;
+  const eventsCount = homeEventsData?.length || 0;
+  const totalPages = Math.max(1, Math.ceil(eventsCount/3));
   const canGoLeft = totalPages > 1;
   const canGoRight = totalPages > 1;
-  const lastStart = Math.max(0, (homeEventsData?.length || 0) - eventsToShow);
-  const goLeft = () => setEventsIndex((i) => (i <= 0 ? lastStart : i - eventsToShow));
-  const goRight = () => setEventsIndex((i) => (i >= lastStart ? 0 : i + eventsToShow));
-  const goToPage = (page) => setEventsIndex(Math.min(page * eventsToShow, lastStart));
+  const goLeft = () => setEventsIndex((i) => (i <= 0 ? totalPages*3 - 3 : i - 3));
+  const goRight = () => setEventsIndex((i) => (i >= totalPages *3 - 3 ? 0 : i + 3));
+  const goToPage = (page) => setEventsIndex(Math.min(page*3, totalPages *3 - 3));
+
+  const getEventDayMonth = (ev) => {
+    if (!ev?.start) return { day: '', month: '' };
+    const d = new Date(ev.start);
+    return {
+      day: d.getDate(),
+      month: d.toLocaleDateString('en-US', { month: 'short' }),
+    };
+  };
 
 
 
@@ -251,76 +212,101 @@ export default function HomePage() {
 
       
         
-        {/* Events Section - simple 3-card slider */}
-        <section id="events" className="py-20 bg-gradient-to-b from-slate-600 to-slate-500">
-          <div className="container">
+        {/* Events Section - carousel with date-led cards */}
+        <section id="events" className="relative py-20">
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-600 to-slate-500" />
+          <div className="absolute inset-0 opacity-30" style={{ backgroundImage: 'linear-gradient(135deg, transparent 40%, rgba(255,255,255,0.03) 50%, transparent 60%)' }} />
+          <div className="container relative z-10">
             <h2 className="text-white text-center font-serif text-5xl md:text-7xl tracking-tight">Events</h2>
-            <p className="pb-8 pt-4 flex justify-center text-slate-200 text-lg max-w-2xl mx-auto text-center">
+            <p className="pb-10 pt-4 flex justify-center text-slate-300 text-lg max-w-2xl mx-auto text-center">
               Explore our past events, conferences, and workshops.
             </p>
-            <div className="flex items-stretch gap-4 md:gap-6 mb-8">
+
+            <div className="relative flex items-center justify-center gap-3 px-2 sm:px-4">
               <button
                 type="button"
                 onClick={goLeft}
                 disabled={!canGoLeft}
-                className="shrink-0 w-12 h-12 rounded-full bg-white/15 text-white text-2xl font-light disabled:opacity-30 disabled:cursor-not-allowed hover:bg-white/25 hover:scale-105 active:scale-95 transition-all border border-white/20 flex items-center justify-center"
+                className="shrink-0 w-12 h-12 rounded-full bg-white/20 text-white text-2xl font-light disabled:opacity-30 disabled:cursor-not-allowed hover:bg-white/30 transition-all border border-white/30 flex items-center justify-center"
                 aria-label="Previous events"
               >
                 ‹
               </button>
-              <div className="flex-1 min-w-0 grid grid-cols-1 md:grid-cols-3 gap-6">
-                {homeEventsData && homeEventsData.length > 0 && homeEventsData.slice(eventsIndex, eventsIndex + eventsToShow).map((ev, i) => (
-                  <Link
-                    key={ev.id ?? i}
-                    to={`/events#${ev.id}`}
-                    className="group block rounded-2xl bg-white shadow-lg overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-slate-600"
-                  >
-                    <div className="aspect-[4/3] overflow-hidden bg-slate-100">
-                      {ev.photos?.[0] ? (
-                        <img
-                          src={ev.photos[0]}
-                          alt=""
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        />
-                      ) : (
-                        <img src={stilLogo} alt="" className="w-full h-full object-contain p-8" />
-                      )}
-                    </div>
-                    <div className="p-5">
-                      <p className="text-xs font-medium text-slate-500 uppercase tracking-wider mb-1">{formatDate(ev.start, ev.end)}</p>
-                      <h3 className="text-lg font-semibold text-slate-800 mb-1 line-clamp-2 group-hover:text-slate-600 transition-colors">{ev.title}</h3>
-                      {ev.place && <p className="text-sm text-blue-600 mb-2">{ev.place}</p>}
-                      <ReactMarkdown className="text-slate-600 text-sm line-clamp-3">{ev.desc}</ReactMarkdown>
-                    </div>
-                  </Link>
-                ))}
+
+              <div className="overflow-hidden w-full ">
+                <div
+                  className="flex gap-6 transition-transform duration-300 ease-out"
+                  style={{ transform: `translateX(-${eventsIndex * (320 + 24)}px)` }}
+                >
+                  {homeEventsData && homeEventsData.length > 0 && homeEventsData.map((ev, i) => {
+                    const { day, month } = getEventDayMonth(ev);
+                    const isActive = i === eventsIndex;
+                    return (
+                      <Link
+                        key={ev.id ?? i}
+                        to={`/events?scroll=${ev.id}`}
+                        className={`group flex-shrink-0 w-[min(320px,85vw)] rounded-2xl bg-white shadow-lg overflow-hidden transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-transparent ${!isActive ? 'opacity-80 hover:opacity-90' : 'shadow-xl'}`}
+                      >
+                        <div className="p-5 pb-4">
+                          <div className="mb-3">
+                            <span className="block text-3xl font-bold leading-none text-slate-900">{day}</span>
+                            <span className="block text-sm font-normal text-slate-700 mt-0.5">{month}</span>
+                            <div className="mt-2 h-px w-8 bg-slate-900" />
+                          </div>
+                          {/* {ev.category && (
+                            <span className="inline-block text-[10px] font-medium uppercase tracking-wider text-slate-500 bg-slate-100 rounded px-2 py-0.5 mb-2">
+                              {ev.category}
+                            </span>
+                          )} */}
+                          <h3 className="text-lg font-bold text-slate-900 mt-1 line-clamp-2 group-hover:text-slate-700">{ev.title}</h3>
+                          {ev.place && (
+                            <p className="text-xs text-sky-700 mt-1.5 line-clamp-1">{ev.place}</p>
+                          )}
+                          <ReactMarkdown className="text-sm text-slate-500 mt-2 line-clamp-3">{ev.desc?.replace(/\s+/g, ' ').trim()}</ReactMarkdown>
+                          
+                        </div>
+                        <div className="aspect-[4/3] min-h-[140px] overflow-hidden bg-slate-100 rounded-b-2xl">
+                          {ev.photos?.[0] ? (
+                            <img src={ev.photos[0]} alt="" className="h-full w-full object-cover" />
+                          ) : (
+                            <img src={stilLogo} alt="" className="h-full w-full object-contain p-6" />
+                          )}
+                        </div>
+                      </Link>
+                    );
+                  })}
+                </div>
               </div>
+
               <button
                 type="button"
                 onClick={goRight}
                 disabled={!canGoRight}
-                className="shrink-0 w-12 h-12 rounded-full bg-white/15 text-white text-2xl font-light disabled:opacity-30 disabled:cursor-not-allowed hover:bg-white/25 hover:scale-105 active:scale-95 transition-all border border-white/20 flex items-center justify-center"
+                className="shrink-0 w-12 h-12 rounded-full bg-white/20 text-white text-2xl font-light disabled:opacity-30 disabled:cursor-not-allowed hover:bg-white/30 transition-all border border-white/30 flex items-center justify-center"
                 aria-label="Next events"
               >
                 ›
               </button>
             </div>
+
             {totalPages > 1 && (
-              <div className="flex justify-center gap-2 mb-8">
+              <div className="flex justify-center gap-2 mt-8">
                 {Array.from({ length: totalPages }, (_, p) => (
                   <button
-                    key={p}
+                    key={p*3}
                     type="button"
-                    onClick={() => goToPage(p)}
-                    className={`w-2.5 h-2.5 rounded-full transition-all ${
-                      p === currentPage ? 'bg-white scale-125' : 'bg-white/40 hover:bg-white/60'
+                    onClick={() => goToPage(p*3)}
+                    className={`rounded-full transition-all ${
+                      p*3 === eventsIndex ? 'h-2.5 w-2.5 bg-white' : 'h-2 w-2 bg-white/50 hover:bg-white/70'
                     }`}
-                    aria-label={`Go to page ${p + 1}`}
+                    aria-label={`Go to slide ${p*3 + 1}`}
                   />
                 ))}
               </div>
             )}
-            <SeeMoreButton linkto="/events" />
+            <div className="mt-8 flex justify-center">
+              <SeeMoreButton linkto="/events" />
+            </div>
           </div>
         </section>
 
