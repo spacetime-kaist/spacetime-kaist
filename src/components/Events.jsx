@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { useLocation, useSearchParams } from 'react-router-dom';
 import { useDataLoader } from '../hooks/useDataLoader';
@@ -48,77 +48,10 @@ const categoryStyles = {
   exhibition: 'bg-amber-100 text-amber-800',
   meeting: 'bg-slate-100 text-slate-700',
   award: 'bg-rose-100 text-rose-800',
+  seminar: 'bg-teal-100 text-teal-800',
+  hackathon: 'bg-orange-100 text-orange-800',
 };
 const getCategoryStyle = (category) => categoryStyles[category] || 'bg-slate-100 text-slate-600';
-
-const EventCard = ( event ) => (
-  <article className="p-6 bg-white rounded-lg border border-gray-200 shadow-sm mb-8">
-    <h2 className="text-2xl font-bold">{event.title}</h2>
-    <p className="text-sm text-gray-500 mb-2">{event.place}</p>
-    <p className="text-sm text-sky-600 mb-1"><span className="font-bold">Participants: </span>{event.participants}</p>
-    {event.keyword?.length > 0 && (
-      <p className="text-sm text-sky-500 mb-4">Keywords: {event.keyword.map((k, idx) => <span key={idx}>#{k}</span>)}</p>
-    )}
-
-    <div className="prose prose-gray break-all overflow-auto max-w-none mb-6 text-gray-700 text-lg p">
-      <ReactMarkdown className="markdown">{event.desc}</ReactMarkdown>
-    </div>
-
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      {event.youtube && (
-        <iframe
-          src={`${event.youtube}&origin=https://spacetime.kaist.ac.kr/`}
-          title={`${event.title} youtube`}
-          className="w-full aspect-video rounded-md"
-        />
-      )}
-      {event.photos?.map((photo, idx) => (
-        <img
-          key={idx}
-          src={photo}
-          alt={`${event.title} photo ${idx + 1}`}
-          className="w-full rounded-md"
-        />
-      ))}
-    </div>
-  </article>
-);
-
-const EventGridCard = ( event ) => (
-  <article id={event.id} className="p-6 bg-white rounded-lg border border-gray-200 shadow-sm mb-8">
-    <h2 className="text-2xl font-bold">{event.title}</h2>
-    <p className="text-sm text-gray-500 mb-2">{event.place}</p>
-    <p className="text-sm text-sky-600 mb-1"><span className="font-bold">Participants: </span>{event.participants}</p>
-    {event.keyword?.length > 0 && (
-      <p className="text-sm text-sky-500 mb-4">Keywords: {event.keyword.map((k, idx) => <span key={idx}>#{k}</span>)}</p>
-    )}
-
-    <div className="prose prose-gray break-all overflow-auto max-w-none mb-6 text-gray-700 text-lg p">
-      <ReactMarkdown className="markdown">{event.desc}</ReactMarkdown>
-    </div>
-
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      {event.youtube ? (
-        <iframe
-          src={`${event.youtube}&origin=https://spacetime.kaist.ac.kr/`}
-          title={`${event.title} youtube`}
-          className="w-full aspect-video rounded-md col-span-2 row-span-2 object-cover"
-        />
-      ) : event.photos?.[0] && (
-        <img src={event.photos[0]} alt="" className="col-span-2 row-span-2 object-cover rounded-md" />
-      )}
-      {event.photos?.slice(1).map((photo, idx) => (
-        <img
-          key={idx}
-          src={photo}
-          alt={`${event.title} photo ${idx + 2}`}
-          className="object-cover rounded-lg"
-        />
-      ))}
-    </div>
-  </article>
-);
-
 const EventMasonryCard = (event) => (
   <article
     id={event.id}
@@ -245,6 +178,75 @@ export default function EventsPage() {
   const { data: eventsData, loading } = useDataLoader('eventsData');
   const [searchParams] = useSearchParams();
   const location = useLocation();
+  const [selectedCategories, setSelectedCategories] = useState([]);
+  const [selectedKeywords, setSelectedKeywords] = useState([]);
+  const [keywordSearch, setKeywordSearch] = useState('');
+
+  const { categories, keywords, filteredEvents, eventsByYear } = useMemo(() => {
+    if (!eventsData?.length) {
+      return { years: [], categories: [], keywords: [], filteredEvents: [], eventsByYear: {} };
+    }
+    const yearSet = new Set();
+    const catSet = new Set();
+    const kwSet = new Set();
+    eventsData.forEach((e) => {
+      if (e.start) yearSet.add(new Date(e.start).getFullYear());
+      if (e.category) catSet.add(e.category);
+      (e.keyword || []).forEach((k) => kwSet.add(k));
+    });
+    const years = Array.from(yearSet).sort((a, b) => b - a);
+    const categories = Array.from(catSet).sort();
+    const keywords = Array.from(kwSet).sort();
+
+    const filtered = eventsData.filter((event) => {
+      const matchCategory =
+        selectedCategories.length === 0 || (event.category && selectedCategories.includes(event.category));
+      const matchKeyword =
+        selectedKeywords.length === 0 ||
+        (event.keyword && event.keyword.some((k) => selectedKeywords.includes(k)));
+      return matchCategory && matchKeyword;
+    });
+
+    const byYear = {};
+    filtered.forEach((event) => {
+      const y = event.start ? new Date(event.start).getFullYear() : 'Unknown';
+      if (!byYear[y]) byYear[y] = [];
+      byYear[y].push(event);
+    });
+    const sortedByYear = {};
+    years.forEach((y) => {
+      if (byYear[y]?.length) sortedByYear[y] = byYear[y];
+    });
+
+    return {
+      years,
+      categories,
+      keywords,
+      filteredEvents: filtered,
+      eventsByYear: sortedByYear,
+    };
+  }, [eventsData, selectedCategories, selectedKeywords]);
+
+  const toggleCategory = (cat) => {
+    setSelectedCategories((prev) =>
+      prev.includes(cat) ? prev.filter((c) => c !== cat) : [...prev, cat]
+    );
+  };
+  const toggleKeyword = (kw) => {
+    setSelectedKeywords((prev) =>
+      prev.includes(kw) ? prev.filter((k) => k !== kw) : [...prev, kw]
+    );
+  };
+  const clearFilters = () => {
+    setSelectedCategories([]);
+    setSelectedKeywords([]);
+    setKeywordSearch('');
+  };
+
+  const scrollToYear = (year) => {
+    const el = document.getElementById(`year-${year}`);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
 
   // Scroll to event by id (from hash or ?scroll=id) after data is loaded and rendered
   useEffect(() => {
@@ -278,23 +280,126 @@ export default function EventsPage() {
   
   
 
+  const keywordsFiltered = keywordSearch
+    ? keywords.filter((k) => k.toLowerCase().includes(keywordSearch.toLowerCase()))
+    : keywords;
+  const hasActiveFilters = selectedCategories.length > 0 || selectedKeywords.length > 0;
+
   return (
     <>
       <header className="py-5">
-        <div className='container'>
+        <div className="container">
           <h1 className="pagetitle">Events</h1>
           <p className="flex justify-center text-gray-600">
             Explore our past events, conferences, and workshops.
           </p>
-        <div className='divider' />
+          <div className="divider" />
         </div>
       </header>
- 
+
       <main className="py-1">
-        <div className="container">
-          {eventsData.map((event) => (
-            <EventMasonryCard key={event.id} {...event} />
-          ))}
+        <div className="container flex flex-col lg:flex-row gap-8">
+          {/* Sidebar: years + filters (floating, recent year on top) */}
+          <aside className="lg:w-64 shrink-0">
+            <div className="lg:sticky lg:top-24 space-y-6 rounded-xl border border-slate-200 bg-white p-4 shadow-lg shadow-slate-200/80">
+              <div>
+                <h2 className="text-sm font-semibold uppercase tracking-wider text-slate-500 mb-2">
+                  By year
+                </h2>
+                <nav className="flex flex-wrap gap-1 lg:flex-col">
+                  {[...Object.keys(eventsByYear)].sort((a, b) => Number(b) - Number(a)).map((year) => (
+                    <button
+                      key={year}
+                      type="button"
+                      onClick={() => changeYear(year)}
+                      className="text-left px-3 py-1.5 rounded-md text-slate-700 hover:bg-slate-200 font-medium transition-colors"
+                    >
+                      {year}
+                    </button>
+                  ))}
+                </nav>
+              </div>
+
+              <div className="border-t border-slate-200 pt-4">
+                <h2 className="text-sm font-semibold uppercase tracking-wider text-slate-500 mb-2">
+                  Category
+                </h2>
+                <div className="flex flex-wrap gap-1.5">
+                  {categories.map((cat) => (
+                    <button
+                      key={cat}
+                      type="button"
+                      onClick={() => toggleCategory(cat)}
+                      className={`rounded-full px-2.5 py-1 text-xs font-medium uppercase tracking-wider transition-colors ${getCategoryStyle(cat)} ${selectedCategories.includes(cat) ? 'ring-2 ring-slate-600 ring-offset-1' : 'opacity-80 hover:opacity-100'}`}
+                    >
+                      {cat}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div className="border-t border-slate-200 pt-4">
+                <h2 className="text-sm font-semibold uppercase tracking-wider text-slate-500 mb-2">
+                  Keywords
+                </h2>
+                <input
+                  type="text"
+                  placeholder="Search keywords..."
+                  value={keywordSearch}
+                  onChange={(e) => setKeywordSearch(e.target.value)}
+                  className="w-full rounded-md border border-slate-300 px-2.5 py-1.5 text-sm mb-2 focus:outline-none focus:ring-2 focus:ring-sky-500"
+                />
+                <div className="flex flex-wrap gap-1.5 max-h-40 overflow-y-auto">
+                  {keywordsFiltered.map((kw) => (
+                    <button
+                      key={kw}
+                      type="button"
+                      onClick={() => toggleKeyword(kw)}
+                      className={`rounded bg-slate-200 px-2 py-0.5 text-xs font-medium text-slate-700 hover:bg-slate-300 transition-colors ${selectedKeywords.includes(kw) ? 'ring-2 ring-sky-500 ring-offset-1 bg-sky-100' : ''}`}
+                    >
+                      #{kw}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {hasActiveFilters && (
+                <button
+                  type="button"
+                  onClick={clearFilters}
+                  className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm font-medium text-slate-600 hover:bg-slate-200 transition-colors"
+                >
+                  Clear filters
+                </button>
+              )}
+            </div>
+          </aside>
+
+          {/* Main content: events grouped by year */}
+          <div className="min-w-0 flex-1">
+            {filteredEvents.length === 0 ? (
+              <p className="text-slate-500 py-8">No events match the current filters.</p>
+            ) : (
+              Object.entries(eventsByYear)
+                .sort(([a], [b]) => Number(b) - Number(a))
+                .map(([year, events]) => (
+                <section
+                  key={year}
+                  id={`year-${year}`}
+                  className="scroll-mt-24 mb-10"
+                >
+                  <h2 className="text-2xl font-bold text-slate-800 mb-4 pb-2 border-b border-slate-200">
+                    {year}
+                  </h2>
+                  <div className="space-y-6">
+                    {events.map((event) => (
+                      <EventMasonryCard key={event.id} {...event} />
+                    ))}
+                  </div>
+                </section>
+              ))
+            )}
+          </div>
         </div>
       </main>
     </>
