@@ -11,50 +11,68 @@ import pressImg from '../assets/images_20251029.jpg';
 import ReactMarkdown from 'react-markdown';
 import NavbarCategorized from '../utility/NavbarCategorized';
 
-
 // to reduce cost, events in the same order
 // const eventsMap = Object.fromEntries(eventsData.map(event=>[event.id, event]));
 // const homeEventsData = homeEventsList.map(id => eventsMap[id])
 
-// image and txt
-const EventsCard = (event) => (
-  <figure className="bg-white hover:bg-white/90 border border-slate-200 shadow shadow-sm hover:shadow-2xl transition-transform duration-500 hover:scale-120 ">
-    <div className=" m-7 overflow-hidden bg-gradient-to-br from-gray-200 to-gray-100 flex items-center justify-center">
-      <div className="flex flex-col gap-2">
-        {event.photos ? event.photos.slice(0,1).map((photo, idx) => (
-          <img
-            key={idx}
-            src={`${photo}`}
-            alt={`${event.title} photo ${idx + 1}`}
-            className="w-full object-fill"
-          />
-          ))
-        :
-          <img
-            src={stilLogo}
-            alt={'default photo'}
-            className="w-full h-48 object-cover"
-          />
-        }
-      </div>
-    </div>
-    <figcaption className="p-4 bg-white ">
-      <div className="text-lg sm:text-2xl text-slate-900">{event.title}</div>
-      <div className="text-md text-blue-400 mt-1">{event.place}</div>
-      {/* <div className="text-sm text-blue-500 mt-1">{event.keywords}</div> */}
-    </figcaption>
-  </figure>
-);
-
 
 export default function HomePage() {
-  const { data: eventsDataObj, loading: eventsLoading } = useDataLoader('eventsData');
+
   const { data: pressData, loading: pressLoading } = useDataLoader('pressData');
   const { data: researchData, loading: researchLoading } = useDataLoader('researchData');
+  const { data: homeData, loading: homeLoading } = useDataLoader('homeData');
+  const { data: eventsData, loading: eventsDataLoading } = useDataLoader('eventsData');
   
-  const eventsData = eventsDataObj?.eventsData || [];
-  const homeEventsList = eventsDataObj?.homeEventsList || [];
-  const loading = eventsLoading || pressLoading || researchLoading;
+  const homeEventsList =  homeData?.homeEventsList || [];
+  console.log(homeEventsList); 
+  const loading = pressLoading || researchLoading || homeLoading || eventsDataLoading;
+  const homeEventsData = loading?[]:eventsData.filter(event => homeEventsList.includes(event.id));
+
+  const formatDate = (start, end) => {
+    const daySuffix = (day) => {
+        if (day > 3 && day < 21) {
+            return 'th';
+        }
+        switch (day % 10) {
+            case 1:
+            return 'st';
+            case 2:
+            return 'nd';
+            case 3: 
+            return 'rd';
+            default:
+            return 'th';
+        }
+    }
+    const startDate = new Date(start);
+    const startDay = startDate.getDate();
+    const startDaySuffix = daySuffix(startDay);
+    const startMonth = startDate.toLocaleDateString('en-US', { month: 'long' });
+    const startYear = startDate.getFullYear();
+
+    if (!end) {
+        return `${startMonth} ${startDay}${startDaySuffix}, ${startYear}`;
+    }
+    
+    const endDate = new Date(end);
+    const endDay = endDate.getDate();
+    const endDaySuffix = daySuffix(endDay);
+    const endMonth = endDate.toLocaleDateString('en-US', { month: 'long' });
+    const endYear = endDate.getFullYear();
+
+    if (startDate === endDate) {
+        return `${startMonth} ${startDay}${startDaySuffix}, ${startYear}`;
+    }
+    if (startYear !== endYear){
+        return `${startMonth} ${startDay}${startDaySuffix}, ${startYear}-${endMonth} ${endDay}${endDaySuffix}, ${endYear}`;
+    }else if (startMonth !== endMonth){
+        return `${startMonth} ${startDay}${startDaySuffix}-${endMonth} ${endDay}${endDaySuffix}, ${startYear}`;
+    }else if (startDay !== endDay){
+        return `${startMonth} ${startDay}${startDaySuffix}-${endDay}${endDaySuffix}, ${startYear}`;
+    }else{
+        return `${startMonth} ${startDay}${startDaySuffix}, ${startYear}`;
+    }
+}
 
   // Slide Show
   const [slideIdx, setSlideIndex] = useState(0);
@@ -69,16 +87,16 @@ export default function HomePage() {
 
   const currentSlide = researchData?.[slideIdx];
 
-  const scrollRef = useRef(null);
-  const handleWheel = (e) => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollLeft += e.deltaY*5;
-    }
-  };
-  const scroll = (direction) => {
-  if (!scrollRef.current) return;
-  scrollRef.current.scrollBy({ left: direction === "left" ? -900 : 900, behavior: "smooth" });
-};
+  const [eventsIndex, setEventsIndex] = useState(0);
+  const eventsToShow = 3;
+  const totalPages = Math.max(1, Math.ceil((homeEventsData?.length || 0) / eventsToShow));
+  const currentPage = totalPages ? Math.min(Math.floor(eventsIndex / eventsToShow), totalPages - 1) : 0;
+  const canGoLeft = totalPages > 1;
+  const canGoRight = totalPages > 1;
+  const lastStart = Math.max(0, (homeEventsData?.length || 0) - eventsToShow);
+  const goLeft = () => setEventsIndex((i) => (i <= 0 ? lastStart : i - eventsToShow));
+  const goRight = () => setEventsIndex((i) => (i >= lastStart ? 0 : i + eventsToShow));
+  const goToPage = (page) => setEventsIndex(Math.min(page * eventsToShow, lastStart));
 
 
 
@@ -231,82 +249,80 @@ export default function HomePage() {
           </div>
         </section>
 
+      
         
-
-        {/* Events Section */}
-        <section id="events" className="py-20 bg-slate-400 ">
+        {/* Events Section - simple 3-card slider */}
+        <section id="events" className="py-20 bg-gradient-to-b from-slate-600 to-slate-500">
           <div className="container">
-            <h2 className="text-white text-center font-serif text-5xl md:text-7xl ">Events</h2>
-            {/* <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:md:grid-cols-3 gap-6"> */}
-            <p className="pb-20 pt-5 flex justify-center text-gray-300 "> Explore our past events, conferences, and workshops.</p>
-            <div className="mt-6 columns-1 md:columns-2 lg:columns-3 gap-6">
-              {eventsData && eventsData.length > 0 && eventsData.slice(0,20).map((event) => (
-                <div key={event.id} className='break-inside-avoid mb-3'>
-                <Link to={`/events#${event.id}`}>
-                <EventsCard {...event} className="min-w-[300px]" />
-                </Link>
-                </div>
-              ))}
+            <h2 className="text-white text-center font-serif text-5xl md:text-7xl tracking-tight">Events</h2>
+            <p className="pb-8 pt-4 flex justify-center text-slate-200 text-lg max-w-2xl mx-auto text-center">
+              Explore our past events, conferences, and workshops.
+            </p>
+            <div className="flex items-stretch gap-4 md:gap-6 mb-8">
+              <button
+                type="button"
+                onClick={goLeft}
+                disabled={!canGoLeft}
+                className="shrink-0 w-12 h-12 rounded-full bg-white/15 text-white text-2xl font-light disabled:opacity-30 disabled:cursor-not-allowed hover:bg-white/25 hover:scale-105 active:scale-95 transition-all border border-white/20 flex items-center justify-center"
+                aria-label="Previous events"
+              >
+                ‹
+              </button>
+              <div className="flex-1 min-w-0 grid grid-cols-1 md:grid-cols-3 gap-6">
+                {homeEventsData && homeEventsData.length > 0 && homeEventsData.slice(eventsIndex, eventsIndex + eventsToShow).map((ev, i) => (
+                  <Link
+                    key={ev.id ?? i}
+                    to={`/events#${ev.id}`}
+                    className="group block rounded-2xl bg-white shadow-lg overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-slate-600"
+                  >
+                    <div className="aspect-[4/3] overflow-hidden bg-slate-100">
+                      {ev.photos?.[0] ? (
+                        <img
+                          src={ev.photos[0]}
+                          alt=""
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                      ) : (
+                        <img src={stilLogo} alt="" className="w-full h-full object-contain p-8" />
+                      )}
+                    </div>
+                    <div className="p-5">
+                      <p className="text-xs font-medium text-slate-500 uppercase tracking-wider mb-1">{formatDate(ev.start, ev.end)}</p>
+                      <h3 className="text-lg font-semibold text-slate-800 mb-1 line-clamp-2 group-hover:text-slate-600 transition-colors">{ev.title}</h3>
+                      {ev.place && <p className="text-sm text-blue-600 mb-2">{ev.place}</p>}
+                      <ReactMarkdown className="text-slate-600 text-sm line-clamp-3">{ev.desc}</ReactMarkdown>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+              <button
+                type="button"
+                onClick={goRight}
+                disabled={!canGoRight}
+                className="shrink-0 w-12 h-12 rounded-full bg-white/15 text-white text-2xl font-light disabled:opacity-30 disabled:cursor-not-allowed hover:bg-white/25 hover:scale-105 active:scale-95 transition-all border border-white/20 flex items-center justify-center"
+                aria-label="Next events"
+              >
+                ›
+              </button>
             </div>
+            {totalPages > 1 && (
+              <div className="flex justify-center gap-2 mb-8">
+                {Array.from({ length: totalPages }, (_, p) => (
+                  <button
+                    key={p}
+                    type="button"
+                    onClick={() => goToPage(p)}
+                    className={`w-2.5 h-2.5 rounded-full transition-all ${
+                      p === currentPage ? 'bg-white scale-125' : 'bg-white/40 hover:bg-white/60'
+                    }`}
+                    aria-label={`Go to page ${p + 1}`}
+                  />
+                ))}
+              </div>
+            )}
             <SeeMoreButton linkto="/events" />
           </div>
         </section>
-        
-        {/* Events Section2 */}
-        {/* <section id="events" className="py-20 bg-slate-400 ">
-          <div className="container">
-            <h2 className="text-white text-center font-serif text-5xl md:text-7xl ">Events</h2>
-            <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:md:grid-cols-3 gap-6">
-            <p className="pb-15 pt-5 flex justify-center text-gray-300 "> Explore our past events, conferences, and workshops.</p>
-            <div className="flex justify-between items-center mb-6">
-          <div className="flex gap-2">
-            <div variant="ghost" size="icon" onClick={() => scroll("left")}>
-              {'<'}
-            </div>
-            <div variant="ghost" size="icon" onClick={() => scroll("right")}>
-              {'>'}
-            </div>
-          </div>
-        </div>
-
-        <div
-          ref={scrollRef}
-          onWheel = {handleWheel}
-          className="flex overflow-x-scroll overflow-y-hidden gap-6 scroll-smooth scrollbar-hide snap-x snap-mandatory [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)"
-        >
-          {eventsData && eventsData.length > 0 && eventsData.slice(0,20).map((ev, i) => (
-            <div
-              key={i}
-              className="min-w-[400px] max-w-[400px] flex-shrink-0 rounded-2xl shadow-md hover:shadow-lg transition-all bg-white"
-            >
-              <div className="p-6">
-                <p className="text-sm text-gray-500 mb-2">{ev.date}</p>
-                <h3 className="text-xl font-semibold mb-2">{ev.title}</h3>
-                <p className="text-gray-700 text-sm">{ev.desc}</p>
-              </div>
-              <div className="max-w-[300px] flex flex-col gap-2">
-                {ev.photos ? ev.photos.slice(0,1).map((photo, idx) => (
-                  <img
-                    key={idx}
-                    src={`${photo}`}
-                    alt={`${ev.title} photo ${idx + 1}`}
-                    className="w-full object-fill"
-                  />
-                  ))
-                :
-                  <img
-                    src={stilLogo}
-                    alt={'default photo'}
-                    className="w-full h-48 object-cover"
-                  />
-                }
-            </div>
-            </div>
-          ))}
-        </div>
-            <SeeMoreButton linkto="/events" />
-          </div>
-        </section> */}
 
         {/* <section id="contact" className="py-12 bg-gradient-to-b from-gray-50 to-white">
           <div className="container">
