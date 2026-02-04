@@ -181,6 +181,7 @@ export default function EventsPage() {
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [selectedKeywords, setSelectedKeywords] = useState([]);
   const [keywordSearch, setKeywordSearch] = useState('');
+  const [expandedYears, setExpandedYears] = useState([]);
 
   const { categories, keywords, filteredEvents, eventsByYear } = useMemo(() => {
     if (!eventsData?.length) {
@@ -243,9 +244,42 @@ export default function EventsPage() {
     setKeywordSearch('');
   };
 
+  const sortedYears = useMemo(
+    () => Object.keys(eventsByYear).sort((a, b) => Number(b) - Number(a)),
+    [eventsByYear]
+  );
+
+  const sortedYearKey = useMemo(
+    () => Object.keys(eventsByYear).sort((a, b) => Number(b) - Number(a)).join(','),
+    [eventsByYear]
+  );
+
+  useEffect(() => {
+    if (!sortedYearKey) return;
+    const sorted = sortedYearKey.split(',');
+    const latest = sorted[0];
+    setExpandedYears((prev) => {
+      const hasLatest = prev.includes(latest);
+      const stillValid = prev.every((y) => sorted.includes(y));
+      if (!hasLatest || !stillValid) return [latest];
+      return prev.filter((y) => sorted.includes(y));
+    });
+  }, [sortedYearKey]);
+
+  const toggleYearExpanded = (year) => {
+    setExpandedYears((prev) =>
+      prev.includes(year) ? prev.filter((y) => y !== year) : [...prev, year]
+    );
+  };
+
   const scrollToYear = (year) => {
     const el = document.getElementById(`year-${year}`);
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
+  const onSidebarYearClick = (year) => {
+    if (!expandedYears.includes(year)) setExpandedYears((prev) => [...prev, year]);
+    scrollToYear(year);
   };
 
   // Scroll to event by id (from hash or ?scroll=id) after data is loaded and rendered
@@ -299,19 +333,19 @@ export default function EventsPage() {
 
       <main className="py-1">
         <div className="container flex flex-col lg:flex-row gap-8">
-          {/* Sidebar: years + filters (floating, recent year on top) */}
-          <aside className="lg:w-64 shrink-0">
-            <div className="lg:sticky lg:top-24 space-y-6 rounded-xl border border-slate-200 bg-white p-4 shadow-lg shadow-slate-200/80">
+          {/* Sidebar: sticks and follows scroll; recent year on top */}
+          <aside className="lg:w-64 shrink-0 lg:self-start">
+            <div className="lg:sticky lg:top-24 lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto space-y-6 rounded-xl border border-slate-200 bg-white/80 p-4 shadow-lg shadow-slate-200/80">
               <div>
                 <h2 className="text-sm font-semibold uppercase tracking-wider text-slate-500 mb-2">
                   By year
                 </h2>
                 <nav className="flex flex-wrap gap-1 lg:flex-col">
-                  {[...Object.keys(eventsByYear)].sort((a, b) => Number(b) - Number(a)).map((year) => (
+                  {sortedYears.map((year) => (
                     <button
                       key={year}
                       type="button"
-                      onClick={() => changeYear(year)}
+                      onClick={() => onSidebarYearClick(year)}
                       className="text-left px-3 py-1.5 rounded-md text-slate-700 hover:bg-slate-200 font-medium transition-colors"
                     >
                       {year}
@@ -380,24 +414,35 @@ export default function EventsPage() {
             {filteredEvents.length === 0 ? (
               <p className="text-slate-500 py-8">No events match the current filters.</p>
             ) : (
-              Object.entries(eventsByYear)
-                .sort(([a], [b]) => Number(b) - Number(a))
-                .map(([year, events]) => (
-                <section
-                  key={year}
-                  id={`year-${year}`}
-                  className="scroll-mt-24 mb-10"
-                >
-                  <h2 className="text-2xl font-bold text-slate-800 mb-4 pb-2 border-b border-slate-200">
-                    {year}
-                  </h2>
-                  <div className="space-y-6">
-                    {events.map((event) => (
-                      <EventMasonryCard key={event.id} {...event} />
-                    ))}
-                  </div>
-                </section>
-              ))
+              sortedYears.map((year) => {
+                const events = eventsByYear[year] || [];
+                const isExpanded = expandedYears.includes(year);
+                return (
+                  <section
+                    key={year}
+                    id={`year-${year}`}
+                    className="scroll-mt-24 mb-6"
+                  >
+                    <button
+                      type="button"
+                      onClick={() => toggleYearExpanded(year)}
+                      className="flex w-full items-center justify-between gap-2 text-left text-2xl font-bold text-slate-800 mb-2 pb-2 border-b border-slate-200 hover:bg-slate-50 -mx-1 px-1 rounded transition-colors"
+                    >
+                      <span>{year}</span>
+                      <span className="text-slate-400 shrink-0" aria-hidden>
+                        {isExpanded ? '▼' : '▶'}
+                      </span>
+                    </button>
+                    {isExpanded && (
+                      <div className="space-y-6 pt-2">
+                        {events.map((event) => (
+                          <EventMasonryCard key={event.id} {...event} />
+                        ))}
+                      </div>
+                    )}
+                  </section>
+                );
+              })
             )}
           </div>
         </div>
