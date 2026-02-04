@@ -253,10 +253,10 @@ export default function HomePage() {
         </section>
         
         {/* Events Section2 */}
-        <section id="events" className="py-20 bg-slate-400 ">
+        {/* <section id="events" className="py-20 bg-slate-400 ">
           <div className="container">
             <h2 className="text-white text-center font-serif text-5xl md:text-7xl ">Events</h2>
-            {/* <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:md:grid-cols-3 gap-6"> */}
+            <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:md:grid-cols-3 gap-6">
             <p className="pb-15 pt-5 flex justify-center text-gray-300 "> Explore our past events, conferences, and workshops.</p>
             <div className="flex justify-between items-center mb-6">
           <div className="flex gap-2">
@@ -306,7 +306,7 @@ export default function HomePage() {
         </div>
             <SeeMoreButton linkto="/events" />
           </div>
-        </section>
+        </section> */}
 
         {/* <section id="contact" className="py-12 bg-gradient-to-b from-gray-50 to-white">
           <div className="container">
@@ -326,6 +326,29 @@ export default function HomePage() {
           </div>
         </section> */}
     </main>
+    <footer className="py-8 flex flex-col items-center bg-slate-800 text-slate-200 w-full">
+        <div className="container">
+        <div className='color-white p-8'>
+        <h2 className='text-2xl font-bold text-sky-700 py-3'>Spacetime Intelligence Laboratory</h2>
+        <h3 className='text-xl font-semibold text-slate-500 pb-2'>Contact</h3>
+        <p>
+          Address: W16 #410, KAIST, 291 Daehak-ro, Yuseong-gu, Daejeon, Republic
+          of Korea
+          <br />
+          TEL: +82-42-350-3615
+          <br />
+          E-mail: yoonjin@kaist.ac.kr
+        </p>
+      </div>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="text-sm text-gray-500">© {new Date().getFullYear()} Spacetime Intelligence Laboratory. All rights reserved.</div>
+            <div className="flex gap-4 text-sm text-gray-600">
+              <a href="#">Privacy</a>
+              <a href="#">Terms</a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
     </div>
     </div>

@@ -3,7 +3,7 @@
     "id": "urban-heat-urban-sales",
     "title": "Urban Heat, Urban Sales",
     "menuTitle": "Urban Heat, Urban Sales",
-    "thumbnail": "/images/researchImg/uhus.png",
+    "thumbnail": "/img/researchImg/uhus.png",
     "desc": "This research develops a predictive AI framework using over 300 million urban data points to quantify the economic impact of climate stress on small businesses, introducing a novel \"Data Sonification\" model to translate complex resilience indicators into accessible auditory patterns.",
     "research": [
       {
@@ -13,11 +13,11 @@
         "desc": "\n### AI-Driven Modeling of Urban Economic Resilience to Climate Change\n\nThis research introduces an AI-driven framework to predict the impact of climate change on urban small business ecosystems. The study utilizes a large-scale dataset of over 300 million data points, encompassing 96 business sectors across Seoul's 426 administrative districts.\n\nThe core methodology involves a high-precision analysis correlating climate factors with sector-specific sales revenue. By quantifying sales volatility during climate stress events (e.g., heatwaves), the team generated 40,896 'Urban Heat Resilience' indicators. A key finding is the significant spatial disparity in climate resilience, with sectors like convenience stores showing vastly different outcomes depending on their location.\n\n### Innovation in Data Interpretation: Data Sonification\n\nA novel component of this research is the pioneering use of Data Sonification—the conversion of data into sound. In a world-first application for this scale of urban data, researchers employed generative AI to transform the massive dataset of temperature, humidity, and sales into complex auditory patterns. This \"Barrier-Free AI\" technique translates complex statistics into intuitive sound attributes like pitch, rhythm, and intensity. This approach not only offers a new mode of data interpretation but is also designed for inclusivity, making the information accessible to citizens with visual impairments and children, thereby demonstrating a new potential for human-AI sensory interfaces.\n\n### [Try Out the AI Tool :](https://05970c0c.slw-6vy.pages.dev/)",
         "videos": [
           [
-            "/images/researchImg/uhus_predict.mp4",
+            "/img/researchImg/uhus_predict.mp4",
             "Sales prediction results"
           ],
           [
-            "/images/researchImg/uhus_sound.mp4",
+            "/img/researchImg/uhus_sound.mp4",
             "Sonified representation of urban data"
           ]
         ]
@@ -28,7 +28,7 @@
     "id": "urban-region",
     "title": "Urban Region Representation Learning",
     "menuTitle": "Urban Region Representation",
-    "thumbnail": "/images/researchImg/1.png",
+    "thumbnail": "/img/researchImg/1.png",
     "desc": "In this work, we propose heterogeneous urban graph attention network (HUGAT), which incorporates heterogeneity of diverse urban datasets.",
     "research": [
       {
@@ -37,12 +37,12 @@
         "desc": "Revealing the hidden patterns shaping the urban environment is essential to understand its dynamics and to make cities smarter. Recent studies have demonstrated that learning the representations of urban regions can be an effective strategy to uncover the intrinsic characteristics of urban areas. However, existing studies lack in incorporating diversity in urban data sources. In this work, we propose heterogeneous urban graph attention network (HUGAT), which incorporates heterogeneity of diverse urban datasets. In HUGAT, heterogeneous urban graph (HUG) incorporates both the geo-spatial and temporal people movement variations in a single graph structure. Given a HUG, a set of meta-paths are designed to capture the rich urban semantics as composite relations between nodes. Region embedding is carried out using heterogeneous graph attention network (HAN). HUGAT is designed to consider multiple learning objectives of city’s geo-spatial and mobility variations simultaneously. In our extensive experiments on NYC data, HUGAT outperformed all the state-of-the-art models. Moreover, it demonstrated a robust generalization capability across the various prediction tasks of crime, average personal income, and bike flow as well as the spatial clustering task.",
         "images": [
           [
-            "/images/researchImg/1-1.png"
+            "/img/researchImg/1-1.png"
           ],
           [
-            "/images/researchImg/1-2.png",
-            "/images/researchImg/1-3.png",
-            "/images/researchImg/1-4.png"
+            "/img/researchImg/1-2.png",
+            "/img/researchImg/1-3.png",
+            "/img/researchImg/1-4.png"
           ]
         ]
       }
@@ -53,7 +53,7 @@
     "title": "Urban Air Mobility (UAM)",
     "menuTitle": "UAM",
     "desc": "As our first step toward UAM demand forecasting, we considered the case of using existing helipads. We plan to expand our scope in future work to UAM routing, fleet rebalancing and scheduling.",
-    "thumbnail": "/images/researchImg/2.png",
+    "thumbnail": "/img/researchImg/2.png",
     "research": [
       {
         "title": "Integrating Urban Air Mobility with Highway Infrastructure: A Strategic Approach for Vertiport Location Selection in the Seoul Metropolitan Area",
@@ -64,7 +64,7 @@
           "https://www.youtube-nocookie.com/embed/uz03YgCI1MY?si=T9sQkTXhivEiuCxq"
         ],
         "images": [
-          "/images/researchImg/2-2.png"
+          "/img/researchImg/2-2.png"
         ]
       },
       {
@@ -72,8 +72,8 @@
         "date": "",
         "desc": "As the public interest in UAM is getting higher and the underlying technology for UAM becomes sophisticated, the need to forecast the future demand for UAM increases. As the data-driven demand forecasting method has become more accurate than the traditional modeling-based forecasting method, TRUE lab utilized Seoul taxi GPS data to forecast the potential demand for UAM. Our assumption is based on the idea that part of the long-range taxi trip will be replaced by the emerging mobility service - UAM. As our first step toward UAM demand forecasting, we considered the case of using existing helipads. We plan to expand our scope in future work to UAM routing, fleet rebalancing, and scheduling. For details, please visit our blog.",
         "images": [
-          "/images/researchImg/2-3.png",
-          "/images/researchImg/2-4.png"
+          "/img/researchImg/2-3.png",
+          "/img/researchImg/2-4.png"
         ]
       },
       {
@@ -89,14 +89,14 @@
     "title": "UTM and Spatial Analysis",
     "menuTitle": "UTM",
     "desc": "This research field includes Regionalization for urban air mobility application in metropolitan areas, Density-aware flight planning for multiple agents in urban airspace, Cooperative sUAV Collision Avoidance, and so on.",
-    "thumbnail": "/images/researchImg/5.png",
+    "thumbnail": "/img/researchImg/5.png",
     "research": [
       {
         "title": "Regional for urban air mobility application in metropolitan areas: case studies in San Francisco and New York",
         "date": "",
         "desc": "In this study, as a first step to assess the feasibility of UAM in urban areas, we conduct 3D geodemographic analyses of two major cities in San Francisco, CA and Manhattan, NY. The 3D building footprint data is used to identify the raw available airspace as well as the added spatial restrictions with geofencing. Population data is used to represent the potential customer base by combining the daytime and nighttime population. Since the geospatial and demographic datasets differ in representation, the spatial data is vectorized while population data is available by census tract, spatial information is aggregated in census tracts. In addition, We proposed to group the areas of similar spatial and population characteristics through regionalization. Regionalization is a spatially constrained multi-variate clustering method to group small geographical units (census blocks and tracts in general) into a contiguous region of homogeneous nature. The main benefit of regionalization is to delineate regions of similar characteristics and spatial proximity. Through regionalization, one can better understand the urban space with comprehensive geographic perspective, rather than a small geographical unit of census blocks or tracts. Furthermore, regionalization can also improve geospatial intelligence in urban spaces by delineating the functional neighborhood . In this study, we adopted the SKATER, an efficient regionalization technique that uses minimum spanning tree consisting of a connected tree with no circuits. The intention is to provide a region map of the city that can readily identify regions of similar UAM operational and population characteristics with spatial continuity and feasibility. Based on the regionalization results, correspondence analysis was conducted to translate the compound effect of spatial and population characteristics into feasibility.",
         "images": [
-          "/images/researchImg/5-1.png"
+          "/img/researchImg/5-1.png"
         ]
       },
       {
@@ -116,7 +116,7 @@
           "Namwoo Kim, Yoonjin Yoon, \"Cooperative sUAV Collision Avoidance Based on Satisficing Theory\", International Journal of Aeronautical and Space Sciences, 2019"
         ],
         "images": [
-          "/images/researchImg/5-2.png"
+          "/img/researchImg/5-2.png"
         ]
       },
       {
@@ -124,7 +124,7 @@
         "date": "",
         "desc": "For application of UAS and UAM in urban area, people and man-mad structures that consisting urban environment should be considered. We analyzed urban space by using census tract based population data and 3d building model data. Highly urbanized areas – Manhattan Island and San Francisco were analyzed for their urban space characteristics.",
         "images": [
-          "/images/researchImg/5-3.png"
+          "/img/researchImg/5-3.png"
         ]
       },
       {
@@ -132,7 +132,7 @@
         "date": "",
         "desc": "One of the key challenges in enabling large-scale UAS operations at low altitude lies in the limited airspace of densely built-up urban environment. Unlike the high-altitude controlled airspace, the geospatial complexity arising from existing static obstacles such as buildings and terrain poses a new challenge in the UAS traffic flow management. Hence, a more adaptive and intelligent approach is necessary to identify airspace that is not only free of obstacles but also usable or operable within an acceptable level of risk.\n        \nAs a first step to airspace capacity management, we propose an airspace availability assessment framework that incorporates the underlying geospatial complexity as well as vehicle operational requirements. Specifically, we utilize two types of geofence - keep-out and keep-in.\n\nThis interactive tool enables you to explore the airspace availability in three case study areas - Gangnam, Manhattan, and San Francisco. Using this tool, one can identify and compare usable airspace at given altitude with various geofence parameter combinations.\n\n**SELECTED REFERENCES**\n\nJungwoo Cho, Yoonjin Yoon, \"How to Assess the Capacity of Urban Airspace: A Topological Approach Using Keep-in and Keep-out Geofence\", 92, 137-149, Transportation Research, Part C, 2018,  \nMethod for identifying available airspace for unmanned aerial vehicle operations, Patent filed, Dec 17, 2017, KR 10-2018-0033978",
         "images": [
-          "/images/researchImg/5-4.png"
+          "/img/researchImg/5-4.png"
         ]
       },
       {
@@ -141,10 +141,10 @@
         "desc": "Low-level airspace contains existing environment of people and surrounding structures that are sensitive to risks posed by UAS operations. In such environment, not all free airspace is available for operational use. In many literatures, however, UTM airspace is often regarded nearly free of obstacles, and geospatial complexity of airspace arising from obstacles is not fully addressed.\n\nIn this study, we present topography map and skeletal graph to interpret underlying geometrical and topological properties of urban airspace. Specifically, we present topographic map to provide a quantitative representation of vertical and horizontal dimension of usable airspace. Also, a skeletal graph is extracted to uncover horizontal and vertical connectivity of airspace. Both methods not only provide a compact and informative abstraction of airspace but also can be used to partition the entire airspace into different levels.\n\n\n**SELECTED REFERENCES**\n\nJungwoo Cho, Yoonjin Yoon. \"Extraction and Interpretation of Geometrical and Topological Properties of Urban Airspace for UAS Operations\". 13th ATM R&D Seminar, 2019",
         "images": [
           [
-            "/images/researchImg/5-5.png"
+            "/img/researchImg/5-5.png"
           ],
           [
-            "/images/researchImg/5-6.png"
+            "/img/researchImg/5-6.png"
           ]
         ]
       },
@@ -163,16 +163,16 @@
     "title": "Maritime Transportation",
     "menuTitle": "",
     "desc": "This research proposes a novel deep learning-based vessel trajectory prediction framework for AIS data using Auxiliary tasks and Convolutional encoders (AIS-ACNet).",
-    "thumbnail": "/images/researchImg/3.png",
+    "thumbnail": "/img/researchImg/3.png",
     "research": [
       {
         "title": "Deep Learning Framework for Vessel Trajectory Prediction Using Auxiliary Tasks and Convolutional Networks",
         "date": "",
         "desc": "The accurate prediction of vessel trajectories plays a pivotal role in various maritime applications, including route planning, collision avoidance, and maritime traffic management. With the exponential growth in vessel traffic and the increasing complexity of maritime operations, there is a pressing need for reliable and efficient methods to forecast vessel movements. Traditional statistical and machine-learning approaches have limitations in capturing the complex spatial-temporal patterns of vessel movements. Deep learning techniques have emerged as a promising solution due to their ability to handle large-scale datasets and capture nonlinear relationships. This paper proposes a novel deep learning-based vessel trajectory prediction framework for AIS data using Auxiliary tasks and Convolutional encoders (AIS-ACNet). The model leverages Automatic Identification System (AIS) data, including geographical positions, and vessel dynamics such as Speed Over Ground (SOG), and Course Over Ground (COG), for trajectory prediction. The AIS-ACNet employs parallel convolutional encoder networks with feature fusion layers. The model is trained with a learning objective that includes auxiliary tasks such as SOG and COG predictions. This framework enhances the model's representative power of vessel trajectory data leading to a better understanding of vessel dynamics and higher trajectory prediction performance. The proposed framework is evaluated on real-world data from the Port of Houston, Texas, USA, and compared to existing models through extensive experiments and ablation studies. The results demonstrate the effectiveness and superiority of AIS-ACNet in accurately predicting vessel trajectories.\n\n**REFERENCE**\n\n- Y. Shin, N. Kim, H. Lee, S.Y. In, M. Hansen, and Y. Yoon (2024), \"Deep Learning Framework for Vessel Trajectory Prediction Using Auxiliary Tasks and Convolutional Networks\". Engineering Applications of Artificial Intelligence, 132, 107936",
         "images": [
-          "/images/researchImg/3-1.png",
-          "/images/researchImg/3-2.png",
-          "/images/researchImg/3-3.png"
+          "/img/researchImg/3-1.png",
+          "/img/researchImg/3-2.png",
+          "/img/researchImg/3-3.png"
         ]
       }
     ]
@@ -182,14 +182,14 @@
     "title": "Traffic Forecasting",
     "menuTitle": "",
     "desc": "Traffic forecasting problem is a research area in transportation engineering that has flourished over the last couple of decades, and started to garner broader research interest as a key technical enabler of the adaptive traffic management.",
-    "thumbnail": "/images/researchImg/4.png",
+    "thumbnail": "/img/researchImg/4.png",
     "research": [
       {
         "title": "A Novel Graph Convolutional Networks to Progressively Adapt to Online Data",
         "date": "",
         "desc": "In recent years, graph convolutional networks that possess the ability to adapt to the input data have shown promising results in several studies. In most cases, however, the adaptation has been made during the training phases of the models, which inevitably make the models vulnerable to unexpected traffic conditions such as road closure and traffic accident during the testing phases. In this study, we propose a novel traffic forecasting model, Progressive Graph Convolutional Network (PGCN) to make the model adapt to online traffic data. PGCN constructs a set of graphs by calculating learnable similarity measures among the node signals. The architecture of the model is based on Graph WaveNet. When applied to seven real-world datasets, PGCN consistently achieves state-of-the-art performance. This result shows that PGCN has the ability to generalize in different study areas by progressively adapting to online data.\n\n**SELECTED REFERENCE**\n\n- Y. Shin, Y. Yoon. (2024). [PGCN: Progressive graph convolutional networks for spatial-temporal traffic forecasting](https://ieeexplore.ieee.org/abstract/document/10400973) IEEE Transactions on Intelligent Transportation Systems",
         "images": [
-          "/images/researchImg/4-1.png"
+          "/img/researchImg/4-1.png"
         ]
       },
       {
@@ -197,7 +197,7 @@
         "date": "",
         "desc": "Since 2014, various studies have proposed deep learning-based models to solve traffic forecasting problems. While earlier approaches have shown more wide range of implementations, the basic elements of the recent models can be categorized into a few groups - that are RNN, convolution, and self-attention for temporal feature extraction, and Graph Convolutional Networks (GCN) and Graph Attention Networks (GAT) for spatial feature extraction. However, there has been little effort to assess the characteristics of each element and make an in-depth evaluation. In this study, we thoroughly evaluated the performance and characteristics of basic elements of traffic forecasting models through extensive and multi-faceted experiments on four real-world datasets. The result reveals that there is no single element that is superior to the others in all aspects. Interesting outcomes include that the convolution-based models show more accurate overall performance than the attention-based models, while the attention-based models show more robustness against abnormal conditions.\n\n**SELECTED REFERENCE**\n\n- Y. Shin, Y. Yoon*, \"A Comparative Study on Basic Elements of Deep Learning Models for Spatial-Temporal Traffic Forecasting\", AAAI-22 workshop: AI for Transportation, 2022.",
         "images": [
-          "/images/researchImg/4-2.png"
+          "/img/researchImg/4-2.png"
         ]
       },
       {
@@ -205,7 +205,7 @@
         "date": "",
         "desc": "[TRUE Blog Site](https://sites.google.com/view/trueblog/home)\nTraffic forecasting problem is a research area in transportation engineering that has flourished over the last couple of decades, and started to garner broader research interest as a key technical enabler of the adaptive traffic management. The recent surge of Graph Convolutional Networks has led to acute improvement on the performance of traffic forecasting tasks. However, many studies overlook the features that can represent the transportation networks such as speed limit, distance, and flow direction. In our research, we propose Multi-Weight Traffic Graph Convolutional Networks (MW-TGC) to incorporate aforementioned features in a single model and to reflect more spatial dynamicity in traffic forecasting problem. Experiment on two real-world datasets show that the proposed model outperforms the state-of-the-art models.\n\n**SELECTED REFERENCE**\n\n- Y. Shin and Y. Yoon, \"Incorporating Dynamicity of Transportation Network With Multi-Weight Traffic Graph Convolutional Network for Traffic Forecasting,\" in IEEE Transactions on Intelligent Transportation Systems, doi: 10.1109/TITS.2020.3031331.\n",
         "images": [
-          "/images/researchImg/4-3.png"
+          "/img/researchImg/4-3.png"
         ]
       }
     ]
@@ -215,15 +215,15 @@
     "title": "Transportation Network and Data Representation",
     "menuTitle": "Transportation Network",
     "desc": "In this research field, we conduct about Traffic Data Representation: Resolutions and Structures and Air Route Network as Complex Network.",
-    "thumbnail": "/images/researchImg/6.gif",
+    "thumbnail": "/img/researchImg/6.gif",
     "research": [
       {
         "title": "Traffic Data Representation: Resolutions and Structures",
         "date": "",
         "desc": "",
         "images": [
-          "/images/researchImg/6-1.gif",
-          "/images/researchImg/6-2.gif"
+          "/img/researchImg/6-1.gif",
+          "/img/researchImg/6-2.gif"
         ]
       },
       {
@@ -231,7 +231,7 @@
         "date": "",
         "desc": "Air traffic carried by three major countries in Northeast Asia have significantly increased in the past decade. In contrast to the growing importance, there exist few regional studies on the characteristics of the Air Transport Network (ATN). ATNs have been researched over a couple of recent decades by modeling them as airport networks. Airport networks as virtual networks of directly connected airport pairs essentially model airline service network to exclude the airspace, where most of the operational resources are consumed. In this study, air route network robustness of the rapidly growing Northeast Asian region is assessed based on the node criticality.\n\n**SELECTED REFERENCE**\n\nSeyun Kim, Yoonjin Yoon, \"On Node Criticality of the Northeast Asian Air Route Network\", Journal of Air Transport Management, 80, 101693, 2019",
         "images": [
-          "/images/researchImg/6-3.png"
+          "/img/researchImg/6-3.png"
         ]
       }
     ]
@@ -241,7 +241,7 @@
     "title": "Autonomous Vehicle",
     "menuTitle": "",
     "desc": "Our study incorporates the individual difference to characterize the workload response on personal basis. & The result shows two groups of subjects, one not showing much evidence of stress and the other exhibiting sufficient stress.",
-    "thumbnail": "/images/researchImg/7.png",
+    "thumbnail": "/img/researchImg/7.png",
     "images": [
       "-"
     ],
@@ -251,7 +251,7 @@
         "date": "",
         "desc": "The ability to measure and detect driver’s workload has been an important research topic in automotive research domain, and started to attract greater interest in recent years in relation to the emerging vehicle technology such as autonomous driving. Our study incorporates the individual difference to characterize the workload response on personal basis. Extensive pre-processing of electroencephalogram (EEG) and electrocardiogram (ECG) signals were carried out to generate features for personalization. The results showed that human workload response is far from homogeneity, nor the driving environment is a sole determinant.\n\n**SELECTED REFERENCE**\n\n- Yuna Noh, \"Modeling Individual Differences in Driver Workload Estimation using Physiological Data\", Ph.D Thesis, 2018\n- Yuna Noh, Yoonjin Yoon, \"Personalized stress assessment during real-world electric vehicle driving based on fuzzy c-means clustering using physiological and operational data\", under review",
         "images": [
-          "/images/researchImg/7-1.png"
+          "/img/researchImg/7-1.png"
         ]
       },
       {
@@ -259,7 +259,7 @@
         "date": "",
         "desc": "From 53 km Electric vehicle driving experiment of 40 subjects, physiological data including electroencephalogram (EEG) and eye-gazing were obtained along with vehicle operational data such as state of charge, altitude, and speed. The dataset was rich in information, but individual difference and nonlinear patterns made it extremely difficult to draw meaningful insights. As a solution, an information-theoretic framework is proposed to evaluate mutual information between physiological and operational data as well as the entropy of physiological data itself.\n\nThe result shows two groups of subjects, one not showing much evidence of stress and the other exhibiting sufficient stress. Among the subjects who showed sufficient driving, 9 out of the top 10 high EEG-entropy drivers were female, one driver showed a strong pattern of range anxiety, and several showed patterns of uphill climbing anxiety.\n\n**SELECTED REFERENCE**\n\nSeyun Kim, W. Rhee, D. Choi, Y.J. Jang, Yoonjin Yoon, \"Characterizing Driver Stress Using Physiological and Operational Data from Real-world Electric Vehicle Driving Experiment\", 19(5), 895-906, International Journal of Automotive Technology, 2018",
         "images": [
-          "/images/researchImg/7-2.png"
+          "/img/researchImg/7-2.png"
         ]
       }
     ]
@@ -269,14 +269,14 @@
     "title": "Traffic Safety",
     "menuTitle": "",
     "desc": "This research field contains Elderly Pedestrian Safety and Elderly Driver Injury Severity by Seat Positions and Seat-belt Use.",
-    "thumbnail": "/images/researchImg/8.png",
+    "thumbnail": "/img/researchImg/8.png",
     "research": [
       {
         "title": "Elderly Pedestrian Safety",
         "date": "",
         "desc": "Changes in the physical and mental abilities of elderly road users have led to an important question of how to define elderly. With an 8-year collision data set in Seoul, this study investigated the commonality and diversity of pedestrian injuries among the elderly by introducing an additional cutoff age of 75. By employing single and interaction binary logit models, common risk factors were identified for both elderly groups, as well as those that are particularly hazardous to the older-old. With nearly every country experiencing growth in the elderly population, our study strongly suggests that the conventional definition of a single elderly group is no longer relevant and the variety among elderly pedestrians needs to be considered in traffic safety policy.\n  \n**SELECTED REFERENCE**\n  \nYuna Noh, Minjae Kim, Yoonjin Yoon, \"Elderly pedestrian safety in a rapidly aging society—Commonality and diversity between the younger-old and older-old.\" Traffic Injury Prevention, 19(8), 874-879, 2018",
         "images": [
-          "/images/researchImg/8-1.png"
+          "/img/researchImg/8-1.png"
         ]
       },
       {
@@ -292,7 +292,7 @@
     "longTitle": "-",
     "menuTitle": "",
     "desc": "Includes air traffic management master plan (NARAE), autonomous logistics and probabilistic air traffic flow management (ATFM).",
-    "thumbnail": "/images/researchImg/9.png",
+    "thumbnail": "/img/researchImg/9.png",
     "research": [
       {
         "title": "Air Traffic Management Master Plan - NARAE (National ATM Renovation & Enhancement)",
@@ -330,7 +330,7 @@
         "date": "",
         "desc": "- The ash cloud from the Eyjafjallajokull volcano in Iceland caused a significant impact on aviation industry on April 14, 2010. Airports across Europe were closed, and at least 17,000 flights a day were cancelled for over a week. Overall 100,000 flights were cancelled and 10 million passengers were unable to board their flights during this week. After Iceland case, there have been many studies trying to address aviation industry impact of Volcanic Ash. However, most of the volcanic eruption scenario studies have limitations.\n- In TRUE lab, we analyze the damage of the airports and number of the cancelled flights depend on the hypothetical case of Mt. Baegdu eruption model to derive a predicted flights path and diffusion distance of volcanic ash. This research analyzes the effect of volcanic ash to air traffic and airport by quantification value by assessing volcanic ash concentration and its altitude.",
         "images": [
-          "/images/researchImg/9-11.png"
+          "/img/researchImg/9-11.png"
         ]
       }
     ]
@@ -341,7 +341,7 @@
     "menuTitle": "",
     "desc": "Includes risk factor analysis, accident hot spot study, and EMS response time coverage using historic traffic data.",
     "detail": "Transportation data has grown exponentially in the past decades, and opened a new channel to analyze and understand numerous common interests in the domain. At TRUE, we utilize multiple data sources for collision analysis and prediction, including feature selection of injury severity prediction, high collision area classification, and post-collision response. ",
-    "thumbnail": "/images/researchImg/10.png",
+    "thumbnail": "/img/researchImg/10.png",
     "research": [
       {
         "title": "Risk factor analysis",
@@ -359,7 +359,7 @@
         "desc": "- In the Emergency Medical Service (EMS), it is widely recognized that the response time - the time from receipt of an emergency call to arrival at the patient location, highly affects the patient survival rate. Response time consists of two components: pre-travel delay and travel time. The pre-travel delay is the amount of time between an emergency call and the vehicle mobilization, while the travel time is the time between the vehicle mobilization and arrival at the patient location.\n- Between the two components of response time, travel time addresses the larger portion in most cases, and is highly dependent on road traffic condition. There have been numerous researches to analyse the impact of traffic condition to emergency response time based on vehicle speed. However, travel speeds are assumed to be constant in most cases, and variations in travel speed due to conditions common to the road traffic system such as commute hour congestion are not properly addressed.  \n- In this research, time-varying speeds are defined for each street segment within a street network based on the historic traffic data. We propose a GIS-based method to calculate the k-minute travel time contour to represent the response time coverage, incorporating time-of-day and day-of-week effect on travel time in Seoul, South Korea. ",
         "images": [
           [
-            "/images/researchImg/10-5.png"
+            "/img/researchImg/10-5.png"
           ]
         ]
       },
@@ -369,7 +369,7 @@
         "desc": "- The ash cloud from the Eyjafjallajokull volcano in Iceland caused a significant impact on aviation industry on April 14, 2010. Airports across Europe were closed, and at least 17,000 flights a day were cancelled for over a week. Overall 100,000 flights were cancelled and 10 million passengers were unable to board their flights during this week. After Iceland case, there have been many studies trying to address aviation industry impact of Volcanic Ash. However, most of the volcanic eruption scenario studies have limitations.\n- In TRUE lab, we analyze the damage of the airports and number of the cancelled flights depend on the hypothetical case of Mt. Baegdu eruption model to derive a predicted flights path and diffusion distance of volcanic ash. This research analyzes the effect of volcanic ash to air traffic and airport by quantification value by assessing volcanic ash concentration and its altitude.",
         "images": [
           [
-            "/images/researchImg/10-6.png"
+            "/img/researchImg/10-6.png"
           ]
         ]
       }
