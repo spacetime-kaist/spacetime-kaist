@@ -19,7 +19,7 @@
       "participants": "Minwoo Jeong (M.S. candidate)",
       "keywords": "#SIGSPATIAL #LLM #Agent #SUMO",
       "desc":"M.S. candidate Minwoo presented the work “Speak to Simulate: An LLM-Guided Agentic Framework for Traffic Simulation in SUMO,” conducted with M.S. candidate Jeeyun, at the ACM SIGSPATIAL International Workshop on GeoSpatial Simulation (GeoSIM'25). The work has also been selected for the Association for Computing Machinery (ACM) Showcase on Kudos.\n\n[[LINK]](https://www.growkudos.com/publications/10.1145%25252F3764921.3770151/reader)\n\n[[LINK]](https://www.growkudos.com/publications/10.1145%25252F3764921.3770151/reader)",
-      "photos": ["/img/img/eventsImg/IMG_6734.jpg", "/img/img/eventsImg/IMG_6793.jpg"]
+      "photos": ["/images/eventsImg/IMG_6734.jpg", "/images/eventsImg/IMG_6793.jpg"]
     },
       {
       "id":  20251019,
@@ -28,7 +28,7 @@
       "participants": "Juneyoung Ro (M.S. candidate)",
       "keywords": "#ICCV #Vision",
       "desc":"M.S. student Juneyoung attended ICCV 2025 and presented the work “How Weel do Vision-Language Models Understand Cities? A Comparative Study on Spatial Reasoning from Street-View Images” (conducted with Postdoc researcher Namwoo) at the ICCV Workshop on Multimodal Reasoning and Slow Thinking in Large Model Era: Towards System 2 and Beyond (MARS2). The work investigated how spatially complex urban scenes can be understood through general-purpose VLMs and whether domain-specific fine-tuning can close the gap.\n\n[[Link]](https://openaccess.thecvf.com/content/ICCV2025W/MARS2/papers/Ro_How_Well_Do_Vision-Language_Models_Understand_Cities__A_Comparative_ICCVW_2025_paper.pdf)",
-      "photos": ["/img/img/eventsImg/IMG_0749.jpeg","/img/img/eventsImg/IMG_3152.JPG", "/img/img/eventsImg/IMG_3168.JPG"]
+      "photos": ["/images/eventsImg/IMG_0749.jpeg","/images/eventsImg/IMG_3152.JPG", "/images/eventsImg/IMG_3168.JPG"]
     },
     {
       "id": 20250930,
@@ -38,9 +38,9 @@
       "keywords": "#K-DS",
       "desc": "Our laboratory collaborated with the *MIT Senseable City Lab* at **Smart Life Week 2025**, presenting two exhibitions — “Urban Heat, Urban Sales” and “Feeling Nature” — centered on urban climate, citizens’ daily lives, and climate resilience.\n\nBased on credit card transaction data from 426 administrative districts in Seoul, covering 96 business sectors over 365 days, we quantitatively analyzed how climate factors such as temperature and humidity affect small business owners’ sales and sustainability. Using artificial intelligence, we modeled sales patterns by region and industry under climate stress conditions such as heatwaves and heavy rainfall, and visualized the results as an “Urban Resilience” index.",
       "photos": [
-        "/img/img/eventsImg/IMG_0227.jpg",
-        "/img/img/eventsImg/IMG_0299.jpg",
-        "/img/img/eventsImg/IMG_0306.jpg"
+        "/images/eventsImg/IMG_0227.jpg",
+        "/images/eventsImg/IMG_0299.jpg",
+        "/images/eventsImg/IMG_0306.jpg"
       ]
     },
     {
@@ -51,8 +51,8 @@
       "keywords": "#K-DS",
       "desc": "M.S. candidate Minwoo presented his work at K-DS conference and won the Best Paper Award.",
       "photos": [
-        "/img/img/eventsImg/IMG_5532.jpg",
-        "/img/img/eventsImg/IMG_5540.jpg"
+        "/images/eventsImg/IMG_5532.jpg",
+        "/images/eventsImg/IMG_5540.jpg"
       ]
     },
     {
@@ -63,7 +63,7 @@
       "keywords": "#CAUS",
       "desc": "CAUS workshop was held to present the first-year achievements of CAUS and to share the research progress of each lab.",
       "photos": [
-        "/img/img/eventsImg/caus250617.jpg"
+        "/images/eventsImg/caus250617.jpg"
       ]
     },
     {
@@ -73,8 +73,8 @@
       "participants": "Professor Yoonjin Yoon, Professor Uichin Lee, students",
       "keywords": "#CAUS #Monthly Seminar",
       "photos": [
-        "/img/img/eventsImg/unnamed(0).jpg",
-        "/img/img/eventsImg/unnamed(1).jpg"
+        "/images/eventsImg/unnamed(0).jpg",
+        "/images/eventsImg/unnamed(1).jpg"
       ]
     },
     {
@@ -84,8 +84,8 @@
       "participants": "Namwoo Kim (Postdoc Researcher), Sungmin Sohn (Ph.D. candidate), Minwoo Jeong (M.S. candidate)",
       "keywords": "#INFORMS #TSL",
       "photos": [
-        "/img/img/eventsImg/unnamed(2).jpg",
-        "/img/img/eventsImg/unnamed(3).jpg"
+        "/images/eventsImg/unnamed(2).jpg",
+        "/images/eventsImg/unnamed(3).jpg"
       ]
     },
     {
@@ -95,8 +95,8 @@
       "participants": "Professor Yoonjin Yoon, Professor Ilchul Moon, Professor Taesik Lee, Professor Minjoon Seo, Professor Changhyun Kwon, Professor Dongman Lee, students",
       "keywords": "#CAUS #Monthly Seminar",
       "photos": [
-        "/img/img/eventsImg/unnamed(4).jpg",
-        "/img/img/eventsImg/unnamed(5).jpg"
+        "/images/eventsImg/unnamed(4).jpg",
+        "/images/eventsImg/unnamed(5).jpg"
       ]
     },
     {
@@ -107,7 +107,7 @@
       "keywords": "#CEE Seminar",
       "desc": "*Amy M. Kim* is a Professor of Civil Engineering at the University of British Columbia in Vancouver, \non the traditional territories of the Musqueam people. \nWith the members of her lab, **UBC Multimodal Mobility Systems**, she investigates how long-distance transportation systems perform in connecting people across large geographies, particularly amid disruptions \ncaused by natural hazards and other climate change-induced events.\n\nHer work aims to support infrastructure and operational decision-making for climate change adaptation and emergency planning, and to train values-driven, community-minded practitioners and researchers.  \n\n*- BASc in Civil Engineering, University of Waterloo*\n\n*- MS and PhD, University of California, Berkeley*\n\n*- Professional experience in transportation consulting in California and BC*\n",
       "photos": [
-        "/img/img/eventsImg/unnamed(6).png"
+        "/images/eventsImg/unnamed(6).png"
       ]
     },
     {
@@ -117,11 +117,11 @@
       "participants": "Professor Yoonjin Yoon, Professor Carlo Ratti (Director of MIT Senseable City Lab), Professor Song Chong (Dean of KAIST Graduate School of AI), Mangi Kim (President of Seoul AI Foundation), Seyun Kim (Research Professor), Minwoo Jeong (M.S. candidate), Juneyoung Ro (M.S. candidate)",
       "keywords": "#AI Festa",
       "photos": [
-        "/img/img/eventsImg/unnamed(7).jpg",
-        "/img/img/eventsImg/unnamed(8).jpg",
-        "/img/img/eventsImg/unnamed(9).jpg",
-        "/img/img/eventsImg/unnamed(10).jpg",
-        "/img/img/eventsImg/unnamed(11).jpg"
+        "/images/eventsImg/unnamed(7).jpg",
+        "/images/eventsImg/unnamed(8).jpg",
+        "/images/eventsImg/unnamed(9).jpg",
+        "/images/eventsImg/unnamed(10).jpg",
+        "/images/eventsImg/unnamed(11).jpg"
       ]
     },
     {
@@ -131,11 +131,11 @@
       "participants": "Professors, leaders, students participating in CAUS",
       "keywords": "#CAUS",
       "photos": [
-        "/img/img/eventsImg/unnamed(12).jpg",
-        "/img/img/eventsImg/unnamed(13).jpg",
-        "/img/img/eventsImg/unnamed(14).jpg",
-        "/img/img/eventsImg/unnamed(15).jpg",
-        "/img/img/eventsImg/unnamed(16).jpg"
+        "/images/eventsImg/unnamed(12).jpg",
+        "/images/eventsImg/unnamed(13).jpg",
+        "/images/eventsImg/unnamed(14).jpg",
+        "/images/eventsImg/unnamed(15).jpg",
+        "/images/eventsImg/unnamed(16).jpg"
       ]
     },
     {
@@ -145,11 +145,11 @@
       "participants": "Seyun Kim (Research Professor), Sungmin Sohn (Ph.D. candidate), Donghyun Yoon (Ph.D. candidate), Minwoo Jeong (M.S. candidate)",
       "keywords": "#TRB",
       "photos": [
-        "/img/img/eventsImg/unnamed(17).jpg",
-        "/img/img/eventsImg/unnamed(18).jpg",
-        "/img/img/eventsImg/unnamed(19).jpg",
-        "/img/img/eventsImg/unnamed(20).jpg",
-        "/img/img/eventsImg/unnamed(21).jpg"
+        "/images/eventsImg/unnamed(17).jpg",
+        "/images/eventsImg/unnamed(18).jpg",
+        "/images/eventsImg/unnamed(19).jpg",
+        "/images/eventsImg/unnamed(20).jpg",
+        "/images/eventsImg/unnamed(21).jpg"
       ]
     },
     {
@@ -159,7 +159,7 @@
       "participants": "Prof. Changhyun Kwon, Prof. Yoonjin Yoon, students",
       "keywords": "#CAUS",
       "photos": [
-        "/img/img/eventsImg/unnamed(22).jpg"
+        "/images/eventsImg/unnamed(22).jpg"
       ]
     },
     {
@@ -183,9 +183,9 @@
       "participants": "Prof. Yoonjin Yoon, Prof. Dongman Lee, Prof. Jinkyoo Park, Prof. Changhyun Kwon, Prof. Taesik Lee, Dr. Seonghoon Kim (CTO at Motov), students",
       "keywords": "#CAUS",
       "photos": [
-        "/img/img/eventsImg/unnamed(23).png",
-        "/img/img/eventsImg/unnamed(24).png",
-        "/img/img/eventsImg/unnamed(25).jpg"
+        "/images/eventsImg/unnamed(23).png",
+        "/images/eventsImg/unnamed(24).png",
+        "/images/eventsImg/unnamed(25).jpg"
       ]
     },
     {
@@ -195,9 +195,9 @@
       "participants": "Donghyun Yoon (Ph.D. candidate), Sungmin Sohn (Ph.D. candidate), Juneyoung Ro (M.S. candidate), Seungro Lee (M.S. candidate)",
       "keywords": "#K-DS #Hackathon",
       "photos": [
-        "/img/img/eventsImg/unnamed(26).jpg",
-        "/img/img/eventsImg/unnamed(27).jpg",
-        "/img/img/eventsImg/unnamed(28).jpg"
+        "/images/eventsImg/unnamed(26).jpg",
+        "/images/eventsImg/unnamed(27).jpg",
+        "/images/eventsImg/unnamed(28).jpg"
       ]
     },
     {
@@ -207,11 +207,11 @@
       "participants": "Prof. Yoonjin Yoon, Seyun Kim (Research Professor), Namwoo Kim (PostDoc Researcher), Sungmin Sohn (Ph.D. candidate), Donghyun Yoon (Ph.D. candidate)",
       "keywords": "#한국경영과학회",
       "photos": [
-        "/img/img/eventsImg/unnamed(29).jpg",
-        "/img/img/eventsImg/unnamed(30).jpg",
-        "/img/img/eventsImg/unnamed(31).jpg",
-        "/img/img/eventsImg/unnamed(32).jpg",
-        "/img/img/eventsImg/unnamed(33).jpg"
+        "/images/eventsImg/unnamed(29).jpg",
+        "/images/eventsImg/unnamed(30).jpg",
+        "/images/eventsImg/unnamed(31).jpg",
+        "/images/eventsImg/unnamed(32).jpg",
+        "/images/eventsImg/unnamed(33).jpg"
       ]
     },
     {
@@ -221,7 +221,7 @@
       "participants": "Prof. Changhyun Kwon, Prof. Seyun Kim, students",
       "keywords": "#CAUS",
       "photos": [
-        "/img/img/eventsImg/unnamed(34).jpg"
+        "/images/eventsImg/unnamed(34).jpg"
       ]
     },
     {
@@ -231,7 +231,7 @@
       "participants": "Prof. Yoonjin Yoon, Prof. Changhyun Kwon, students",
       "keywords": "#CAUS",
       "photos": [
-        "/img/img/eventsImg/unnamed(35).jpg"
+        "/images/eventsImg/unnamed(35).jpg"
       ]
     },
     {
@@ -241,10 +241,10 @@
       "participants": "Juneyoung Ro (M.S. Candidate)",
       "keywords": "#ICTC",
       "photos": [
-        "/img/img/eventsImg/unnamed(36).jpg",
-        "/img/img/eventsImg/unnamed(37).jpg",
-        "/img/img/eventsImg/unnamed(38).jpg",
-        "/img/img/eventsImg/unnamed(39).jpg"
+        "/images/eventsImg/unnamed(36).jpg",
+        "/images/eventsImg/unnamed(37).jpg",
+        "/images/eventsImg/unnamed(38).jpg",
+        "/images/eventsImg/unnamed(39).jpg"
       ]
     },
     {
@@ -261,7 +261,7 @@
       "participants": "Prof. Yoonjin Yoon, Prof. Changhyun Kwon, Prof. Seyun Kim, Prof. Dongman Lee, Prof. Minjoon Seo",
       "keywords": "#CAUS",
       "photos": [
-        "/img/img/eventsImg/unnamed(40).jpg"
+        "/images/eventsImg/unnamed(40).jpg"
       ]
     },
     {
@@ -271,7 +271,7 @@
       "participants": "Prof. Yoonjin Yoon, Prof. Taesik Lee, students",
       "keywords": "#CAUS",
       "photos": [
-        "/img/img/eventsImg/unnamed(41).jpg"
+        "/images/eventsImg/unnamed(41).jpg"
       ]
     },
     {
@@ -281,8 +281,8 @@
       "participants": "Donghyun Yoon (Ph.D. candidate), Minwoo Jeong (M.S. candidate)",
       "keywords": "#한국도로공사",
       "photos": [
-        "/img/img/eventsImg/unnamed(42).jpg",
-        "/img/img/eventsImg/unnamed(43).jpg"
+        "/images/eventsImg/unnamed(42).jpg",
+        "/images/eventsImg/unnamed(43).jpg"
       ]
     },
     {
@@ -292,8 +292,8 @@
       "participants": "Prof. Yoonjin Yoon, Prof. Changhyun Kwon, Prof. Taesik Lee, Prof. Dongman Lee, Prof. Jinkyoo Park, Prof. Minjoon Seo",
       "keywords": "#CAUS",
       "photos": [
-        "/img/img/eventsImg/unnamed(44).jpg",
-        "/img/img/eventsImg/unnamed(45).jpg"
+        "/images/eventsImg/unnamed(44).jpg",
+        "/images/eventsImg/unnamed(45).jpg"
       ]
     },
     {
@@ -302,9 +302,9 @@
       "place": "August 22, 2024, 14:30 pm KST",
       "keywords": "#CAUS",
       "photos": [
-        "/img/img/eventsImg/unnamed(46).jpg",
-        "/img/img/eventsImg/unnamed(47).jpg",
-        "/img/img/eventsImg/unnamed(48).jpg"
+        "/images/eventsImg/unnamed(46).jpg",
+        "/images/eventsImg/unnamed(47).jpg",
+        "/images/eventsImg/unnamed(48).jpg"
       ]
     },
     {
@@ -342,7 +342,7 @@
       "participants": "Prof. Yoonjin Yoon, Prof. Changhyun Kwon, GS, students",
       "keywords": "#CAUS",
       "photos": [
-        "/img/img/eventsImg/unnamed(49).jpg"
+        "/images/eventsImg/unnamed(49).jpg"
       ]
     },
     {
@@ -352,7 +352,7 @@
       "participants": "Prof. Jinkyoo Park, Prof. Minjoon Seo, Speaker: Yuyol Shin (Ph.D, Postdoctoral Researcher, KAIST)",
       "keywords": "#traffic forecasting",
       "photos": [
-        "/img/img/eventsImg/unnamed(50).jpg"
+        "/images/eventsImg/unnamed(50).jpg"
       ]
     },
     {
@@ -363,10 +363,10 @@
       "keywords": "#civil infrastructures",
       "desc": "**Talk:** Cyber Physical System for Civil Infrastructures",
       "photos": [
-        "/img/img/eventsImg/unnamed(51).jpg",
-        "/img/img/eventsImg/unnamed(52).jpg",
-        "/img/img/eventsImg/unnamed(53).jpg",
-        "/img/img/eventsImg/unnamed(54).jpg"
+        "/images/eventsImg/unnamed(51).jpg",
+        "/images/eventsImg/unnamed(52).jpg",
+        "/images/eventsImg/unnamed(53).jpg",
+        "/images/eventsImg/unnamed(54).jpg"
       ]
     },
     {
@@ -377,7 +377,7 @@
       "keywords": "#Human flows #Urban space",
       "desc": "Understanding Urban State Changes via Human Flow Analysis",
       "photos": [
-        "/img/img/eventsImg/unnamed(55).png"
+        "/images/eventsImg/unnamed(55).png"
       ]
     },
     {
@@ -406,7 +406,7 @@
       "keywords": "#mobility #climatechange #health #policy #inequality",
       "desc": "Responsible and Responsive City - The Next Phase of Urban Planning",
       "photos": [
-        "/img/img/eventsImg/unnamed(56).png"
+        "/images/eventsImg/unnamed(56).png"
       ]
     },
     {
