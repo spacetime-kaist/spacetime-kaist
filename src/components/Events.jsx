@@ -424,9 +424,9 @@ export default function EventsPage() {
                 <button
                   type="button"
                   onClick={clearFilters}
-                  className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm font-medium text-slate-600 hover:bg-slate-200 transition-colors"
+                  className="w-full rounded-md border border-blue-300 px-3 py-2 text-sm font-medium text-blue-600 hover:bg-slate-200 transition-colors"
                 >
-                  Clear filters
+                  Reset filters
                 </button>
               )}
             </div>
