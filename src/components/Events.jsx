@@ -3,7 +3,6 @@ import ReactMarkdown from 'react-markdown';
 import { useLocation, useSearchParams } from 'react-router-dom';
 import { useDataLoader } from '../hooks/useDataLoader';
 
-
 const formatDate = (start, end) => {
   if (!start) return null;
   const daySuffix = (day) => {
@@ -162,7 +161,8 @@ const EventMasonryCard = (event) => (
               key={idx}
               src={photo}
               alt={`${event.title} photo ${idx + 1}`}
-              className={`mb-2 ${event.photos.length > 1 ? 'w-full' : 'w-full max-w-4xl'} rounded-md`}
+              className={`mb-2 ${event.photos.length > 1 ? 'w-full' : 'w-full max-w-4xl'} rounded-md hover:brightness-95 hover:scale-105 transition-transform duration-200 cursor-pointer object-cover border border-gray-200`}
+              onDoubleClick={() => window.open(photo, "_blank")}
             />
           ))}
         </div>
@@ -436,7 +436,7 @@ export default function EventsPage() {
                     {isExpanded && (
                       <div className="space-y-6 pt-2">
                         {events.map((event) => (
-                          <EventMasonryCard key={event.id} {...event} />
+                          <EventMasonryCard key={event.id} {...event}/>
                         ))}
                       </div>
                     )}
