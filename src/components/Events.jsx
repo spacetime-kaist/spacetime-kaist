@@ -54,20 +54,22 @@ const getCategoryStyle = (category) => categoryStyles[category] || 'bg-slate-100
 const EventMasonryCard = (event) => (
   <article
     id={event.id}
-    className="mb-6 overflow-hidden rounded-xl border border-slate-200/80 bg-white shadow-sm transition-shadow hover:shadow-md"
+    className={`mb-6 overflow-hidden rounded-xl border border-slate-200/80 bg-white shadow-sm transition-shadow hover:shadow-md
+                grid ${event.photos &&event.photos.length ? 'sm:grid-cols-5' : ''} grid-cols-1 gap-4 sm:gap-6`}
   >
     {/* Hero image */}
-    {/* {event.photos?.[0] && (
-      <div className="aspect-[3/1] max-h-40 w-full overflow-hidden bg-slate-100">
-        <img
-          src={event.photos[0]}
-          alt=""
-          className="h-full w-full object-cover"
-        />
+     {event.photos && event.photos.length && (
+      // when only one photo, show on the right of the article
+      <div className={`hidden sm:block col-span-2 flex justify-center items-start ml-4 mt-4 sm:ml-8 sm:mt-8`}>
+          <img
+            src={event.photos[0]}
+            alt={`${event.title} photo 1`}
+            className={`mb-2 w-full max-w-4xl rounded-md hover:brightness-95 hover:scale-105 transition-transform duration-200 cursor-pointer object-cover border border-gray-200`}
+            onDoubleClick={() => window.open(event.photos[0], "_blank")}
+          />
       </div>
-    )} */}
-
-    <div className="p-4 sm:p-5">
+      )}
+    <div className="p-4 sm:p-5 col-span-3">
       {/* Category, award, date & place */}
       <div className="mb-2 flex flex-wrap items-center gap-1.5">
         {event.category && (
@@ -151,25 +153,46 @@ const EventMasonryCard = (event) => (
           className="w-full max-w-4xl aspect-video rounded-md object-cover border border-gray-300"
         />
       )}
-        {event.photos && event.photos.length > 0 && (
-          <div>
-            <span className="mb-1.5 block text-[10px] font-semibold uppercase tracking-wider text-slate-400">Photos</span>
+      
+      {event.photos && event.photos.length > 1 && (
+        // only when more then two photos
+        <div>
+          <span className="mb-1.5 block text-[10px] font-semibold uppercase tracking-wider text-slate-400">Photos</span>
 
-        <div className={`columns-1 ${event.photos.length > 1 ? 'sm:columns-2 lg:columns-3' : ''} gap-4 w-full max-w-6xl`}>
-          {event.photos.map((photo, idx) => (
-            <img
-              key={idx}
-              src={photo}
-              alt={`${event.title} photo ${idx + 1}`}
-              className={`mb-2 ${event.photos.length > 1 ? 'w-full' : 'w-full max-w-4xl'} rounded-md hover:brightness-95 hover:scale-105 transition-transform duration-200 cursor-pointer object-cover border border-gray-200`}
-              onDoubleClick={() => window.open(photo, "_blank")}
-            />
-          ))}
+      <div className={`columns-2 ${event.photos.length > 2 ? 'lg:columns-3' : ''} gap-4 w-full max-w-6xl`}>
+        <div className={`block sm:hidden`}>
+          <img
+            src={event.photos[0]}
+            alt={`${event.title} photo 1`}
+            className={`mb-2 w-full max-w-4xl rounded-md hover:brightness-95 hover:scale-105 transition-transform duration-200 cursor-pointer object-cover border border-gray-200`}
+            onDoubleClick={() => window.open(event.photos[0], "_blank")}
+          />
         </div>
-          </div>
-        )}
+        {event.photos.slice(1).map((photo, idx) => (
+          <img
+            key={idx}
+            src={photo}
+            alt={`${event.title} photo ${idx + 1}`}
+            className={`mb-2 w-full max-w-4xl rounded-md hover:brightness-95 hover:scale-105 transition-transform duration-200 cursor-pointer object-cover border border-gray-200`}
+            onDoubleClick={() => window.open(photo, "_blank")}
+          />
+        ))}
+      </div>
+        </div>
+      )}
       </div>
     </div>
+    {/* {event.photos && event.photos.length == 1 && (
+      // when only one photo, show on the right of the article
+      <div className={`col-span-2 flex justify-center items-start mr-4 mt-4 sm:mr-8 sm:mt-8`}>
+          <img
+            src={event.photos[0]}
+            alt={`${event.title} photo 1`}
+            className={`mb-2 ${event.photos.length > 1 ? 'w-full' : 'w-full max-w-4xl'} rounded-md hover:brightness-95 hover:scale-105 transition-transform duration-200 cursor-pointer object-cover border border-gray-200`}
+            onDoubleClick={() => window.open(event.photos[0], "_blank")}
+          />
+      </div>
+      )} */}
   </article>
 );
 
