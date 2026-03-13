@@ -55,18 +55,6 @@
       "photo": "/peopleImg/4.jpg"
     },
     {
-      "id": 5,
-      "name": "Minwoo Jeong",
-      "link": "https://sites.google.com/view/minwoo-jeong",
-      "role": "M.S. Candidate",
-      "from": "2024.03~",
-      "email": "minwoo5003@kaist.ac.kr",
-      "edu": [
-        "B.S. in Economics and Data Science, University of Seoul"
-      ],
-      "photo": "/peopleImg/5.jpg"
-    },
-    {
       "id": 6,
       "name": "Juneyoung Ro",
       "link": "https://sites.google.com/view/juneyoungro",
@@ -186,7 +174,7 @@
       "degree": "Ph.D.",
       "date": "2016.03~2021.02",
       "photo": "/peopleImg/19.jpg",
-      "desc": "2021.03~2025.07\n\n  (Research Assistant Professor)"
+      "desc": "2021.03~2025.07 (Research Assistant Professor)"
     },
     {
       "id": 20,
@@ -284,6 +272,13 @@
       "name": "Junghee Kim",
       "degree": "M.S.",
       "date": "2022.09~2024.07"
-    }
+    },
+    {
+      "id": 5,
+      "name": "Minwoo Jeong",
+      "link": "https://sites.google.com/view/minwoo-jeong",
+      "degree": "M.S.",
+      "date": "2024.03~2026.02"
+    },
   ]
 }
