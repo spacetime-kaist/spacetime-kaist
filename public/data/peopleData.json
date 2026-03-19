@@ -55,16 +55,17 @@
       "photo": "/peopleImg/4.jpg"
     },
     {
-      "id": 6,
-      "name": "Juneyoung Ro",
-      "link": "https://sites.google.com/view/juneyoungro",
-      "role": "M.S. Candidate",
-      "from": "2024.03~",
-      "email": "juneyoung.ro@kaist.ac.kr",
+      "id": 5,
+      "name": "Minwoo Jeong",
+      "link": "https://sites.google.com/view/minwoo-jeong",
+      "role": "Researcher",
+      "from": "2026.03~",
+      "email": "minwoo5003@kaist.ac.kr",
       "edu": [
-        "B.S. in Quantitative Sciences and Biology, Emory University"
+        "M.S. in Data Science, KAIST",
+        "B.S. in Economics and Data Science, University of Seoul"
       ],
-      "photo": "/peopleImg/6.jpg"
+      "photo": "assets/images/people/5.jpg"
     },
     {
       "id": 7,
@@ -106,7 +107,7 @@
       "from": "2025.09~",
       "email": "jh.ohk@kaist.ac.kr",
       "edu": [
-        "B.S. in Civil Engineering, Kyoto University"
+        "B.S. in Civil, Environmental and Resources Engineering, Kyoto University"
       ],
       "photo": "/peopleImg/10.jpg"
     }
@@ -173,8 +174,7 @@
       "name": "Seyun Kim",
       "degree": "Ph.D.",
       "date": "2016.03~2021.02",
-      "photo": "/peopleImg/19.jpg",
-      "desc": "2021.03~2025.07 (Research Assistant Professor)"
+      "photo": "/peopleImg/19.jpg"
     },
     {
       "id": 20,
@@ -274,10 +274,10 @@
       "date": "2022.09~2024.07"
     },
     {
-      "id": 5,
-      "name": "Minwoo Jeong",
+      "id": 6,
+      "name": "Juneyoung Ro",
       "degree": "M.S.",
       "date": "2024.03~2026.02"
-    }
+    },
   ]
 }
