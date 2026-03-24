@@ -1,5 +1,5 @@
 [
-        {
+   {
       "id": "20260220",
       "title": "Congratulations to Our Graduates",
       "category": "ceremony",
@@ -55,7 +55,7 @@
         "ICCV",
         "Vision"
       ],
-      "desc": "M.S. student Juneyoung attended ICCV 2025 and presented the work \"How Weel do Vision-Language Models Understand Cities? A Comparative Study on Spatial Reasoning from Street-View Images\" (conducted with Postdoc researcher Namwoo) at the ICCV Workshop on Multimodal Reasoning and Slow Thinking in Large Model Era: Towards System 2 and Beyond (MARS2). The work investigated how spatially complex urban scenes can be understood through general-purpose VLMs and whether domain-specific fine-tuning can close the gap.",
+      "desc": "M.S. student Juneyoung attended ICCV 2025 and presented the work \"How Well do Vision-Language Models Understand Cities? A Comparative Study on Spatial Reasoning from Street-View Images\" (conducted with Postdoc researcher Namwoo) at the ICCV Workshop on Multimodal Reasoning and Slow Thinking in Large Model Era: Towards System 2 and Beyond (MARS2). The work investigated how spatially complex urban scenes can be understood through general-purpose VLMs and whether domain-specific fine-tuning can close the gap.",
       "photos": [
         "/eventsImg/IMG_0749.jpeg",
         "/eventsImg/IMG_3152.JPG",
