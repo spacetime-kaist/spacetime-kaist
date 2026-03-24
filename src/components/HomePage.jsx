@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, version } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useDataLoader } from '../hooks/useDataLoader';
 // Import UI
@@ -11,50 +11,21 @@ import pressImg from '../assets/images_20251029.jpg';
 import ReactMarkdown from 'react-markdown';
 import NavbarCategorized from '../utility/NavbarCategorized';
 
-
 // to reduce cost, events in the same order
 // const eventsMap = Object.fromEntries(eventsData.map(event=>[event.id, event]));
 // const homeEventsData = homeEventsList.map(id => eventsMap[id])
 
-// image and txt
-const EventsCard = (event) => (
-  <figure className="bg-white hover:bg-white/90 border border-slate-200 shadow shadow-sm hover:shadow-2xl transition-transform duration-500 hover:scale-120 ">
-    <div className=" m-7 overflow-hidden bg-gradient-to-br from-gray-200 to-gray-100 flex items-center justify-center">
-      <div className="flex flex-col gap-2">
-        {event.photos ? event.photos.slice(0,1).map((photo, idx) => (
-          <img
-            key={idx}
-            src={`${photo}`}
-            alt={`${event.title} photo ${idx + 1}`}
-            className="w-full object-fill"
-          />
-          ))
-        :
-          <img
-            src={stilLogo}
-            alt={'default photo'}
-            className="w-full h-48 object-cover"
-          />
-        }
-      </div>
-    </div>
-    <figcaption className="p-4 bg-white ">
-      <div className="text-lg sm:text-2xl text-slate-900">{event.title}</div>
-      <div className="text-md text-blue-400 mt-1">{event.place}</div>
-      {/* <div className="text-sm text-blue-500 mt-1">{event.keywords}</div> */}
-    </figcaption>
-  </figure>
-);
-
 
 export default function HomePage() {
-  const { data: eventsDataObj, loading: eventsLoading } = useDataLoader('eventsData');
+
   const { data: pressData, loading: pressLoading } = useDataLoader('pressData');
   const { data: researchData, loading: researchLoading } = useDataLoader('researchData');
+  const { data: homeData, loading: homeLoading } = useDataLoader('homeData');
+  const { data: eventsData, loading: eventsDataLoading } = useDataLoader('eventsData');
   
-  const eventsData = eventsDataObj?.eventsData || [];
-  const homeEventsList = eventsDataObj?.homeEventsList || [];
-  const loading = eventsLoading || pressLoading || researchLoading;
+  const homeEventsList =  homeData?.homeEventsList || [];
+  const loading = pressLoading || researchLoading || homeLoading || eventsDataLoading;
+  const homeEventsData = loading?[]:eventsData.filter(event => homeEventsList.includes(event.id));
 
   // Slide Show
   const [slideIdx, setSlideIndex] = useState(0);
@@ -69,16 +40,87 @@ export default function HomePage() {
 
   const currentSlide = researchData?.[slideIdx];
 
-  const scrollRef = useRef(null);
-  const handleWheel = (e) => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollLeft += e.deltaY*5;
-    }
+  const [eventsIndex, setEventsIndex] = useState(0);
+  const [eventsPerPage, setEventsPerPage] = useState(3);
+
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const mq1 = window.matchMedia('(max-width: 639px)');
+    const mq2 = window.matchMedia('(min-width: 640px) and (max-width: 1023px)');
+    const update = () => {
+      setIsMobile(mq1.matches);
+      if (mq1.matches) setEventsPerPage(1);
+      else if (mq2.matches) setEventsPerPage(2);
+      else setEventsPerPage(3);
+    };
+    update();
+    mq1.addEventListener('change', update);
+    mq2.addEventListener('change', update);
+    return () => {
+      mq1.removeEventListener('change', update);
+      mq2.removeEventListener('change', update);
+    };
+  }, []);
+
+  const eventsCount = homeEventsData?.length || 0;
+  const totalPages = Math.max(1, Math.ceil(eventsCount / eventsPerPage));
+  const lastStart = Math.max(0, eventsCount - eventsPerPage);
+
+  useEffect(() => {
+    setEventsIndex((i) => Math.min(i, lastStart));
+  }, [eventsPerPage, lastStart]);
+
+  const currentPage = totalPages > 1 ? Math.min(Math.floor(eventsIndex / eventsPerPage), totalPages - 1) : 0;
+  const canGoLeft = totalPages > 1;
+  const canGoRight = totalPages > 1;
+  const goLeft = () => setEventsIndex((i) => (i <= 0 ? lastStart : i - eventsPerPage));
+  const goRight = () => setEventsIndex((i) => (i >= lastStart ? 0 : i + eventsPerPage));
+  const goToPage = (page) => setEventsIndex(Math.min(page * eventsPerPage, lastStart));
+
+  const getEventDayMonth = (ev) => {
+    if (!ev?.start) return { day: '', month: '', year: '' };
+    const d = new Date(ev.start);
+    return {
+      day: d.getDate(),
+      month: d.toLocaleDateString('en-US', { month: 'short' }),
+      year: d.getFullYear(),
+    };
   };
-  const scroll = (direction) => {
-  if (!scrollRef.current) return;
-  scrollRef.current.scrollBy({ left: direction === "left" ? -900 : 900, behavior: "smooth" });
-};
+
+  const touchStartX = useRef(0);
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+  const goRightOneCard = () => setEventsIndex((i) => (i >= eventsCount - 1 ? 0 : i + 1));
+  const goLeftOneCard = () => setEventsIndex((i) => (i <= 0 ? Math.max(0, eventsCount - 1) : i - 1));
+  const handleTouchEnd = (e) => {
+    const endX = e.changedTouches[0].clientX;
+    const delta = touchStartX.current - endX;
+    const threshold = 50;
+    if (delta > threshold) goRightOneCard();
+    else if (delta < -threshold) goLeftOneCard();
+  };
+
+  const carouselRef = useRef(null);
+  const [carouselWidth, setCarouselWidth] = useState(0);
+  useEffect(() => {
+    const el = carouselRef.current;
+    if (!el) return;
+    const update = () => setCarouselWidth(el.offsetWidth);
+    update();
+    const ro = new ResizeObserver(update);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
+
+  const CARD_WIDTH = 320;
+  const CARD_GAP = 24;
+  const CARD_STEP = CARD_WIDTH + CARD_GAP;
+  const maxTranslate = carouselWidth / 2 - CARD_WIDTH / 2;
+  const minTranslate = eventsCount > 0 ? carouselWidth / 2 - CARD_WIDTH / 2 - (eventsCount - 1) * CARD_STEP : 0;
+  const translateX = isMobile && carouselWidth > 0
+    ? Math.min(maxTranslate, Math.max(minTranslate, carouselWidth / 2 - CARD_WIDTH / 2 - eventsIndex * CARD_STEP))
+    : -eventsIndex * CARD_STEP;
 
 
 
@@ -231,82 +273,110 @@ export default function HomePage() {
           </div>
         </section>
 
+      
         
+        {/* Events Section - carousel with date-led cards */}
+        <section id="events" className="relative py-20">
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-600 to-slate-500" />
+          <div className="absolute inset-0 opacity-30" style={{ backgroundImage: 'linear-gradient(135deg, transparent 40%, rgba(255,255,255,0.03) 50%, transparent 60%)' }} />
+          <div className="container relative z-10">
+            <h2 className="text-white text-center font-serif text-5xl md:text-7xl tracking-tight">Events</h2>
+            <p className="pb-10 pt-4 flex justify-center text-slate-300 text-lg max-w-2xl mx-auto text-center">
+              Explore our past events, conferences, and workshops.
+            </p>
 
-        {/* Events Section */}
-        <section id="events" className="py-20 bg-slate-400 ">
-          <div className="container">
-            <h2 className="text-white text-center font-serif text-5xl md:text-7xl ">Events</h2>
-            {/* <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:md:grid-cols-3 gap-6"> */}
-            <p className="pb-20 pt-5 flex justify-center text-gray-300 "> Explore our past events, conferences, and workshops.</p>
-            <div className="mt-6 columns-1 md:columns-2 lg:columns-3 gap-6">
-              {eventsData && eventsData.length > 0 && eventsData.slice(0,20).map((event) => (
-                <div key={event.id} className='break-inside-avoid mb-3'>
-                <Link to={`/events#${event.id}`}>
-                <EventsCard {...event} className="min-w-[300px]" />
-                </Link>
+            <div className="relative flex items-center justify-center gap-3 px-2 sm:px-4">
+              <button
+                type="button"
+                onClick={goLeft}
+                disabled={!canGoLeft}
+                className="hidden sm:flex shrink-0 w-12 h-12 rounded-full bg-white/20 text-white text-2xl font-light disabled:opacity-30 disabled:cursor-not-allowed hover:bg-white/30 transition-all border border-white/30 items-center justify-center"
+                aria-label="Previous events"
+              >
+                ‹
+              </button>
+
+              <div
+                ref={carouselRef}
+                className="overflow-hidden w-full touch-pan-y"
+                onTouchStart={handleTouchStart}
+                onTouchEnd={handleTouchEnd}
+              >
+                <div
+                  className="flex gap-6 transition-transform duration-300 ease-out"
+                  style={{ transform: `translateX(${translateX}px)` }}
+                >
+                  {homeEventsData && homeEventsData.length > 0 && homeEventsData.map((ev, i) => {
+                    const { day, month, year } = getEventDayMonth(ev);
+                    const isActive = i === eventsIndex;
+                    return (
+                      <Link
+                        key={ev.id ?? i}
+                        to={`/events?scroll=${ev.id}`}
+                        className={`group flex-shrink-0 w-[min(320px,85vw)] rounded-2xl bg-white shadow-lg overflow-hidden transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-transparent ${!isActive ? 'opacity-80 hover:opacity-90' : 'shadow-xl'}`}
+                      >
+                        <div className="p-5 pb-4">
+                          <div className="mb-3">
+                            <span className="block text-3xl font-bold leading-none text-slate-900">{day}</span>
+                            <span className="block text-sm font-normal text-slate-700 mt-0.5">{month} {year}</span>
+                            <div className="mt-2 h-px w-8 bg-slate-900" />
+                          </div>
+                          {/* {ev.category && (
+                            <span className="inline-block text-[10px] font-medium uppercase tracking-wider text-slate-500 bg-slate-100 rounded px-2 py-0.5 mb-2">
+                              {ev.category}
+                            </span>
+                          )} */}
+                          <h3 className="text-lg font-bold text-slate-900 mt-1 line-clamp-2 group-hover:text-slate-700">{ev.title}</h3>
+                          {ev.place && (
+                            <p className="text-xs text-sky-700 mt-1.5 line-clamp-1">{ev.place}</p>
+                          )}
+                          <ReactMarkdown className="text-sm text-slate-500 mt-2 line-clamp-3">{ev.desc?.replace(/\s+/g, ' ').trim()}</ReactMarkdown>
+                          
+                        </div>
+                        <div className="aspect-[4/3] min-h-[140px] overflow-hidden bg-slate-100 rounded-b-2xl">
+                          {ev.photos?.[0] ? (
+                            <img src={ev.photos[0]} alt="" className="h-full w-full object-cover" />
+                          ) : (
+                            <img src={stilLogo} alt="" className="h-full w-full object-contain p-6" />
+                          )}
+                        </div>
+                      </Link>
+                    );
+                  })}
                 </div>
-              ))}
+              </div>
+
+              <button
+                type="button"
+                onClick={goRight}
+                disabled={!canGoRight}
+                className="hidden sm:flex shrink-0 w-12 h-12 rounded-full bg-white/20 text-white text-2xl font-light disabled:opacity-30 disabled:cursor-not-allowed hover:bg-white/30 transition-all border border-white/30 items-center justify-center"
+                aria-label="Next events"
+              >
+                ›
+              </button>
             </div>
-            <SeeMoreButton linkto="/events" />
+
+            {totalPages > 1 && (
+              <div className="flex justify-center gap-2 mt-8">
+                {Array.from({ length: totalPages }, (_, p) => (
+                  <button
+                    key={p}
+                    type="button"
+                    onClick={() => goToPage(p)}
+                    className={`rounded-full transition-all ${
+                      p === currentPage ? 'h-2.5 w-2.5 bg-white' : 'h-2 w-2 bg-white/50 hover:bg-white/70'
+                    }`}
+                    aria-label={`Go to slide ${p + 1}`}
+                  />
+                ))}
+              </div>
+            )}
+            <div className="mt-8 flex justify-center">
+              <SeeMoreButton linkto="/events" />
+            </div>
           </div>
         </section>
-        
-        {/* Events Section2 */}
-        {/* <section id="events" className="py-20 bg-slate-400 ">
-          <div className="container">
-            <h2 className="text-white text-center font-serif text-5xl md:text-7xl ">Events</h2>
-            <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:md:grid-cols-3 gap-6">
-            <p className="pb-15 pt-5 flex justify-center text-gray-300 "> Explore our past events, conferences, and workshops.</p>
-            <div className="flex justify-between items-center mb-6">
-          <div className="flex gap-2">
-            <div variant="ghost" size="icon" onClick={() => scroll("left")}>
-              {'<'}
-            </div>
-            <div variant="ghost" size="icon" onClick={() => scroll("right")}>
-              {'>'}
-            </div>
-          </div>
-        </div>
-
-        <div
-          ref={scrollRef}
-          onWheel = {handleWheel}
-          className="flex overflow-x-scroll overflow-y-hidden gap-6 scroll-smooth scrollbar-hide snap-x snap-mandatory [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)"
-        >
-          {eventsData && eventsData.length > 0 && eventsData.slice(0,20).map((ev, i) => (
-            <div
-              key={i}
-              className="min-w-[400px] max-w-[400px] flex-shrink-0 rounded-2xl shadow-md hover:shadow-lg transition-all bg-white"
-            >
-              <div className="p-6">
-                <p className="text-sm text-gray-500 mb-2">{ev.date}</p>
-                <h3 className="text-xl font-semibold mb-2">{ev.title}</h3>
-                <p className="text-gray-700 text-sm">{ev.desc}</p>
-              </div>
-              <div className="max-w-[300px] flex flex-col gap-2">
-                {ev.photos ? ev.photos.slice(0,1).map((photo, idx) => (
-                  <img
-                    key={idx}
-                    src={`${photo}`}
-                    alt={`${ev.title} photo ${idx + 1}`}
-                    className="w-full object-fill"
-                  />
-                  ))
-                :
-                  <img
-                    src={stilLogo}
-                    alt={'default photo'}
-                    className="w-full h-48 object-cover"
-                  />
-                }
-            </div>
-            </div>
-          ))}
-        </div>
-            <SeeMoreButton linkto="/events" />
-          </div>
-        </section> */}
 
         {/* <section id="contact" className="py-12 bg-gradient-to-b from-gray-50 to-white">
           <div className="container">
