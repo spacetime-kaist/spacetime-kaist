@@ -46,9 +46,9 @@ const categoryStyles = {
   workshop: 'bg-emerald-100 text-emerald-800',
   exhibition: 'bg-amber-100 text-amber-800',
   meeting: 'bg-slate-100 text-slate-700',
-  award: 'bg-rose-100 text-rose-800',
+  honors: 'bg-rose-100 text-rose-800',
   seminar: 'bg-teal-100 text-teal-800',
-  hackathon: 'bg-orange-100 text-orange-800',
+  ceremony: 'bg-orange-100 text-orange-800',
 };
 const getCategoryStyle = (category) => categoryStyles[category] || 'bg-slate-100 text-slate-600';
 const EventMasonryCard = (event) => (
