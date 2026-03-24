@@ -36,7 +36,7 @@ const AluminiCard = (member) => (
       :
       <h3 className="text-xl font-semibold mb-1">{member.name}</h3>}
     <p className="text-gray-400 text-sm mb-2">{member.date}</p>
-    {member.desc && <ReactMarkdown className="markdown">{member.desc}</ReactMarkdown>}
+    {member.desc && <ReactMarkdown className="markdown text-gray-300 text-sm">{member.desc}</ReactMarkdown>}
   </div>
 );
 
