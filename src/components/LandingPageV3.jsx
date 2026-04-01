@@ -1,7 +1,7 @@
 import React, { useMemo, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useDataLoader } from '../hooks/useDataLoader';
-import NavbarCategorized from '../utility/NavbarCategorized';
+import Navbar from '../utility/Navbar';
 import ScrollUpBt from '../utility/ScrollUpButton';
 
 const parseYear = (v) => { const n = Number.parseInt(v, 10); return Number.isNaN(n) ? 0 : n; };
@@ -62,7 +62,7 @@ export default function LandingPageV3() {
   if (loading) {
     return (
       <div id="top" className="font-display w-screen min-h-screen bg-white">
-        <div className="w-full h-16" /><NavbarCategorized />
+        <div className="w-full h-16" /><Navbar />
         <div className="max-w-6xl mx-auto px-6 pt-28 text-gray-400">Loading…</div>
       </div>
     );
@@ -72,7 +72,7 @@ export default function LandingPageV3() {
     <div id="top" className="font-display flex flex-col items-center overflow-hidden">
       <div className="w-screen min-w-[320px]">
         <div className="w-full h-16" />
-        <NavbarCategorized />
+        <Navbar />
         <ScrollUpBt />
 
         {/* ══════════════════════════════════════════

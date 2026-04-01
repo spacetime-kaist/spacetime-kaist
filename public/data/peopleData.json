@@ -18,7 +18,7 @@
     {
       "id": 2,
       "name": "Namwoo Kim",
-      "link": "https://sites.google.com/view/namwookim",
+      "link": "namwoo0910.github.io",
       "role": "Postdoctoral Researcher",
       "from": "2023.09~",
       "email": "ih736x@kaist.ac.kr",
@@ -32,6 +32,7 @@
       "id": 3,
       "name": "Sungmin Sohn",
       "link": "https://sites.google.com/view/sungmin-sohn",
+      "linkedin": "https://www.linkedin.com/in/sungmin-sohn-43280216a",
       "role": "Ph.D. Candidate",
       "from": "2023.09~",
       "email": "smsohn1997@kaist.ac.kr",
@@ -70,7 +71,7 @@
     {
       "id": 7,
       "name": "Seungro Lee",
-      "role": "M.S. Candidate",
+      "role": "M.S. Student",
       "from": "2024.09~",
       "email": "roy.seungro.lee@kaist.ac.kr",
       "edu": [
@@ -92,7 +93,7 @@
     {
       "id": 9,
       "name": "Jeeyun Chang",
-      "role": "M.S. Candidate",
+      "role": "M.S. Student",
       "from": "2025.03~",
       "email": "jyc021@kaist.ac.kr",
       "edu": [
@@ -103,7 +104,8 @@
     {
       "id": 10,
       "name": "Jihyeon Ohk",
-      "role": "M.S. Candidate",
+      "link": "https://sites.google.com/spacetime.kaist.ac.kr/jihyeon-ohk",
+      "role": "M.S. Student",
       "from": "2025.09~",
       "email": "jh.ohk@kaist.ac.kr",
       "edu": [
@@ -118,166 +120,189 @@
       "name": "Ohhoon Kwon",
       "degree": "Ph.D.",
       "date": "2010.03~2015.02",
-      "photo": "/peopleImg/11.jpg"
+      "phd": "2010.03~2015.02",
+      "photo": "/peopleImg/11.png"
     },
     {
       "id": 12,
       "name": "Sammer Ud Din",
       "degree": "Ph.D.",
-      "date": "2014.03~2018.02",
-      "photo": "/peopleImg/12.jpg"
+      "date": "2014.03~2018.02",  
+      "phd": "2014.03~2018.02",
+      "photo": "/peopleImg/12.png"
     },
     {
       "id": 13,
       "name": "Yuna Noh",
       "degree": "Ph.D.",
-      "date": "2012.09~2018.02",
-      "photo": "/peopleImg/13.jpg"
+      "date": "2012.09~2018.02",  
+      "phd": "2012.09~2018.02",
+      "photo": "/peopleImg/13.png"
     },
     {
       "id": 14,
       "name": "Jungwoo Cho",
       "degree": "Ph.D.",
-      "date": "2015.09~2020.02",
-      "photo": "/peopleImg/14.jpg"
+      "date": "2015.09~2020.02",  
+      "phd": "2015.09~2020.02",
+      "photo": "/peopleImg/14.png"
     },
     {
       "id": 15,
       "name": "Jiseon Lee",
       "degree": "Ph.D.",
       "date": "2013.09~2022.08",
-      "photo": "/peopleImg/15.jpg"
+      "phd": "2013.09~2022.08",
+      "photo": "/peopleImg/15.png"
     },
     {
       "id": 16,
       "name": "Yuyol Shin",
       "degree": "Ph.D.",
       "date": "2016.09~2022.08",
-      "photo": "/peopleImg/16.jpg"
+      "phd": "2016.09~2022.08",
+      "photo": "/peopleImg/16.png",
+      "current": "NYUAD / Postdocotral Associate"
     },
     {
       "id": 17,
       "name": "Soohwan Oh",
       "degree": "Ph.D.",
-      "date": "2016.09~2023.02",
-      "photo": "/peopleImg/17.jpg"
+      "date": "2016.09~2023.02",  
+      "phd": "2016.09~2023.02",
+      "photo": "/peopleImg/17.png"
     },
     {
       "id": 18,
       "name": "Namwoo Kim",
       "degree": "Ph.D.",
-      "date": "2017.09~2023.08",
+      "date": "2015.09~2023.08",
+      "phd": "2017.09~2023.08",
+      "ms": "2015.09~2017.08",
       "photo": "/peopleImg/18.jpg"
     },
     {
       "id": 19,
       "name": "Seyun Kim",
+      "current": "한국교통연구원 부연구위원(KOTI / Associate Research Fellow)",
       "degree": "Ph.D.",
-      "date": "2016.03~2021.02",
-      "photo": "/peopleImg/19.jpg"
+      "date": "2014.03~2025.07",
+      "ms": "2014.03~2016.02",
+      "phd": "2016.03~2021.02",
+      "pdra": "2021.03~2025.07",
+      "photo": "/peopleImg/19.png"
     },
     {
       "id": 20,
-      "name": "Seyun Kim",
-      "degree": "",
-      "date": "2021.03~2025.07",
-      "photo": "/peopleImg/20.jpg"
+      "name": "Kyowon Song",
+      "degree": "M.S.",
+      "date": "2010.09~2012.08",
+      "ms": "2010.09~2012.08",
+      "photo": "/peopleImg/20.png"
     },
     {
       "id": 21,
-      "name": "Kyowon Song",
+      "name": "Yingping Zhao",
       "degree": "M.S.",
-      "date": "2010.09~2012.08"
+      "date": "2010.09~2012.08",
+      "ms": "2010.09~2012.08",
+      "photo": "/peopleImg/21.png"
     },
     {
       "id": 22,
-      "name": "Yingping Zhao",
+      "name": "Eunhye Kim",
       "degree": "M.S.",
-      "date": "2010.09~2012.08"
+      "date": "2012.03~2014.02",
+      "ms": "2012.03~2014.02",
+      "photo": "/peopleImg/22.jpg"
     },
     {
       "id": 23,
-      "name": "Eunhye Kim",
+      "name": "Donghun Lee",
       "degree": "M.S.",
-      "date": "2012.03~2014.02"
+      "date": "2012.03~2014.02",
+      "ms": "2012.03~2014.02",
+      "photo": "/peopleImg/23.png"
     },
     {
       "id": 24,
-      "name": "Donghun Lee",
+      "name": "Eunseok Kim",
       "degree": "M.S.",
-      "date": "2012.03~2014.02"
+      "date": "2012.09~2014.08",
+      "ms": "2012.09~2014.08",
+      "photo": "/peopleImg/24.png"
     },
     {
       "id": 25,
-      "name": "Eunseok Kim",
+      "name": "Qundeel Hussain",
       "degree": "M.S.",
-      "date": "2012.09~2014.08"
+      "date": "2013.03~2015.02",
+      "ms": "2013.03~2015.02",
+      "photo": "/peopleImg/25.png"
     },
     {
       "id": 26,
-      "name": "Qundeel Hussain",
+      "name": "Jungwoo Cho",
       "degree": "M.S.",
-      "date": "2013.03~2015.02"
+      "date": "2014.03~2015.08",
+      "ms": "2014.03~2015.08",
+      "photo": "/peopleImg/26.png"
     },
     {
       "id": 27,
-      "name": "Jungwoo Cho",
+      "name": "Yoonjung Kang",
       "degree": "M.S.",
-      "date": "2014.03~2015.08"
+      "date": "2013.09~2016.08",
+      "ms": "2013.09~2016.08",
+      "photo": "/peopleImg/27.png"
     },
     {
       "id": 28,
-      "name": "Yoonjung Kang",
-      "degree": "M.S.",
-      "date": "2013.09~2016.08"
-    },
-    {
-      "id": 29,
       "name": "Yeonghwa Woo",
       "degree": "M.S.",
-      "date": "2014.03~2016.02"
-    },
-    {
-      "id": 30,
-      "name": "Seyun Kim",
-      "degree": "M.S.",
-      "date": "2014.03~2016.02"
+      "date": "2014.03~2016.02",
+      "ms": "2014.03~2016.02",
+      "photo": "/peopleImg/28.png"
     },
     {
       "id": 31,
-      "name": "Namwoo Kim",
+      "name": "Minjae Kim",
       "degree": "M.S.",
-      "date": "2015.09~2017.08"
+      "date": "2016.03~2018.02",
+      "ms": "2016.03~2018.02",
+      "photo": "/peopleImg/31.png"
     },
     {
       "id": 32,
-      "name": "Minjae Kim",
+      "name": "Hyeyeong Lee",
       "degree": "M.S.",
-      "date": "2016.03~2018.02"
+      "date": "2021.03~2023.02",
+      "ms": "2021.03~2023.02",
+      "photo": "/peopleImg/32.png"
     },
     {
       "id": 33,
-      "name": "Hyeyeong Lee",
+      "name": "Gwanghwan Seong",
       "degree": "M.S.",
-      "date": "2021.03~2023.02"
+      "date": "2021.03~2023.02",
+      "ms": "2021.03~2023.02",
+      "photo": "/peopleImg/33.png"
     },
     {
       "id": 34,
-      "name": "Gwanghwan Seong",
-      "degree": "M.S.",
-      "date": "2021.03~2023.02"
-    },
-    {
-      "id": 35,
       "name": "Junghee Kim",
       "degree": "M.S.",
-      "date": "2022.09~2024.07"
+      "date": "2022.09~2024.07",
+      "ms": "2022.09~2024.07",
+      "photo": "/peopleImg/34.png"
     },
     {
       "id": 6,
       "name": "Juneyoung Ro",
       "degree": "M.S.",
-      "date": "2024.03~2026.02"
+      "date": "2024.03~2026.02",
+      "ms": "2024.03~2026.02",
+      "photo": "/peopleImg/6.jpg"
     }
   ]
 }

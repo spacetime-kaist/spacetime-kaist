@@ -48,7 +48,7 @@ const categoryStyles = {
   meeting: 'bg-slate-100 text-slate-700',
   honors: 'bg-rose-100 text-rose-800',
   seminar: 'bg-teal-100 text-teal-800',
-  ceremony: 'bg-orange-100 text-orange-800',
+  lablife: 'bg-orange-100 text-orange-800'
 };
 const getCategoryStyle = (category) => categoryStyles[category] || 'bg-slate-100 text-slate-600';
 const EventMasonryCard = (event) => (
@@ -103,7 +103,7 @@ const EventMasonryCard = (event) => (
       {event.participants && (
         <div className="mb-2">
           <span className="text-[10px] font-semibold uppercase tracking-wider text-slate-400">Participants</span>
-          <p className="mt-0.5 text-sm text-slate-600 line-clamp-2">{event.participants}</p>
+          <p className="mt-0.5 text-sm text-slate-600 line-clamp-3">{event.participants}</p>
         </div>
       )}
 
@@ -198,7 +198,8 @@ const EventMasonryCard = (event) => (
 
 
 export default function EventsPage() {
-  const { data: eventsData, loading } = useDataLoader('eventsData');
+  const { data: lablifeData, loading: lablifeLoading } = useDataLoader('lablifeData');
+  const { data: outreachData, loading: outreachLoading } = useDataLoader('outreachData');
   const [searchParams] = useSearchParams();
   const location = useLocation();
   const [selectedCategories, setSelectedCategories] = useState([]);
@@ -206,6 +207,10 @@ export default function EventsPage() {
   const [keywordSearch, setKeywordSearch] = useState('');
   const [expandedYears, setExpandedYears] = useState([]);
 
+  const eventsData = useMemo(
+    () => [...(Array.isArray(lablifeData) ? lablifeData : []), ...(Array.isArray(outreachData) ? outreachData : [])],
+    [lablifeData, outreachData]
+  );
   const { categories, keywords, filteredEvents, eventsByYear } = useMemo(() => {
     if (!eventsData?.length) {
       return { years: [], categories: [], keywords: [], filteredEvents: [], eventsByYear: {} };
@@ -239,7 +244,11 @@ export default function EventsPage() {
     });
     const sortedByYear = {};
     years.forEach((y) => {
-      if (byYear[y]?.length) sortedByYear[y] = byYear[y];
+      if (byYear[y]?.length) {
+        sortedByYear[y] = byYear[y].slice().sort(
+          (a, b) => new Date(b.start).getTime() - new Date(a.start).getTime()
+        );
+      }
     });
 
     return {
@@ -305,21 +314,30 @@ export default function EventsPage() {
     scrollToYear(year);
   };
 
-  // Scroll to event by id (from hash or ?scroll=id) after data is loaded and rendered
+  // Scroll to event by id (from hash or ?scroll=id) after data is loaded and rendered.
+  // We must expand the year section that contains the target event first, then scroll.
   useEffect(() => {
     if (!eventsData?.length) return;
     const id = searchParams.get('scroll') || (location.hash ? location.hash.slice(1) : null);
     if (!id) return;
-    const el = document.getElementById(id);
-    if (el) {
-      const t = setTimeout(() => {
-        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 100);
-      return () => clearTimeout(t);
+
+    const targetEvent = eventsData.find((e) => e.id === id);
+    const targetYear = targetEvent?.start
+      ? new Date(targetEvent.start).getFullYear().toString()
+      : null;
+
+    if (targetYear) {
+      setExpandedYears((prev) => (prev.includes(targetYear) ? prev : [...prev, targetYear]));
     }
+
+    const t = setTimeout(() => {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 300);
+    return () => clearTimeout(t);
   }, [eventsData, searchParams, location.hash]);
 
-  if (loading) {
+  if (lablifeLoading || outreachLoading) {
     return (
       <div className="container pt-32 text-center">
         <p className="text-gray-600">Loading events data...</p>

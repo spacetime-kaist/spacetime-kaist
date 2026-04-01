@@ -1,8 +1,9 @@
 import React, { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { useDataLoader } from '../hooks/useDataLoader';
-import NavbarCategorized from '../utility/NavbarCategorized';
+import Navbar from '../utility/Navbar';
 import ScrollUpBt from '../utility/ScrollUpButton';
+import NavbarCategorized from '../utility/NavbarCategorized';
 
 const parseYear = (value) => {
   const numeric = Number.parseInt(value, 10);
@@ -49,6 +50,7 @@ export default function LandingPage() {
     <div id="top" className="font-display flex flex-col justify-center items-center overflow-hidden">
       <div className="w-screen min-h-[100vh] min-w-[320px] bg-welcomeHome lg:bg-cover bg-contain bg-no-repeat">
         <div className="w-full h-16" />
+        {/* <Navbar /> */}
         <NavbarCategorized />
         <ScrollUpBt />
 

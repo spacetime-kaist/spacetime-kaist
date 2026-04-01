@@ -1,10 +1,51 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDataLoader } from "../../hooks/useDataLoader";
-import ScrolltoAnchor from "../../utility/ScrolltoAnchor";
 import { Link } from "react-router-dom";
 
+function PubCard(item) {
+  const [isPodcastOpen, setIsPodcastOpen] = useState(false);
+  return (
+    <div className="bg-white px-4 py-2 rounded-sm border-l-4 border-slate-600 hover:shadow-md transition">
+      <div className="flex flex-col">
+        <h2 className="text-lg sm:text-xl font-semibold">{item.title}</h2>
+        <p className="text-gray-500 italic inline-block">{item.journal}</p>
+        <p className="text-gray-600 text-lg inline-block">
+          {item.authors} ({item.date})
+        </p>
 
+        <div className="flex flex-row gap-3 items-center mt-2">
+          {item.href && (
+            <a
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:underline"
+            >
+              Read Paper
+            </a>
+          )}
+          {item.podcast && (
+            <button
+              type="button"
+              onClick={() => setIsPodcastOpen((prev) => !prev)}
+              className="text-blue-600 hover:underline"
+            >
+              {isPodcastOpen ? "Hide Podcast" : "Podcast"}
+            </button>
+          )}
+        </div>
 
+        {item.podcast && isPodcastOpen && (
+          <audio controls preload="none" className="w-full mt-3">
+            <source src={item.podcast} type="audio/mp4" />
+            <source src={item.podcast} type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+        )}
+      </div>
+    </div>
+  );
+}
 
 export default function PubCon() {
   const { data: publicationsData, loading: pubLoading } = useDataLoader('publicationsData');
@@ -22,30 +63,6 @@ export default function PubCon() {
   }
 
 
-const PubCard = ( item ) => (   
-<div key={item.id} className="bg-white px-4 py-2 rounded-sm border-l-4 border-slate-600 hover:shadow-md transition">
-            {item.href ?
-              <a
-                href={item.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex flex-col hover:underline "
-              >
-                <h2 className="text-lg sm:text-xl font-semibold">{item.title}</h2>
-                <p className="text-gray-500 italic inline-block">{item.journal}</p>
-                <p className="text-gray-600 text-lg inline-block">{item.authors} ({item.date})</p>
-                <p className="text-blue-600 hover:underline mt-2 ">Read Paper</p>           
-              </a>
-            :
-            <>
-            <h2 className="text-lg sm:text-xl font-semibold">{item.title}</h2>
-            <p className="text-gray-500 italic">{item.journal}</p>
-            <p className="text-gray-600 text-lg ">{item.authors} ({item.date})</p>
-            </>
-            }
-
-</div>
-)
 const ConCard = ( item ) => (   
 <div key={item.id} className="bg-white px-4 py-2 rounded-sm border-l-4 border-slate-600 hover:shadow-md transition">
             {item.href ?

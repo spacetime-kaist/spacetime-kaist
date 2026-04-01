@@ -3,14 +3,12 @@ import { Routes, Route, HashRouter } from 'react-router-dom'
 // Pages
 import Layout from './Layout'
 import HomePage from './components/HomePage'
-import LandingPage from './components/LandingPage'
-import LandingPageV2 from './components/LandingPageV2'
-import LandingPageV3 from './components/LandingPageV3'
-import LandingPageV4 from './components/LandingPageV4'
-import LandingPageV5 from './components/LandingPageV5'
+import LandingPageAgg from './components/LandingPageAgg'
+import PaperOverview from './components/PaperOverview'
 import Publications from './components/Publications/Publications'
 import Conference from './components/Publications/Conference'
 import People from './components/People'
+import PeopleDetail from './components/PeopleDetail'
 import Research from './components/Research/Research'
 import ResearchDetail from './components/Research/ResearchDetail'
 import Projects from './components/Projects/Projects'
@@ -34,11 +32,8 @@ function App() {
     <HashRouter>
       <ScrolltoAnchor />
       <Routes>
-        <Route path="/" element={<LandingPageV4 />} />
-        <Route path="/landing-v5" element={<LandingPageV5 />} />
-        <Route path="/landing-v3" element={<LandingPageV3 />} />
-        <Route path="/landing-v2" element={<LandingPageV2 />} />
-        <Route path="/landing-v1" element={<LandingPage />} />
+        <Route path="/" element={<LandingPageAgg />} />
+        <Route path="/paper-overview" element={<PaperOverview />} />
         <Route path='/test' element={<Test />} />
         {/* Under Layout */}
         <Route element={<Layout />} >
@@ -46,6 +41,7 @@ function App() {
         <Route path='/publications' element={<PubCon />} />
         <Route path='/conference' element={<Conference />} />
         <Route path='/people' element={<People />} />
+        <Route path='/people/:slug' element={<PeopleDetail />} />
         <Route path='/research' element={<Research/>} />
         <Route path='/research/:slug' element={<ResearchDetail/>} />
         <Route path='/projects' element={<Projects />} />
@@ -55,6 +51,7 @@ function App() {
         <Route path='/press' element={<Press />} />
         {/* <Route path='/apply' element={<Apply />} /> */}
         {/* <Route path='/apply/:slug' element={<ApplyDetail />} /> */}
+        {/* 개인페이지 Redirection */}
         </Route>
       </Routes>
     </HashRouter>

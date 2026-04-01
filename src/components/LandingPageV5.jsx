@@ -14,7 +14,7 @@
 import React, { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { useDataLoader } from '../hooks/useDataLoader';
-import NavbarCategorized from '../utility/NavbarCategorized';
+import Navbar from '../utility/Navbar';
 import ScrollUpBt from '../utility/ScrollUpButton';
 
 /* ── helpers ── */
@@ -136,7 +136,7 @@ export default function LandingPageV5() {
   if (loading) {
     return (
       <div id="top" className="font-display w-screen min-h-screen bg-white">
-        <div className="w-full h-16" /><NavbarCategorized />
+        <div className="w-full h-16" /><Navbar />
         <div className="max-w-6xl mx-auto px-6 pt-28 text-gray-300 text-sm font-light">Loading…</div>
       </div>
     );
@@ -146,7 +146,7 @@ export default function LandingPageV5() {
     <div id="top" className="font-display flex flex-col items-center overflow-hidden">
       <div className="w-screen min-w-[320px] bg-white">
         <div className="w-full h-16" />
-        <NavbarCategorized />
+        <Navbar />
         <ScrollUpBt />
 
         {/* ══════════════════════════════════════════════════
