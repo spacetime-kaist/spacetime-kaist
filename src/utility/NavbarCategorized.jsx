@@ -16,6 +16,7 @@ function NavbarCategorized() {
   const [hoveredMenu, setHoveredMenu] = useState(null);
   const menuRef = useRef(null);
   const navbarRef = useRef(null);
+  const megaMenuRef = useRef(null);
 
   const { data: researchData } = useDataLoader('researchData');
   const { data: projectsData } = useDataLoader('projectsData');
@@ -26,7 +27,14 @@ function NavbarCategorized() {
         setDropdownOpen(false);
         setPublicationsOpen(false);
       }
-      if (navbarRef.current && !navbarRef.current.contains(event.target)) {
+      // Mega menu lives outside `navbarRef`, so exclude it from "outside click".
+      const clickInsideMegaMenu =
+        megaMenuRef.current && megaMenuRef.current.contains(event.target);
+      if (
+        navbarRef.current &&
+        !navbarRef.current.contains(event.target) &&
+        !clickInsideMegaMenu
+      ) {
         setHoveredMenu(null);
       }
     };
@@ -47,23 +55,29 @@ function NavbarCategorized() {
         {
           categoryTitle: "Research",
           link: "/research",
-          items: (researchData || []).map(r => ({
+          items: (researchData || []).slice(0, 6).map(r => ({
             title: (r.menuTitle !== '') ? r.menuTitle : r.title,
             link: `/research/${r.id}`,
             desc: r.desc || ""
           }))
-        },
-        {
-          categoryTitle: "Projects",
-          link: "/projects",
-          items: (projectsData || []).filter(p => p.link && !p.pagetitle).map(p => ({
-            title: p.title,
-            link: p.type === "internal" ? `/projects${p.link}` : p.link,
-            desc: "",
-            external: p.type === "external"
-          }))
-        },
+        }
       ]
+    },
+    projects: {
+      title: "Projects",
+      link: "/projects"
+      // categories: [
+      //   {
+      //     categoryTitle: "Projects",
+      //     link: "/projects",
+      //     items: (projectsData || []).filter(p => p.active===true).map(p => ({
+      //       title: p.title,
+      //       link: p.type === "internal" ? `/projects${p.link}` : p.link,
+      //       desc: "",
+      //       external: p.type === "external"
+      //     }))
+      //   }
+      // ]
     },
     publications: {
       title: "Publications",
@@ -88,15 +102,15 @@ function NavbarCategorized() {
       ]
     },
     people: {
-      title: "Members",
+      title: "People",
       link: "/people",
       categories: [
         {
-          categoryTitle: "Members",
+          categoryTitle: "People",
           link: "/people",
           items: [
             { title: "Professor", link: "/people#professor" },
-            { title: "Lab Members", link: "/people#labmembers" },
+            { title: "Lab People", link: "/people#labpeople" },
             { title: "Alumni", link: "/people#alumni" }
           ]
         }
@@ -110,6 +124,7 @@ function NavbarCategorized() {
 
     return (
       <div
+        ref={megaMenuRef}
         className="fixed left-0 right-0 bg-white/95 backdrop-blur-md border-t border-gray-100 shadow-xl z-40 top-16 lg:top-[4.5rem]"
         style={{ animation: 'megaFadeIn 0.18s ease-out both' }}
         onMouseEnter={() => setHoveredMenu(menuKey)}
@@ -305,6 +320,15 @@ function NavbarCategorized() {
 
                 <div
                   className="relative"
+                >
+                  <Link to="/projects" className={`${menuTextStyle} inline-flex items-center gap-1`}>
+                    Projects
+
+                  </Link>
+                </div>
+
+                <div
+                  className="relative"
                   onMouseEnter={() => setHoveredMenu('newsEvents')}
                 >
                   <button
@@ -320,14 +344,9 @@ function NavbarCategorized() {
 
                 <div
                   className="relative"
-                  onMouseEnter={() => setHoveredMenu('people')}
                 >
                   <Link to="/people" className={`${menuTextStyle} inline-flex items-center gap-1`}>
-                    Members
-                    <IoIosArrowDown
-                      size={14}
-                      className={`transition-transform duration-200 ${hoveredMenu === 'people' ? 'rotate-180' : ''}`}
-                    />
+                    People
                   </Link>
                 </div>
 
@@ -383,17 +402,11 @@ function NavbarCategorized() {
                     </div>
 
                     <Link to="/research" className={menuTextStyle} onClick={() => setDropdownOpen(false)}>Research</Link>
+                    <Link to="/projects" className={menuTextStyle}>Projects</Link>
                     <Link to="/events" className={menuTextStyle} onClick={() => setDropdownOpen(false)}>Events</Link>
                     <Link to="/press" className={menuTextStyle} onClick={() => setDropdownOpen(false)}>Press</Link>
-                    <Link to="/people" className={menuTextStyle} onClick={() => setDropdownOpen(false)}>Members</Link>
+                    <Link to="/people" className={menuTextStyle}>People</Link>
                     <div className="mt-1 pt-1 border-t border-gray-100">
-                      <Link
-                        to="/apply"
-                        className="block mx-1 px-3 py-2 rounded-xl bg-sky-600 text-white text-sm font-medium text-center hover:bg-blue-700 transition-colors duration-200"
-                        onClick={() => setDropdownOpen(false)}
-                      >
-                        Apply
-                      </Link>
                     </div>
                   </div>
                 )}

@@ -2,11 +2,8 @@ import { Routes, Route, HashRouter } from 'react-router-dom'
 
 // Pages
 import Layout from './Layout'
-import HomePage from './components/HomePage'
 import LandingPageAgg from './components/LandingPageAgg'
 import PaperOverview from './components/PaperOverview'
-import Publications from './components/Publications/Publications'
-import Conference from './components/Publications/Conference'
 import People from './components/People'
 import PeopleDetail from './components/PeopleDetail'
 import Research from './components/Research/Research'
@@ -23,6 +20,7 @@ import ApplyDetail from './components/Apply/ApplyDetail'
 import ScrolltoAnchor from './utility/ScrolltoAnchor'
 import Test from './components/Test'
 import PubCon from './components/Publications/PubCon'
+import PubConDetails from './components/Publications/PubConDetails'
 
 
 
@@ -37,11 +35,10 @@ function App() {
         <Route path='/test' element={<Test />} />
         {/* Under Layout */}
         <Route element={<Layout />} >
-        <Route path='/homepage' element={<HomePage />} />
-        <Route path='/publications' element={<PubCon />} />
-        <Route path='/conference' element={<Conference />} />
+        <Route path='/publications/:slug' element={<PubConDetails />} />
+        <Route path='/publications' element={<PubCon />} />'
         <Route path='/people' element={<People />} />
-        <Route path='/people/:slug' element={<PeopleDetail />} />
+        <Route path='/:slug' element={<PeopleDetail />} />
         <Route path='/research' element={<Research/>} />
         <Route path='/research/:slug' element={<ResearchDetail/>} />
         <Route path='/projects' element={<Projects />} />

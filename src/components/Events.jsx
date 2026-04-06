@@ -365,9 +365,9 @@ export default function EventsPage() {
       <header className="py-5">
         <div className="container">
           <h1 className="pagetitle">Events</h1>
-          <p className="flex justify-center text-gray-600">
+          {/* <p className="flex justify-center text-gray-600">
             Explore our past events, conferences, and workshops.
-          </p>
+          </p> */}
           <div className="divider" />
         </div>
       </header>

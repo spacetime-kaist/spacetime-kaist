@@ -28,7 +28,10 @@ const GridGallery = ({ imageRows }) => {
   </div>    
 )};
 
-const ResearchDetailCard = ( detail ) => (
+
+const ResearchDetailCard = ( detail ) => {
+    detail.slug
+    return (
 <article className="flex flex-col flex-shrink p-6 bg-white rounded-lg border border-gray-200 shadow-sm mb-8">
     <h1 className="text-3xl font-bold text-sky-800">{detail.title}</h1>
     <p className="text-lg text-gray-500 mt-1">{detail.date}</p>
@@ -36,11 +39,11 @@ const ResearchDetailCard = ( detail ) => (
     <ReactMarkdown className="markdown">{detail.desc}</ReactMarkdown>
     </div>
     {detail.hyperlink && <div><a href={detail.hyperlink} target="_blank" rel="noopener noreferrer" className="text-lg text-blue-600 hover:underline">[LINK]</a></div>}
-    {/* {detail.ref && 
+    {detail.ref && 
     <div>
     <h4 className=""> SELECTED REFERENCE </h4>
-    {detail.ref.map((ref, idx) => (<div key={`ref-${idx}`} className="text-sm text-gray-500 mb-2">{ref}</div>))}
-    </div>} */}
+    <ReactMarkdown className="text-sm text-gray-500 mb-2">{detail.ref}</ReactMarkdown>
+    </div>}
     <div className="mt-10  flex flex-col w-full justify-center items-center pb-10">
     {detail.images &&  <GridGallery imageRows = {detail.images}/>}
     {detail.videos && <div className={`w-full grid grid-cols-1 lg:grid-cols-${Math.max(detail.videos.length, 2)} gap-4`}>
@@ -71,5 +74,5 @@ const ResearchDetailCard = ( detail ) => (
     <ReactMarkdown className="markdown">{detail.footnote}</ReactMarkdown>
     </div>}
 </article>
-);
+)};
 export default ResearchDetailCard;

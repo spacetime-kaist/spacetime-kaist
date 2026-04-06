@@ -4,7 +4,6 @@ import ReactMarkdown from "react-markdown";
 import { Link } from "react-router-dom";
 import { MdEmail, MdCheck, MdPersonOutline } from "react-icons/md";
 import { FaLinkedin, FaGoogle, FaGithub, FaOrcid } from "react-icons/fa";
-import { slugifyMemberName } from "../utility/peopleLinks";
 
 /* ── helpers ─────────────────────────────────────────────────────── */
 
@@ -76,7 +75,7 @@ function SocialIcon({ type, href, label }) {
   if (type === "website" && label) {
     return (
       <Link
-        to={`/people/${slugifyMemberName(label)}`}
+        to={`/${(label)}`}
         target="_blank"
         rel="noopener noreferrer"
         title={label || meta.tip}
@@ -110,7 +109,7 @@ function MemberLinks({ member }) {
           {copied ? <MdCheck className="text-gray-600" /> : <MdEmail />}
         </IconBtn>
       )}
-      {member.link     && <SocialIcon type="website"  href={member.link} label={member.name} />}
+      {member.link     && <SocialIcon type="website"  href={member.link} label={member.slug} />}
       {member.linkedin && <SocialIcon type="linkedin" href={member.linkedin} />}
       {member.github   && <SocialIcon type="github"   href={member.github} />}
       {member.scholar  && <SocialIcon type="scholar"  href={member.scholar} />}
@@ -140,13 +139,13 @@ function MembersCard({ member }) {
         {/* Name / role / period */}
         <div className="flex-1 min-w-0 pt-0.5">
           <Link
-            to={`/people/${slugifyMemberName(member.name)}`}
+            to={`/${member.slug}`}
             className="font-bold text-gray-900 hover:text-blue-600 transition leading-snug block"
           >
             {member.name}
           </Link>
           <span className="inline-block mt-1 text-[11px] font-semibold uppercase tracking-wide text-blue-500 bg-blue-50 px-2 py-0.5 rounded-full border border-blue-100">
-            {member.role}
+            {member.role || 'Principal Investigator'}
           </span>
           {/* {member.from && (
             <p className="text-xs text-gray-400 mt-1">{member.from}</p>
@@ -157,6 +156,7 @@ function MembersCard({ member }) {
       {/* Education */}
       {member.edu && member.edu.length > 0 && (
         <div className="px-5 pb-3 flex-1">
+          {/* <p className="text-[10px] font-semibold uppercase tracking-wider text-gray-400 mb-0.5">Education</p> */}
           <ul className="space-y-1">
             {member.edu.map((edu, idx) => (
               <li key={idx} className="flex gap-2 text-xs text-gray-500">
@@ -210,10 +210,12 @@ function AlumniCard({ member }) {
 
         {/* Position tags */}
         {(member.pdra || member.phd || member.ms) && (
-          <div className="flex flex-col gap-0.5 w-full mt-0.5">
-            {member.pdra && <p className="text-[11px] text-gray-500"><span className="font-semibold text-blue-400">PDRA · </span>{member.pdra}</p>}
-            {member.phd  && <p className="text-[11px] text-gray-500"><span className="font-semibold text-blue-400">Ph.D. · </span>{member.phd}</p>}
-            {member.ms   && <p className="text-[11px] text-gray-500"><span className="font-semibold text-blue-400">M.S. · </span>{member.ms}</p>}
+          <div className="justify-center flex flex-row gap-0.5 w-full mt-0.5">
+            {member.pdra && <p className="text-[11px] text-gray-500"><span className="font-semibold text-blue-400">PDRA</span></p>}
+            {member.pdra && member.phd && <p className="text-[11px] text-gray-500"><span className="font-semibold text-blue-400">·</span></p>}
+            {member.phd  && <p className="text-[11px] text-gray-500"><span className="font-semibold text-blue-400">Ph.D.</span></p>}
+            {member.phd  && member.ms && <p className="text-[11px] text-gray-500"><span className="font-semibold text-blue-400">·</span></p>}
+            {member.ms   && <p className="text-[11px] text-gray-500"><span className="font-semibold text-blue-400">M.S.</span></p>}
           </div>
         )}
 
@@ -248,9 +250,9 @@ function SectionHeader({ title, count, countLabel = "members" }) {
   return (
     <div className="flex items-center gap-3 mb-8">
       <h2 className="text-xl font-semibold text-gray-900 shrink-0">{title}</h2>
-      {count != null && (
+      {/* {count != null && (
         <span className="text-sm text-gray-400 shrink-0">{count} {countLabel}</span>
-      )}
+      )} */}
       <span className="flex-1 h-px bg-gray-200" />
     </div>
   );
@@ -291,14 +293,21 @@ export default function People() {
 
 
   return (
-    <div className="bg-white min-h-screen">
+    <div className=" min-h-screen">
+      <header className="py-5">
+          <div className="container ">
+            <h1 className="pagetitle lg:pl-40 justify-start items-start ml-0">People</h1>
+            {/* <div className="divider" /> */}
+          </div>
+        </header>
+
 
       {/* ── Professor ─────────────────────────────────────────────── */}
-      <section className="border-b border-gray-200 pt-24 pb-14">
+      {/* <section className="border-b border-gray-200 pt-24 pb-14">
         <div className="max-w-5xl mx-auto px-8">
           <div className="flex flex-col sm:flex-row gap-10 items-start">
 
-            {/* Photo */}
+            Photo
             <img
               src={`/peopleImg/1.jpg`}
               alt={professorData?.name}
@@ -306,7 +315,7 @@ export default function People() {
               onError={e => { e.target.src = "/peopleImg/placeholder.jpg"; }}
             />
 
-            {/* Info */}
+            Info
             <div className="flex-1 min-w-0">
               <p className={labelCls}>
                 Principal Investigator
@@ -318,7 +327,7 @@ export default function People() {
                 {professorData?.greeting}
               </p>
 
-              {/* Links */}
+              Links
               <div className="flex flex-wrap gap-2 mt-4">
                 {professorData?.email && (
                   <div onClick={() => {navigator.clipboard.writeText(professorData.email); setCopied(true); setTimeout(() => setCopied(false), 3000);}}
@@ -346,7 +355,7 @@ export default function People() {
                 )}
               </div>
 
-              {/* Education */}
+              Education
               <div className="mt-6">
                 <span className={labelCls}>Education</span>
                 <ul className="space-y-1">
@@ -358,7 +367,7 @@ export default function People() {
                 </ul>
               </div>
 
-              {/* Research Interests */}
+              Research Interests
               <div className="mt-6">
                 <span className={labelCls}>Research Interests</span>
                 <p className="text-sm text-gray-600 leading-relaxed">
@@ -377,20 +386,22 @@ export default function People() {
                   </li>
                   <li className="flex gap-2 text-sm text-gray-600 leading-relaxed">
                     <span className="mt-1.5 shrink-0 w-1 h-1 rounded-full bg-blue-300" />
-                    <span clas><span className="font-semibold text-gray-700">Sustainable Urban Mobility</span>: Urban Mobility Decarbonization; Mobility Accessibility and Inequality; Urban Air Mobility (UAM)</span>
+                    <span ><span className="font-semibold text-gray-700">Sustainable Urban Mobility</span>: Urban Mobility Decarbonization; Mobility Accessibility and Inequality; Urban Air Mobility (UAM)</span>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ── Lab Members ───────────────────────────────────────────── */}
       <section id="labmembers" className="py-14">
+        
         <div className="max-w-5xl mx-auto px-8">
-          <SectionHeader title="Lab Members" count={labMembersData.length} />
+          <SectionHeader title="Current" count={labMembersData.length} />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <MembersCard member={professorData} />
             {labMembersData.map(member => (
               <MembersCard key={member.id} member={member} />
             ))}

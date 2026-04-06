@@ -1,6 +1,7 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { useDataLoader } from '../hooks/useDataLoader';
+import Navbar from '../utility/Navbar';
 import ScrollUpBt from '../utility/ScrollUpButton';
 import NavbarCategorized from '../utility/NavbarCategorized';
 
@@ -28,26 +29,14 @@ const byDateDesc = (a, b) => {
  * id: the item's id field from the corresponding JSON file.
  */
 const RESEARCH_RELATED = {
-  'tda': [
-    { data: 'publications', id: '10.1109/TNNLS.2025.3577202' },
-    { data: 'publications',  id: 9 }
-  ],
-  'urban-simulation': [
-    { data: 'international', id: '10.1145/3764921.3770151' },
-    { data: 'outreach', id: '20251103' },
-  ],
-  'usr': [
-    { data: 'international', id: 'i74' },
-    { data: 'outreach',      id: '20251019' },
-  ],
-  'uhus': [
+  'urban-heat-urban-sales': [
     { data: 'press',         id: 'press20251029' },
     { data: 'outreach',      id: '20250930' },
   ],
-  'ure': [
+  'urban-region': [
     // { data: 'international', id: '' },
     { data: 'publications',  id: '10.1109/ACCESS.2025.3577202' },
-    { data: 'international',  id: '3' },
+    { data: 'international',  id: '4' },
   ],
   'uam': [
     { data: 'international', id: 'i75' },
@@ -61,8 +50,8 @@ const RESEARCH_RELATED = {
     { data: 'publications',  id: 2 },
   ],
   'traffic-forecasting':    [
-    { data: 'publications', id: '10.1109/TNNLS.2025.3577202' },
-    { data: 'publications',  id: 3 }
+    { data: 'publications',  id: 3 },
+    { data: 'international', id: 8 },
   ],
   'transportation-network': [
     { data: 'national', id: 'NODE12087850' },
@@ -72,6 +61,7 @@ const RESEARCH_RELATED = {
   'aviation':               [],
   'other':                  [],
 };
+const RecentResearch = ['urban-heat-urban-sales', 'urban-region', 'uam','maritime', 'traffic-forecasting', 'transportation-network'];
 
 /* ── Thin horizontal rule used between every section ── */
 const Rule = () => <hr className="border-t border-gray-200 my-0" />;
@@ -90,69 +80,6 @@ const SectionLink = ({ to }) => (
   </Link>
 );
 
-function RelatedItem({ item, idx, categoryStyles }) {
-  const [isPodcastOpen, setIsPodcastOpen] = useState(false);
-  return (
-    <li className={`w-full min-w-0 py-1 flex flex-col justify-center ${idx > 0 ? 'border-t border-dashed border-gray-300' : ''}`}>
-      <article>
-        <div className="flex items-center gap-2 mb-1">
-          <span className={`shrink-0 text-[8px] font-bold uppercase tracking-wide px-1 py-0.5 rounded leading-none ${categoryStyles[item.subtype]}`}>
-            {item.label}
-          </span>
-          {item.date && <span className="text-[10px] text-gray-400">{item.date}</span>}
-        </div>
-        {item.href ? (
-          <a
-            href={item.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-semibold text-gray-800 hover:text-red-700 hover:underline leading-snug"
-          >
-            {item.title}
-          </a>
-        ) : (
-          <p className="text-sm font-semibold text-gray-800 leading-snug">{item.title}</p>
-        )}
-        <p className="mt-0.5 text-xs text-gray-500 line-clamp-1">{item.who}</p>
-        <p className="text-[11px] text-gray-400 italic line-clamp-1">{item.where}</p>
-        <div className="mt-1.5 flex flex-row gap-2 items-center">
-          {item.to ? (
-            <Link to={`${item.to}`} className="text-[11px] text-blue-500 hover:text-blue-700 hover:underline">More Details</Link>
-          ) : null}
-          {item.slug ? (
-            <Link to={`/publications/${item.slug}`} className="text-[11px] text-blue-500 hover:text-blue-700 hover:underline">Blog</Link>
-          ) : null}
-          {item.podcast && (
-            <div>
-              <button
-                type="button"
-                onClick={() => setIsPodcastOpen((prev) => !prev)}
-                className="flex items-center gap-1 text-[11px] text-blue-500 hover:text-blue-700"
-              >
-                {/* <svg
-                  className={`w-3 h-3 transition-transform ${isPodcastOpen ? 'rotate-90' : ''}`}
-                  viewBox="0 0 20 20" fill="currentColor"
-                >
-                  <path fillRule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clipRule="evenodd" />
-                </svg> */}
-                {isPodcastOpen ? 'Hide Podcast' : 'Podcast'}
-              </button>
-           
-            </div>
-          )}
-        </div>
-        {isPodcastOpen && (
-                <audio controls preload="none" className="w-full max-h-8 mt-2">
-                  <source src={item.podcast} type="audio/mp4" />
-                  <source src={item.podcast} type="audio/mpeg" />
-                  Your browser does not support the audio element.
-         \</audio>
-              )}
-      </article>
-    </li>
-  );
-}
-
 export default function LandingPageV4() {
   const { data: researchData,      loading: rL  } = useDataLoader('researchData');
   const { data: publicationsData,  loading: pL  } = useDataLoader('publicationsData');
@@ -166,13 +93,11 @@ export default function LandingPageV4() {
 
   
   const featuredResearch = useMemo(() => {
-    const list = (researchData || []).slice(0, 6);
-    return list.map((r) => ({
-      id: r.id,
-      title: r.title,
-      desc: r.desc,
-      thumbnail: r.thumbnail || null,
-    }));
+    const list = Array.isArray(researchData) ? researchData : [];
+    return RecentResearch.map((id) => {
+      const r = list.find((x) => x.id === id);
+      return r ? { id: r.id, title: r.title, desc: r.desc } : { id, title: String(id), desc: '' };
+    });
   }, [researchData]);
   
   const recentPubs = useMemo(() => {
@@ -257,12 +182,12 @@ export default function LandingPageV4() {
     const resolve = ({ data, id }) => {
       const item = idx[data]?.[String(id)];
       if (!item) return null;
-      if (data === 'press')         return { type: 'press', subtype:'press', label: 'Press',       date: item.date,  title: item.title, who:item.writer, where:item.link_others.source, href: item.link_en || item.link_kr , to: `/press?${item.id}`};
-      if (data === 'outreach')      return { type: 'event', subtype:item.category, label: item.category || 'Event', date: item.start, title: item.title, who:item.participants, where:item.place, to: `/events?scroll=${item.id}` };
-      if (data === 'lablife')       return { type: 'event', subtype:item.category, label: 'Lab Life',    date: item.start, title: item.title, who:item.participants, where:item.place, to: `/events?scroll=${item.id}` };
-      if (data === 'publications')  return { type: 'pub',   subtype:'journal', label: 'Journal',     date: item.date,  title: item.title, who:item.authors, where:item.journal, href: item.href, podcast: item.podcast || null, slug: item.slug };
-      if (data === 'international') return { type: 'pub',   subtype:'conf', label: 'Intl. Conf.', date: item.date,  title: item.title, who:item.authors, where:item.conference, href: item.href, podcast: item.podcast || null, slug: item.slug };
-      if (data === 'national')      return { type: 'pub',   subtype:'conf', label: 'Natl. Conf.', date: item.date,  title: item.title, who:item.authors, where:item.conference, href: item.href, podcast: item.podcast || null, slug: item.slug };
+      if (data === 'press')         return { type: 'press', subtype:'press', label: 'Press',       date: item.date,  title: item.title, who:item.writer,  href: item.link_en || item.link_kr };
+      if (data === 'outreach')      return { type: 'event', subtype:item.category, label: item.category || 'Event', date: item.start, title: item.title, who:item.participants, href: `/events?scroll=${item.id}` };
+      if (data === 'lablife')       return { type: 'event', subtype:item.category, label: 'Lab Life',    date: item.start, title: item.title, who:item.participants, href: `/events?scroll=${item.id}` };
+      if (data === 'publications')  return { type: 'pub',   subtype:'journal', label: 'Journal',     date: item.date,  title: item.title, who:item.authors, href: item.href };
+      if (data === 'international') return { type: 'pub',   subtype:'conf', label: 'Intl. Conf.', date: item.date,  title: item.title, who:item.authors, href: item.href };
+      if (data === 'national')      return { type: 'pub',   subtype:'conf', label: 'Natl. Conf.', date: item.date,  title: item.title, who:item.authors, href: item.href };
       return null;
     };
 
@@ -277,7 +202,7 @@ export default function LandingPageV4() {
   if (loading) {
     return (
       <div id="top" className="font-display w-screen min-h-screen bg-white">
-        <div className="w-full h-16" /><NavbarCategorized />
+        <div className="w-full h-16" /><Navbar />
         <div className="max-w-6xl mx-auto px-6 pt-28 text-gray-400">Loading…</div>
       </div>
     );
@@ -301,7 +226,7 @@ export default function LandingPageV4() {
               <header className="border-b border-slate-200 bg-white">
                 <div className="container pt-20 pb-12">
                   {/* <p className="text-sm tracking-[0.15em] uppercase text-slate-500">KAIST · Civil and Environmental Engineering · Data Science</p> */}
-                  <h1 className="mt-3 text-4xl md:text-5xl font-semibold text-slate-900">
+                  <h1 className="mt-3 text-3xl md:text-5xl font-semibold text-slate-900">
                     Spacetime Intelligence Lab
                   </h1>
                   {/* <p className="mt-6 max-w-4xl text-md leading-relaxed text-slate-700">
@@ -323,7 +248,7 @@ export default function LandingPageV4() {
                   ══════════════════════════════════════ */}
               <section className="container py-14 pb-20 border-b border-slate-200">
                 <div className="flex items-center justify-between gap-4">
-                  <h2 className="text-2xl md:text-3xl font-semibold">Recent Research Highlights</h2>
+                  <h2 className="text-3xl font-semibold">Recent Research Highlights</h2>
                   <Link to="/research" className="text-sm text-blue-700 hover:underline">
                     View all research
                   </Link>
@@ -334,17 +259,38 @@ export default function LandingPageV4() {
                     const related = resolvedRelated[item.id] || [];
                     return (
                       <article key={item.id} className="bg-white border border-slate-200 rounded-md p-4 flex flex-col">
-                        <h3 className="text-md  leading-snug">{item.title}</h3>
-                        {/* <p className="mt-1.5 text-xs text-slate-500 line-clamp-2 leading-relaxed">{item.desc}</p> */}
-                        {/* <Link to={`/research/${item.id}`} className="mt-2 text-xs text-slate-400 hover:text-blue-700 hover:underline">
+                        <h3 className="text-sm font-semibold leading-snug">{item.title}</h3>
+                        <p className="mt-1.5 text-xs text-slate-500 line-clamp-2 leading-relaxed">{item.desc}</p>
+                        <Link to={`/research/${item.id}`} className="mt-2 text-xs text-blue-700 hover:underline">
                           Read details →
-                        </Link> */}
+                        </Link>
 
                         {related.length > 0 && (
-                          <ul className="mt-3 pt-3 border-t border-slate-100 grid grid-rows-2 h-full">
-                            {related.slice(0, 2).map((item, idx) => (
-                              <RelatedItem key={`${item.id}-${idx}`} item={item} idx={idx} categoryStyles={categoryStyles} />
+                          <ul className="mt-3 pt-3 border-t border-slate-100 space-y-1">
+                            {related.slice(0, 2).map((rel, i) => (
+                              <li key={i} className="flex items-center gap-1.5 min-w-0">
+                                <span className={`shrink-0 text-[8px] font-bold uppercase tracking-wide px-1 py-0.5 rounded leading-none ${
+                                  categoryStyles[rel.subtype]
+                                }`}>
+                                  {rel.label}
+                                </span>
+                                <span className="shrink-0 text-[10px] text-slate-400">{rel.date}</span>
+                                {rel.href ? (
+                                  rel.type === 'event' ? (
+                                    <Link to={rel.href} className="text-[11px] text-slate-600 hover:text-blue-700 hover:underline truncate">
+                                      {rel.title}
+                                    </Link>
+                                  ) : (
+                                    <a href={rel.href} target="_blank" rel="noopener noreferrer" className="text-[11px] text-slate-600 hover:text-blue-700 hover:underline truncate">
+                                      {rel.title}
+                                    </a>
+                                  )
+                                ) : (
+                                  <span className="text-[11px] text-slate-600 truncate">{rel.title}</span>
+                                )}
+                              </li>
                             ))}
+                            {/* <li className="gap-1.5 space-0 text-xs text-slate-400">… and more</li> */}
                           </ul>
                         )}
                       </article>
@@ -489,7 +435,7 @@ export default function LandingPageV4() {
         {/* ══════════════════════════════════════
             QUICK NAV — clean Senseable-style link row
             ══════════════════════════════════════ */}
-        {/* <section className="bg-white border-t border-b border-gray-200">
+        <section className="bg-white border-t border-b border-gray-200">
           <div className="container mx-auto px-6 sm:px-10">
             <div className="grid grid-cols-2 sm:grid-cols-4 divide-x divide-gray-200">
               {[
@@ -511,7 +457,7 @@ export default function LandingPageV4() {
               ))}
             </div>
           </div>
-        </section> */}
+        </section>
         {/* ══════════════════════════════════════
             FOOTER — light, clean (Senseable-style)
             ══════════════════════════════════════ */}

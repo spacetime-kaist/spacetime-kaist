@@ -1,7 +1,7 @@
 import { useEffect, useMemo } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useDataLoader } from "../hooks/useDataLoader";
-import { normalizeExternalUrl, slugifyMemberName } from "../utility/peopleLinks";
+import { normalizeExternalUrl } from "../hooks/peopleLinks";
 
 function findPersonBySlug(peopleData, slug) {
   if (!peopleData || !slug) return null;
@@ -12,7 +12,7 @@ function findPersonBySlug(peopleData, slug) {
     peopleData.professorData,
   ].filter(Boolean);
 
-  return members.find((person) => slugifyMemberName(person.name) === slug) || null;
+  return members.find((person) => person.slug === slug) || null;
 }
 
 export default function PeopleDetail() {
@@ -42,9 +42,9 @@ export default function PeopleDetail() {
 
   if (!person) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50 px-6">
+      <div className="min-h-screen flex flex-col gap-4 items-center justify-center bg-gray-50 px-6">
         <div className="bg-white rounded-2xl shadow-sm border border-gray-100 max-w-xl w-full p-8 text-center">
-          <h1 className="text-2xl font-bold text-gray-900">Member not found</h1>
+          <h1 className="text-2xl font-bold text-gray-900">Page not found</h1>
           <p className="mt-3 text-gray-600">The requested profile does not exist.</p>
           <Link
             to="/people"
@@ -52,6 +52,20 @@ export default function PeopleDetail() {
           >
             Back to People
           </Link>
+        </div>
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 max-w-xl w-full p-8 text-center">
+          <h1 className="text-xl font-bold text-gray-900">Members Page</h1>
+          <p className="mt-1 mb-2 text-gray-600">Check out the personal page of our members.</p>
+          <div className="flex flex-wrap gap-2 justify-center">
+              <Link to={`/yoonjin`} className="inline-block underline text-sm px-4 py-2 rounded-lg text-slate-500 hover:text-blue-700 transition">
+                Yoonjin Yoon
+              </Link>
+            {peopleData.labMembersData.map((member) => (
+              <Link to={`/${member.slug}`} key={member.id} className="inline-block underline text-sm px-4 py-2 rounded-lg text-slate-500 hover:text-blue-700 transition">
+                {member.name}
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     );

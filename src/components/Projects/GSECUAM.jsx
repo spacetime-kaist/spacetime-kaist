@@ -5,7 +5,7 @@ import airport from '../../assets/airport_terminal.jpg';
 const gsEcUamData = {
   slug: "gs-ec-uam",
   title: "GS E&C (UAM)",
-  objective: `In collaboration with GS Construction, KAIST TRUE Lab is conducting an industry-academia project to establish the UAM Vertiport Operational Concept in pursuit of developing an 'End-to-end Vertiport Solution' encompassing site selection, design, construction, and operation of urban UAM vertiports.
+  objective: `In collaboration with GS Construction, KAIST STIL Lab is conducting an industry-academia project to establish the UAM Vertiport Operational Concept in pursuit of developing an 'End-to-end Vertiport Solution' encompassing site selection, design, construction, and operation of urban UAM vertiports.
 
 Through investigating and analyzing the latest operational concept trends from leading aviation countries and consulting with international experts, we identify essential technologies for vertiport design and evaluate the potential for integrating value chains. Additionally, we derive an initial vertiport operational concept, including projected throughput information for various operational scenarios.
 

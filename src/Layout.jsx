@@ -1,10 +1,11 @@
 import React from 'react'
-import { Outlet } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
 
 import Navbar from './utility/Navbar';
 import ScrollUpBt from './utility/ScrollUpButton';
 import NavbarCategorized from './utility/NavbarCategorized';
 
+const Rule = () => <hr className="border-t border-gray-200 my-0" />;
 function Layout() {
     return (
 <div id='top' className="font-display flex flex-col justify-center items-center overflow-hidden">
@@ -24,7 +25,61 @@ function Layout() {
     </section>
     </main>
     </div>
-    <footer className="py-8 flex flex-col items-center bg-slate-800 text-slate-200 w-full">
+    {/* ══════════════════════════════════════
+            FOOTER — light, clean (Senseable-style)
+            ══════════════════════════════════════ */}
+        <footer className="bg-white border-t border-gray-200">
+          <div className="container mx-auto px-6 sm:px-10 py-12">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 text-sm mb-10">
+
+              <div>
+                <p className="font-semibold text-gray-900 mb-1 text-base">
+                  Spacetime Intelligence Laboratory
+                </p>
+                <p className="text-xs text-gray-400 font-light">
+                  KAIST · Civil and Environmental Engineering
+                </p>
+                <div className="mt-4 flex flex-col gap-1 text-xs text-gray-500">
+                  <Link to="/research"      className="hover:text-gray-900 hover:underline font-light">Research</Link>
+                  <Link to="/publications"  className="hover:text-gray-900 hover:underline font-light">Publications</Link>
+                  <Link to="/people"        className="hover:text-gray-900 hover:underline font-light">People</Link>
+                  <Link to="/projects"      className="hover:text-gray-900 hover:underline font-light">Projects</Link>
+                  <Link to="/events"        className="hover:text-gray-900 hover:underline font-light">Events</Link>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-[10px] font-semibold uppercase tracking-[0.18em] text-gray-400 mb-3">Address</h3>
+                <p className="text-sm text-gray-600 leading-relaxed font-light">
+                  W16 #410, KAIST<br />
+                  291 Daehak-ro, Yuseong-gu<br />
+                  Daejeon, Republic of Korea
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-[10px] font-semibold uppercase tracking-[0.18em] text-gray-400 mb-3">Contact</h3>
+                <p className="text-sm text-gray-600 leading-relaxed font-light">
+                  TEL: +82-42-350-3615<br />
+                  yoonjin@kaist.ac.kr
+                </p>
+              </div>
+
+            </div>
+
+            <Rule />
+
+            <div className="pt-6 flex flex-wrap items-center justify-between gap-3">
+              <p className="text-xs text-gray-400 font-light">
+                © {new Date().getFullYear()} Spacetime Intelligence Laboratory, KAIST
+              </p>
+              <p className="text-xs text-gray-300 font-light">
+                Department of Civil and Environmental Engineering
+              </p>
+            </div>
+          </div>
+        </footer>
+    {/* <footer className="py-8 flex flex-col items-center bg-slate-800 text-slate-200 w-full">
         <div className="container">
         <div className='color-white p-8'>
         <h2 className='text-2xl font-bold text-sky-700 py-3'>Spacetime Intelligence Laboratory</h2>
@@ -46,7 +101,7 @@ function Layout() {
             </div>
           </div>
         </div>
-      </footer>
+      </footer> */}
 </div>
 </div>
 

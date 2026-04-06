@@ -1,6 +1,138 @@
 [
+{
+  "id": "tda",
+  "title": "Topological Data Analysis",
+  "menuTitle": "",
+  "desc": "Traffic forecasting problem is a research area in transportation engineering that has flourished over the last couple of decades, and started to garner broader research interest as a key technical enabler of the adaptive traffic management.",
+  "thumbnail": "/researchImg/topocl_framework.png",
+  "research": [
+    {
+      "title": "TopoCL: Topological Contrastive Learning for Time Series",
+      "slug": "pub2026-topocl-topological-contrastive-learning",
+      "date": "",
+      "ref":"N. Kim, H. Baik, Y. Yoon. (2026). [\"TopoCL: Topological Contrastive Learning for Time Series\"](https://arxiv.org/abs/2502.02924), IEEE Transactions on Neural Networks and Learning Systems",
+      "desc": "Universal time series representation learning is challenging but valuable in real-world applications such as classification, anomaly detection, and forecasting. Recently, contrastive learning (CL) has been actively explored to tackle time series representation. However, a key challenge is that the data augmentation process in CL can distort seasonal patterns or temporal dependencies, inevitably leading to a loss of semantic information. To address this challenge, we propose Topological Contrastive Learning for time series (TopoCL). TopoCL mitigates such information loss by incorporating persistent homology, which captures the topological characteristics of data that remain invariant under transformations. In this paper, we treat the temporal and topological properties of time series data as distinct modalities. Specifically, we compute persistent homology to construct topological features of time series data, representing them in persistence diagrams. We then design a neural network to encode these persistent diagrams. Our approach jointly optimizes CL within the time modality and time-topology correspondence, promoting a comprehensive understanding of both temporal semantics and topological properties of time series. We conduct extensive experiments on four downstream tasks-classification, anomaly detection, forecasting, and transfer learning. The results demonstrate that TopoCL achieves state-of-the-art performance.",
+      "images": [
+        "/researchImg/topocl_framework.png"
+      ]
+    },
+    {
+      "title": "Extracting the topology of urban airspace through graph abstraction",
+      "slug": "pub2021-extracting-topology-urban-airspace",
+      "date": "",
+      "hyperlink": "https://doi.org/10.1016/j.trc.2021.103116",
+      "desc": "With the rapid adoption of the operational concept of Unmanned Aerial Systems (UAS) in urban airspace, there is an increased focus on the spatial extent that Unmanned Aircraft (UA) can safely navigate. Urban airspace is full of intrinsic risks associated with several factors, including but not limited to unpredictable microclimates, radio-frequency disturbances and electro-magnetic interferences. For safe and efficient use of airspace, it is imperative to proactively assess the availability of airspace volumes to accommodate large-scale operations. In this paper, we highlight that urban airspace is a unique environment where highly obstructed (complex topology) and sparsely structured (simple topology) regions coexist. The presence of static obstacles and required separation from those obstacles create particular spatial structures, such as narrow passages, islands and funnels, throughout the airspace. Considering that not only throughput capacity of airspace but also complexity of path planning is highly dependent on the topology of a navigable space, we propose a new airspace assessment approach to extract the topology of airspace using computational geometry techniques. We focus on identifying geospatial locations suitable for high density UAS operations as well as examining spatial contiguity between those locations in highly urbanized areas. In doing so, we define segment as an airspace region that is wide enough for multiple vehicles to simultaneously pass through. Low-altitude urban airspace is abstracted into a compact and informative graph structure called segment graph that summarizes segment connectivity in the horizontal and vertical dimension. The proposed method shows that the geometry of low-altitude airspace is fundamentally different from that of conventional high-altitude airspace and can provide a useful basis for airspace design and management within low-altitude urban environments."
+    },
+    {
+      "title": "Unmanned aerial vehicle impacts on heat-strengthened glass",
+      "date": "",
+      "hyperlink": "https://ieeexplore.ieee.org/abstract/document/8768301",
+      "desc": "Increasing demand for small unmanned aerial vehicles (UAVs) in the logistics and rescue fields, which are closely related to urban environments, has been accompanied by an increase in impact risk to people and property. However, safety regulations for small UAVs in urban areas have not yet been well established, and there are very few studies investigating the collisions between UAVs and building structures that could occur in an urban area. In this study, experimental and numerical investigations are conducted to evaluate the damage resulting from a UAV collision with heat-strengthened glass, a widely used building exterior cladding. Commercially available UAVs were impacted into a series of glass panels at various speeds and angles. The collision processes were recorded with a high-speed camera, and the impact forces of the UAVs were measured using dynamic force sensors. A numerical model of the UAV was then developed to simulate the impacts using the finite element method and verified by comparison with the experimental results. The collision tests performed in this study are expected to provide primary data for establishing UAV safety regulations, and the verified numerical model can be applied to evaluate various collision scenarios for the different UAVs."
+    }
+  ]
+},
+{
+    "id": "uam",
+    "title": "Urban Air Mobility (UAM)",
+    "menuTitle": "UAM",
+    "desc": "As our first step toward UAM demand forecasting, we considered the case of using existing helipads. We plan to expand our scope in future work to UAM routing, fleet rebalancing and scheduling.",
+    "thumbnail": "/researchImg/2.png",
+    "research": [
+      {
+        "title": "Integrating Urban Air Mobility with Highway Infrastructure: A Strategic Approach for Vertiport Location Selection in the Seoul Metropolitan Area",
+        "date": "",
+        "desc": "This study focuses on identifying suitable locations for highway-transfer Vertiports to integrate Urban Air Mobility (UAM) with existing highway infrastructure. UAM offers an effective solution for enhancing transportation accessibility in the Seoul Metropolitan Area, where conventional transportation often struggle to connect suburban employment zones such as industrial parks. By integrating UAM with ground transportation at highway facilities, an efficient connectivity solution can be achieved for regions with limited transportation options. Our proposed methodology for determining the suitable Vertiport locations utilizes data such as geographic information, origin-destination volume, and travel time. Vertiport candidates are evaluated and selected based on criteria including location desirability, combined transportation accessibility and transportation demand. Applying this methodology to the Seoul metropolitan area, we identify 56 suitable Vertiport locations out of 148 candidates. The proposed methodology offers a strategic approach for the selection of highway-transfer Vertiport locations, enhancing UAM integration with existing transportation systems. Our study provides valuable insights for urban planners and policymakers, with recommendations for future research to include real-time environmental data and to explore the impact of Mobility-as-a-Service on UAM operations. Detailed explanations are available on the following webpage.",
+        "hyperlink": "https://scholar.google.com/citations?view_op=view_citation&hl=ko&user=W-lkXroAAAAJ&citation_for_view=W-lkXroAAAAJ:W7OEmFMy1HYC",
+        "youtube": [
+          "https://www.youtube-nocookie.com/embed/uz03YgCI1MY?si=T9sQkTXhivEiuCxq"
+        ],
+        "images": [
+          "/researchImg/2-2.png"
+        ]
+      },
+      {
+        "title": "Data-driven future demand forecasting for UAM",
+        "date": "",
+        "desc": "As the public interest in UAM is getting higher and the underlying technology for UAM becomes sophisticated, the need to forecast the future demand for UAM increases. As the data-driven demand forecasting method has become more accurate than the traditional modeling-based forecasting method, STIL lab utilized Seoul taxi GPS data to forecast the potential demand for UAM. Our assumption is based on the idea that part of the long-range taxi trip will be replaced by the emerging mobility service - UAM. As our first step toward UAM demand forecasting, we considered the case of using existing helipads. We plan to expand our scope in future work to UAM routing, fleet rebalancing, and scheduling. For details, please visit our blog.",
+        "images": [
+          "/researchImg/2-3.png",
+          "/researchImg/2-4.png"
+        ]
+      },
+      {
+        "title": "UAM Concept of Operations",
+        "date": "",
+        "desc": "Urban Air Mobility (UAM) refers to an aviation transportation system that overcomes the limitations of existing terrestrial transportation methods and enables the transportation of people or cargo in three-dimensional urban airspace through vertical takeoff and landing (VTOL) vehicles, as well as the supporting infrastructure for takeoff and landing. UAM is expected to grow into a new advanced industry in future mobility, with a projected scale of over 700 trillion won over the next 20 years. Consequently, major mobility companies and governments around the world are rapidly joining the technological development efforts. In this context, in the first half of 2020, the Federal Aviation Administration (FAA) and the National Aeronautics and Space Administration (NASA) of the United States each announced specific concepts for UAM operations, known as UAM ConOps and UAM OpsCon Passenger-Carrying Operations, respectively. In line with this global trend, Korea also announced the 'Korean Urban Air Mobility (K-UAM) Roadmap,' including practical operational concepts tailored to the domestic context, as well as a technology development roadmap in the first half of 2020. Additionally, in June, we released the UAM operational concept document. Detailed explanations are available on the following webpage",
+        "hyperlink": "https://sites.google.com/view/urbanairmobility/home?authuser=1&pli=1"
+      }
+    ]
+  },
+{
+  "id": "ure",
+  "title": "Urban Region Representation Learning",
+  "menuTitle": "Urban Region Representation",
+  "thumbnail": "/researchImg/1.png",
+  "desc": "In this work, we propose heterogeneous urban graph attention network (HUGAT), which incorporates heterogeneity of diverse urban datasets.",
+  "research": [
+    {
+      "title": "Effective Urban Region Representation Learning Using Heterogeneous Urban Graph Attention Network (HUGAT)",
+      "date": "September 2021 ~ September 2022",
+      "desc": "Revealing the hidden patterns shaping the urban environment is essential to understand its dynamics and to make cities smarter. Recent studies have demonstrated that learning the representations of urban regions can be an effective strategy to uncover the intrinsic characteristics of urban areas. However, existing studies lack in incorporating diversity in urban data sources. In this work, we propose heterogeneous urban graph attention network (HUGAT), which incorporates heterogeneity of diverse urban datasets. In HUGAT, heterogeneous urban graph (HUG) incorporates both the geo-spatial and temporal people movement variations in a single graph structure. Given a HUG, a set of meta-paths are designed to capture the rich urban semantics as composite relations between nodes. Region embedding is carried out using heterogeneous graph attention network (HAN). HUGAT is designed to consider multiple learning objectives of city’s geo-spatial and mobility variations simultaneously. In our extensive experiments on NYC data, HUGAT outperformed all the state-of-the-art models. Moreover, it demonstrated a robust generalization capability across the various prediction tasks of crime, average personal income, and bike flow as well as the spatial clustering task.",
+      "images": [
+        [
+          "/researchImg/1-1.png"
+        ],
+        [
+          "/researchImg/1-2.png",
+          "/researchImg/1-3.png",
+          "/researchImg/1-4.png"
+        ]
+      ]
+    }
+  ]
+},
+{
+  "id": "urban-simulation",
+  "title": "Agentic Framework for Urban Simulation",
+  "menuTitle": "Urban Simulation",
+  "thumbnail": "/researchImg/CEUS_fig1_overview.png",
+  "desc": "This research field includes traffic simulation and its applications to urban data.",
+  "research": [
+    {
+      "title": "Speak to Simulate: An LLM-Guided Agentic Framework for Traffic Simulation in SUMO",
+      "date": "2025",
+      "hyperlink": "https://dl.acm.org/doi/abs/10.1145/3764921.3770151",
+      "desc": "Traffic simulation plays a pivotal role in shaping transportation policy amid increasing urban traffic congestion and evolving mobility patterns. As a leading simulator, Simulation of Urban MObility (SUMO) is a widely adopted open-source platform for urban mobility research. However, generating traffic scenarios in SUMO is a time-consuming and intricate process, creating a steep learning curve and restricting iterative policy experiments. Although recent studies have integrated Large Language Models (LLMs) to mitigate these challenges, they often rely on fixed pipelines that lack interactive scenario generation and broad coverage of SUMO's capabilities. To address these limitations, we propose AgentSUMO, an LLM-guided agentic framework for traffic simulation. Our framework positions the LLM as an AI agent, enabling interactive scenario design and flexible policy experimentation across the full range of SUMO functionalities. On the Manhattan network, our framework demonstrates that AgentSUMO addresses high-level policy goals through task planning and policy selection, resulting in consistent improvements in key traffic flow metrics. This novel agentic approach significantly lowers the barrier to entry for traffic simulation.",
+      "images": [
+        "/researchImg/CEUS_fig1_overview.png",
+        "/researchImg/exp3_overview_ver1.png",
+        "/researchImg/exp3_result1.png"
+      ]
+    }
+  ]
+},  
+{
+  "id": "usr",
+  "title": "Urban Spatial Reasoning",
+  "menuTitle": "Urban Spatial Reasoning",
+  "thumbnail": "/researchImg/vision.png",
+  "desc": "This research field includes Vision-Language Models (VLM) and their applications to urban data.",
+  "research": [
+    {
+      "title": "How Well do Vision-Language Models Understand Cities? A Comparative Study on Spatial Reasoning from Street-View Images",
+      "date": "2025",
+      "hyperlink": "https://openaccess.thecvf.com/content/ICCV2025W/MARS2/papers/Ro_How_Well_Do_Vision-Language_Models_Understand_Cities__A_Comparative_ICCVW_2025_paper.pdf",
+      "desc": "This research investigated how spatially complex urban scenes can be understood through general-purpose VLMs and whether domain-specific fine-tuning can close the gap.\n\nEffectively understanding urban scenes requires fine-grained spatial reasoning about objects, layouts, and depth cues. However, how well current vision-language models (VLMs), pretrained on general scenes, transfer these abilities to urban domain remains underexplored. To address this gap, we conduct a comparative study of three off-the-shelf VLMs—BLIP2, InstructBLIP, and LLaVA-1.5—evaluating both zero-shot performance and the effects of fine-tuning with a synthetic VQA dataset specific to urban scenes. We construct such dataset from segmentation, depth, and object detection predictions of street-view images, pairing each question with LLM-generated Chain-of-Thought (CoT) answers for stepby-step reasoning supervision. Results show that while VLMs perform reasonably well in zero-shot settings, finetuning with our synthetic CoT-supervised dataset substantially boosts performance, especially for challenging question types such as negation and counterfactuals. This study introduces urban spatial reasoning as a new challenge for VLMs and demonstrates synthetic dataset construction as a practical path for adapting general-purpose models to specialized domains.",
+      "images": [
+        "/researchImg/vision.png",
+        "/researchImg/vision_overview.png"
+      ]
+    
+    }
+  ]
+},
   {
-    "id": "urban-heat-urban-sales",
+    "id": "uhus",
     "title": "Urban Heat, Urban Sales",
     "menuTitle": "Urban Heat, Urban Sales",
     "thumbnail": "/researchImg/uhus.png",
@@ -25,62 +157,35 @@
     ]
   },
   {
-    "id": "urban-region",
-    "title": "Urban Region Representation Learning",
-    "menuTitle": "Urban Region Representation",
-    "thumbnail": "/researchImg/1.png",
-    "desc": "In this work, we propose heterogeneous urban graph attention network (HUGAT), which incorporates heterogeneity of diverse urban datasets.",
+    "id": "traffic-forecasting",
+    "title": "Traffic Forecasting",
+    "menuTitle": "",
+    "desc": "Traffic forecasting problem is a research area in transportation engineering that has flourished over the last couple of decades, and started to garner broader research interest as a key technical enabler of the adaptive traffic management.",
+    "thumbnail": "/researchImg/4.png",
     "research": [
       {
-        "title": "Effective Urban Region Representation Learning Using Heterogeneous Urban Graph Attention Network (HUGAT)",
-        "date": "September 2021 ~ September 2022",
-        "desc": "Revealing the hidden patterns shaping the urban environment is essential to understand its dynamics and to make cities smarter. Recent studies have demonstrated that learning the representations of urban regions can be an effective strategy to uncover the intrinsic characteristics of urban areas. However, existing studies lack in incorporating diversity in urban data sources. In this work, we propose heterogeneous urban graph attention network (HUGAT), which incorporates heterogeneity of diverse urban datasets. In HUGAT, heterogeneous urban graph (HUG) incorporates both the geo-spatial and temporal people movement variations in a single graph structure. Given a HUG, a set of meta-paths are designed to capture the rich urban semantics as composite relations between nodes. Region embedding is carried out using heterogeneous graph attention network (HAN). HUGAT is designed to consider multiple learning objectives of city’s geo-spatial and mobility variations simultaneously. In our extensive experiments on NYC data, HUGAT outperformed all the state-of-the-art models. Moreover, it demonstrated a robust generalization capability across the various prediction tasks of crime, average personal income, and bike flow as well as the spatial clustering task.",
-        "images": [
-          [
-            "/researchImg/1-1.png"
-          ],
-          [
-            "/researchImg/1-2.png",
-            "/researchImg/1-3.png",
-            "/researchImg/1-4.png"
-          ]
-        ]
-      }
-    ]
-  },
-  {
-    "id": "uam",
-    "title": "Urban Air Mobility (UAM)",
-    "menuTitle": "UAM",
-    "desc": "As our first step toward UAM demand forecasting, we considered the case of using existing helipads. We plan to expand our scope in future work to UAM routing, fleet rebalancing and scheduling.",
-    "thumbnail": "/researchImg/2.png",
-    "research": [
-      {
-        "title": "Integrating Urban Air Mobility with Highway Infrastructure: A Strategic Approach for Vertiport Location Selection in the Seoul Metropolitan Area",
+        "title": "A Novel Graph Convolutional Networks to Progressively Adapt to Online Data",
         "date": "",
-        "desc": "This study focuses on identifying suitable locations for highway-transfer Vertiports to integrate Urban Air Mobility (UAM) with existing highway infrastructure. UAM offers an effective solution for enhancing transportation accessibility in the Seoul Metropolitan Area, where conventional transportation often struggle to connect suburban employment zones such as industrial parks. By integrating UAM with ground transportation at highway facilities, an efficient connectivity solution can be achieved for regions with limited transportation options. Our proposed methodology for determining the suitable Vertiport locations utilizes data such as geographic information, origin-destination volume, and travel time. Vertiport candidates are evaluated and selected based on criteria including location desirability, combined transportation accessibility and transportation demand. Applying this methodology to the Seoul metropolitan area, we identify 56 suitable Vertiport locations out of 148 candidates. The proposed methodology offers a strategic approach for the selection of highway-transfer Vertiport locations, enhancing UAM integration with existing transportation systems. Our study provides valuable insights for urban planners and policymakers, with recommendations for future research to include real-time environmental data and to explore the impact of Mobility-as-a-Service on UAM operations. Detailed explanations are available on the following webpage.",
-        "hyperlink": "https://scholar.google.com/citations?view_op=view_citation&hl=ko&user=W-lkXroAAAAJ&citation_for_view=W-lkXroAAAAJ:W7OEmFMy1HYC",
-        "youtube": [
-          "https://www.youtube-nocookie.com/embed/uz03YgCI1MY?si=T9sQkTXhivEiuCxq"
-        ],
+        "desc": "In recent years, graph convolutional networks that possess the ability to adapt to the input data have shown promising results in several studies. In most cases, however, the adaptation has been made during the training phases of the models, which inevitably make the models vulnerable to unexpected traffic conditions such as road closure and traffic accident during the testing phases. In this study, we propose a novel traffic forecasting model, Progressive Graph Convolutional Network (PGCN) to make the model adapt to online traffic data. PGCN constructs a set of graphs by calculating learnable similarity measures among the node signals. The architecture of the model is based on Graph WaveNet. When applied to seven real-world datasets, PGCN consistently achieves state-of-the-art performance. This result shows that PGCN has the ability to generalize in different study areas by progressively adapting to online data.\n\n**SELECTED REFERENCE**\n\n- Y. Shin, Y. Yoon. (2024). [PGCN: Progressive graph convolutional networks for spatial-temporal traffic forecasting](https://ieeexplore.ieee.org/abstract/document/10400973) IEEE Transactions on Intelligent Transportation Systems",
         "images": [
-          "/researchImg/2-2.png"
+          "/researchImg/4-1.png"
         ]
       },
       {
-        "title": "Data-driven future demand forecasting for UAM",
+        "title": "Performance Evaluation of Basic Elements of Deep Neural Network Models for Traffic Forecasting",
         "date": "",
-        "desc": "As the public interest in UAM is getting higher and the underlying technology for UAM becomes sophisticated, the need to forecast the future demand for UAM increases. As the data-driven demand forecasting method has become more accurate than the traditional modeling-based forecasting method, TRUE lab utilized Seoul taxi GPS data to forecast the potential demand for UAM. Our assumption is based on the idea that part of the long-range taxi trip will be replaced by the emerging mobility service - UAM. As our first step toward UAM demand forecasting, we considered the case of using existing helipads. We plan to expand our scope in future work to UAM routing, fleet rebalancing, and scheduling. For details, please visit our blog.",
+        "desc": "Since 2014, various studies have proposed deep learning-based models to solve traffic forecasting problems. While earlier approaches have shown more wide range of implementations, the basic elements of the recent models can be categorized into a few groups - that are RNN, convolution, and self-attention for temporal feature extraction, and Graph Convolutional Networks (GCN) and Graph Attention Networks (GAT) for spatial feature extraction. However, there has been little effort to assess the characteristics of each element and make an in-depth evaluation. In this study, we thoroughly evaluated the performance and characteristics of basic elements of traffic forecasting models through extensive and multi-faceted experiments on four real-world datasets. The result reveals that there is no single element that is superior to the others in all aspects. Interesting outcomes include that the convolution-based models show more accurate overall performance than the attention-based models, while the attention-based models show more robustness against abnormal conditions.\n\n**SELECTED REFERENCE**\n\n- Y. Shin, Y. Yoon*, \"A Comparative Study on Basic Elements of Deep Learning Models for Spatial-Temporal Traffic Forecasting\", AAAI-22 workshop: AI for Transportation, 2022.",
         "images": [
-          "/researchImg/2-3.png",
-          "/researchImg/2-4.png"
+          "/researchImg/4-2.png"
         ]
       },
       {
-        "title": "UAM Concept of Operations",
+        "title": "Short-Term Traffic Forecasting Using Graph Convolutional Networks",
         "date": "",
-        "desc": "Urban Air Mobility (UAM) refers to an aviation transportation system that overcomes the limitations of existing terrestrial transportation methods and enables the transportation of people or cargo in three-dimensional urban airspace through vertical takeoff and landing (VTOL) vehicles, as well as the supporting infrastructure for takeoff and landing. UAM is expected to grow into a new advanced industry in future mobility, with a projected scale of over 700 trillion won over the next 20 years. Consequently, major mobility companies and governments around the world are rapidly joining the technological development efforts. In this context, in the first half of 2020, the Federal Aviation Administration (FAA) and the National Aeronautics and Space Administration (NASA) of the United States each announced specific concepts for UAM operations, known as UAM ConOps and UAM OpsCon Passenger-Carrying Operations, respectively. In line with this global trend, Korea also announced the 'Korean Urban Air Mobility (K-UAM) Roadmap,' including practical operational concepts tailored to the domestic context, as well as a technology development roadmap in the first half of 2020. Additionally, in June, we released the UAM operational concept document. Detailed explanations are available on the following webpage",
-        "hyperlink": "https://sites.google.com/view/urbanairmobility/home?authuser=1&pli=1"
+        "desc": "[STIL Blog Site](https://sites.google.com/view/trueblog/home)\nTraffic forecasting problem is a research area in transportation engineering that has flourished over the last couple of decades, and started to garner broader research interest as a key technical enabler of the adaptive traffic management. The recent surge of Graph Convolutional Networks has led to acute improvement on the performance of traffic forecasting tasks. However, many studies overlook the features that can represent the transportation networks such as speed limit, distance, and flow direction. In our research, we propose Multi-Weight Traffic Graph Convolutional Networks (MW-TGC) to incorporate aforementioned features in a single model and to reflect more spatial dynamicity in traffic forecasting problem. Experiment on two real-world datasets show that the proposed model outperforms the state-of-the-art models.\n\n**SELECTED REFERENCE**\n\n- Y. Shin and Y. Yoon, \"Incorporating Dynamicity of Transportation Network With Multi-Weight Traffic Graph Convolutional Network for Traffic Forecasting,\" in IEEE Transactions on Intelligent Transportation Systems, doi: 10.1109/TITS.2020.3031331.\n",
+        "images": [
+          "/researchImg/4-3.png"
+        ]
       }
     ]
   },
@@ -178,39 +283,6 @@
     ]
   },
   {
-    "id": "traffic-forecasting",
-    "title": "Traffic Forecasting",
-    "menuTitle": "",
-    "desc": "Traffic forecasting problem is a research area in transportation engineering that has flourished over the last couple of decades, and started to garner broader research interest as a key technical enabler of the adaptive traffic management.",
-    "thumbnail": "/researchImg/4.png",
-    "research": [
-      {
-        "title": "A Novel Graph Convolutional Networks to Progressively Adapt to Online Data",
-        "date": "",
-        "desc": "In recent years, graph convolutional networks that possess the ability to adapt to the input data have shown promising results in several studies. In most cases, however, the adaptation has been made during the training phases of the models, which inevitably make the models vulnerable to unexpected traffic conditions such as road closure and traffic accident during the testing phases. In this study, we propose a novel traffic forecasting model, Progressive Graph Convolutional Network (PGCN) to make the model adapt to online traffic data. PGCN constructs a set of graphs by calculating learnable similarity measures among the node signals. The architecture of the model is based on Graph WaveNet. When applied to seven real-world datasets, PGCN consistently achieves state-of-the-art performance. This result shows that PGCN has the ability to generalize in different study areas by progressively adapting to online data.\n\n**SELECTED REFERENCE**\n\n- Y. Shin, Y. Yoon. (2024). [PGCN: Progressive graph convolutional networks for spatial-temporal traffic forecasting](https://ieeexplore.ieee.org/abstract/document/10400973) IEEE Transactions on Intelligent Transportation Systems",
-        "images": [
-          "/researchImg/4-1.png"
-        ]
-      },
-      {
-        "title": "Performance Evaluation of Basic Elements of Deep Neural Network Models for Traffic Forecasting",
-        "date": "",
-        "desc": "Since 2014, various studies have proposed deep learning-based models to solve traffic forecasting problems. While earlier approaches have shown more wide range of implementations, the basic elements of the recent models can be categorized into a few groups - that are RNN, convolution, and self-attention for temporal feature extraction, and Graph Convolutional Networks (GCN) and Graph Attention Networks (GAT) for spatial feature extraction. However, there has been little effort to assess the characteristics of each element and make an in-depth evaluation. In this study, we thoroughly evaluated the performance and characteristics of basic elements of traffic forecasting models through extensive and multi-faceted experiments on four real-world datasets. The result reveals that there is no single element that is superior to the others in all aspects. Interesting outcomes include that the convolution-based models show more accurate overall performance than the attention-based models, while the attention-based models show more robustness against abnormal conditions.\n\n**SELECTED REFERENCE**\n\n- Y. Shin, Y. Yoon*, \"A Comparative Study on Basic Elements of Deep Learning Models for Spatial-Temporal Traffic Forecasting\", AAAI-22 workshop: AI for Transportation, 2022.",
-        "images": [
-          "/researchImg/4-2.png"
-        ]
-      },
-      {
-        "title": "Short-Term Traffic Forecasting Using Graph Convolutional Networks",
-        "date": "",
-        "desc": "[TRUE Blog Site](https://sites.google.com/view/trueblog/home)\nTraffic forecasting problem is a research area in transportation engineering that has flourished over the last couple of decades, and started to garner broader research interest as a key technical enabler of the adaptive traffic management. The recent surge of Graph Convolutional Networks has led to acute improvement on the performance of traffic forecasting tasks. However, many studies overlook the features that can represent the transportation networks such as speed limit, distance, and flow direction. In our research, we propose Multi-Weight Traffic Graph Convolutional Networks (MW-TGC) to incorporate aforementioned features in a single model and to reflect more spatial dynamicity in traffic forecasting problem. Experiment on two real-world datasets show that the proposed model outperforms the state-of-the-art models.\n\n**SELECTED REFERENCE**\n\n- Y. Shin and Y. Yoon, \"Incorporating Dynamicity of Transportation Network With Multi-Weight Traffic Graph Convolutional Network for Traffic Forecasting,\" in IEEE Transactions on Intelligent Transportation Systems, doi: 10.1109/TITS.2020.3031331.\n",
-        "images": [
-          "/researchImg/4-3.png"
-        ]
-      }
-    ]
-  },
-  {
     "id": "transportation-network",
     "title": "Transportation Network and Data Representation",
     "menuTitle": "Transportation Network",
@@ -298,14 +370,14 @@
         "title": "Air Traffic Management Master Plan - NARAE (National ATM Renovation & Enhancement)",
         "projectsSlug": "narae",
         "date": "",
-        "desc": "2012 marks the 40th anniversary for the Republic of Korea(ROK)'s first trans-pacific flight. Over the past decades, ROK has seen a tremendous growth in air navigation sector fueled by robust economic growth, along with a demonstrated operational capability to handle increasing demand.\n\nROK has been actively investing in modernizing of air navigation system, including CNS/ATM, aviation technology, and so on. In 2011, ROK initiated on a transition to the future ATM system and is establishing future ATM plan called NARAE, National ATM Renovation And Enhancement, which means the ‘wing’ in Korean.\n\nROK subsequently commissioned the working group in November 2011 as a group of researchers from academia and civil aviation organizations to prepare the draft of NARAE for the future ATM system. True lab developed the ROK’s ATM master plan as below.\n\n![9-1](/researchImg/narae.jpg)\n\n### **Implementation Plan**\n\n![9-1](/researchImg/9-1.png)",
+        "desc": "2012 marks the 40th anniversary for the Republic of Korea(ROK)'s first trans-pacific flight. Over the past decades, ROK has seen a tremendous growth in air navigation sector fueled by robust economic growth, along with a demonstrated operational capability to handle increasing demand.\n\nROK has been actively investing in modernizing of air navigation system, including CNS/ATM, aviation technology, and so on. In 2011, ROK initiated on a transition to the future ATM system and is establishing future ATM plan called NARAE, National ATM Renovation And Enhancement, which means the ‘wing’ in Korean.\n\nROK subsequently commissioned the working group in November 2011 as a group of researchers from academia and civil aviation organizations to prepare the draft of NARAE for the future ATM system. STIL lab developed the ROK’s ATM master plan as below.\n\n![9-1](/researchImg/narae.jpg)\n\n### **Implementation Plan**\n\n![9-1](/researchImg/9-1.png)",
         "footnote": "**Period**: 2011.12~2012.06\n\n**Funding**: MOLIT\n\n**Team**: Ohhoun Kwon, Kyowon Song, Donghoun Lee, Eunhye Kim\n\n**R&D Partnership**: Korea Civil Aviation Development Association (KADA)"
       },
       {
         "title": "Autonomous Logistics",
         "projectsSlug": "autonomous-logistics",
         "date": "",
-        "desc": "### **Development of Autonomous Mobile Agent System in Complex Warehouse**\n\nUnlike vehicles with men aboard, autonomous vehicles require algorithms for path planning, static obstacle avoidance, dynamic obstacle avoidance, and many more. Especially, algorithms need to be considered for co-working with human workers to easily adapt the system in existing warehouses with lower setup cost.\n\nTherefore TRUE lab is developing an optimized algorithm for each robot to find the shortest path from origin to destination for each mission while potential conflicts and deadlocks are prevented.\n\nThe goal of this project is to develop an algorithm which enables a large quantity of mobile robots (up to 300) operate in simulation. By having a testbed in a real warehouse and mobile robots specially produced for this project, in 2015-2016 the algorithm will be tested.\n\n![9-2](/researchImg/9-2.png)\n\n### **Development**\n\nBreadth First Search algorithm can be modified to be adopted in three-dimensional space with discrete time windows. Similar to Amazon's Kiva system, the algorithm generates paths for multi mobile robots, and check if any cell is overlapped by more than one robots. If there is a conflict, it finds another path which is the second shortest. This is repeated until all conflicts are resolved maintaining the shortest path as much as possible.\n\n![9-3](/researchImg/9-3.png)\n\n### **Simulation Example**",
+        "desc": "### **Development of Autonomous Mobile Agent System in Complex Warehouse**\n\nUnlike vehicles with men aboard, autonomous vehicles require algorithms for path planning, static obstacle avoidance, dynamic obstacle avoidance, and many more. Especially, algorithms need to be considered for co-working with human workers to easily adapt the system in existing warehouses with lower setup cost.\n\nTherefore STIL lab is developing an optimized algorithm for each robot to find the shortest path from origin to destination for each mission while potential conflicts and deadlocks are prevented.\n\nThe goal of this project is to develop an algorithm which enables a large quantity of mobile robots (up to 300) operate in simulation. By having a testbed in a real warehouse and mobile robots specially produced for this project, in 2015-2016 the algorithm will be tested.\n\n![9-2](/researchImg/9-2.png)\n\n### **Development**\n\nBreadth First Search algorithm can be modified to be adopted in three-dimensional space with discrete time windows. Similar to Amazon's Kiva system, the algorithm generates paths for multi mobile robots, and check if any cell is overlapped by more than one robots. If there is a conflict, it finds another path which is the second shortest. This is repeated until all conflicts are resolved maintaining the shortest path as much as possible.\n\n![9-3](/researchImg/9-3.png)\n\n### **Simulation Example**",
         "youtube": [
           "https://www.youtube-nocookie.com/embed/z-0NvxDENak?si=AbtzbgWHjJphgGR2"
         ],
@@ -322,13 +394,13 @@
         "title": "Aviation System Safety Management and Reliability Centered Maintenance Program Development",
         "projectsSlug": "aviation-system-safety-management",
         "date": "",
-        "desc": "- The goal of this research is to develop SMS tools for service providers and policymakers to achieve proactive safety management in accordance with ICAO guideline. \n- TRUE is participating on a project of development of risk model and related techniques to assess risks in the aviation organizations both in quantitative and qualitative way: direction of collecting safety data for risk analysis and risk assessment, methodology of risk assessment using safety database, and developing state safety indicators.\n\n### CATS, ESD Model\n\n![9-6](/researchImg/9-6.png)\n\n### ICAO- Risk Matrix Model\n\n![9-7](/researchImg/9-7.png)\n\n### FAA - Risk Matrix Model\n\n![9-8](/researchImg/9-8.png)\n\n### KAIST-Risk Model\n\n**1. Worst/Most Credible Risk Matrix method**\n- Identify both of the most frequent risk level and the worst risk level by hazard\n- The risk levels are visually shown on risk matrix.\n\n**2. Cromatography method**\n- Represent probability distribution of severity by hazard into stacked bar chart. \n- Provide insights into overall risk level by hazard, but does not provide immediate risk assessment\n\n\n**3. Risk Scoring**\n- Likelihood value from existing risk matrix’s likelihood value\n- Severity value from weighted sum of the number of occurrence by severity level\n- Useful in quantitative comparison of risks among hazards\n\n![9-9](/researchImg/9-9.png)",
+        "desc": "- The goal of this research is to develop SMS tools for service providers and policymakers to achieve proactive safety management in accordance with ICAO guideline. \n- STIL is participating on a project of development of risk model and related techniques to assess risks in the aviation organizations both in quantitative and qualitative way: direction of collecting safety data for risk analysis and risk assessment, methodology of risk assessment using safety database, and developing state safety indicators.\n\n### CATS, ESD Model\n\n![9-6](/researchImg/9-6.png)\n\n### ICAO- Risk Matrix Model\n\n![9-7](/researchImg/9-7.png)\n\n### FAA - Risk Matrix Model\n\n![9-8](/researchImg/9-8.png)\n\n### KAIST-Risk Model\n\n**1. Worst/Most Credible Risk Matrix method**\n- Identify both of the most frequent risk level and the worst risk level by hazard\n- The risk levels are visually shown on risk matrix.\n\n**2. Cromatography method**\n- Represent probability distribution of severity by hazard into stacked bar chart. \n- Provide insights into overall risk level by hazard, but does not provide immediate risk assessment\n\n\n**3. Risk Scoring**\n- Likelihood value from existing risk matrix’s likelihood value\n- Severity value from weighted sum of the number of occurrence by severity level\n- Useful in quantitative comparison of risks among hazards\n\n![9-9](/researchImg/9-9.png)",
         "footnote": "**Period**: 2011.12 ~ 2015.06\n\n**Funding**: KAIA\n\n**Team**: Ohhoun Kwon, Yuna Noh, Jiseon Lee, Donghoun Lee, Eunhye Kim, Eunseok Kim\n\n**Patents**:\n-  Aviation safety risk assessment method based on hazard matrix and apparatus for the same.  Korea Domestic Patent Application.    App. No. 10-2014-0105376  (2014.08.13)\n- Software: Aviation Risk Identification and Assessment (ARIA)\n\n**R&D Partnership**:\n\n![9-10](/researchImg/9-10.png)"
       },
       {
         "title": "Impacts of volcanic eruption on aviation system",
         "date": "",
-        "desc": "- The ash cloud from the Eyjafjallajokull volcano in Iceland caused a significant impact on aviation industry on April 14, 2010. Airports across Europe were closed, and at least 17,000 flights a day were cancelled for over a week. Overall 100,000 flights were cancelled and 10 million passengers were unable to board their flights during this week. After Iceland case, there have been many studies trying to address aviation industry impact of Volcanic Ash. However, most of the volcanic eruption scenario studies have limitations.\n- In TRUE lab, we analyze the damage of the airports and number of the cancelled flights depend on the hypothetical case of Mt. Baegdu eruption model to derive a predicted flights path and diffusion distance of volcanic ash. This research analyzes the effect of volcanic ash to air traffic and airport by quantification value by assessing volcanic ash concentration and its altitude.",
+        "desc": "- The ash cloud from the Eyjafjallajokull volcano in Iceland caused a significant impact on aviation industry on April 14, 2010. Airports across Europe were closed, and at least 17,000 flights a day were cancelled for over a week. Overall 100,000 flights were cancelled and 10 million passengers were unable to board their flights during this week. After Iceland case, there have been many studies trying to address aviation industry impact of Volcanic Ash. However, most of the volcanic eruption scenario studies have limitations.\n- In STIL lab, we analyze the damage of the airports and number of the cancelled flights depend on the hypothetical case of Mt. Baegdu eruption model to derive a predicted flights path and diffusion distance of volcanic ash. This research analyzes the effect of volcanic ash to air traffic and airport by quantification value by assessing volcanic ash concentration and its altitude.",
         "images": [
           "/researchImg/9-11.png"
         ]
@@ -340,18 +412,18 @@
     "title": "Other Research",
     "menuTitle": "",
     "desc": "Includes risk factor analysis, accident hot spot study, and EMS response time coverage using historic traffic data.",
-    "detail": "Transportation data has grown exponentially in the past decades, and opened a new channel to analyze and understand numerous common interests in the domain. At TRUE, we utilize multiple data sources for collision analysis and prediction, including feature selection of injury severity prediction, high collision area classification, and post-collision response. ",
+    "detail": "Transportation data has grown exponentially in the past decades, and opened a new channel to analyze and understand numerous common interests in the domain. At STIL, we utilize multiple data sources for collision analysis and prediction, including feature selection of injury severity prediction, high collision area classification, and post-collision response. ",
     "thumbnail": "/researchImg/10.png",
     "research": [
       {
         "title": "Risk factor analysis",
         "date": "",
-        "desc": "There were numbers of studies related to risk factor analysis done in TRUE from 2011.\n\nThe studies contain :\n\n- Risk factor analysis with respect to injury severity\n- Risk factor analysis with respect to cellphone usage\n- Risk factor analysis of highway accident with respect to cost severity\n- Risk factor analysis for fatal crash\n- Aged pedestrian safety study\n\n### **Risk factor analysis with respect to injury severity**\n\n- Many recent road traffic safety studies are focusing on the analysis of risk factors that impact fatality and injury level of traffic accidents. While there are well known factors that affect accident severity such as drug usage and drinking, still there are numerous risk factors that needs to be discovered to affect the severity. \n- In this research, Naïve Bayes classifier method and the decision tree classifier method were used to reveal the relative importance of the data fields with respect to the resulting severity level.\n- Some of high-ranking risk factors were found to be having strong interdependency, and it was revealed that only a few numbers of risk factors dominate the severity level.\n\n![10-1](/researchImg/10-1.png)\n\n### **Risk factor analysis with respect to cellphone usage**\n\n- Along with the development of IT industry, cellphone usage while driving is becoming one of the major concerns in traffic safety. While cellphone using popularity is growing, there are many cities banning handheld cellphone usage while driving and the efficiency of this banning policy is a controversial topic. By performing turning point analysis technique based on the frequentist and Bayesian approach, it was revealed that the law was critical to the reduction of cellphone-related collisions.\n\n![10-2](/researchImg/10-2.png)\n\n### **Risk factor analysis of highway accident with respect to cost severity**\n\n- Current of damage cost calculation of traffic accidents is based only on insurance compensation. This means that the damage cost of road equipment is being ignored, and there is no efficient resolution being prepared to reduce the traffic accidents.\n- Our research team used a decision tree analysis that considers dependencies between the data fields in order to analyze the relationship between the accident features and the occurrence of damage cost about traffic facilities and road equipment. By using CART algorithm based decision tree classifier, we figured out that cause of accident, accident type, accident location, lane, linearity of road, and road condition are main variables that affects the damage cost. Also, situations that are highly likely to cause high equipment damage cost were extracted from the data.\n\n### **Other researches related to the risk factor analysis**\n- In addition to the research mentioned above, there are several other risk factor analysis studies such as fatal accident-focused risk analysis, and risk factor analysis about aged pedestrians\n"
+        "desc": "There were numbers of studies related to risk factor analysis done in STIL from 2011.\n\nThe studies contain :\n\n- Risk factor analysis with respect to injury severity\n- Risk factor analysis with respect to cellphone usage\n- Risk factor analysis of highway accident with respect to cost severity\n- Risk factor analysis for fatal crash\n- Aged pedestrian safety study\n\n### **Risk factor analysis with respect to injury severity**\n\n- Many recent road traffic safety studies are focusing on the analysis of risk factors that impact fatality and injury level of traffic accidents. While there are well known factors that affect accident severity such as drug usage and drinking, still there are numerous risk factors that needs to be discovered to affect the severity. \n- In this research, Naïve Bayes classifier method and the decision tree classifier method were used to reveal the relative importance of the data fields with respect to the resulting severity level.\n- Some of high-ranking risk factors were found to be having strong interdependency, and it was revealed that only a few numbers of risk factors dominate the severity level.\n\n![10-1](/researchImg/10-1.png)\n\n### **Risk factor analysis with respect to cellphone usage**\n\n- Along with the development of IT industry, cellphone usage while driving is becoming one of the major concerns in traffic safety. While cellphone using popularity is growing, there are many cities banning handheld cellphone usage while driving and the efficiency of this banning policy is a controversial topic. By performing turning point analysis technique based on the frequentist and Bayesian approach, it was revealed that the law was critical to the reduction of cellphone-related collisions.\n\n![10-2](/researchImg/10-2.png)\n\n### **Risk factor analysis of highway accident with respect to cost severity**\n\n- Current of damage cost calculation of traffic accidents is based only on insurance compensation. This means that the damage cost of road equipment is being ignored, and there is no efficient resolution being prepared to reduce the traffic accidents.\n- Our research team used a decision tree analysis that considers dependencies between the data fields in order to analyze the relationship between the accident features and the occurrence of damage cost about traffic facilities and road equipment. By using CART algorithm based decision tree classifier, we figured out that cause of accident, accident type, accident location, lane, linearity of road, and road condition are main variables that affects the damage cost. Also, situations that are highly likely to cause high equipment damage cost were extracted from the data.\n\n### **Other researches related to the risk factor analysis**\n- In addition to the research mentioned above, there are several other risk factor analysis studies such as fatal accident-focused risk analysis, and risk factor analysis about aged pedestrians\n"
       },
       {
         "title": "Accident hot spot study",
         "date": "",
-        "desc": "There were numbers of studies related to accident hotspot study\n\n- DB Fusion\n- Hotspot clustering study\n- Factor-wise accident hotspot analysis\n\n### **DB fusion**\n\n- Various kinds of traffic-related data are being collected and managed from many agencies. Some of these large-scale traffic DB including traffic volume, flow speed, or public transportation DB are available to public. Accident hotspots (High Collision Concentration Locations, HCCL) researches that only considered accident history DB have limitations in reliability and accuracy due to its insufficient information. \n- TRUE Lab is working on the fusion of collision history DB from SWITRS with real-time traffic information data from PeMS in order to construct integrated collision DB that provides both environmental factors and driving behavior factors. Combining different kinds of traffic DB will lead to the mutual supplementation of data reliability, offering analysis result of higher credibility.\n\n![10-3](/researchImg/10-3.png)\n\n### **Factor-wise accident hotspot analysis**\n\n- Current concept of accident hotspot is explained as HCCL (High Collision Concentration Location), which is determined by counting the accident frequency along absolute post-mile of the road. However, this method does not consider the severity and the cause of the accidents.\n- In TRUE lab, we focused on factor-wise accident research which enables evaluation of accident in both frequency and severity, using nonparametric models and clustering algorithms.\n\n![10-4](/researchImg/10-4.png)"
+        "desc": "There were numbers of studies related to accident hotspot study\n\n- DB Fusion\n- Hotspot clustering study\n- Factor-wise accident hotspot analysis\n\n### **DB fusion**\n\n- Various kinds of traffic-related data are being collected and managed from many agencies. Some of these large-scale traffic DB including traffic volume, flow speed, or public transportation DB are available to public. Accident hotspots (High Collision Concentration Locations, HCCL) researches that only considered accident history DB have limitations in reliability and accuracy due to its insufficient information. \n- STIL Lab is working on the fusion of collision history DB from SWITRS with real-time traffic information data from PeMS in order to construct integrated collision DB that provides both environmental factors and driving behavior factors. Combining different kinds of traffic DB will lead to the mutual supplementation of data reliability, offering analysis result of higher credibility.\n\n![10-3](/researchImg/10-3.png)\n\n### **Factor-wise accident hotspot analysis**\n\n- Current concept of accident hotspot is explained as HCCL (High Collision Concentration Location), which is determined by counting the accident frequency along absolute post-mile of the road. However, this method does not consider the severity and the cause of the accidents.\n- In STIL lab, we focused on factor-wise accident research which enables evaluation of accident in both frequency and severity, using nonparametric models and clustering algorithms.\n\n![10-4](/researchImg/10-4.png)"
       },
       {
         "title": "EMS response time coverage using historic traffic data",
@@ -366,7 +438,7 @@
       {
         "title": "Impacts of volcanic eruption on aviation system",
         "date": "",
-        "desc": "- The ash cloud from the Eyjafjallajokull volcano in Iceland caused a significant impact on aviation industry on April 14, 2010. Airports across Europe were closed, and at least 17,000 flights a day were cancelled for over a week. Overall 100,000 flights were cancelled and 10 million passengers were unable to board their flights during this week. After Iceland case, there have been many studies trying to address aviation industry impact of Volcanic Ash. However, most of the volcanic eruption scenario studies have limitations.\n- In TRUE lab, we analyze the damage of the airports and number of the cancelled flights depend on the hypothetical case of Mt. Baegdu eruption model to derive a predicted flights path and diffusion distance of volcanic ash. This research analyzes the effect of volcanic ash to air traffic and airport by quantification value by assessing volcanic ash concentration and its altitude.",
+        "desc": "- The ash cloud from the Eyjafjallajokull volcano in Iceland caused a significant impact on aviation industry on April 14, 2010. Airports across Europe were closed, and at least 17,000 flights a day were cancelled for over a week. Overall 100,000 flights were cancelled and 10 million passengers were unable to board their flights during this week. After Iceland case, there have been many studies trying to address aviation industry impact of Volcanic Ash. However, most of the volcanic eruption scenario studies have limitations.\n- In STIL lab, we analyze the damage of the airports and number of the cancelled flights depend on the hypothetical case of Mt. Baegdu eruption model to derive a predicted flights path and diffusion distance of volcanic ash. This research analyzes the effect of volcanic ash to air traffic and airport by quantification value by assessing volcanic ash concentration and its altitude.",
         "images": [
           [
             "/researchImg/10-6.png"

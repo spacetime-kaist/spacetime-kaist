@@ -12,7 +12,7 @@ export default function ProjectsDetail() {
   const { data: researchData, loading: researchLoading } = useDataLoader('researchData');
   
   const loading = projectsLoading || researchLoading;
-  const project = projectsData?.find(item => item.link.replace('/','') === slug);
+  const project = projectsData?.find(item => item.link&&item.link.replace('/','') === slug);
   const researchSection = researchData?.find(item => item.id === project?.researchSectionID);
   const detail = researchSection?.research?.find(item => item.projectsSlug === slug);
 

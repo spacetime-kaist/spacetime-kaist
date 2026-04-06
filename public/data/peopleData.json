@@ -1,6 +1,7 @@
 {
   "professorData": {
     "id": 1,
+    "slug": "yoonjin",
     "name": "Prof. Yoonjin Yoon",
     "greeting": "I'm an associate Professor in Department of Civil and Environmental Engineering at KAIST with joint appointment in Graduate School of Artificial Intelligence and Graduate School of Data Science",
     "link": "https://sites.google.com/view/yoonjintrue",
@@ -17,6 +18,7 @@
   "labMembersData": [
     {
       "id": 2,
+      "slug": "namwoo",
       "name": "Namwoo Kim",
       "link": "namwoo0910.github.io",
       "role": "Postdoctoral Researcher",
@@ -30,6 +32,7 @@
     },
     {
       "id": 3,
+      "slug": "sungmin",
       "name": "Sungmin Sohn",
       "link": "https://sites.google.com/view/sungmin-sohn",
       "linkedin": "https://www.linkedin.com/in/sungmin-sohn-43280216a",
@@ -44,6 +47,7 @@
     },
     {
       "id": 4,
+      "slug": "donghyun",
       "name": "Donghyun Yoon",
       "link": "https://sites.google.com/view/donghyun-yoon",
       "role": "Ph.D. Candidate",
@@ -57,9 +61,9 @@
     },
     {
       "id": 5,
+      "slug": "minwoo",
       "name": "Minwoo Jeong",
-      "link": "https://sites.google.com/view/minwoo-jeong",
-      "role": "Researcher",
+      "role": "Research Associate",
       "from": "2026.03~",
       "email": "minwoo5003@kaist.ac.kr",
       "edu": [
@@ -70,8 +74,9 @@
     },
     {
       "id": 7,
+      "slug": "seungro",
       "name": "Seungro Lee",
-      "role": "M.S. Student",
+      "role": "M.S. Candidate",
       "from": "2024.09~",
       "email": "roy.seungro.lee@kaist.ac.kr",
       "edu": [
@@ -81,6 +86,7 @@
     },
     {
       "id": 8,
+      "slug": "keonhee",
       "name": "Keonhee Jang",
       "role": "Integrated M.S.-Ph.D Candidate",
       "from": "2024.09~",
@@ -92,8 +98,9 @@
     },
     {
       "id": 9,
+      "slug": "jeeyun",
       "name": "Jeeyun Chang",
-      "role": "M.S. Student",
+      "role": "M.S. Candidate",
       "from": "2025.03~",
       "email": "jyc021@kaist.ac.kr",
       "edu": [
@@ -103,9 +110,10 @@
     },
     {
       "id": 10,
+      "slug": "jihyeon",
       "name": "Jihyeon Ohk",
       "link": "https://sites.google.com/spacetime.kaist.ac.kr/jihyeon-ohk",
-      "role": "M.S. Student",
+      "role": "M.S. Candidate",
       "from": "2025.09~",
       "email": "jh.ohk@kaist.ac.kr",
       "edu": [
