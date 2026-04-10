@@ -7,6 +7,7 @@
     "conference": "대한교통학회지 제43권 제1호",
     "date": "2025",
     "href": "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE12087850",
+    "keywords": ["transit", "time series", "mobility"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -18,6 +19,7 @@
     "conference": "대한교통학회 제90회 학술발표회",
     "date": "2024",
     "href": "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE11760070",
+    "keywords": ["UAV", "airspace", "safety"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -29,6 +31,7 @@
     "conference": "2022 춘계공동학술대회(한국경영과학회, 대한산업공학회)",
     "date": "2022",
     "href": "https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11084371",
+    "keywords": ["mobility", "road safety", "urban computing"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -40,6 +43,7 @@
     "conference": "2022 춘계공동학술대회(한국경영과학회, 대한산업공학회)",
     "date": "2022",
     "href": "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE11101163",
+    "keywords": ["urban computing", "mobility", "deep learning"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -51,6 +55,7 @@
     "conference": "2022 춘계공동학술대회(한국경영과학회, 대한산업공학회)",
     "date": "2022",
     "href": "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE11084369",
+    "keywords": ["UAV", "safety", "airspace"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -62,6 +67,7 @@
     "conference": "2020 한국추계경영과학회",
     "date": "2020",
     "href": "https://koasas.kaist.ac.kr/handle/10203/279806",
+    "keywords": ["traffic forecasting", "mobility", "deep learning"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -73,6 +79,7 @@
     "conference": "2020 한국추계경영과학회",
     "date": "2020",
     "href": "https://koasas.kaist.ac.kr/handle/10203/279805",
+    "keywords": ["UAM", "airspace", "GNN"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -84,6 +91,7 @@
     "conference": "한국경영과학회 추계학술대회",
     "date": "2017",
     "href": "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE07272879",
+    "keywords": ["UAV", "safety", "autonomous driving"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -95,6 +103,7 @@
     "conference": "한국경영과학회 추계학술대회",
     "date": "2017",
     "href": "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE07272880",
+    "keywords": ["road safety", "safety", "mobility"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -106,6 +115,7 @@
     "conference": "한국경영과학회 추계학술대회",
     "date": "2017",
     "href": "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE07272881",
+    "keywords": ["physiological sensing", "autonomous driving", "safety"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -117,6 +127,7 @@
     "conference": "한국경영과학회 추계학술대회",
     "date": "2017",
     "href": "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE07272882",
+    "keywords": ["UAV", "airspace", "safety"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -128,6 +139,7 @@
     "conference": "춘계공동학술대회(대한산업공학회, 한국경영과학회, 한국시뮬레이션학회) ",
     "date": "2017",
     "href": "https://koasas.kaist.ac.kr/handle/10203/223811",
+    "keywords": ["road safety", "safety", "mobility"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -139,6 +151,7 @@
     "conference": "춘계공동학술대회(대한산업공학회, 한국경영과학회, 한국시뮬레이션학회) ",
     "date": "2017",
     "href": "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE07169283",
+    "keywords": ["physiological sensing", "autonomous driving", "safety"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -150,6 +163,7 @@
     "conference": "춘계공동학술대회(대한산업공학회, 한국경영과학회, 한국시뮬레이션학회) ",
     "date": "2017",
     "href": "https://koasas.kaist.ac.kr/handle/10203/223809",
+    "keywords": ["mobility", "safety", "urban computing"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -161,6 +175,7 @@
     "conference": "춘계공동학술대회(대한산업공학회, 한국경영과학회, 한국시뮬레이션학회) ",
     "date": "2017",
     "href": "https://koasas.kaist.ac.kr/handle/10203/223812",
+    "keywords": ["UAV", "safety", "autonomous driving"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -172,6 +187,7 @@
     "conference": "춘계공동학술대회(대한산업공학회, 한국경영과학회, 한국시뮬레이션학회) ",
     "date": "2017",
     "href": "https://koasas.kaist.ac.kr/handle/10203/223810",
+    "keywords": ["mobility", "safety", "urban computing"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -183,6 +199,7 @@
     "conference": "The 75th Conference of Korean Society of Transportation",
     "date": "2016",
     "href": "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE08001919",
+    "keywords": ["road safety", "safety", "urban computing"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -194,6 +211,7 @@
     "conference": "The 72th Conference of Korean Society of Transportation",
     "date": "2015",
     "href": "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE06278154",
+    "keywords": ["autonomous driving", "simulation", "infrastructure"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -205,6 +223,7 @@
     "conference": "The 72th Conference of Korean Society of Transportation",
     "date": "2015",
     "href": "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE07499400",
+    "keywords": ["road safety", "safety", "machine learning"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -216,6 +235,7 @@
     "conference": "The 72th Conference of Korean Society of Transportation",
     "date": "2015",
     "href": "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE07499441",
+    "keywords": ["mobility", "safety", "urban computing"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -227,6 +247,7 @@
     "conference": "The 72th Conference of Korean Society of Transportation",
     "date": "2015",
     "href": "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE07499450",
+    "keywords": ["aviation", "safety", "air traffic"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   }

@@ -15,21 +15,8 @@
     "active": true
   },
   {
-    "id": 20252028,
-    "label": "GS E&C (UAM)",
-    "title": "Analysis of Vertiport Locations and 3D Urban Space for Urban Air Mobility (UAM) Operations",
-    "project_title":"UAM 운용을 위한 버티포트 위치 및 도심 3차원 공간 분석",
-    "code": "G04250032",
-    "period": "2025 ~ 2028",
-    "image": "/projectsImg/gsec.png",
-    "link": "/gs-ec-uam",
-    "funding": "GS E&C",
-    "funding_short": "GS E&C",
-    "type": "internal"
-  },
-  {
     "id": 20242028,
-    "label": "GS E&C (Urban AI)",
+    "label": "CAUS",
     "image": "/projectsImg/gsec.png",
     "title": "GS E&C-KAIST Joint R&D on Urban AI Technologies for Future Cities",
     "project_title":"GS건설-KAIST 미래 도시 인공지능 핵심 기술 연구개발",
@@ -38,7 +25,22 @@
     "funding": "GS E&C Industrial R&D Project",
     "funding_short": "GS E&C",
     "budget": "4,400,000,000 KRW",
-    "active": true
+    "active": true,
+    "projects": [
+        {
+          "id": 20252028,
+          "label": "GS E&C (UAM)",
+          "title": "Analysis of Vertiport Locations and 3D Urban Space for Urban Air Mobility (UAM) Operations",
+          "project_title":"UAM 운용을 위한 버티포트 위치 및 도심 3차원 공간 분석",
+          "code": "G04250032",
+          "period": "2025 ~ 2028",
+          "image": "/projectsImg/gsec.png",
+          "link": "/gs-ec-uam",
+          "funding": "GS E&C",
+          "funding_short": "GS E&C",
+          "type": "internal"
+        }
+    ]
   },
   {
     "id": 20252027,

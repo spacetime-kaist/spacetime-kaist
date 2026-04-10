@@ -7,20 +7,35 @@
     "conference": "GeoSIM '25: 8th ACM SIGSPATIAL International Workshop on Geospatial Simulation",
     "date": "2025",
     "href": "https://dl.acm.org/doi/abs/10.1145/3764921.3770151",
-    "summary": "City planners and policymakers often need to explore “what if” ideas, such as how to ease rush hour congestion or improve traffic flow. Yet most traffic simulators depend on complicated scripts, large datasets, and technical skills that make them difficult for non-experts to use.\n\nOur work presents **AgentSUMO**, an AI agent that makes traffic simulation as easy as having a conversation. Instead of writing code, users can simply describe their goals in everyday language. Even when a request is abstract or incomplete like saying “find a way to reduce traffic around downtown”, the AI interprets the intention, asks follow-up questions, fills in the missing details, and automatically builds and runs a simulation in SUMO.\n\nThe agent does more than follow commands. It works with the user to plan experiments, test policies such as signal coordination or road closures, and present the results in a clear and visual way. In experiments on a Manhattan road network, AgentSUMO showed that it can intelligently design and optimize traffic scenarios that improve travel time and traffic flow.\n\nIn essence, AgentSUMO makes traffic simulation interactive and approachable, allowing people to explore and experiment with city mobility through simple conversation with AI.",
+    "keywords": ["LLM", "simulation", "traffic forecasting"],
+    "summary": "City planners and policymakers often need to explore \"what if\" ideas, such as how to ease rush hour congestion or improve traffic flow. Yet most traffic simulators depend on complicated scripts, large datasets, and technical skills that make them difficult for non-experts to use.\n\nOur work presents **AgentSUMO**, an AI agent that makes traffic simulation as easy as having a conversation. Instead of writing code, users can simply describe their goals in everyday language. Even when a request is abstract or incomplete like saying \"find a way to reduce traffic around downtown\", the AI interprets the intention, asks follow-up questions, fills in the missing details, and automatically builds and runs a simulation in SUMO.\n\nThe agent does more than follow commands. It works with the user to plan experiments, test policies such as signal coordination or road closures, and present the results in a clear and visual way. In experiments on a Manhattan road network, AgentSUMO showed that it can intelligently design and optimize traffic scenarios that improve travel time and traffic flow.\n\nIn essence, AgentSUMO makes traffic simulation interactive and approachable, allowing people to explore and experiment with city mobility through simple conversation with AI.",
     "podcast": "/audio/HUGAT.m4a",
-    "podcast_long": "/audio/HUGAT_long.m4a"
+    "podcast_long": "/audio/HUGAT_long.m4a",
+    "images": [
+      "/researchImg/CEUS_fig1_overview.png",
+      "/researchImg/exp3_overview_ver1.png",
+      "/researchImg/exp3_result1.png"
+    ]
   },
   {
     "id": "i75",
     "slug": "intl2025-integrating-urban-air-mobility",
     "title": "Integrating Urban Air Mobility with Highway Infrastructure: A Strategic Approach for Vertiport Location Selection in the Seoul Metropolitan Area",
     "authors": "D. Yoon, M. Jeong, J. Lee, S. Kim, Y. Yoon",
-    "conference": "TRB",
+    "conference": "104th TRB Annual Meeting",
     "date": "2025",
     "href": "https://arxiv.org/abs/2502.00399",
+    "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=ko&user=W-lkXroAAAAJ&citation_for_view=W-lkXroAAAAJ:W7OEmFMy1HYC",
+    "keywords": ["UAM", "vertiport", "mobility"],
+    "abstract": "This study focuses on identifying suitable locations for highway-transfer Vertiports to integrate Urban Air Mobility (UAM) with existing highway infrastructure. UAM offers an effective solution for enhancing transportation accessibility in the Seoul Metropolitan Area, where conventional transportation often struggle to connect suburban employment zones such as industrial parks. By integrating UAM with ground transportation at highway facilities, an efficient connectivity solution can be achieved for regions with limited transportation options. Our proposed methodology for determining the suitable Vertiport locations utilizes data such as geographic information, origin-destination volume, and travel time. Vertiport candidates are evaluated and selected based on criteria including location desirability, combined transportation accessibility and transportation demand. Applying this methodology to the Seoul metropolitan area, we identify 56 suitable Vertiport locations out of 148 candidates. The proposed methodology offers a strategic approach for the selection of highway-transfer Vertiport locations, enhancing UAM integration with existing transportation systems. Our study provides valuable insights for urban planners and policymakers, with recommendations for future research to include real-time environmental data and to explore the impact of Mobility-as-a-Service on UAM operations.",
     "podcast": "/audio/HUGAT.m4a",
-    "podcast_long": "/audio/HUGAT_long.m4a"
+    "podcast_long": "/audio/HUGAT_long.m4a",
+    "images": [
+      "/researchImg/2-2.png"
+    ],
+    "youtube": [
+      "https://www.youtube-nocookie.com/embed/uz03YgCI1MY?si=T9sQkTXhivEiuCxq"
+    ]
   },
   {
     "id": "i74",
@@ -30,6 +45,12 @@
     "conference": "IEEE/CVF International Conference on Computer Vision (ICCV) Workshops",
     "date": "2025",
     "href": "https://openaccess.thecvf.com/content/ICCV2025W/MARS2/html/Ro_How_Well_Do_Vision-Language_Models_Understand_Cities__A_Comparative_ICCVW_2025_paper.html",
+    "keywords": ["vision-language", "deep learning", "urban computing"],
+    "abstract": "Effectively understanding urban scenes requires fine-grained spatial reasoning about objects, layouts, and depth cues. However, how well current vision-language models (VLMs), pretrained on general scenes, transfer these abilities to urban domain remains underexplored. To address this gap, we conduct a comparative study of three off-the-shelf VLMs--BLIP-2, InstructBLIP, and LLaVA-1.5--evaluating both zero-shot performance and the effects of fine-tuning with a synthetic VQA dataset specific to urban scenes. We construct such dataset from segmentation, depth, and object detection predictions of street-view images, pairing each question with LLM-generated Chain-of-Thought (CoT) answers for step-by-step reasoning supervision. Results show that while VLMs perform reasonably well in zero-shot settings, fine-tuning with our synthetic CoT-supervised dataset substantially boosts performance, especially for challenging question types such as negation and counterfactuals. This study introduces urban spatial reasoning as a new challenge for VLMs and demonstrates synthetic dataset construction as a practical path for adapting general-purpose models to specialized domains.",
+    "images": [
+      "/researchImg/vision_overview.png",
+      "/researchImg/vision.png"
+    ],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -41,6 +62,7 @@
     "conference": "104th TRB Annual Meeting",
     "date": "2025",
     "href": "https://koasas.kaist.ac.kr/handle/10203/327191",
+    "keywords": ["UAM", "vertiport", "urban computing"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -52,6 +74,7 @@
     "conference": "15th International Conference on Information and Communication Technology Convergence (ICTC)",
     "date": "2025",
     "href": "https://ieeexplore.ieee.org/abstract/document/10826871",
+    "keywords": ["physiological sensing", "deep learning", "time series"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -63,6 +86,11 @@
     "conference": "ACM SIGSPATIAL",
     "date": "2023",
     "href": "https://dl.acm.org/doi/abs/10.1145/3589132.3625650?casa_token=vf_NEaenPUEAAAAA:mVghIh0_JHkZUKM8Rm3Id-6TFwbfzWneZxfA0kWL-1dVd7xOc2_GS3hmQ5XcRK9YdVzlrWAi1HFs6Q",
+    "keywords": ["socioeconomic", "urban computing", "GNN"],
+    "abstract" :"Chicago, IL has been undergoing significant demographic and racial shifts as a result of gentrification and displacement. To resolve the risk, it is necessary to monitor the socioeconomic characteristics of regions and detect regions with drastic socioeconomic changes, such as gentrification. Region representation learning using mobility data is a rapidly developing field for inferring regional demographic features. However, past approaches had a limitation in identifying longitudinal changes in urban regions. In this paper, we propose a novel approach to model the longitudinal evolution of urban regions using heterogeneous information networks and heterogeneous graph attention networks. From the experimental results on 77 community areas in Chicago, the proposed model outperforms the state-of-the-art models in predicting the racial population percentage, unemployment rate, and poverty rate. Further, we analyze the change in the similarity between region representations and detect a region where displacement of the black population is extreme due to gentrification. Our proposed approach can contribute to achieving more equitable and sustainable cities by providing a useful basis for modeling and monitoring the evolution of urban regions.",
+    "images": [
+      "/researchImg/l_urban_HIN_framework.png"
+    ],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -74,6 +102,7 @@
     "conference": "UrbanAI 2023 : The 1st ACM SIGSPATIAL International Workshop on Advances in Urban AI",
     "date": "2023",
     "href": "https://dl.acm.org/doi/abs/10.1145/3615900.3628786?casa_token=6pwgE4jJIbAAAAAA:bN2omkGt5Id5v9sn8yz6w9HyfIxxslGIHmiKX6a3ygvFQHxhHkKQtpgih0vZ2iL7308wFVol-TDxow",
+    "keywords": ["urban computing", "GNN", "mobility"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -85,6 +114,7 @@
     "conference": "The 14th International Conference on Ambient Systems, Networks and Technologies (ANT)",
     "date": "2023",
     "href": "https://www.sciencedirect.com/science/article/pii/S1877050923005690",
+    "keywords": ["socioeconomic", "urban computing", "mobility"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -96,6 +126,7 @@
     "conference": "The 14th International Conference on Ambient Systems, Networks and Technologies (ANT)",
     "date": "2023",
     "href": "https://www.sciencedirect.com/science/article/pii/S1877050923006889",
+    "keywords": ["urban computing", "mobility", "deep learning"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -107,6 +138,7 @@
     "conference": "2022 IEEE 25th International Conference on Intelligent Transportation Systems (ITSC)",
     "date": "2022",
     "href": "https://ieeexplore.ieee.org/abstract/document/9922030",
+    "keywords": ["UAV", "safety", "airspace"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -118,6 +150,7 @@
     "conference": "AAAI 2021 Workshop: AI for Transportation",
     "date": "2021",
     "href": "https://arxiv.org/abs/2111.07513",
+    "keywords": ["traffic forecasting", "deep learning", "machine learning"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -129,6 +162,7 @@
     "conference": "INFORMS (Institute for Operation Research and the Management Sciences)",
     "date": "2022",
     "href": "https://koasas.kaist.ac.kr/handle/10203/302988",
+    "keywords": ["UAM", "vertiport", "mobility"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -140,6 +174,7 @@
     "conference": "INFORMS (Institute for Operation Research and the Management Sciences)",
     "date": "2022",
     "href": "https://www.abstractsonline.com/pp8/#!/10693/presentation/6251",
+    "keywords": ["UAM", "GNN", "mobility"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -151,6 +186,7 @@
     "conference": "INFORMS (Institute for Operation Research and the Management Sciences)",
     "date": "2022",
     "href": "https://www.abstractsonline.com/pp8/#!/10693/presentation/4671",
+    "keywords": ["UAV", "airspace", "safety"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -162,6 +198,7 @@
     "conference": "2022 IEEE 25th International Conference on Intelligent Transportation Systems (ITSC)",
     "date": "2022",
     "href": "https://ieeexplore.ieee.org/abstract/document/9922030",
+    "keywords": ["UAV", "safety", "airspace"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -173,6 +210,7 @@
     "conference": "Transportation Research Board: 101st Annual Meeting",
     "date": "2022",
     "href": "https://koasas.kaist.ac.kr/handle/10203/301921",
+    "keywords": ["UAM", "mobility", "urban computing"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -184,6 +222,7 @@
     "conference": "ICRAT(International Conference on Research in Air Transportation)",
     "date": "2020",
     "href": "https://koasas.kaist.ac.kr/handle/10203/279309",
+    "keywords": ["airspace", "UAV", "topology"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -195,6 +234,7 @@
     "conference": "ICRAT(International Conference on Research in Air Transportation) Doctoral Symposium",
     "date": "2020",
     "href": "https://koasas.kaist.ac.kr/handle/10203/279307",
+    "keywords": ["UAV", "airspace", "urban computing"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -206,6 +246,7 @@
     "conference": "ICRAT(International Conference on Research in Air Transportation) Doctoral Symposium",
     "date": "2020",
     "href": "https://koasas.kaist.ac.kr/handle/10203/279308",
+    "keywords": ["air traffic", "network analysis", "topology"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -217,6 +258,7 @@
     "conference": "Transportation Research Board 99th Annual Meeting",
     "date": "2020",
     "href": "https://koasas.kaist.ac.kr/handle/10203/276236",
+    "keywords": ["UAV", "airspace", "safety"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -228,6 +270,7 @@
     "conference": "The 32nd KKHTCNN Symposium",
     "date": "2019",
     "href": "https://kkhtcnn.wixsite.com/kkhtcnn2019/schedule",
+    "keywords": ["UAV", "airspace", "safety"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -239,6 +282,7 @@
     "conference": "The 32nd KKHTCNN Symposium",
     "date": "2019",
     "href": "https://koasas.kaist.ac.kr/handle/10203/269036",
+    "keywords": ["UAV", "airspace", "urban computing"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -250,6 +294,7 @@
     "conference": "The 32nd KKHTCNN Symposium",
     "date": "2019",
     "href": "https://koasas.kaist.ac.kr/handle/10203/269034",
+    "keywords": ["traffic forecasting", "GNN", "deep learning"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -261,6 +306,7 @@
     "conference": "The 32nd KKHTCNN Symposium",
     "date": "2019",
     "href": "https://koasas.kaist.ac.kr/handle/10203/269037",
+    "keywords": ["air traffic", "network analysis", "aviation"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -272,6 +318,7 @@
     "conference": "2019 IEEE INTELLIGENT TRANSPORTATION SYSTEMS CONFERENCE (ITSC)",
     "date": "2019",
     "href": "https://ieeexplore.ieee.org/abstract/document/8916844",
+    "keywords": ["physiological sensing", "autonomous driving", "safety"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -283,6 +330,7 @@
     "conference": "The 23rd ATRS(Aviation Transport Research Society) World Conference",
     "date": "2019",
     "href": "https://www.atrs2019amsterdam.nl/program",
+    "keywords": ["UAV", "airspace", "urban computing"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -294,6 +342,7 @@
     "conference": "The 23rd ATRS(Aviation Transport Research Society) World Conference",
     "date": "2019",
     "href": "https://koasas.kaist.ac.kr/handle/10203/270453",
+    "keywords": ["air traffic", "network analysis", "aviation"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -305,6 +354,7 @@
     "conference": "13th ATM R&D Seminar",
     "date": "2019",
     "href": "https://www.researchgate.net/profile/Jungwoo-Cho/publication/334882861_Extraction_and_Interpretation_of_Geometrical_and_Topological_Properties_of_Urban_Airspace_for_UAS_Operations/links/5d43dff9a6fdcc370a74473a/Extraction-and-Interpretation-of-Geometrical-and-Topological-Properties-of-Urban-Airspace-for-UAS-Operations.pdf",
+    "keywords": ["airspace", "UAV", "topology"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -316,6 +366,7 @@
     "conference": "The 31st KKHTCNN Symposium",
     "date": "2018",
     "href": "https://koasas.kaist.ac.kr/handle/10203/247757",
+    "keywords": ["UAV", "safety", "autonomous driving"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -327,6 +378,7 @@
     "conference": "The 31st KKHTCNN Symposium",
     "date": "2018",
     "href": "https://koasas.kaist.ac.kr/handle/10203/247756",
+    "keywords": ["air traffic", "network analysis", "topology"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -338,6 +390,7 @@
     "conference": "The 31st KKHTCNN Symposium",
     "date": "2018",
     "href": "https://koasas.kaist.ac.kr/handle/10203/247753",
+    "keywords": ["UAV", "airspace", "urban computing"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -349,6 +402,7 @@
     "conference": "The 31st KKHTCNN Symposium",
     "date": "2018",
     "href": "https://koasas.kaist.ac.kr/handle/10203/247754",
+    "keywords": ["network analysis", "topology", "urban computing"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -360,6 +414,7 @@
     "conference": "The 31st KKHTCNN Symposium",
     "date": "2018",
     "href": "https://koasas.kaist.ac.kr/handle/10203/247755",
+    "keywords": ["road safety", "safety", "mobility"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -371,6 +426,7 @@
     "conference": "Transportation Research Board",
     "date": "2018",
     "href": "https://trid.trb.org/View/1496035",
+    "keywords": ["aviation", "safety", "air traffic"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -382,6 +438,7 @@
     "conference": "The 2nd Asian Conference on Railway Engineering and Transportation",
     "date": "2018",
     "href": "https://koasas.kaist.ac.kr/handle/10203/247866",
+    "keywords": ["transit", "mobility", "infrastructure"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -393,6 +450,7 @@
     "conference": "The 2nd Asian Conference on Railway Engineering and Transportation",
     "date": "2018",
     "href": "https://koasas.kaist.ac.kr/handle/10203/247867",
+    "keywords": ["transit", "mobility", "deep learning"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -404,6 +462,7 @@
     "conference": "The 22nd ATRS(Aviation Transport Research Society) World Conference",
     "date": "2018",
     "href": "https://koasas.kaist.ac.kr/handle/10203/248000",
+    "keywords": ["UAV", "safety", "autonomous driving"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -415,6 +474,7 @@
     "conference": "The 22nd ATRS(Aviation Transport Research Society) World Conference",
     "date": "2018",
     "href": "https://koasas.kaist.ac.kr/handle/10203/248001",
+    "keywords": ["airspace", "UAV", "urban computing"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -425,6 +485,7 @@
     "authors": "J. Cho, Y. Yoon",
     "conference": "ICRAT(International Conference on Research in Air Transportation) Doctoral Symposium, 2018 ",
     "href": "https://koasas.kaist.ac.kr/handle/10203/248008",
+    "keywords": ["airspace", "UAV", "topology"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -436,6 +497,7 @@
     "conference": "International Federation of Operational Research Societies(IFORS)",
     "date": "2017",
     "href": "https://koasas.kaist.ac.kr/handle/10203/225543",
+    "keywords": ["safety", "mobility", "urban computing"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -447,6 +509,7 @@
     "conference": "International Federation of Operational Research Societies(IFORS)",
     "date": "2017",
     "href": "https://koasas.kaist.ac.kr/handle/10203/225544",
+    "keywords": ["UAV", "simulation", "airspace"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -458,6 +521,7 @@
     "conference": "The 29th KKHTCNN Symposium",
     "date": "2016",
     "href": "https://koasas.kaist.ac.kr/handle/10203/222531",
+    "keywords": ["transit", "mobility", "machine learning"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -469,6 +533,7 @@
     "conference": "The 29th KKHTCNN Symposium",
     "date": "2016",
     "href": "https://koasas.kaist.ac.kr/handle/10203/222530",
+    "keywords": ["air traffic", "aviation", "airspace"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -480,17 +545,19 @@
     "conference": "The 29th KKHTCNN Symposium",
     "date": "2016",
     "href": "https://koasas.kaist.ac.kr/handle/10203/222529",
+    "keywords": ["road safety", "safety", "urban computing"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
   {
     "id": 42,
     "slug": "intl2016-uav-traffic-urban-airspace",
-    "title": "“UAV traffic in urban airspace: A simple measure of conflict”",
+    "title": "UAV traffic in urban airspace: A simple measure of conflict",
     "authors": "J. Cho, Y. Yoon",
     "conference": "The 29th KKHTCNN Symposium",
     "date": "2016",
     "href": "",
+    "keywords": ["UAV", "airspace", "simulation"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -502,6 +569,7 @@
     "conference": "AIP Conference Proceedings",
     "date": "2016",
     "href": "https://pubs.aip.org/aip/acp/article-abstract/1790/1/150027/577261",
+    "keywords": ["autonomous driving", "simulation", "infrastructure"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -512,6 +580,7 @@
     "authors": "D. Jin, S. Kim, Y. Yoon",
     "conference": "INFORMS 2016",
     "href": "https://koasas.kaist.ac.kr/handle/10203/220656",
+    "keywords": ["physiological sensing", "autonomous driving", "energy"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -522,6 +591,7 @@
     "authors": "Y. Noh, Y. Yoon",
     "conference": "INFORMS 2016",
     "href": "https://pubs.aip.org/aip/acp/article-abstract/1790/1/150027/577261",
+    "keywords": ["autonomous driving", "simulation", "infrastructure"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -532,6 +602,7 @@
     "authors": "Y. Woo, Y. Yoon",
     "conference": "INFORMS 2016",
     "href": "https://koasas.kaist.ac.kr/handle/10203/213840",
+    "keywords": ["road safety", "safety", "machine learning"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -543,6 +614,7 @@
     "conference": "International Conference on Research in Air Transportation",
     "date": "2016",
     "href": "https://www.researchgate.net/publication/309819071_A_Quantitative_Approach_to_the_influence_on_the_South_Korean_Air_Transportation_System_in_the_Event_of_Volcanic_Ash_Dispersal",
+    "keywords": ["air traffic", "aviation", "safety"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -554,17 +626,19 @@
     "conference": "IEEE ITSC (Intelligent Transportation Systems Conference)",
     "date": "2015",
     "href": "https://ieeexplore.ieee.org/abstract/document/7313322/",
+    "keywords": ["mobility", "safety", "urban computing"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
   {
     "id": 49,
     "slug": "intl2015-impact-mt-baegdu-explosion",
-    "title": "Impact of the Mt. Baegdu explosion to South Korea’s air traffic flow",
+    "title": "Impact of the Mt. Baegdu explosion to South Korea's air traffic flow",
     "authors": "J. Lee, Y. Yoon",
     "conference": "Transport Research Board",
     "date": "2015",
     "href": "https://trid.trb.org/View/1337419",
+    "keywords": ["air traffic", "aviation", "safety"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -576,6 +650,7 @@
     "conference": "International Conference on Computational & Experimental Engineering and Sciences 2014",
     "date": "2014",
     "href": "https://koasas.kaist.ac.kr/handle/10203/194905",
+    "keywords": ["road safety", "safety", "machine learning"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -587,6 +662,7 @@
     "conference": "International Conference on Computational & Experimental Engineering and Sciences 2014",
     "date": "2014",
     "href": "https://koasas.kaist.ac.kr/handle/10203/194906",
+    "keywords": ["safety", "machine learning", "optimization"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -598,6 +674,7 @@
     "conference": "The 8th AOTULE meeting and conference",
     "date": "2013",
     "href": "https://koasas.kaist.ac.kr/handle/10203/194907",
+    "keywords": ["road safety", "safety", "machine learning"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -609,6 +686,7 @@
     "conference": "Transport Research Board",
     "date": "2013",
     "href": "https://trid.trb.org/View/1241963",
+    "keywords": ["road safety", "safety", "machine learning"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -620,6 +698,7 @@
     "conference": "Transportation Research Board",
     "date": "2013",
     "href": "https://www.sciencedirect.com/science/article/pii/S0001457513002583",
+    "keywords": ["road safety", "safety", "machine learning"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -631,6 +710,7 @@
     "conference": "ASCE workshop on computing in civil engineering",
     "date": "2013",
     "href": "https://ascelibrary.org/doi/abs/10.1061/9780784413029.020",
+    "keywords": ["infrastructure", "network analysis", "transit"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -642,6 +722,7 @@
     "conference": "Air Transport Research Society",
     "date": "2013",
     "href": "https://koasas.kaist.ac.kr/handle/10203/175763",
+    "keywords": ["aviation", "safety", "machine learning"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -653,6 +734,7 @@
     "conference": "Air Transport Research Society",
     "date": "2013",
     "href": "https://koasas.kaist.ac.kr/handle/10203/226110",
+    "keywords": ["aviation", "safety", "machine learning"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -663,6 +745,7 @@
     "authors": "​K. Kim, J. Lee, Y. Yoon",
     "conference": "INFORMS 2013",
     "href": "https://koasas.kaist.ac.kr/handle/10203/257158",
+    "keywords": ["infrastructure", "network analysis", "transit"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -673,6 +756,7 @@
     "authors": "E. Kim, Y. Yoon",
     "conference": "INFORMS 2013",
     "href": "https://koasas.kaist.ac.kr/handle/10203/257159",
+    "keywords": ["aviation", "safety", "machine learning"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -683,6 +767,7 @@
     "authors": "O. Kwon, Y. Yoon",
     "conference": "INFORMS 2013",
     "href": "https://koasas.kaist.ac.kr/handle/10203/257161",
+    "keywords": ["aviation", "safety", "machine learning"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -693,6 +778,7 @@
     "authors": "Y. Noh, Y. Yoon",
     "conference": "INFORMS 2013",
     "href": "https://koasas.kaist.ac.kr/handle/10203/257160",
+    "keywords": ["aviation", "safety", "machine learning"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -703,6 +789,7 @@
     "authors": "J. Lee, Y. Yoon",
     "conference": "INFORMS 2013",
     "href": "https://koasas.kaist.ac.kr/handle/10203/194908",
+    "keywords": ["aviation", "safety", "infrastructure"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -714,6 +801,7 @@
     "conference": "International Conference on Research in Air Transportation",
     "date": "2012",
     "href": "https://koasas.kaist.ac.kr/handle/10203/171350",
+    "keywords": ["air traffic", "aviation", "optimization"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -725,6 +813,7 @@
     "conference": "International Symposium on Transportation and Traffic Theory",
     "date": "2012",
     "href": "https://www.sciencedirect.com/science/article/pii/S1366554511000640",
+    "keywords": ["air traffic", "aviation", "optimization"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -736,6 +825,7 @@
     "conference": "International Conference on Research in Air Transportation",
     "date": "2010",
     "href": "https://koasas.kaist.ac.kr/handle/10203/187616",
+    "keywords": ["air traffic", "aviation", "optimization"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -746,6 +836,7 @@
     "authors": "S. Tak, Y. Yoon",
     "conference": "INFORMS 2012",
     "href": "https://koasas.kaist.ac.kr/handle/10203/171351",
+    "keywords": ["infrastructure", "network analysis", "safety"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -756,6 +847,7 @@
     "authors": "O. Kwon, Y. Yoon",
     "conference": "INFORMS 2012",
     "href": "https://koasas.kaist.ac.kr/handle/10203/171352",
+    "keywords": ["road safety", "safety", "machine learning"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -766,6 +858,7 @@
     "authors": "Y. Yoon, M. Hansen",
     "conference": "INFORMS 2012",
     "href": "https://koasas.kaist.ac.kr/handle/10203/171350",
+    "keywords": ["air traffic", "aviation", "optimization"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -777,6 +870,7 @@
     "conference": "INFORMS 2009",
     "date": "2008",
     "href": "https://koasas.kaist.ac.kr/handle/10203/260349",
+    "keywords": ["air traffic", "aviation", "optimization"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -788,6 +882,7 @@
     "conference": "INFORMS 2008",
     "date": "2007",
     "href": "https://koasas.kaist.ac.kr/handle/10203/260388",
+    "keywords": ["air traffic", "aviation", "optimization"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -799,6 +894,7 @@
     "conference": "INFORMS 2007",
     "date": "2006",
     "href": "https://koasas.kaist.ac.kr/handle/10203/260410",
+    "keywords": ["air traffic", "aviation", "machine learning"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -810,6 +906,7 @@
     "conference": "AIAA Modeling and Simulations Technology Conference",
     "date": "2007",
     "href": "https://arc.aiaa.org/doi/pdf/10.2514/6.2007-6697",
+    "keywords": ["air traffic", "aviation", "infrastructure"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   }

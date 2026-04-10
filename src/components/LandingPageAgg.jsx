@@ -123,11 +123,12 @@ function RelatedItem({ item, idx, categoryStyles }) {
             <Link to={`/publications/${item.slug}`} className="text-[11px] text-blue-500 hover:text-blue-700 hover:underline">Blog</Link>
           ) : null}
           {item.podcast && (
+            item.podcast_status ? (
             <div>
               <button
                 type="button"
                 onClick={() => setIsPodcastOpen((prev) => !prev)}
-                className="flex items-center gap-1 text-[11px] text-blue-500 hover:text-blue-700"
+                className="flex items-center gap-1 text-[11px] text-blue-500 hover:text-blue-700 hover:underline"
               >
                 {/* <svg
                   className={`w-3 h-3 transition-transform ${isPodcastOpen ? 'rotate-90' : ''}`}
@@ -139,6 +140,13 @@ function RelatedItem({ item, idx, categoryStyles }) {
               </button>
            
             </div>
+            ) : (
+              <div
+                className="flex items-center gap-1 text-[11px] text-blue-500 hover:text-slate-500"
+              >
+                {isPodcastOpen ? 'Hide Podcast' : 'Podcast'}
+              </div>
+            )
           )}
         </div>
         {isPodcastOpen && (
@@ -260,9 +268,9 @@ export default function LandingPageV4() {
       if (data === 'press')         return { type: 'press', subtype:'press', label: 'Press',       date: item.date,  title: item.title, who:item.writer, where:item.link_others.source, href: item.link_en || item.link_kr , to: `/press?${item.id}`};
       if (data === 'outreach')      return { type: 'event', subtype:item.category, label: item.category || 'Event', date: item.start, title: item.title, who:item.participants, where:item.place, to: `/events?scroll=${item.id}` };
       if (data === 'lablife')       return { type: 'event', subtype:item.category, label: 'Lab Life',    date: item.start, title: item.title, who:item.participants, where:item.place, to: `/events?scroll=${item.id}` };
-      if (data === 'publications')  return { type: 'pub',   subtype:'journal', label: 'Journal',     date: item.date,  title: item.title, who:item.authors, where:item.journal, href: item.href, podcast: item.podcast || null, slug: item.slug };
-      if (data === 'international') return { type: 'pub',   subtype:'conf', label: 'Intl. Conf.', date: item.date,  title: item.title, who:item.authors, where:item.conference, href: item.href, podcast: item.podcast || null, slug: item.slug };
-      if (data === 'national')      return { type: 'pub',   subtype:'conf', label: 'Natl. Conf.', date: item.date,  title: item.title, who:item.authors, where:item.conference, href: item.href, podcast: item.podcast || null, slug: item.slug };
+      if (data === 'publications')  return { type: 'pub',   subtype:'journal', label: 'Journal',     date: item.date,  title: item.title, who:item.authors, where:item.journal, href: item.href, podcast: item.podcast || null, podcast_status: item.podcast_status || false, slug: item.slug };
+      if (data === 'international') return { type: 'pub',   subtype:'conf', label: 'Intl. Conf.', date: item.date,  title: item.title, who:item.authors, where:item.conference, href: item.href, podcast: item.podcast || null, podcast_status: item.podcast_status || false, slug: item.slug };
+      if (data === 'national')      return { type: 'pub',   subtype:'conf', label: 'Natl. Conf.', date: item.date,  title: item.title, who:item.authors, where:item.conference, href: item.href, podcast: item.podcast || null, podcast_status: item.podcast_status || false, slug: item.slug };
       return null;
     };
 
@@ -290,7 +298,7 @@ export default function LandingPageV4() {
         <NavbarCategorized />
         <ScrollUpBt />
 
-        <div className="min-h-screen bg-slate-50 text-slate-900">
+        <div className="min-h-screen px-6 sm:px-10 bg-slate-50 text-slate-900">
           {loading ? (
             <LoadingState />
           ) : (
@@ -515,7 +523,7 @@ export default function LandingPageV4() {
         {/* ══════════════════════════════════════
             FOOTER — light, clean (Senseable-style)
             ══════════════════════════════════════ */}
-        <footer className="bg-white border-t border-gray-200">
+        <footer className="px-6 sm:px-10 bg-white border-t border-gray-200">
           <div className="container mx-auto px-6 sm:px-10 py-12">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 text-sm mb-10">
 

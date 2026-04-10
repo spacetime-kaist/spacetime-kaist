@@ -1,17 +1,8 @@
 import { useMemo } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import { useDataLoader } from "../../hooks/useDataLoader";
 
-function findPublicationBySlug(lists, slugParam) {
-  if (!slugParam) return null;
-  for (const list of lists) {
-    if (!Array.isArray(list)) continue;
-    const hit = list.find((item) => item.slug === slugParam);
-    if (hit) return hit;
-  }
-  return null;
-}
 
 function venueLine(pub) {
   if (pub.journal) return pub.journal;
@@ -21,10 +12,8 @@ function venueLine(pub) {
   return pub.date || null;
 }
 
-function summaryMarkdown(pub) {
-  if (pub.summary) return pub.summary;
-  if (pub.abstract) return pub.abstract;
-  return null;
+function podcastEnabled(pub) {
+  return pub?.podcast_status === true || pub?.podcastStatus === true;
 }
 
 function shortPodcastUrl(pub) {
@@ -43,20 +32,40 @@ function longPodcastUrl(pub) {
 
 export default function PubDetails() {
   const { slug } = useParams();
+  const navigate = useNavigate();
   const { data: publicationsData, loading: pubLoading } = useDataLoader("publicationsData");
   const { data: internationalData, loading: intLoading } = useDataLoader("internationalData");
   const { data: nationalData, loading: natLoading } = useDataLoader("nationalData");
 
   const loading = pubLoading || intLoading || natLoading;
 
-  const pub = useMemo(
-    () => findPublicationBySlug([publicationsData, internationalData, nationalData], slug),
-    [publicationsData, internationalData, nationalData, slug]
+  const allPubs = useMemo(
+    () => [
+      ...(publicationsData || []),
+      ...(internationalData || []),
+      ...(nationalData || []),
+    ],
+    [publicationsData, internationalData, nationalData]
   );
 
+  const pub = useMemo(
+    () => allPubs.find((item) => item.slug === slug) ?? null,
+    [allPubs, slug]
+  );
+
+  const currentIndex = useMemo(
+    () => allPubs.findIndex((item) => item.slug === slug),
+    [allPubs, slug]
+  );
+
+  const prevPub = currentIndex > 0 ? allPubs[currentIndex - 1] : null;
+  const nextPub = currentIndex < allPubs.length - 1 ? allPubs[currentIndex + 1] : null;
+
+  const isPodcastPlayable = pub ? podcastEnabled(pub) : false;
   const shortAudio = pub ? shortPodcastUrl(pub) : null;
   const longAudio = pub ? longPodcastUrl(pub) : null;
   const duplicatePodcast = shortAudio && longAudio && shortAudio === longAudio;
+  const audioClassName = `w-full ${isPodcastPlayable ? "" : "pointer-events-none opacity-60"}`;
 
   if (loading) {
     return (
@@ -88,12 +97,39 @@ export default function PubDetails() {
   return (
     <div className="min-h-screen bg-gray-50 p-8 pb-16">
       <div className="max-w-3xl mx-auto">
-        <Link
-          to="/publications"
-          className="text-blue-600 no-underline hover:underline text-sm font-medium inline-block mb-8"
-        >
-          ← Publications
-        </Link>
+        <div className="flex items-center justify-between mb-8">
+          <Link
+            to="/publications"
+            className="text-blue-600 no-underline hover:underline text-sm font-medium"
+          >
+            ← Publications
+          </Link>
+          <div className="flex items-center gap-3">
+            {prevPub?.slug ? (
+              <button
+                onClick={() => navigate(`/publications/${prevPub.slug}`)}
+                className="flex items-center gap-1 text-sm text-gray-500 hover:text-gray-900 transition"
+                title={prevPub.title}
+              >
+                ‹ Prev
+              </button>
+            ) : (
+              <span className="text-sm text-gray-300">‹ Prev</span>
+            )}
+            <span className="text-gray-300 text-sm">|</span>
+            {nextPub?.slug ? (
+              <button
+                onClick={() => navigate(`/publications/${nextPub.slug}`)}
+                className="flex items-center gap-1 text-sm text-gray-500 hover:text-gray-900 transition"
+                title={nextPub.title}
+              >
+                Next ›
+              </button>
+            ) : (
+              <span className="text-sm text-gray-300">Next ›</span>
+            )}
+          </div>
+        </div>
 
         <article className="bg-white rounded-sm border border-gray-200 border-l-4 border-slate-600 shadow-sm p-6 sm:p-8">
           <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 leading-snug">{pub.title}</h1>
@@ -133,26 +169,47 @@ export default function PubDetails() {
               </a>
             </div>
           )}
-
+          {pub.summary? (
           <section className="mt-10">
-            <h2 className="text-sm font-semibold uppercase tracking-wide text-gray-500">Summary</h2>
+            <h2 className="text-sm font-semibold uppercase tracking-wide text-gray-500"></h2>
             <div className="mt-2 text-gray-700 leading-relaxed [&_p]:mt-3 [&_p:first-child]:mt-0 [&_strong]:font-semibold [&_a]:text-blue-600 [&_a]:underline [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5">
-              <ReactMarkdown>{summaryMarkdown(pub)}</ReactMarkdown>
+              <ReactMarkdown>{pub.summary}</ReactMarkdown>
             </div>
-          </section>
+          </section>)
+          : pub.abstract? (
+            <section className="mt-10">
+              <h2 className="text-sm font-semibold uppercase tracking-wide text-gray-500">Abstract</h2>
+              <div className="mt-2 text-gray-700 leading-relaxed [&_p]:mt-3 [&_p:first-child]:mt-0 [&_strong]:font-semibold [&_a]:text-blue-600 [&_a]:underline [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5">
+                <ReactMarkdown>{pub.abstract}</ReactMarkdown>
+              </div>
+            </section>
+          ) : null}
 
-          <section className="mt-5">
+          {pub.images && <section className="mt-5">
             <h2 className="text-sm font-semibold uppercase tracking-wide text-gray-500">Image</h2>
-            {pub.image && (
-            <img src={pub.image} alt={pub.title} className="my-3 ml-5 border border-slate-500 w-120 object-contain rounded-sm" />
-            )}
-          </section>
+            <img src={pub.images[0]} alt={pub.title} className="my-3 sm:mx-5 border border-slate-500 w-120 object-contain rounded-sm" />
+          </section>}
+
+          {pub.youtube && <section className="mt-5">
+            <h2 className="text-sm font-semibold uppercase tracking-wide text-gray-500">Video</h2>
+            <div className={`my-3 sm:mx-5 w-full grid grid-cols-1 lg:grid-cols-${Math.min(pub.youtube.length, 2)} gap-4`}>
+            {pub.youtube.map((video, idx) => (
+            <iframe
+                key={idx}
+                src={`${video}&origin=https://spacetime.kaist.ac.kr/`}
+                alt={`${pub.title} youtube ${idx + 1}`}
+                allowFullScreen
+                allow="accelerometer; autoplay;"
+                className="max-w-120 border border-slate-500 aspect-video rounded-md "
+                />
+                ))}
+          </div></section>}
 
           {(shortAudio || longAudio) && (
             <section className="mt-10 space-y-8">
               <h2 className="text-sm font-semibold uppercase tracking-wide text-gray-500">Podcast</h2>
               {duplicatePodcast ? (
-                <audio controls preload="none" className="w-full">
+                <audio controls preload="none" className={audioClassName}>
                   <source src={shortAudio} type="audio/mp4" />
                   <source src={shortAudio} type="audio/mpeg" />
                   Your browser does not support the audio element.
@@ -162,7 +219,7 @@ export default function PubDetails() {
                   {shortAudio && (
                     <div>
                       <p className="text-sm font-medium text-gray-800 mb-2">Short</p>
-                      <audio controls preload="none" className="w-full">
+                      <audio controls preload="none" className={audioClassName}>
                         <source src={shortAudio} type="audio/mp4" />
                         <source src={shortAudio} type="audio/mpeg" />
                         Your browser does not support the audio element.
@@ -172,7 +229,7 @@ export default function PubDetails() {
                   {longAudio && (
                     <div>
                       <p className="text-sm font-medium text-gray-800 mb-2">Long</p>
-                      <audio controls preload="none" className="w-full">
+                      <audio controls preload="none" className={audioClassName}>
                         <source src={longAudio} type="audio/mp4" />
                         <source src={longAudio} type="audio/mpeg" />
                         Your browser does not support the audio element.
@@ -181,9 +238,31 @@ export default function PubDetails() {
                   )}
                 </>
               )}
+              <p className="text-xs text-gray-400 italic -mt-4">Generated by NotebookLM</p>
             </section>
           )}
         </article>
+
+        <div className="flex items-center justify-between mt-6">
+          {prevPub?.slug ? (
+            <button
+              onClick={() => navigate(`/publications/${prevPub.slug}`)}
+              className="flex flex-col items-start text-sm text-gray-500 hover:text-gray-900 transition max-w-[45%]"
+            >
+              <span className="text-xs text-gray-400 mb-0.5">← Previous</span>
+              <span className="line-clamp-1 text-left">{prevPub.title}</span>
+            </button>
+          ) : <div />}
+          {nextPub?.slug ? (
+            <button
+              onClick={() => navigate(`/publications/${nextPub.slug}`)}
+              className="flex flex-col items-end text-sm text-gray-500 hover:text-gray-900 transition max-w-[45%]"
+            >
+              <span className="text-xs text-gray-400 mb-0.5">Next →</span>
+              <span className="line-clamp-1 text-right">{nextPub.title}</span>
+            </button>
+          ) : <div />}
+        </div>
       </div>
     </div>
   );

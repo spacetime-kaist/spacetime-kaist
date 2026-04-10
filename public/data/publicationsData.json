@@ -7,14 +7,16 @@
     "date": "2026",
     "journal": "IEEE Transactions on Neural Networks and Learning Systems",
     "href": "https://arxiv.org/abs/2502.02924",
+    "keywords": ["time series", "contrastive learning", "deep learning"],
     "subjects": [
       "Machine Learning (cs.LG)",
       "Artificial Intelligence (cs.AI)"
     ],
     "abstract": "Universal time series representation learning is challenging but valuable in real-world applications such as classification, anomaly detection, and forecasting. Recently, contrastive learning (CL) has been actively explored to tackle time series representation. However, a key challenge is that the data augmentation process in CL can distort seasonal patterns or temporal dependencies, inevitably leading to a loss of semantic information. To address this challenge, we propose Topological Contrastive Learning for time series (TopoCL). TopoCL mitigates such information loss by incorporating persistent homology, which captures the topological characteristics of data that remain invariant under transformations. In this paper, we treat the temporal and topological properties of time series data as distinct modalities. Specifically, we compute persistent homology to construct topological features of time series data, representing them in persistence diagrams. We then design a neural network to encode these persistent diagrams. Our approach jointly optimizes CL within the time modality and time-topology correspondence, promoting a comprehensive understanding of both temporal semantics and topological properties of time series. We conduct extensive experiments on four downstream tasks-classification, anomaly detection, forecasting, and transfer learning. The results demonstrate that TopoCL achieves state-of-the-art performance.",
-    "image": "/researchImg/topocl_framework.png",
-    "podcast": "/audio/HUGAT.m4a",
-    "podcast_long": "/audio/HUGAT_long.m4a"
+    "images": ["/researchImg/topocl_framework.png"],
+    "podcast": "/audio/TopoCL.m4a",
+    "podcast_long": "/audio/TopoCL_long.m4a",
+    "podcast_status": true
   },
   {
     "id": "10.1109/ACCESS.2025.3577202",
@@ -24,9 +26,15 @@
     "date": "2025",
     "journal": "IEEE Access, vol. 13, pp. 102602-102612.",
     "href": "https://ieeexplore.ieee.org/abstract/document/11027114/",
-    "summary": "Revealing the hidden patterns shaping the urban environment is essential to understand its dynamics and to make cities smarter. Recent studies have demonstrated that learning the representations of urban regions can be an effective strategy to uncover the intrinsic characteristics of urban areas. However, existing studies lack in incorporating diversity in urban data sources. In this work, we propose heterogeneous urban graph attention network (HUGAT), which incorporates heterogeneity of diverse urban datasets. In HUGAT, heterogeneous urban graph (HUG) incorporates both the geo-spatial and temporal people movement variations in a single graph structure. Given a HUG, a set of meta-paths are designed to capture the rich urban semantics as composite relations between nodes. Region embedding is carried out using heterogeneous graph attention network (HAN). HUGAT is designed to consider multiple learning objectives of city’s geo-spatial and mobility variations simultaneously. In our extensive experiments on NYC data, HUGAT outperformed all the state-of-the-art models. Moreover, it demonstrated a robust generalization capability across the various prediction tasks of crime, average personal income, and bike flow as well as the spatial clustering task.",
+    "keywords": ["urban computing", "GNN", "mobility"],
+    "summary": "Revealing the hidden patterns shaping the urban environment is essential to understand its dynamics and to make cities smarter. Recent studies have demonstrated that learning the representations of urban regions can be an effective strategy to uncover the intrinsic characteristics of urban areas. However, existing studies lack in incorporating diversity in urban data sources. In this work, we propose heterogeneous urban graph attention network (HUGAT), which incorporates heterogeneity of diverse urban datasets. In HUGAT, heterogeneous urban graph (HUG) incorporates both the geo-spatial and temporal people movement variations in a single graph structure. Given a HUG, a set of meta-paths are designed to capture the rich urban semantics as composite relations between nodes. Region embedding is carried out using heterogeneous graph attention network (HAN). HUGAT is designed to consider multiple learning objectives of city's geo-spatial and mobility variations simultaneously. In our extensive experiments on NYC data, HUGAT outperformed all the state-of-the-art models. Moreover, it demonstrated a robust generalization capability across the various prediction tasks of crime, average personal income, and bike flow as well as the spatial clustering task.",
+    "images": ["/researchImg/1-1.png",
+              "/researchImg/1-2.png",
+              "/researchImg/1-3.png",
+              "/researchImg/1-4.png"],  
     "podcast": "/audio/HUGAT.m4a",
-    "podcast_long": "/audio/HUGAT_long.m4a"
+    "podcast_long": "/audio/HUGAT_long.m4a",
+    "podcast_status": true
   },
   {
     "id": "10.1109/TITS.2024.3382680",
@@ -36,7 +44,8 @@
     "date": "2024",
     "journal": "IEEE Transactions on Intelligent Transportation Systems 25 (8), 9482-9497.",
     "href": "https://ieeexplore.ieee.org/abstract/document/10496360",
-    "abstract": "Recently, numerous studies have investigated cooperative traffic systems using the communication among vehicle-to-everything (V2X). Unfortunately, when multiple autonomous vehicles are deployed while exposed to communication failure, there might be a conflict of ideal conditions between various autonomous vehicles leading to adversarial situation on the roads. In South Korea, virtual and real-world urban autonomous multi-vehicle races were held in March and November of 2021, respectively. During the competition, multiple vehicles were involved simultaneously, which required maneuvers such as overtaking low-speed vehicles, negotiating intersections, and obeying traffic laws. In this study, we introduce a fully autonomous driving software stack to deploy a competitive driving model, which enabled us to win the urban autonomous multi-vehicle races. We evaluate module-based systems such as navigation, perception, and planning in real and virtual environments. Additionally, an analysis of traffic is performed after collecting multiple vehicle position data over communication to gain additional insight into a multi-agent autonomous driving scenario. Finally, we propose a method for analyzing traffic in order to compare the spatial distribution of multiple autonomous vehicles. We study the similarity distribution between each team’s driving log data to determine the impact of competitive autonomous driving on the traffic environment. Our fully autonomous software architecture, proven successful in winning urban autonomous multi-vehicle races in South Korea, is ready for deployment on urban robot taxis. Our traffic analysis addresses multi-agent scenarios and resolves competitive conflicts among robot taxi companies, crucial for smart city integration and optimizing autonomous vehicle performance in complex urban settings.",
+    "keywords": ["autonomous driving", "traffic forecasting", "safety"],
+    "abstract": "Recently, numerous studies have investigated cooperative traffic systems using the communication among vehicle-to-everything (V2X). Unfortunately, when multiple autonomous vehicles are deployed while exposed to communication failure, there might be a conflict of ideal conditions between various autonomous vehicles leading to adversarial situation on the roads. In South Korea, virtual and real-world urban autonomous multi-vehicle races were held in March and November of 2021, respectively. During the competition, multiple vehicles were involved simultaneously, which required maneuvers such as overtaking low-speed vehicles, negotiating intersections, and obeying traffic laws. In this study, we introduce a fully autonomous driving software stack to deploy a competitive driving model, which enabled us to win the urban autonomous multi-vehicle races. We evaluate module-based systems such as navigation, perception, and planning in real and virtual environments. Additionally, an analysis of traffic is performed after collecting multiple vehicle position data over communication to gain additional insight into a multi-agent autonomous driving scenario. Finally, we propose a method for analyzing traffic in order to compare the spatial distribution of multiple autonomous vehicles. We study the similarity distribution between each team's driving log data to determine the impact of competitive autonomous driving on the traffic environment. Our fully autonomous software architecture, proven successful in winning urban autonomous multi-vehicle races in South Korea, is ready for deployment on urban robot taxis. Our traffic analysis addresses multi-agent scenarios and resolves competitive conflicts among robot taxi companies, crucial for smart city integration and optimizing autonomous vehicle performance in complex urban settings.",
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -48,6 +57,7 @@
     "date": "2024",
     "journal": "Transportation Research Part A: Policy and Practice, 182, 104034.",
     "href": "https://www.sciencedirect.com/science/article/pii/S096585642400082X",
+    "keywords": ["UAV", "airspace", "UAM"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -59,6 +69,7 @@
     "date": "2024",
     "journal": "Engineering Applications of Artificial Intelligence, 132, 107936",
     "href": "https://www.sciencedirect.com/science/article/pii/S0952197624000940",
+    "keywords": ["deep learning", "mobility", "machine learning"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -70,6 +81,7 @@
     "date": "2024",
     "journal": "IEEE Transactions on Intelligent Transportation Systems",
     "href": "https://ieeexplore.ieee.org/abstract/document/10400973",
+    "keywords": ["traffic forecasting", "GNN", "deep learning"],
     "abstract": "The complex spatial-temporal correlations in transportation networks make the traffic forecasting problem challenging. Since transportation system inherently possesses graph structures, many research efforts have been put with graph neural networks. Recently, constructing adaptive graphs to the data has shown promising results over the models relying on a single static graph structure. However, the graph adaptations are applied during the training phases and do not reflect the data used during the testing phases. Such shortcomings can be problematic especially in traffic forecasting since the traffic data often suffer from unexpected changes and irregularities in the time series. In this study, we propose a novel traffic forecasting framework called Progressive Graph Convolutional Network (PGCN). PGCN constructs a set of graphs by progressively adapting to online input data during the training and testing phases. Specifically, we implemented the model to construct progressive adjacency matrices by learning trend similarities among graph nodes. Then, the model is combined with the dilated causal convolution and gated activation unit to extract temporal features. With residual and skip connections, PGCN performs the traffic prediction. When applied to seven real-world traffic datasets of diverse geometric nature, the proposed model achieves state-of-the-art performance with consistency in all datasets. We conclude that the ability of PGCN to progressively adapt to input data enables the model to generalize in different study sites with robustness.",
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
@@ -82,6 +94,7 @@
     "date": "2023",
     "journal": "IEEE Access, 11, 136478-136495",
     "href": "https://ieeexplore.ieee.org/document/10336800",
+    "keywords": ["traffic forecasting", "deep learning", "machine learning"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -93,6 +106,7 @@
     "date": "2023",
     "journal": "Procedia Computer Science, 220, 259-266.",
     "href": "https://doi.org/10.1016/j.procs.2023.03.034",
+    "keywords": ["socioeconomic", "urban computing", "mobility"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -104,6 +118,7 @@
     "date": "2023",
     "journal": "Procedia Computer Science, 220, 251-258.",
     "href": "https://doi.org/10.1016/j.procs.2023.03.153",
+    "keywords": ["urban computing", "mobility", "deep learning"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -115,6 +130,7 @@
     "date": "2022",
     "journal": "Transportation Research Interdisciplinary Perspectives, 16, 100732.",
     "href": "https://doi.org/10.1016/j.trip.2022.100732",
+    "keywords": ["UAV", "safety", "airspace"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -126,6 +142,7 @@
     "date": "2021",
     "journal": "Procedia Computer Science, 184, 388-395.",
     "href": "https://doi.org/10.1016/j.procs.2021.03.049",
+    "keywords": ["UAM", "airspace", "urban computing"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -137,6 +154,7 @@
     "date": "2021",
     "journal": "Transportation Research Part C: Emerging Technologies, 127, 103116.",
     "href": "https://doi.org/10.1016/j.trc.2021.103116",
+    "keywords": ["airspace", "topology", "UAM"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -148,6 +166,7 @@
     "date": "2021",
     "journal": "IEEE Access, 9, 54739-54756.",
     "href": "https://ieeexplore.ieee.org/abstract/document/9395529",
+    "keywords": ["traffic forecasting", "deep learning", "machine learning"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -159,6 +178,7 @@
     "date": "2021",
     "journal": "International journal of automotive technology, 22, 201-212.",
     "href": "https://link.springer.com/article/10.1007/s12239-021-0020-8",
+    "keywords": ["physiological sensing", "safety", "autonomous driving"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -170,6 +190,7 @@
     "date": "2020",
     "journal": "IEEE Transactions on Intelligent Transportation Systems, 23(3), 2082-2092.",
     "href": "https://ieeexplore.ieee.org/document/9239873",
+    "keywords": ["traffic forecasting", "GNN", "deep learning"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -181,6 +202,7 @@
     "date": "2020",
     "journal": "KSCE Journal of Civil Engineering, 24(9), 2784-2793.",
     "href": "https://link.springer.com/article/10.1007/s12205-020-2395-x",
+    "keywords": ["aviation", "safety", "air traffic"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -192,6 +214,7 @@
     "date": "2020",
     "journal": ", South Korea. Traffic injury prevention, 21(3), 188-194.",
     "href": "https://doi.org/10.1080/15389588.2019.1710834",
+    "keywords": ["road safety", "safety", "mobility"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -203,6 +226,7 @@
     "date": "2019",
     "journal": "IEEE Access, 7, 104269-104278.",
     "href": "https://ieeexplore.ieee.org/abstract/document/8768301",
+    "keywords": ["UAV", "safety", "infrastructure"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -214,6 +238,7 @@
     "date": "2019",
     "journal": "International Journal of Aeronautical and Space Sciences, 20(4), 978-986.",
     "href": "https://link.springer.com/article/10.1007/s42405-019-00183-4",
+    "keywords": ["UAV", "safety", "autonomous driving"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -225,6 +250,7 @@
     "date": "2019",
     "journal": "Journal of Air Transport Management, 80, 101693.",
     "href": "https://doi.org/10.1016/j.jairtraman.2019.101693",
+    "keywords": ["air traffic", "network analysis", "aviation"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -236,6 +262,7 @@
     "date": "2019",
     "journal": "Natural Hazards, 96, 647-667.",
     "href": "https://link.springer.com/article/10.1007/s11069-018-3562-y",
+    "keywords": ["aviation", "safety", "air traffic"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -247,6 +274,7 @@
     "date": "2018",
     "journal": "Traffic injury prevention, 19(8), 874-879.",
     "href": "https://doi.org/10.1080/15389588.2018.1509209",
+    "keywords": ["road safety", "safety", "mobility"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -258,6 +286,7 @@
     "date": "2018",
     "journal": "Energy, 161, 670-679.",
     "href": "https://doi.org/10.1016/j.energy.2018.07.179",
+    "keywords": ["energy", "machine learning", "optimization"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -269,6 +298,7 @@
     "date": "2018",
     "journal": "International Journal of Automotive Technology, 19, 895-906.",
     "href": "https://link.springer.com/article/10.1007/s12239-018-0086-0",
+    "keywords": ["physiological sensing", "autonomous driving", "safety"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -280,6 +310,7 @@
     "date": "2018",
     "journal": "Sensors, 18(5), 1606.",
     "href": "https://doi.org/10.3390/s18051606",
+    "keywords": ["energy", "infrastructure", "machine learning"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -291,6 +322,7 @@
     "date": "2018",
     "journal": "Transportation Research Part C: Emerging Technologies, 92, 137-149.",
     "href": "https://doi.org/10.1016/j.trc.2018.05.001",
+    "keywords": ["airspace", "UAM", "topology"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -302,6 +334,7 @@
     "date": "2018",
     "journal": "Journal of Advanced Transportation, 2018, 1-19.",
     "href": "https://doi.org/10.1155/2018/7865362",
+    "keywords": ["aviation", "safety", "air traffic"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -313,6 +346,7 @@
     "date": "2017",
     "journal": "PLoS one, 12(8), e0183043.",
     "href": "https://doi.org/10.1371/journal.pone.0183043",
+    "keywords": ["road safety", "safety", "mobility"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -324,6 +358,7 @@
     "date": "2017",
     "journal": "PloS one, 12(8), e0183241.",
     "href": "https://doi.org/10.1371/journal.pone.0183241",
+    "keywords": ["mobility", "safety", "infrastructure"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -335,6 +370,7 @@
     "date": "2015",
     "journal": "Accident Analysis & Prevention, 75, 1-15.",
     "href": "https://doi.org/10.1016/j.aap.2014.11.005",
+    "keywords": ["road safety", "safety", "machine learning"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -346,6 +382,7 @@
     "date": "2014",
     "journal": "Safety science, 70, 50-57.",
     "href": "https://doi.org/10.1016/j.ssci.2014.04.014",
+    "keywords": ["road safety", "safety", "machine learning"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -357,6 +394,7 @@
     "date": "2014",
     "journal": "Journal of safety research, 50, 1-10.",
     "href": "https://doi.org/10.1016/j.jsr.2014.01.001",
+    "keywords": ["road safety", "safety", "machine learning"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -368,6 +406,7 @@
     "date": "2013",
     "journal": "Renewable energy, 50, 522-531.",
     "href": "https://doi.org/10.1016/j.renene.2012.07.029",
+    "keywords": ["energy", "infrastructure", "optimization"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -379,6 +418,7 @@
     "date": "2013",
     "journal": "Structure and Infrastructure Engineering, 9(4), 317-328.",
     "href": "https://doi.org/10.1080/15732479.2012.657649",
+    "keywords": ["infrastructure", "optimization", "machine learning"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -390,6 +430,7 @@
     "date": "2013",
     "journal": "Accident Analysis & Prevention, 59, 357-364.",
     "href": "https://doi.org/10.1016/j.aap.2013.06.030",
+    "keywords": ["road safety", "safety", "machine learning"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -401,6 +442,7 @@
     "date": "2012",
     "journal": "Transportation research part E: logistics and transportation review, 48(1), 34-49.",
     "href": "https://doi.org/10.1016/j.tre.2011.05.005",
+    "keywords": ["air traffic", "aviation", "optimization"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   }

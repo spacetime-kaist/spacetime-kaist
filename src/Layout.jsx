@@ -28,7 +28,7 @@ function Layout() {
     {/* ══════════════════════════════════════
             FOOTER — light, clean (Senseable-style)
             ══════════════════════════════════════ */}
-        <footer className="bg-white border-t border-gray-200">
+        <footer className="px-6 sm:px-10 bg-white border-t border-gray-200">
           <div className="container mx-auto px-6 sm:px-10 py-12">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 text-sm mb-10">
 

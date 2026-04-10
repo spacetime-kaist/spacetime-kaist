@@ -377,7 +377,7 @@ function NavbarCategorized() {
                   <div className="absolute right-0 mt-2 w-56 p-2 flex flex-col bg-white/95 backdrop-blur-md border border-gray-200 rounded-xl shadow-xl z-50">
                     <Link to="/" className={menuTextStyle} onClick={() => setDropdownOpen(false)}>Home</Link>
 
-                    <div>
+                    {/* <div>
                       <div className="flex items-center">
                         <button
                           onClick={() => setPublicationsOpen(!isPublicationsOpen)}
@@ -399,12 +399,12 @@ function NavbarCategorized() {
                           </Link>
                         </div>
                       )}
-                    </div>
-
-                    <Link to="/research" className={menuTextStyle} onClick={() => setDropdownOpen(false)}>Research</Link>
+                    </div> */}
+                    <Link to="/publications" className={menuTextStyle}>Publications</Link>
+                    <Link to="/research" className={menuTextStyle}>Research</Link>
                     <Link to="/projects" className={menuTextStyle}>Projects</Link>
-                    <Link to="/events" className={menuTextStyle} onClick={() => setDropdownOpen(false)}>Events</Link>
-                    <Link to="/press" className={menuTextStyle} onClick={() => setDropdownOpen(false)}>Press</Link>
+                    <Link to="/events" className={menuTextStyle}>Events</Link>
+                    <Link to="/press" className={menuTextStyle}>Press</Link>
                     <Link to="/people" className={menuTextStyle}>People</Link>
                     <div className="mt-1 pt-1 border-t border-gray-100">
                     </div>

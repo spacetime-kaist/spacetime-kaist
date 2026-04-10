@@ -202,7 +202,7 @@ export default function EventsPage() {
   const { data: outreachData, loading: outreachLoading } = useDataLoader('outreachData');
   const [searchParams] = useSearchParams();
   const location = useLocation();
-  const [selectedCategories, setSelectedCategories] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedKeywords, setSelectedKeywords] = useState([]);
   const [keywordSearch, setKeywordSearch] = useState('');
   const [expandedYears, setExpandedYears] = useState([]);
@@ -229,7 +229,7 @@ export default function EventsPage() {
 
     const filtered = eventsData.filter((event) => {
       const matchCategory =
-        selectedCategories.length === 0 || (event.category && selectedCategories.includes(event.category));
+        !selectedCategory || (event.category && event.category === selectedCategory);
       const matchKeyword =
         selectedKeywords.length === 0 ||
         (event.keyword && event.keyword.some((k) => selectedKeywords.includes(k)));
@@ -258,12 +258,10 @@ export default function EventsPage() {
       filteredEvents: filtered,
       eventsByYear: sortedByYear,
     };
-  }, [eventsData, selectedCategories, selectedKeywords]);
+  }, [eventsData, selectedCategory, selectedKeywords]);
 
   const toggleCategory = (cat) => {
-    setSelectedCategories((prev) =>
-      prev.includes(cat) ? prev.filter((c) => c !== cat) : [...prev, cat]
-    );
+    setSelectedCategory((prev) => (prev === cat ? null : cat));
   };
   const toggleKeyword = (kw) => {
     setSelectedKeywords((prev) =>
@@ -271,7 +269,7 @@ export default function EventsPage() {
     );
   };
   const clearFilters = () => {
-    setSelectedCategories([]);
+    setSelectedCategory(null);
     setSelectedKeywords([]);
     setKeywordSearch('');
   };
@@ -358,7 +356,7 @@ export default function EventsPage() {
   const keywordsFiltered = keywordSearch
     ? keywords.filter((k) => k.toLowerCase().includes(keywordSearch.toLowerCase()))
     : keywords;
-  const hasActiveFilters = selectedCategories.length > 0 || selectedKeywords.length > 0;
+  const hasActiveFilters = Boolean(selectedCategory) || selectedKeywords.length > 0;
 
   return (
     <>
@@ -405,7 +403,7 @@ export default function EventsPage() {
                       key={cat}
                       type="button"
                       onClick={() => toggleCategory(cat)}
-                      className={`rounded-full px-2.5 py-1 text-xs font-medium uppercase tracking-wider transition-colors ${getCategoryStyle(cat)} ${selectedCategories.includes(cat) ? 'ring-2 ring-slate-600 ring-offset-1' : 'opacity-80 hover:opacity-100'}`}
+                      className={`rounded-full px-2.5 py-1 text-xs font-medium uppercase tracking-wider transition-colors ${getCategoryStyle(cat)} ${selectedCategory === cat ? 'ring-2 ring-slate-600 ring-offset-1' : 'opacity-80 hover:opacity-100'}`}
                     >
                       {cat}
                     </button>

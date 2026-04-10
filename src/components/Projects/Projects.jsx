@@ -117,7 +117,7 @@ const PastProjectRow = ({ project }) => {
   // const budgetParts = project.budget ? budgetDisplayParts(project.budget) : null;
   return (
     <ProjectCardWrapper project={project}>
-      <article className={`group flex items-start gap-5 py-4 px-5 border-b border-slate-100 transition-colors duration-150 ${project.link ? 'hover:bg-slate-50 cursor-pointer' : ''}`}>
+      <article className={`group flex items-start gap-5 py-4 px-5 border-b border-slate-100 transition-colors duration-150 ${project.link ? 'hover:bg-slate-50 cursor-pointer hover:underline' : ''}`}>
       {project.image && (
         <img
           src={project.image}
@@ -197,7 +197,7 @@ export default function Projects() {
             <h2 className="text-base font-semibold text-slate-900 uppercase tracking-widest">
               Active Projects
             </h2>
-            <span className="text-xs text-slate-400">{activeProjects.length}</span>
+            {/* <span className="text-xs text-slate-400">{activeProjects.length}</span> */}
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {activeProjects.map((p) => (
@@ -212,7 +212,7 @@ export default function Projects() {
               <h2 className="text-base font-semibold text-slate-500 uppercase tracking-widest">
                 Past Projects
               </h2>
-              <span className="text-xs text-slate-400">{pastProjects.length}</span>
+              {/* <span className="text-xs text-slate-400">{pastProjects.length}</span> */}
             </div>
             <div className="border-t border-slate-100">
               {pastProjects.map((p) => (

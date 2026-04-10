@@ -21,7 +21,7 @@
       "slug": "namwoo",
       "name": "Namwoo Kim",
       "link": "namwoo0910.github.io",
-      "role": "Postdoctoral Researcher",
+      "role": "Research Professor",
       "from": "2023.09~",
       "email": "ih736x@kaist.ac.kr",
       "edu": [
@@ -129,7 +129,8 @@
       "degree": "Ph.D.",
       "date": "2010.03~2015.02",
       "phd": "2010.03~2015.02",
-      "photo": "/peopleImg/11.png"
+      "photo": "/peopleImg/11.png",
+      "current": "Keimyung University / Department of Transportation Engineering / Associate Professor"
     },
     {
       "id": 12,
@@ -137,7 +138,8 @@
       "degree": "Ph.D.",
       "date": "2014.03~2018.02",  
       "phd": "2014.03~2018.02",
-      "photo": "/peopleImg/12.png"
+      "photo": "/peopleImg/12.png",
+      "current": "NUST / Institute of Civil Engineering / Assistant Professor"
     },
     {
       "id": 13,
@@ -151,9 +153,11 @@
       "id": 14,
       "name": "Jungwoo Cho",
       "degree": "Ph.D.",
-      "date": "2015.09~2020.02",  
+      "date": "2014.03~2020.02",  
       "phd": "2015.09~2020.02",
-      "photo": "/peopleImg/14.png"
+      "ms": "2014.03~2015.08",
+      "photo": "/peopleImg/14.png",
+      "current": "Inha University / Department of Aerospace Engineering / Assistant Professor"
     },
     {
       "id": 15,
@@ -178,7 +182,8 @@
       "degree": "Ph.D.",
       "date": "2016.09~2023.02",  
       "phd": "2016.09~2023.02",
-      "photo": "/peopleImg/17.png"
+      "photo": "/peopleImg/17.png",
+      "current": "Hansei University / Department of Aviation Industrial Engineering / Assistant Professor"
     },
     {
       "id": 18,
@@ -249,14 +254,6 @@
       "photo": "/peopleImg/25.png"
     },
     {
-      "id": 26,
-      "name": "Jungwoo Cho",
-      "degree": "M.S.",
-      "date": "2014.03~2015.08",
-      "ms": "2014.03~2015.08",
-      "photo": "/peopleImg/26.png"
-    },
-    {
       "id": 27,
       "name": "Yoonjung Kang",
       "degree": "M.S.",
@@ -286,7 +283,8 @@
       "degree": "M.S.",
       "date": "2021.03~2023.02",
       "ms": "2021.03~2023.02",
-      "photo": "/peopleImg/32.png"
+      "photo": "/peopleImg/32.png",
+      "current": "Kakao Mobility"
     },
     {
       "id": 33,
@@ -310,7 +308,8 @@
       "degree": "M.S.",
       "date": "2024.03~2026.02",
       "ms": "2024.03~2026.02",
-      "photo": "/peopleImg/6.jpg"
+      "photo": "/peopleImg/6.jpg",
+      "current": "Naver Labs Robotics & Autonomous Driving Group"
     }
   ]
 }
