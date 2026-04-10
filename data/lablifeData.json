@@ -1,0 +1,63 @@
+[
+    {
+       "id": "20260220",
+       "title": "Congratulations to Our Graduates",
+       "start": "2026-02-20",
+       "end": "2026-02-20",
+       "place": "Kaist",
+       "category": "lablife",
+       "participants": "Minwoo Jeong (M.S. candidate), Juneyoung Ro (M.S. candidate), Professor Yoonjin Yoon, Namwoo Kim (Postdoc Researcher), Sungmin Sohn (Ph.D. candidate)",
+       "keyword": [
+         "Graduation",
+         "Congratulations"
+       ],
+       "desc": "We warmly congratulate **Minwoo Jeong** and **Juneyoung Ro** on their graduation from KAIST! Their dedication and valuable research contributions have been greatly appreciated. We wish them every success in their future paths! \n\nWe would also like to express our sincere appreciation to our supervising professor and laboratory members who attended the ceremony to offer their warm congratulations. Their presence made the occasion especially meaningful for our graduates.",
+       "photos": ["/eventsImg/IMG_8443.jpg", "/eventsImg/IMG_8452.jpg", "/eventsImg/IMG_8471.jpg"],
+       "time": ""
+     },
+     {
+        "id": "20250515",
+        "title": "Teacher's Day!",
+        "start": "2025-05-15",
+        "end": "2025-05-15",
+        "place": "Kaist",
+        "category": "lablife",
+        "keyword": [
+          "Teacher's Day",
+          "Celebration"
+        ],
+        "desc": "Professor Yoon and the students celebrated Teacher's Day together!",
+        "photos": ["/eventsImg/life20250515.jpg"],
+        "time": ""
+      },
+     {
+        "id": "20250403",
+        "title": "Strawberry Party!",
+        "start": "2025-04-03",
+        "end": "2025-04-03",
+        "place": "Kaist",
+        "category": "lablife",
+        "keyword": [
+          "Strawberry",
+          "Party"
+        ],
+        "desc": "Professor Yoon and the students had a wonderful time on a Friday afternoon, enjoying delicious strawberries under the beautiful cherry blossom scenery. It was a sweet break from their busy schedules, filled with laughter and good conversation.",
+        "photos": ["/eventsImg/life20250403.jpg"],
+        "time": ""
+      },
+      {
+        "id": "20250221",
+        "title": "윤윤진 교수님 KAIST 지정 석좌교수 임명",
+        "start": "2025-02-21",
+        "end": "2025-02-21",
+        "place": "Kaist",
+        "category": "lablife",
+        "keyword": [
+          "KAIST",
+          "Appointment"
+        ],
+        "desc": "Professor Yoonjin Yoon was appointed as the KAIST Endowed Chair Professor (석좌교수) by KAIST as of March 1st! \n\nKAIST selects and appoints as Endowed Chair Professor among full-time faculty members, or associate professors in their 40's who greatly contributed to the development of school as a result of their excellent educational, research and contribution service.",
+        "photos": ["/eventsImg/life20250221.jpg"],
+        "time": ""
+      }
+]

@@ -1,69 +1,268 @@
-[
+[ 
+
+
   {
-    "id": 1,
-    "title": "GS E&C (UAM)",
-    "image": "/projectsImg/1.png",
-    "link": "/gs-ec-uam",
-    "type": "internal"
+    "id": 20252030,
+    "label": "URL",
+    "image": "/projectsImg/nrf.jpg",
+    "title": "Multi-modal Deep Learning Framework for Effective and Responsible Urban Representation Learning (URL)",
+    "project_title":"도시 표현 학습을 위한 멀티 모달 인공지능 학습 모델 및 신뢰가능한 인공지능 기술 연구",
+    "code": "N01250723",
+    "period": "2025 ~ 2030",
+    "funding": "National Research Foundation Mid-career Grant",
+    "funding_short": "NRF Mid-career Grant",
+    "budget": "1,399,460,000 KRW",
+    "active": true
   },
   {
-    "id": 2,
-    "title": "KAIST-NYU C³",
+    "id": 20242028,
+    "label": "CAUS",
+    "image": "/projectsImg/gsec.png",
+    "title": "GS E&C-KAIST Joint R&D on Urban AI Technologies for Future Cities",
+    "project_title":"GS건설-KAIST 미래 도시 인공지능 핵심 기술 연구개발",
+    "code": "G01240393",
+    "period": "2024 ~ 2028",
+    "funding": "GS E&C Industrial R&D Project",
+    "funding_short": "GS E&C",
+    "budget": "4,400,000,000 KRW",
+    "active": true,
+    "projects": [
+        {
+          "id": 20252028,
+          "label": "GS E&C (UAM)",
+          "title": "Analysis of Vertiport Locations and 3D Urban Space for Urban Air Mobility (UAM) Operations",
+          "project_title":"UAM 운용을 위한 버티포트 위치 및 도심 3차원 공간 분석",
+          "code": "G04250032",
+          "period": "2025 ~ 2028",
+          "image": "/projectsImg/gsec.png",
+          "link": "/gs-ec-uam",
+          "funding": "GS E&C",
+          "funding_short": "GS E&C",
+          "type": "internal"
+        }
+    ]
+  },
+  {
+    "id": 20252027,
+    "label": "BP",
+    "title": "Brain Pool Global Hub for Urban AI",
+    "period": "2025 ~ 2027",
+    "funding": "National Research Foundation (NRF) - Brain Pool Program",
+    "funding_short": "NRF BP",
+    "image": "/projectsImg/nrf.jpg",
+    "budget": "2,100,000,000 KRW",
+    "active": true
+  },
+  {
+    "id": 20232024,
+    "label": "KAIST-NYU C³",
+    "title": "KAIST-NYU Center for Cities and Climate Change",
     "image": "/projectsImg/2.png",
     "link": "https://c3.kaist.ac.kr/home",
-    "type": "external"
+    "type": "external",
+    "period": "2023 ~ 2024",
+    "desc": "KAIST-NYU C³ is a joint effort between KAIST and NYU to develop global research and education program with focus on urban sustainability."
   },
   {
-    "id": 4,
+    "id": 2023,
+    "label": "UAII",
     "title": "Urban@KAIST",
     "image": "/projectsImg/4.png",
     "link": "https://urban.kaist.ac.kr/",
-    "type": "external"
+    "type": "external",
+    "period": "2023 ~"
   },
   {
-    "id": 5,
+    "id": 20222025,
+    "label": "HcFM",
     "title": "Human-centered Future Mobility (HcFM)",
+    "project_title":"인간중심 미래모빌리티를 위한 카이스트-버클리 국제공동연구",
+    "code": "N11210258, N11230001, N11240004",
     "image": "/projectsImg/5.png",
     "link": "https://hcfm.kaist.ac.kr/",
-    "type": "external"
+    "joint": "Kaist-Berkeley",
+    "type": "external",
+    "period": "2022 ~ 2025",
+    "desc": "Human-centered Future Mobility (HcFM) is a research program that focuses on the development of future mobility systems that are human-centered and sustainable. It is a platform for collaborative research and education in the field of future mobility."
+  },
+  {
+    "id": 202502,
+    "label": "Urban Heat, Urban Sales",
+    "image": "/projectsImg/saif.jpg",
+    "title": "Predictive Modeling of Regional Economic Reactions and Climate Sensitivity Mapping Based on Carbon, Air, and Heat Environmental Indicators",
+    "project_title":"탄소 대기 열 환경 정보 기반 지역경제 반응 예측 및 기후 반응 민감지도 개발",
+    "code": "N04250195",
+    "period": "2025",
+    "funding": "Seoul AI Foundation (SAIF)",
+    "funding_short": "SAIF",
+    "budget": "100,000,000 KRW"
+  },
+  {
+    "id": 202501,
+    "label": "Healing Nature",
+    "image": "/projectsImg/saif.jpg",
+    "title": "Building a Visual AI-Based Perceptual Urban Ecological Network for Enhancing the Multidimensional Connectivity of Green Spaces in Seoul",
+    "project_title":"서울시 녹지공간의 입체적 연결성 강화를 위한 Visual AI 기반 체감형 도시생태 네트워크 구축 연구",
+    "code": "N04250196",
+    "period": "2025",
+    "funding": "Seoul AI Foundation (SAIF)",
+    "funding_short": "SAIF",
+    "budget": "100,000,000 KRW"
+  },
+  {
+    "id": 20212024,
+    "label": "Deep Traffic",
+    "title": "NRF Basic Research Lab on Attention based Graph Neural Network Models for Urban Mobility Network Analysis and Prediction",
+    "project_title":"어텐션 메커니즘과 그래프인공신경망에 기반한 대도심 모빌리티 네트워크 분석 및 예측모델 기술 개발",
+    "code": "N01210929, N01220528, N01230429",
+    "period": "2021 ~ 2024",
+    "funding": "National Research Foundation (NRF) Basic Research Lab",
+    "funding_short": "NRF BRL",
+    "image": "/projectsImg/nrf.jpg",
+    "desc": "National Research Foundation's Basic Research Lab on Future Urban Mobility. The lab focuses on application of GNN and Attention Mechanism (transformer) to urban mobility network, both structural and abstract. ETA, routing, rebalancing, and pattern mining are the key areas of focus. "
+  },
+  {
+    "id": 20202024,
+    "label": "Future Mobility",
+    "title": "Semantic Tessellation-based Demand Analysis and Forecasting for Future Mobility",
+    "project_title":"미래 모빌리티 운용을 위한 시멘틱 테셀레이션 기반 수요 분석 및 예측 기술 연구",
+    "code": "N01200608, N01210277, N01220226, N01230385",
+    "period": "2020 ~ 2024",
+    "funding": "National Research Foundation (NRF)",
+    "funding_short": "NRF",
+    "image": "/projectsImg/nrf.jpg"
+  },
+  {
+    "id": 20192023,
+    "label": "TDA",
+    "title": "Big data application for topological transportation network analysis",
+    "project_title":"교통 빅데이터를 활용한 대도심 교통 네트워크의 위상학적 분석 및 응용 연구",
+    "period": "2019 ~ 2023",
+    "funding": "National Research Foundation Mid-career Grant",
+    "funding_short": "NRF Mid-career Grant",
+    "image": "/projectsImg/nrf.jpg"
+  },
+  {
+    "id": 2021,
+    "label": "UAV",
+    "title": "Future Prospects and Applications of Unmanned Vehicles in Urban Environments",
+    "project_title":"미래 도심 환경에서의 무인이동체 활용 전망 연구",
+    "code": "N05210064",
+    "period": "2021",
+    "funding": "ETRI National Security Research Institute",
+    "funding_short": "NSRI",
+    "image": "/projectsImg/nsri.png"
   },
   {
     "id": 6,
-    "title": "POST AI & Mobility",
+    "label": "POST AI & Mobility",
+    "title": "AI-Driven Mobility: Impact and Challenges for Society, Environment, and Our Way of Life",
+    "project_title":"인공지능과 모빌리티: 사회, 환경, 라이프스타일의 변화와 도전",
+    "code": "N11210153",
+    "period": "2021",
     "image": "/projectsImg/6.png",
     "link": "https://sites.google.com/view/post-ai/home",
     "type": "external"
   },
   {
-    "id": 7,
-    "pagetitle": "NARAE",
-    "title": "Air Traffic Management Master Plan - NARAE",
-    "researchSectionID": "aviation",
-    "link": "/narae",
-    "type": "internal"
+    "id": 20172021,
+    "label": "K-UTM",
+    "title": "Korean small UAV Traffic Management (K-UTM)",
+    "period": "2017 ~ 2021",
+    "funding": "Ministry of Land, Infrastructure, and Transportation",
+    "funding_short": "MOLIT",
+    "desc": "The project aims to establish a robust and effective UAV Traffic Management (UTM) techniques and policies in response to rapid adoption of sUAV for public and private purpose. Task 3 focus includes three dimensional airspace structure design, and optimal flow management in urban area. The research is conducted in collaboration with multiple international partners including NASA UTM division and NTU UTM research center. ",
+    "image": "/projectsImg/molit.jpg"
   },
   {
-    "id": 8,
+    "id": 20192020,
+    "label": "Metropolitan Airspace Assessment for UAV",
+    "title": "Metropolitan Airspace Assessment for Safe UAV Operations Using Real-time Population and Traffic Data",
+    "project_title":"무인비행체 운용 안전성 확보를 위한 대도심 유동인구 및 교통량 동적 데이터 기반 공역 평가 방법론 개발",
+    "code": "N11190233",
+    "period": "2019 ~ 2020",
+    "funding": "KAIST",
+    "funding_short": "KAIST",
+    "image": "/projectsImg/kaist.jpg"
+  },
+  {
+    "id": 20172020,
+    "label": "TDA",
+    "title": "Big data application for topological transportation network analysis",
+    "project_title":"교통 빅데이터를 활용한 대도심 교통 네트워크의 위상학적 분석 및 응용 연구",
+    "code": "N01180332, N01190578, N01200430",
+    "period": "2017 ~ 2020",
+    "funding": "National Research Foundation (NRF)",
+    "funding_short": "NRF",
+    "image": "/projectsImg/nrf.jpg",
+    "desc": "Research on topological network analysis both on the surface and air traffic under active control. Main focus is to analyze the transportation network properties incorporating both topological and semantic data for optimal control of future autonomous vehicles."
+  },
+  {
+    "id": 20172019,
+    "label": "UTM",
+    "title": "R&D Planning for Aviation Information and Big Data Analytics for Safety ",
+    "project_title":"저고도 무인비행장치 교통관리(UTM) 핵심기술 연구개발",
+    "period": "2017 ~ 2019",
+    "funding": "National Research Foundation (NRF)",
+    "funding_short": "NRF",
+    "image": "/projectsImg/nrf.jpg",
+    "desc": "Following the ICAO's newly enforced mandate to adopt data-driven risk assessment for Safety Management System (SMS), the Korean government is planning to establish Aviation Big Data Center in 2019. In preparation, research and development scope and requirements are defined based on preliminary big data analysis of aviation sector"
+  },
+  {
+    "id": 2017,
+    "label": "ATFM",
     "pagetitle": "ATFM",
     "title": "Probabilistic Air Traffic Flow Management (ATFM)",
+    "period" : "2014 ~ 2017",
+    "funding": "National Research Foundation (NRF)",
+    "funding_short": "NRF",
+    "image": "/projectsImg/nrf.jpg",
     "researchSectionID": "aviation",
-    "link": "/atfm",
+    "budget": "~$140,000 ",
+    "desc": "Research on traffic flow management in the next generation air transportation system with focus on stochastic route optimization under free flight scenario.",
+    "link": "/atfm",  
     "type": "internal"
   },
   {
-    "id": 9,
+    "id": 20142017,
+    "label": "AL",
     "pagetitle": "Autonomous Logistics",
     "title": "Autonomous Logistics",
+    "period" : "2014 ~ 2017",
+    "funding": "KAIA",
+    "funding_short": "KAIA",
+    "image": "/projectsImg/kaia.jpg",
+    "partnership": "Urban Robotics Lab (URL, KAIST), Korea Electronics Technology Institute (KETI), Nsquare, CJ Korea Express",
     "researchSectionID": "aviation",
     "link": "/autonomous-logistics",
     "type": "internal"
   },
   {
-    "id": 10,
+    "id": 20112015,
+    "label": "ASM",
     "pagetitle": "Aviation System Safety Management",
     "title": "Aviation System Safety Management and Reliability Centered Maintenance Program Development",
+    "period" : "2011 ~ 2015",
+    "funding": "KAIA",
+    "funding_short": "KAIA",
+    "image": "/projectsImg/kaia.jpg",
+    "partnership": "Ecosian, Hanseo University, The Korea Transport Institute (KOTI), Jeju Air, Korea Transportation Safety Authority (KTSA)",
     "researchSectionID": "aviation",
     "link": "/aviation-system-safety-management",
+    "type": "internal"
+  },
+  {
+    "id": 20112012,
+    "label": "NARAE",
+    "pagetitle": "NARAE",
+    "title": "Air Traffic Management Master Plan - NARAE",
+    "period" : "2011 ~ 2012",
+    "funding": "Ministry of Land, Infrastructure, and Transportation",
+    "funding_short": "MOLIT",
+    "image": "/projectsImg/molit.jpg",
+    "partnership": "Korea Civil Aviation Development Association (KADA)",
+    "researchSectionID": "aviation",
+    "link": "/narae",
     "type": "internal"
   }
 ]

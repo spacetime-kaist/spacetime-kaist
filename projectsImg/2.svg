@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" role="img" aria-labelledby="t2 d2">
+  <title id="t2">Project Image</title>
+  <desc id="d2">Monochrome placeholder image for project card.</desc>
+  <rect width="320" height="180" fill="#f8fafc"/>
+  <rect x="16" y="16" width="288" height="148" rx="4" fill="#ffffff" stroke="#cbd5e1"/>
+  <rect x="36" y="44" width="86" height="18" fill="#0f172a"/>
+  <rect x="36" y="78" width="230" height="6" fill="#cbd5e1"/>
+  <rect x="36" y="94" width="194" height="6" fill="#e2e8f0"/>
+  <rect x="36" y="116" width="130" height="8" fill="#64748b"/>
+</svg>

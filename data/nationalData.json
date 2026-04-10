@@ -1,170 +1,254 @@
 [
   {
     "id": "NODE12087850",
+    "slug": "nat2025-NODE12087850",
     "title": "동적 시간 왜곡 기반 코로나 19 에 따른 서울 지하철 이용 패턴의 시계열 군집 분석",
     "authors": "김정희，이혜영，김세윤，윤윤진",
     "conference": "대한교통학회지 제43권 제1호",
     "date": "2025",
-    "href": "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE12087850"
+    "href": "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE12087850",
+    "keywords": ["transit", "time series", "mobility"],
+    "podcast": "/audio/HUGAT.m4a",
+    "podcast_long": "/audio/HUGAT_long.m4a"
   },
   {
     "id": "NODE11760070",
+    "slug": "nat2024-NODE11760070",
     "title": "무인항공시스템 운영을 위한 데이터 기반 통합적 도심 공역 평가 프레임워크 연구",
     "authors": "오수환, 윤윤진",
     "conference": "대한교통학회 제90회 학술발표회",
     "date": "2024",
-    "href": "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE11760070"
+    "href": "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE11760070",
+    "keywords": ["UAV", "airspace", "safety"],
+    "podcast": "/audio/HUGAT.m4a",
+    "podcast_long": "/audio/HUGAT_long.m4a"
   },
   {
     "id": 74,
+    "slug": "nat2022-74",
     "title": "지역별 장애인 콜택시의 접근 형평성 분석",
     "authors": "성광환, 신유열, 윤윤진",
     "conference": "2022 춘계공동학술대회(한국경영과학회, 대한산업공학회)",
     "date": "2022",
-    "href": "https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11084371"
+    "href": "https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11084371",
+    "keywords": ["mobility", "road safety", "urban computing"],
+    "podcast": "/audio/HUGAT.m4a",
+    "podcast_long": "/audio/HUGAT_long.m4a"
   },
   {
     "id": 75,
+    "slug": "nat2022-urban-region-representation-learning",
     "title": "Urban Region Representation Learning Reflecting Seoul Census Data",
     "authors": "이혜영, 김남우, 윤윤진",
     "conference": "2022 춘계공동학술대회(한국경영과학회, 대한산업공학회)",
     "date": "2022",
-    "href": "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE11101163"
+    "href": "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE11101163",
+    "keywords": ["urban computing", "mobility", "deep learning"],
+    "podcast": "/audio/HUGAT.m4a",
+    "podcast_long": "/audio/HUGAT_long.m4a"
   },
   {
     "id": 76,
+    "slug": "nat2022-population-risk-analysis-small",
     "title": "Population risk analysis of small unmanned aircraft system operations in urban environments",
     "authors": "오수환, 김세윤, 윤윤진",
     "conference": "2022 춘계공동학술대회(한국경영과학회, 대한산업공학회)",
     "date": "2022",
-    "href": "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE11084369"
+    "href": "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE11084369",
+    "keywords": ["UAV", "safety", "airspace"],
+    "podcast": "/audio/HUGAT.m4a",
+    "podcast_long": "/audio/HUGAT_long.m4a"
   },
   {
     "id": 77,
+    "slug": "nat2020-traffic-speed-prediction-urban",
     "title": "Traffic speed prediction in urban mobility system using taxi GPS tracking data",
     "authors": "신유열, 윤윤진",
     "conference": "2020 한국추계경영과학회",
     "date": "2020",
-    "href": "https://koasas.kaist.ac.kr/handle/10203/279806"
+    "href": "https://koasas.kaist.ac.kr/handle/10203/279806",
+    "keywords": ["traffic forecasting", "mobility", "deep learning"],
+    "podcast": "/audio/HUGAT.m4a",
+    "podcast_long": "/audio/HUGAT_long.m4a"
   },
   {
     "id": 78,
+    "slug": "nat2020-graphbased-clustering-urban-airspace",
     "title": "Graph-based clustering of urban airspace with spatial constraints for UAM applications in NY and SF",
     "authors": "김남우, 윤윤진",
     "conference": "2020 한국추계경영과학회",
     "date": "2020",
-    "href": "https://koasas.kaist.ac.kr/handle/10203/279805"
+    "href": "https://koasas.kaist.ac.kr/handle/10203/279805",
+    "keywords": ["UAM", "airspace", "GNN"],
+    "podcast": "/audio/HUGAT.m4a",
+    "podcast_long": "/audio/HUGAT_long.m4a"
   },
   {
     "id": 79,
+    "slug": "nat2017-satisficing-theory-cooperative-conflict",
     "title": "Satisficing Theory based Cooperative Conflict Resolution Strategy for Multiple Small Unmanned Aerial Vehicles",
     "authors": "김남우, 윤윤진",
     "conference": "한국경영과학회 추계학술대회",
     "date": "2017",
-    "href": "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE07272879"
+    "href": "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE07272879",
+    "keywords": ["UAV", "safety", "autonomous driving"],
+    "podcast": "/audio/HUGAT.m4a",
+    "podcast_long": "/audio/HUGAT_long.m4a"
   },
   {
     "id": 80,
+    "slug": "nat2017-80",
     "title": "서울시 노인 보행자 교통사고의 부상 심각도 영향 평가",
     "authors": "김민재, 노유나, 윤윤진",
     "conference": "한국경영과학회 추계학술대회",
     "date": "2017",
-    "href": "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE07272880"
+    "href": "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE07272880",
+    "keywords": ["road safety", "safety", "mobility"],
+    "podcast": "/audio/HUGAT.m4a",
+    "podcast_long": "/audio/HUGAT_long.m4a"
   },
   {
     "id": 81,
+    "slug": "nat2017-personalized-driving-stress-recognition",
     "title": "Personalized Driving Stress Recognition of Electric Vehicle in Physiological Signals",
     "authors": "노유나, 윤윤진",
     "conference": "한국경영과학회 추계학술대회",
     "date": "2017",
-    "href": "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE07272881"
+    "href": "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE07272881",
+    "keywords": ["physiological sensing", "autonomous driving", "safety"],
+    "podcast": "/audio/HUGAT.m4a",
+    "podcast_long": "/audio/HUGAT_long.m4a"
   },
   {
     "id": 82,
+    "slug": "nat2017-identification-riskresilient-air-space",
     "title": "Identification of Risk-Resilient Air Space for sUAV Operations in a highly urbanized area",
     "authors": "조정우, 윤윤진",
     "conference": "한국경영과학회 추계학술대회",
     "date": "2017",
-    "href": "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE07272882"
+    "href": "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE07272882",
+    "keywords": ["UAV", "airspace", "safety"],
+    "podcast": "/audio/HUGAT.m4a",
+    "podcast_long": "/audio/HUGAT_long.m4a"
   },
   {
     "id": 83,
+    "slug": "nat2017-83",
     "title": "서울시 교통사고 노인 탑승자의 좌석 위치 및 안전벨트 사용에 따른 부상심각도 영향 평가",
     "authors": "노유나, 윤윤진",
     "conference": "춘계공동학술대회(대한산업공학회, 한국경영과학회, 한국시뮬레이션학회) ",
     "date": "2017",
-    "href": "https://koasas.kaist.ac.kr/handle/10203/223811"
+    "href": "https://koasas.kaist.ac.kr/handle/10203/223811",
+    "keywords": ["road safety", "safety", "mobility"],
+    "podcast": "/audio/HUGAT.m4a",
+    "podcast_long": "/audio/HUGAT_long.m4a"
   },
   {
     "id": 84,
+    "slug": "nat2017-84",
     "title": "생체신호를 활용한 주행 데이터 기반 운전자의 스트레스 추정 기법 연구",
     "authors": "김세윤, 장영재, 윤윤진",
     "conference": "춘계공동학술대회(대한산업공학회, 한국경영과학회, 한국시뮬레이션학회) ",
     "date": "2017",
-    "href": "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE07169283"
+    "href": "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE07169283",
+    "keywords": ["physiological sensing", "autonomous driving", "safety"],
+    "podcast": "/audio/HUGAT.m4a",
+    "podcast_long": "/audio/HUGAT_long.m4a"
   },
   {
     "id": 85,
+    "slug": "nat2017-85",
     "title": "교통 네트워크 및 데이터 기반 응급의료서비스 접근성 분석",
     "authors": "조정우, 윤윤진",
     "conference": "춘계공동학술대회(대한산업공학회, 한국경영과학회, 한국시뮬레이션학회) ",
     "date": "2017",
-    "href": "https://koasas.kaist.ac.kr/handle/10203/223809"
+    "href": "https://koasas.kaist.ac.kr/handle/10203/223809",
+    "keywords": ["mobility", "safety", "urban computing"],
+    "podcast": "/audio/HUGAT.m4a",
+    "podcast_long": "/audio/HUGAT_long.m4a"
   },
   {
     "id": 86,
+    "slug": "nat2017-86",
     "title": "이타적 충돌회피 이론 기반 무인비행장치 충돌회피 성능 요건 분석",
     "authors": "김남우, 신유열, 윤윤진",
     "conference": "춘계공동학술대회(대한산업공학회, 한국경영과학회, 한국시뮬레이션학회) ",
     "date": "2017",
-    "href": "https://koasas.kaist.ac.kr/handle/10203/223812"
+    "href": "https://koasas.kaist.ac.kr/handle/10203/223812",
+    "keywords": ["UAV", "safety", "autonomous driving"],
+    "podcast": "/audio/HUGAT.m4a",
+    "podcast_long": "/audio/HUGAT_long.m4a"
   },
   {
     "id": 87,
+    "slug": "nat2017-gis",
     "title": "GIS 네트워크 분석을 통한 서울시 응급의료서비스 이송시간 분석",
     "authors": "김민재, 조정우, 윤윤진.  ",
     "conference": "춘계공동학술대회(대한산업공학회, 한국경영과학회, 한국시뮬레이션학회) ",
     "date": "2017",
-    "href": "https://koasas.kaist.ac.kr/handle/10203/223810"
+    "href": "https://koasas.kaist.ac.kr/handle/10203/223810",
+    "keywords": ["mobility", "safety", "urban computing"],
+    "podcast": "/audio/HUGAT.m4a",
+    "podcast_long": "/audio/HUGAT_long.m4a"
   },
   {
     "id": 88,
+    "slug": "nat2016-88",
     "title": "서울시 어린이 보행자 사고 위험요인 분석에 관한 연구",
     "authors": "Y. Kang, J, Lee. Y, Yoon",
     "conference": "The 75th Conference of Korean Society of Transportation",
     "date": "2016",
-    "href": "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE08001919"
+    "href": "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE08001919",
+    "keywords": ["road safety", "safety", "urban computing"],
+    "podcast": "/audio/HUGAT.m4a",
+    "podcast_long": "/audio/HUGAT_long.m4a"
   },
   {
     "id": 89,
+    "slug": "nat2015-89",
     "title": "격자기반 물류창고에서의 복수 운송로봇 교통제어 알고리즘 연구",
     "authors": "​S. Kim., Y. Noh., Y. Yoon",
     "conference": "The 72th Conference of Korean Society of Transportation",
     "date": "2015",
-    "href": "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE06278154"
+    "href": "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE06278154",
+    "keywords": ["autonomous driving", "simulation", "infrastructure"],
+    "podcast": "/audio/HUGAT.m4a",
+    "podcast_long": "/audio/HUGAT_long.m4a"
   },
   {
     "id": 90,
+    "slug": "nat2015-90",
     "title": "의사결정나무를 이용한 고속도로 교통사고 시설 피해액 분석",
     "authors": "S. Kim. Y. Yoon",
     "conference": "The 72th Conference of Korean Society of Transportation",
     "date": "2015",
-    "href": "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE07499400"
+    "href": "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE07499400",
+    "keywords": ["road safety", "safety", "machine learning"],
+    "podcast": "/audio/HUGAT.m4a",
+    "podcast_long": "/audio/HUGAT_long.m4a"
   },
   {
     "id": 91,
+    "slug": "nat2015-91",
     "title": "교통정보 및 지리정보체계를 반영한 구급차 출동범위 분석",
     "authors": "J. Cho. Y. Yoon",
     "conference": "The 72th Conference of Korean Society of Transportation",
     "date": "2015",
-    "href": "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE07499441"
+    "href": "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE07499441",
+    "keywords": ["mobility", "safety", "urban computing"],
+    "podcast": "/audio/HUGAT.m4a",
+    "podcast_long": "/audio/HUGAT_long.m4a"
   },
   {
     "id": 92,
+    "slug": "nat2015-92",
     "title": "항공서비스제공자의 안전성과지표에 대한 사례연구",
     "authors": "J. Lee, Y. Yoon",
     "conference": "The 72th Conference of Korean Society of Transportation",
     "date": "2015",
-    "href": "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE07499450"
+    "href": "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE07499450",
+    "keywords": ["aviation", "safety", "air traffic"],
+    "podcast": "/audio/HUGAT.m4a",
+    "podcast_long": "/audio/HUGAT_long.m4a"
   }
 ]
