@@ -187,7 +187,8 @@ export default function PubDetails() {
 
           {pub.images && <section className="mt-5">
             <h2 className="text-sm font-semibold uppercase tracking-wide text-gray-500">Image</h2>
-            <img src={pub.images[0]} alt={pub.title} className="my-3 sm:mx-5 border border-slate-500 w-120 object-contain rounded-sm" />
+            <img src={pub.images[0].url || pub.images[0]} alt={pub.title} className="my-3 sm:mx-5 border border-slate-500 w-120 object-contain rounded-sm" />
+            {/* <p className="text-xs text-gray-400">{pub.images[0].caption}</p> */}
           </section>}
 
           {pub.youtube && <section className="mt-5">
