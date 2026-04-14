@@ -234,12 +234,29 @@ function AlumniCard({ member }) {
 
       {/* Current workplace — pinned to bottom */}
       {member.current && (
-        <div className="mt-auto w-full border-t border-gray-100 bg-gray-50 px-3 py-2">
+        <div className="mt-auto w-full h-auto border-t border-gray-100 bg-gray-50 px-3 py-2">
           <p className="text-[10px] font-semibold uppercase tracking-wider text-gray-400 mb-0.5">Current</p>
-          <p className="text-[11px] text-gray-600 leading-snug">{member.current}</p>
+          <p className="text-[11px] text-gray-600 leading-snug">
+            {member.current.split(",").map((part, index, parts) => (
+              <span className={
+                index === parts.length - 1
+                  ? "font-medium text-gray-800 "           // institution
+                  : index === 0
+                    ? "font-normal text-gray-500"      // role
+                    : "font-normal text-gray-500"            // department
+              }>
+                {part.trim()}
+                {index < parts.length - 1 && (
+                  <>
+                    ,&nbsp;<br />
+                  </>
+                )}
+              </span>
+            ))}
+          </p>
         </div>
+        
       )}
-
     </div>
   );
 }
