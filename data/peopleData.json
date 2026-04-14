@@ -130,7 +130,7 @@
       "date": "2010.03~2015.02",
       "phd": "2010.03~2015.02",
       "photo": "/peopleImg/11.png",
-      "current": "Keimyung University / Department of Transportation Engineering / Associate Professor"
+      "current": "Associate Professor, Dep. of Transportation Engineering, Keimyung Univ."
     },
     {
       "id": 12,
@@ -139,7 +139,7 @@
       "date": "2014.03~2018.02",  
       "phd": "2014.03~2018.02",
       "photo": "/peopleImg/12.png",
-      "current": "NUST / Institute of Civil Engineering / Assistant Professor"
+      "current": "Assistant Professor, Inst. of Civil Engineering, NUST"
     },
     {
       "id": 13,
@@ -157,7 +157,7 @@
       "phd": "2015.09~2020.02",
       "ms": "2014.03~2015.08",
       "photo": "/peopleImg/14.png",
-      "current": "Inha University / Department of Aerospace Engineering / Assistant Professor"
+      "current": "Assistant Professor, Dep. of Aerospace Engineering, Inha Univ."
     },
     {
       "id": 15,
@@ -174,7 +174,7 @@
       "date": "2016.09~2022.08",
       "phd": "2016.09~2022.08",
       "photo": "/peopleImg/16.png",
-      "current": "NYUAD / Postdocotral Associate"
+      "current": "Postdoctoral Associate, NYUAD"
     },
     {
       "id": 17,
@@ -183,7 +183,7 @@
       "date": "2016.09~2023.02",  
       "phd": "2016.09~2023.02",
       "photo": "/peopleImg/17.png",
-      "current": "Hanseo University / Department of Aviation Industrial & Systems Engineering / Assistant Professor"
+      "current": "Assistant Professor, Dep. of Aerospace Industrial & Systems Engineering, Hanseo Univ."
     },
     {
       "id": 18,
@@ -197,7 +197,8 @@
     {
       "id": 19,
       "name": "Seyun Kim",
-      "current": "한국교통연구원 부연구위원(KOTI / Associate Research Fellow)",
+      "current": "Associate Research Fellow, KOTI",
+      "current_ko": "한국교통연구원 부연구위원",
       "degree": "Ph.D.",
       "date": "2014.03~2025.07",
       "ms": "2014.03~2016.02",
