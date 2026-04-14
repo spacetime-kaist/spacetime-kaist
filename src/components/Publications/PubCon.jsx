@@ -3,9 +3,9 @@ import { useDataLoader } from "../../hooks/useDataLoader";
 import { Link } from "react-router-dom";
 
 const TYPES = [
-  { id: 'journal', label: 'Journal' },
-  { id: 'international', label: 'International' },
-  { id: 'national', label: 'National' },
+  { id: 'journal', label: 'Journal Publications' },
+  { id: 'international', label: 'International Conference Proceedings' },
+  { id: 'national', label: 'National Conference Proceedings' },
 ];
 
 function blogPath(slug) {
@@ -189,7 +189,7 @@ export default function PubCon() {
               <div>
                 
                 <h2 className="text-sm font-semibold uppercase tracking-wider text-slate-500 mb-2">Type</h2>
-                <div className="flex flex-wrap gap-1.5">
+                <div className="flex flex-wrap gap-2">
                   {TYPES.map(({ id, label }) => (
                     <button
                       key={id}
@@ -197,7 +197,7 @@ export default function PubCon() {
                       onClick={() => {
                         setSelectedType(prev => prev === id ? null : id);
                       }}
-                      className={`rounded-full px-2.5 py-1 text-xs font-medium transition-colors border ${
+                      className={`text-start px-2.5 py-1 text-xs font-medium transition-colors border-l-2 border-b-1 border-slate-100 border-l-slate-400 ${
                         selectedType === id
                           ? 'bg-slate-900 text-white border-slate-900'
                           : 'bg-white text-slate-700 border-slate-300 hover:bg-slate-100'
@@ -272,7 +272,7 @@ export default function PubCon() {
                       key={kw}
                       type="button"
                       onClick={() => toggleKeyword(kw)}
-                      className={`rounded bg-slate-100 px-2 py-0.5 text-xs font-medium transition-colors ${
+                      className={`text-start rounded bg-slate-100 px-2 py-0.5 text-xs font-medium transition-colors ${
                         selectedKeywords.includes(kw)
                           ? 'ring-2 ring-sky-500 ring-offset-1 bg-sky-100 text-sky-800'
                           : 'text-slate-700 hover:bg-slate-300'
