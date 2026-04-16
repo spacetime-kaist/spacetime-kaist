@@ -197,7 +197,7 @@ function AlumniCard({ member }) {
       <div className="px-3 pb-3 flex flex-col items-center gap-1">
         {member.link ? (
           <Link
-            to={`/people/${slugifyMemberName(member.name)}`}
+            to={`/people/${member.id}`}
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm font-semibold text-blue-600 hover:text-blue-800 hover:underline leading-tight"
