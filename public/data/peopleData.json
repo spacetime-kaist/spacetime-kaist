@@ -37,6 +37,7 @@
       "link": "https://sites.google.com/view/sungmin-sohn",
       "linkedin": "https://www.linkedin.com/in/sungmin-sohn-43280216a",
       "role": "Ph.D. Candidate",
+      "dept": "Civil and Environmental Engineering",
       "from": "2023.09~",
       "email": "smsohn1997@kaist.ac.kr",
       "edu": [
@@ -77,6 +78,7 @@
       "slug": "seungro",
       "name": "Seungro Lee",
       "role": "M.S. Candidate",
+      "dept": "Data Science",
       "from": "2024.09~",
       "email": "roy.seungro.lee@kaist.ac.kr",
       "edu": [
@@ -89,6 +91,7 @@
       "slug": "keonhee",
       "name": "Keonhee Jang",
       "role": "Integrated M.S.-Ph.D Candidate",
+      "dept": "Data Science",
       "from": "2024.09~",
       "email": "keoniverse@kaist.ac.kr",
       "edu": [
@@ -101,6 +104,7 @@
       "slug": "jeeyun",
       "name": "Jeeyun Chang",
       "role": "M.S. Candidate",
+      "dept": "Data Science",
       "from": "2025.03~",
       "email": "jyc021@kaist.ac.kr",
       "edu": [
@@ -114,12 +118,26 @@
       "name": "Jihyeon Ohk",
       "link": "https://sites.google.com/spacetime.kaist.ac.kr/jihyeon-ohk",
       "role": "M.S. Candidate",
+      "dept": "Civil and Environmental Engineering",
       "from": "2025.09~",
       "email": "jh.ohk@kaist.ac.kr",
       "edu": [
         "B.S. in Civil, Environmental and Resources Engineering, Kyoto University"
       ],
       "photo": "/peopleImg/10.jpg"
+    },
+    {
+      "id": 20263156,
+      "slug": "youngwoo",
+      "name": "Youngwoo Kim",
+      "role": "M.S. Candidate",
+      "dept": "Data Science",
+      "from": "2026.03~",
+      "email": "kimyoungwoo44@kaist.ac.kr",
+      "edu": [
+        "B.S. in Informatics, State University of New York (SUNY) at Albany"
+      ],
+      "photo": "/peopleImg/20263156.jpg"
     }
   ],
   "aluminiData": [
