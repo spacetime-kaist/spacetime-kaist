@@ -123,7 +123,26 @@ const EventMasonryCard = (event) => (
 
       {/* Description */}
       <div className="prose prose-slate prose-sm max-w-none overflow-auto mb-3 text-slate-700">
-        <ReactMarkdown className="markdown">{event.desc}</ReactMarkdown>
+      <ReactMarkdown
+        className="markdown"
+        components={{
+          img: ({ ...props }) => (
+            <img
+              {...props}
+              style={{
+                maxWidth: '300px',
+                width: '80%',
+                height: 'auto',
+                display: 'block',
+                margin: '2px',
+                borderRadius: '3px',
+              }}
+            />
+          ),
+        }}
+      >
+        {event.desc}
+      </ReactMarkdown>
       </div>
 
       {/* Links */}
