@@ -87,7 +87,6 @@
       "place": "Convention and Exhibition Center (COEX)",
       "participants": "Professor Yoonjin Yoon, Namwoo Kim (Postdoc Researcher), YoungJoun Park, Juneyoung Ro (M.S. candidate), Keonhee Jang (Integrated M.S.-Ph.D candidate), Seokwoo Yun",
       "keyword": [
-        "K-DS",
         "Urban Heat, Urban Sales"
       ],
       "desc": "Our laboratory collaborated with the *MIT Senseable City Lab* at **Smart Life Week 2025**, presenting two exhibitions — \"Urban Heat, Urban Sales\" and \"Feeling Nature\" — centered on urban climate, citizens' daily lives, and climate resilience.\n\nBased on credit card transaction data from 426 administrative districts in Seoul, covering 96 business sectors over 365 days, we quantitatively analyzed how climate factors such as temperature and humidity affect small business owners' sales and sustainability. Using artificial intelligence, we modeled sales patterns by region and industry under climate stress conditions such as heatwaves and heavy rainfall, and visualized the results as an \"Urban Resilience\" index.",
