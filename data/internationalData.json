@@ -222,7 +222,7 @@
     "conference": "ICRAT(International Conference on Research in Air Transportation)",
     "date": "2020",
     "href": "https://koasas.kaist.ac.kr/handle/10203/279309",
-    "keywords": ["airspace", "UAV", "topology"],
+    "keywords": ["airspace", "UAV"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -246,7 +246,7 @@
     "conference": "ICRAT(International Conference on Research in Air Transportation) Doctoral Symposium",
     "date": "2020",
     "href": "https://koasas.kaist.ac.kr/handle/10203/279308",
-    "keywords": ["air traffic", "network analysis", "topology"],
+    "keywords": ["air traffic", "network analysis", "topological data analysis (TDA)"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -354,7 +354,7 @@
     "conference": "13th ATM R&D Seminar",
     "date": "2019",
     "href": "https://www.researchgate.net/profile/Jungwoo-Cho/publication/334882861_Extraction_and_Interpretation_of_Geometrical_and_Topological_Properties_of_Urban_Airspace_for_UAS_Operations/links/5d43dff9a6fdcc370a74473a/Extraction-and-Interpretation-of-Geometrical-and-Topological-Properties-of-Urban-Airspace-for-UAS-Operations.pdf",
-    "keywords": ["airspace", "UAV", "topology"],
+    "keywords": ["airspace", "UAV", "topological data analysis (TDA)"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -378,7 +378,7 @@
     "conference": "The 31st KKHTCNN Symposium",
     "date": "2018",
     "href": "https://koasas.kaist.ac.kr/handle/10203/247756",
-    "keywords": ["air traffic", "network analysis", "topology"],
+    "keywords": ["air traffic", "network analysis", "topological data analysis (TDA)"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -402,7 +402,7 @@
     "conference": "The 31st KKHTCNN Symposium",
     "date": "2018",
     "href": "https://koasas.kaist.ac.kr/handle/10203/247754",
-    "keywords": ["network analysis", "topology", "urban computing"],
+    "keywords": ["network analysis", "topological data analysis (TDA)", "urban computing"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -485,7 +485,7 @@
     "authors": "J. Cho, Y. Yoon",
     "conference": "ICRAT(International Conference on Research in Air Transportation) Doctoral Symposium, 2018 ",
     "href": "https://koasas.kaist.ac.kr/handle/10203/248008",
-    "keywords": ["airspace", "UAV", "topology"],
+    "keywords": ["airspace", "UAV", "topological data analysis (TDA)"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -602,7 +602,7 @@
     "authors": "Y. Woo, Y. Yoon",
     "conference": "INFORMS 2016",
     "href": "https://koasas.kaist.ac.kr/handle/10203/213840",
-    "keywords": ["road safety", "safety", "machine learning"],
+    "keywords": ["road safety", "safety", "data mining"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -650,7 +650,7 @@
     "conference": "International Conference on Computational & Experimental Engineering and Sciences 2014",
     "date": "2014",
     "href": "https://koasas.kaist.ac.kr/handle/10203/194905",
-    "keywords": ["road safety", "safety", "machine learning"],
+    "keywords": ["road safety", "safety", "data mining"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -674,7 +674,7 @@
     "conference": "The 8th AOTULE meeting and conference",
     "date": "2013",
     "href": "https://koasas.kaist.ac.kr/handle/10203/194907",
-    "keywords": ["road safety", "safety", "machine learning"],
+    "keywords": ["road safety", "safety"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
