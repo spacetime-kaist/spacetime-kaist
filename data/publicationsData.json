@@ -7,7 +7,7 @@
     "date": "2026",
     "journal": "IEEE Transactions on Neural Networks and Learning Systems",
     "href": "https://ieeexplore.ieee.org/abstract/document/11475883/",
-    "keywords": ["time series", "self-supervised learning", "neural network", "feeds", "topology"],
+    "keywords": ["time series", "anomaly detection", "forecasting", "feeds", "topological data analysis (TDA)"],
     "subjects": [
       "Machine Learning (cs.LG)",
       "Artificial Intelligence (cs.AI)"
@@ -158,7 +158,7 @@
     "date": "2021",
     "journal": "Transportation Research Part C: Emerging Technologies, 127, 103116.",
     "href": "https://doi.org/10.1016/j.trc.2021.103116",
-    "keywords": ["airspace", "topology", "UAM"],
+    "keywords": ["airspace", "topological data analysis (TDA)", "UAM"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
@@ -326,7 +326,7 @@
     "date": "2018",
     "journal": "Transportation Research Part C: Emerging Technologies, 92, 137-149.",
     "href": "https://doi.org/10.1016/j.trc.2018.05.001",
-    "keywords": ["airspace", "UAM", "topology"],
+    "keywords": ["airspace", "UAM", "topological data analysis (TDA)"],
     "podcast": "/audio/HUGAT.m4a",
     "podcast_long": "/audio/HUGAT_long.m4a"
   },
