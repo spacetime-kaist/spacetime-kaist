@@ -32,28 +32,28 @@ export default function ResearchDetail() {
     );
   }
   return (
-    <main className="pt-20 pb-24 bg-white">
+    <main className="pt-20 pb-24 bg-slate-50 min-h-screen">
       <div className="container">
         <Link
           to="/research"
-          className="text-blue-600 hover:underline mb-6 inline-block"
+          className="text-sm text-blue-700 hover:underline mb-6 inline-block"
         >
           ← Back to Research Overview
         </Link>
-        <header className="mb-10">
-          <h1 className="text-5xl font-bold mb-4">{data.title}</h1>
+        <header className="mb-10 border-b border-slate-200 pb-8">
+          <h1 className="text-4xl md:text-5xl font-semibold text-slate-900 mb-4">{data.title}</h1>
           {(data.detail)?
-          <p className="text-gray-600 text-md">{data.detail}</p>
+          <p className="text-slate-600 max-w-3xl leading-relaxed">{data.detail}</p>
           :
-          <p className="text-gray-600 text-md">{data.desc}</p>}
+          <p className="text-slate-600 max-w-3xl leading-relaxed">{data.desc}</p>}
         </header>
         <section>
-          <h2 className="text-2xl font-semibold mb-4">Research</h2>
-          <ul className="list-disc list-inside space-y-2 text-gray-700">
+          <h2 className="text-sm font-semibold uppercase tracking-[0.16em] text-slate-400 mb-5">Research</h2>
+          <div>
             {data.research && data.research.map((detail, i) => (
               <ResearchDetailCard key={i} {...detail} />
             ))}
-          </ul>
+          </div>
         </section>
       </div>
     </main>

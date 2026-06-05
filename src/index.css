@@ -38,6 +38,32 @@
     all: revert;
 }
 
+/* Global styling for links inside any markdown body (.markdown class).
+   Specificity (.markdown a) intentionally beats `.markdown > * { all: revert }`. */
+.markdown a {
+    font-weight: 500;
+    color: #497bc7;
+    text-decoration-color: #a1a1a1;
+    text-underline-offset: 2px;
+    transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+
+.markdown a:hover {
+    color: #1d4ed8;
+    underline: underline;
+    text-decoration-color: #7c99e7;
+}
+
+/* External links get a small upward arrow cue */
+/* .markdown a[href^="http"]::after {
+    content: "↗";
+    display: inline-block;
+    margin-left: 0.15em;
+    font-size: 0.85em;
+    vertical-align: 0.05em;
+    color: #3e4657;
+} */
+
 /* Navbar Mega Menu Animations */
 @keyframes slideDown {
     from {
