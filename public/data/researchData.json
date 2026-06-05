@@ -93,7 +93,7 @@
   "id": "urban-simulation",
   "title": "Agentic Framework for Urban Simulation",
   "menuTitle": "Urban Simulation",
-  "thumbnail": "/researchImg/CEUS_fig1_overview.png",
+  "thumbnail": "/researchImg/CEUS_fig1_overview_1.png",
   "desc": "This research field includes traffic simulation and its applications to urban data.",
   "research": [
     {
@@ -101,11 +101,12 @@
       "date": "2025",
       "ref": "M. Jeong, J. Chang, Y. Yoon. (2025). [\"Speak to Simulate: An LLM-Guided Agentic Framework for Traffic Simulation in SUMO\"](https://dl.acm.org/doi/abs/10.1145/3764921.3770151), GeoSIM '25: 8th ACM SIGSPATIAL International Workshop on Geospatial Simulation",
       "abstract": "Traffic simulation plays a pivotal role in shaping transportation policy amid increasing urban traffic congestion and evolving mobility patterns. As a leading simulator, Simulation of Urban MObility (SUMO) is a widely adopted open-source platform for urban mobility research. However, generating traffic scenarios in SUMO is a time-consuming and intricate process, creating a steep learning curve and restricting iterative policy experiments. Although recent studies have integrated Large Language Models (LLMs) to mitigate these challenges, they often rely on fixed pipelines that lack interactive scenario generation and broad coverage of SUMO's capabilities. To address these limitations, we propose AgentSUMO, an LLM-guided agentic framework for traffic simulation. Our framework positions the LLM as an AI agent, enabling interactive scenario design and flexible policy experimentation across the full range of SUMO functionalities. On the Manhattan network, our framework demonstrates that AgentSUMO addresses high-level policy goals through task planning and policy selection, resulting in consistent improvements in key traffic flow metrics. This novel agentic approach significantly lowers the barrier to entry for traffic simulation.",
-      "desc": "City planners and policymakers often need to explore “what if” ideas, such as how to ease rush hour congestion or improve traffic flow. Yet most traffic simulators depend on complicated scripts, large datasets, and technical skills that make them difficult for non-experts to use.\n\nOur work presents **AgentSUMO**, an AI agent that makes traffic simulation as easy as having a conversation. Instead of writing code, users can simply describe their goals in everyday language. Even when a request is abstract or incomplete like saying “find a way to reduce traffic around downtown”, the AI interprets the intention, asks follow-up questions, fills in the missing details, and automatically builds and runs a simulation in SUMO.\n\nThe agent does more than follow commands. It works with the user to plan experiments, test policies such as signal coordination or road closures, and present the results in a clear and visual way. In experiments on a Manhattan road network, AgentSUMO showed that it can intelligently design and optimize traffic scenarios that improve travel time and traffic flow.\n\nIn essence, AgentSUMO makes traffic simulation interactive and approachable, allowing people to explore and experiment with city mobility through simple conversation with AI.",
+      "desc": "City planners and policymakers often need to explore “what if” ideas, such as how to ease rush hour congestion or improve traffic flow. Yet most traffic simulators depend on complicated scripts, large datasets, and technical skills that make them difficult for non-experts to use.\n\nOur work presents **AgentSUMO**, an AI agent that makes traffic simulation as easy as having a conversation. Instead of writing code, users can simply describe their goals in everyday language. Even when a request is abstract or incomplete like saying “find a way to reduce traffic around downtown”, the AI interprets the intention, asks follow-up questions, fills in the missing details, and automatically builds and runs a simulation in SUMO.\n\nThe agent does more than follow commands. It works with the user to plan experiments, test policies such as signal coordination or road closures, and present the results in a clear and visual way. In experiments on a Manhattan road network, AgentSUMO showed that it can intelligently design and optimize traffic scenarios that improve travel time and traffic flow.\n\nIn essence, AgentSUMO makes traffic simulation interactive and approachable, allowing people to explore and experiment with city mobility through simple conversation with AI. \n\n[GitHub: mw-jeong/AgentSumo](https://github.com/mw-jeong/AgentSUMO) \n\n[AgentSumo Documentation](https://agentsumo.readthedocs.io/en/latest/?badge=latest)",
       "images": [
-        "/researchImg/CEUS_fig1_overview.png",
-        "/researchImg/exp3_overview_ver1.png",
-        "/researchImg/exp3_result1.png"
+        "/researchImg/CEUS_fig1_overview_1.png",
+        "/researchImg/CEUS_fig5_system_architecture.png",
+        "/researchImg/CEUS_fig4_web_interface.png",
+        "/researchImg/CEUS_fig6_geospatial_vis.png"
       ]
     }
   ]
