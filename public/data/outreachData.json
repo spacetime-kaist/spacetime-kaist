@@ -1,7 +1,7 @@
 [
    {
     "id": "20260625",
-    "title": "KAIST Urban AI Workshop @ KCC 2026: Exploring the future of Urban AI through cutting-edge research",
+    "title": "KAIST Urban AI Workshop @ KCC 2026",
     "category": "workshop",
     "start": "2026-06-25",
     "end": "2026-06-25",
@@ -11,7 +11,7 @@
       "Korea Computer Congress 2026 (KCC 2026)",
       "urban challenges", "AI"
     ],
-    "desc":"Our lab attended the **Urban AI Workshop**, held as part of the **Korea Computer Congress 2026 (KCC 2026)** and organized by the KAIST Urban AI Institute. \n As artificial intelligence reshapes the way cities are planned, managed, and operated, Urban AI has become a key technology for tackling problems that conventional approaches struggle to solve. The workshop was convened to share recent research in the field and to discuss where AI-powered urban systems are headed, bringing together researchers from artificial intelligence, transportation, urban systems, and data science. \n The topics covered LLM-based analysis of urban service accessibility, traffic simulation and decision support with large language models, multi-agent reinforcement learning for intelligent transportation systems, vision-language models for spatial reasoning and navigation, urban mobility and EV charging demand, temporal vision-language models for complex decision-making, and AI for resilient infrastructure and flood management. \n **Sungmin Sohn** and **Jeeyun Chang** presented our lab's work at the workshop, and both talks drew good questions from the audience. \n For our members, the day was a valuable chance to put our research in front of researchers working across very different fields, and to see how recent advances in Urban AI are being applied toward smarter, more sustainable cities.",
+    "desc":"Our lab attended the **Urban AI Workshop**, held as part of the **Korea Computer Congress 2026 (KCC 2026)** and organized by the KAIST Urban AI Institute. \n\n As artificial intelligence reshapes the way cities are planned, managed, and operated, Urban AI has become a key technology for tackling problems that conventional approaches struggle to solve. The workshop was convened to share recent research in the field and to discuss where AI-powered urban systems are headed, bringing together researchers from artificial intelligence, transportation, urban systems, and data science. \n\n The topics covered LLM-based analysis of urban service accessibility, traffic simulation and decision support with large language models, multi-agent reinforcement learning for intelligent transportation systems, vision-language models for spatial reasoning and navigation, urban mobility and EV charging demand, temporal vision-language models for complex decision-making, and AI for resilient infrastructure and flood management. \n\n **Sungmin Sohn** and **Jeeyun Chang** presented our lab's work at the workshop, and both talks drew good questions from the audience. \n\n For our members, the day was a valuable chance to put our research in front of researchers working across very different fields, and to see how recent advances in Urban AI are being applied toward smarter, more sustainable cities.",
     "photos": [
       "/eventsImg/IMG_7325.jpg",
       "/eventsImg/IMG_0095.jpg",
