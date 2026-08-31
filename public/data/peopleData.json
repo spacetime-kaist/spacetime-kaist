@@ -64,8 +64,8 @@
       "id": 5,
       "slug": "minwoo",
       "name": "Minwoo Jeong",
-      "role": "Research Associate",
-      "from": "2026.03~",
+      "role": "Ph.D. Candidate",
+      "from": "2026.09~",
       "email": "minwoo5003@kaist.ac.kr",
       "edu": [
         "M.S. in Data Science, KAIST",
@@ -77,11 +77,12 @@
       "id": 7,
       "slug": "seungro",
       "name": "Seungro Lee",
-      "role": "M.S. Candidate",
+      "role": "Research Associate",
       "dept": "Data Science",
-      "from": "2024.09~",
+      "from": "2026.09~",
       "email": "roy.seungro.lee@kaist.ac.kr",
       "edu": [
+        "M.S. in Data Science, KAIST",
         "B.S. in Business Administration, University of Southern California"
       ],
       "photo": "/peopleImg/7.jpg"
@@ -117,7 +118,7 @@
       "slug": "jihyeon",
       "name": "Jihyeon Ohk",
       "link": "https://sites.google.com/spacetime.kaist.ac.kr/jihyeon-ohk",
-      "role": "M.S. Candidate",
+      "role": "Integrated M.S.-Ph.D Candidate",
       "dept": "Civil and Environmental Engineering",
       "from": "2025.09~",
       "email": "jh.ohk@kaist.ac.kr",
