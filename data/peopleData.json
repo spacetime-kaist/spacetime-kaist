@@ -71,7 +71,7 @@
         "M.S. in Data Science, KAIST",
         "B.S. in Economics and Data Science, University of Seoul"
       ],
-      "photo": "assets/images/people/5.jpg"
+      "photo": "/peopleImg/6.jpg",
     },
     {
       "id": 7,
@@ -338,7 +338,7 @@
       "degree": "M.S.",
       "date": "2024.03~2026.02",
       "ms": "2024.03~2026.02",
-      "photo": "assets/images/people/5.jpg",
+      "photo": "/peopleImg/6.jpg",
       "current": "Ph.D. Candidate, Dept. of Data Science, KAIST"
     },
     {
