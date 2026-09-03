@@ -7,10 +7,10 @@
     "link": "https://sites.google.com/view/yoonjintrue",
     "email": "yoonjin@kaist.ac.kr",
     "edu": [
-      "B.S. Mathematics, SNU",
+      "Ph.D. Civil and Environmental Engineering, UC Berkeley",
       "M.S. Computer Science, Stanford",
       "M.S. Management Science and Engineering, Stanford",
-      "Ph.D. Civil and Environmental Engineering, UC Berkeley"
+      "B.S. Mathematics, SNU"
     ],
     "research": "Coming from Mathematics, Computer Science, Management Science, and Civil engineering background, my research focus is system-of-systems, which includes transportation system, city, logistics system, and public health system. My recent research interests include the following areas.\n\n**Urban Intelligence**: Urban Region Representation Learning; SDG Data Science; AI and Cities; AI for Social Good    \n\n**Computational Transportation Science**: Future Mobility and AI; Graph Neural Net and Traffic Forecasting; Transportation Network Science; Safety Risk Management\n\n**Sustainable Urban Mobility**: Urban Mobility Decarbonization; Mobility Accessibility and Inequality; Urban Air Mobility (UAM);",
     "photo": "/peopleImg/1.jpg"
@@ -211,7 +211,8 @@
       "date": "2015.09~2023.08",
       "phd": "2017.09~2023.08",
       "ms": "2015.09~2017.08",
-      "photo": "/peopleImg/18.jpg"
+      "photo": "/peopleImg/18.jpg",
+      "current": "Research Professor, Dep. of Civil and Environmental Engineering, KAIST."
     },
     {
       "id": 19,
@@ -330,6 +331,23 @@
       "ms": "2024.03~2026.02",
       "photo": "/peopleImg/6.jpg",
       "current": "NAVER LABS Robotics & Autonomous Driving Group"
-    }
+    },
+    {
+      "id": 5,
+      "name": "Minwoo Jeong",
+      "degree": "M.S.",
+      "date": "2024.03~2026.02",
+      "ms": "2024.03~2026.02",
+      "photo": "assets/images/people/5.jpg",
+      "current": "Ph.D. Candidate, Dept. of Data Science, KAIST"
+    },
+    {
+      "id": 7,
+      "name": "Seungro Lee",
+      "degree": "M.S.",
+      "date": "2024.09~2026.07",
+      "ms": "2024.09~2026.07",
+      "photo": "/peopleImg/7.jpg"
+    },
   ]
 }
