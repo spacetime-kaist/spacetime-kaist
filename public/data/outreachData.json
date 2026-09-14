@@ -1,5 +1,25 @@
 [
    {
+    "id": "20260808",
+    "title": "ICUSI 2026 in Guangzhou",
+    "category": "conference",
+    "start": "2026-08-08",
+    "end": "2026-08-09",
+    "place": "Hong Kong University of Science and Technology (Guangzhou) in Nansha, Guangzhou",
+    "participants": "Professor Yoonjin Yoon, Minwoo Jeong (Research Associate), Keonhee Jang (Integrated M.S.-Ph.D candidate)",
+    "keyword": [
+      "Urban Intelligence", "AI of Cities"
+    ],
+    "desc":"Our lab attended **ICUSI 2026**, the 4th International Conference on Urban Science and Intelligence, held on August 8-9 at the **Hong Kong University of Science and Technology (Guangzhou) in Nansha, Guangzhou**. The conference was hosted by the Urban Governance and Design Thrust and the Computational Media and Arts Thrust at HKUST(GZ), together with the Department of Electronic Engineering at Tsinghua University and the Tsinghua-Meituan Joint Research Center for Smart Life. \n\n Professor Yoonjin Yoon was invited as a speaker and delivered a talk titled **\"AI of Cities, Cities of AI: Two Perspectives on the Future of Urban Intelligence,\"** joining the conference remotely via Zoom. \n\n Minwoo Jeong and Keonhee Jang traveled to Guangzhou to present their work on site. Minwoo Jeong presented \"AgentSUMO: An Agentic Framework for Interactive Simulation Scenario Generation via Large Language Models,\" and Keonhee Jang presented \"Transactions as Sensors: A City-Scale Framework for Monitoring Retail Heat Vulnerability in Seoul.\"",
+    "photos": [
+      "/eventsImg/260807_MJ_presentation.jpg",
+      "/eventsImg/260807_KJ_presentation.jpg",
+      "/eventsImg/260807_YY_presentation1.jpg",
+      "/eventsImg/260807_YY_presentation2.jpg"
+    ],
+    "time": ""
+  },
+   {
     "id": "20260625",
     "title": "KAIST Urban AI Workshop @ KCC 2026",
     "category": "workshop",
