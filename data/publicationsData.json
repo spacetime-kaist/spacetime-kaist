@@ -1,4 +1,19 @@
 [
+    {
+    "id": "10.1080/15472450.2026.2695352",
+    "slug": "pub2026-traffic-propagation-impacts",
+    "title": "Incorporating traffic propagation impacts into dynamic graph diffusion convolutional network for traffic speed prediction",
+    "authors": "H. Shon, S. Kim, Y. Shin, Y. Yoon, J. Lee",
+    "date": "2026",
+    "journal": "Journal of Intelligent Transportation Systems",
+    "href": "https://scholar.google.com/citations?view_op=view_citation&hl=ko&user=YM30GVoAAAAJ&sortby=pubdate&citation_for_view=YM30GVoAAAAJ:1yQoGdGgb4wC",
+    "keywords": ["traffic patterns"],
+    "subjects": [
+    ],
+    "abstract": "Due to the high complexity of traffic patterns, accurate traffic prediction has remained a challenging task for decades. Recent studies have developed deep learning-based prediction models to capture the spatial and temporal features of traffic data in order to enhance traffic prediction. However, most spatial features are limited to static network characteristics, such as distance and connectivity between road links. In this paper, we consider a dynamic spatial feature, the amount of traffic propagation between two links, which can represent spatial correlations in speed prediction. It helps find which road sections will be affected when congestion occurs in a complex urban network and ultimately improves the accuracy of speed prediction. We propose dynamic graph diffusion convolution networks (DGDCN) to integrate traffic propagation into deep neural networks for predicting speed in urban areas. By using dynamic graph diffusion, we account for changing spatial correlations and include distant but important links by removing irrelevant connections. Additionally, weighted diffusion convolution networks and gated recurrent units are employed to learn the spatiotemporal properties of traffic data. As an experiment, we evaluate the prediction performance of DGDCN using real-world traffic data in Seoul, South Korea. The results show that the proposed model outperforms baseline models, particularly in long-term prediction. In addition, we observe that sparsifying the network based on the impacts of traffic propagation can improve prediction accuracy.",
+    "images": ["/researchImg/gcdn.jpg"],
+    "podcast_status": true
+  },
   {
     "id": "10.1109/TNNLS.2025.3577202",
     "slug": "pub2026-topocl-topological-contrastive-learning",
